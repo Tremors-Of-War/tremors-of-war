@@ -1,0 +1,5 @@
+# vi: ft=toml
+[mypy]
+warn_unused_configs = True
+allow_redefinition = True
+mypy_path = mypy_stubs

@@ -1,0 +1,32 @@
+#!/bin/bash
+set -e
+commands=( 
+	'flake8 --config .flake8 .' 
+	'mypy --config .mypy .' 
+	'python manage.py makemigrations --check' 
+)
+pids=()
+
+# Running black first because it can fix flake8 errors
+echo Running: black
+echo
+black .
+echo
+
+# run processes and store pids in array
+for ((i = 0; i < ${#commands[@]}; i++))
+do
+	command="${commands[$i]}"
+
+	echo Running: ${command}
+	$command &
+	pids+="$! "
+done
+echo
+
+# wait for all processes to complete 
+for pid in ${pids[@]}; do
+	wait $pid 2> /dev/null
+done
+
+
