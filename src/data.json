@@ -670,7 +670,7 @@
       "Abilities": []
     }
   },
-  "ruleset": {
+  "rulesets": {
     "fantasy": {
       "baseline_stats": {
         "M": 5,
@@ -2794,8 +2794,8 @@
           "Int": 6,
           "Points": 140,
           "Abilities": [
-            "Murderous Prowess",
-            "Dodge (Close Combat)"
+            "Dodge (Close Combat)",
+            "Murderous Prowess"
           ],
           "Weaponry": [
             "Dagger",

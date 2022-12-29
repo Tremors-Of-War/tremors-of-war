@@ -25,6 +25,5 @@ def parse_mounts(db: Database):
 
         name = mount["Name"]
         mounts[name] = mount
-        print(mount)
 
     return mounts
