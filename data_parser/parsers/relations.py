@@ -1,7 +1,7 @@
 from pylightxl import Database
 
 from constants import SHEETS
-from utils import get_table_from_headers
+from utils import get_table_from_sheet
 
 
 def _get_relations_sheet(db: Database):
@@ -23,10 +23,7 @@ _cell_is_relation_name = _get_relation_name_from_cell
 def parse_relations(db: Database):
     sheet = _get_relations_sheet(db)
 
-    first_value = sheet.index(1, 1)
-    headers = sheet.keyrow(first_value)
-    table = get_table_from_headers(sheet, headers)
-
+    table = get_table_from_sheet(sheet)
     unit_relations = {}
 
     for unit_name, cells in table.items():

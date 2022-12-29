@@ -24,3 +24,17 @@ def load_stats(stat_array: List):
 
 def get_table_from_headers(sheet, headers):
     return {column: sheet.keycol(column)[1:] for column in headers}
+
+
+def get_table_from_sheet(sheet):
+    first_value = sheet.index(1, 1)
+    headers = sheet.keyrow(first_value)
+    return get_table_from_headers(sheet, headers)
+
+
+def get_table_size(table):
+    return len(list(table.values())[0])
+
+
+def build_object_from_table_on_index(table, index):
+    return {column: table[column][index] for column in table.keys()}

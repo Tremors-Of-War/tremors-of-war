@@ -4,7 +4,13 @@ import logging
 
 from constants import SHEETS, STAT_HEADER_LIST
 from parsers.relations import parse_relations
-from utils import join_pascal_snake_case, load_stats, get_table_from_headers
+from utils import (
+    join_pascal_snake_case,
+    load_stats,
+    get_table_from_headers,
+    get_table_size,
+    build_object_from_table_on_index,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -30,11 +36,6 @@ def _units_sheet_name(ruleset):
 def _get_units_sheet(db: Database, ruleset):
     sheet_name = _units_sheet_name(ruleset)
     return db.ws(sheet_name)
-
-
-def _get_num_units(table):
-    # Get the length of the first element in the table
-    return len(table[HEADERS[0]])
 
 
 def _get_abilities_list(unit):
@@ -71,13 +72,15 @@ def parse_units(db: Database, ruleset):
     relations = parse_relations(db)
 
     table = get_table_from_headers(sheet, HEADERS)
-    num_units = _get_num_units(table)
+    num_units = get_table_size(table)
 
-    units = []
+    units = {}
     for index in range(num_units):
-        unit = {column: table[column][index] for column in table.keys()}
+        unit = build_object_from_table_on_index(table, index)
         unit = _transform_abilities(unit)
         unit = _add_relations_to_unit(unit, relations)
-        units.append(unit)
+
+        name = unit[UNIT_HEADERS.UNIT_NAME]
+        units[name] = unit
 
     return units
