@@ -5,7 +5,6 @@ from utils import (
     get_table_from_sheet,
     get_table_size,
     build_object_from_table_on_index,
-    transform_set_name,
 )
 
 
@@ -33,7 +32,6 @@ def parse_armour(db: Database):
     armours = {}
     for index in range(table_size):
         armour = build_object_from_table_on_index(table, index)
-        armour = transform_set_name(armour, "Armour")
         armour = _transform_empty_value_to_null(armour, ARMOUR_HEADERS.ARMOUR_VALUE_CC)
         armour = _transform_empty_value_to_null(armour, ARMOUR_HEADERS.ARMOUR_VALUE_R)
         armour = _transform_empty_value_to_null(armour, ARMOUR_HEADERS.EFFECTS)

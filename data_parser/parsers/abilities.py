@@ -5,7 +5,6 @@ from utils import (
     get_table_from_sheet,
     get_table_size,
     build_object_from_table_on_index,
-    transform_set_name,
 )
 
 
@@ -28,7 +27,6 @@ def parse_abilities(db: Database):
     for index in range(table_size):
         ability = build_object_from_table_on_index(table, index)
         ability = _transform_empty_cost_to_zero(ability)
-        ability = transform_set_name(ability, "Ability")
 
         name = ability["Name"]
         abilities[name] = ability

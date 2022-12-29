@@ -40,7 +40,25 @@ def build_object_from_table_on_index(table, index):
     return {column: table[column][index] for column in table.keys()}
 
 
-def transform_set_name(obj, key):
-    obj["Name"] = obj[key]
-    del obj[key]
+def _get_field_value(obj, column):
+    value = obj.get(column)
+    if value == "-":
+        return None
+    return value
+
+
+def _remove_null_and_duplicate_values_from_list(li):
+    return list({x for x in li if x})
+
+
+def transform_multi_columns_to_list(obj, column_base, num_columns, full_name):
+    column_names = [f"{column_base}{x + 1}" for x in range(num_columns)]
+    values = [_get_field_value(obj, column_name) for column_name in column_names]
+    values = _remove_null_and_duplicate_values_from_list(values)
+
+    for column_name in column_names:
+        del obj[column_name]
+
+    obj[full_name] = values
+
     return obj

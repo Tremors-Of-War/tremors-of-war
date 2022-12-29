@@ -1,550 +1,673 @@
 {
   "abilities": {
     "Scaley Skin": {
+      "Name": "Scaley Skin",
       "Effects": "A model with Scaley skin is equipped with the scaley skin armour variant",
-      "Cost": 0,
-      "Name": "Scaley Skin"
+      "Cost": 0
     },
     "Size Matters": {
+      "Name": "Size Matters",
       "Effects": "Models with this special rule treat Goblins as having the \"Hot-Headed\" special rule",
-      "Cost": 5,
-      "Name": "Size Matters"
+      "Cost": 5
     },
     "Strength in Numbers": {
+      "Name": "Strength in Numbers",
       "Effects": "This Model add 1 to its Cool characteristic for each friendly model with this ability within 3\"",
-      "Cost": 5,
-      "Name": "Strength in Numbers"
+      "Cost": 5
     },
     "Counter Charge": {
+      "Name": "Counter Charge",
       "Effects": "When an enemy model moves into engagement range with a friendly model within 6\"  this model, and this model is standing and active, this model may make immediate, out of sequence Charge action against that enemy model once it has completed its Charge Action.",
-      "Cost": 5,
-      "Name": "Counter Charge"
+      "Cost": 5
     },
     "Peasant's Duty": {
+      "Name": "Peasant's Duty",
       "Effects": "Models with the Peasant's Duty may use the cool characteristic of any friendly models with the Questing Vow or the Grail Vow within 6\"",
-      "Cost": 5,
-      "Name": "Peasant's Duty"
+      "Cost": 5
     },
     "Support Fire": {
+      "Name": "Support Fire",
       "Effects": "When an enemy model moves into engagement range with a friendly model within 6\"  this model, and this model is standing and active, this model may make immediate, out of sequence Shooting action against that enemy model. This attack does not cause pinning",
-      "Cost": 5,
-      "Name": "Support Fire"
+      "Cost": 5
     },
     "Hold the Line": {
+      "Name": "Hold the Line",
       "Effects": "This Fighter and friendly Fighters within 3\" of this model may roll 3 dice and pick the highest 2 results when taking any Cool checks",
-      "Cost": 5,
-      "Name": "Hold the Line"
+      "Cost": 5
     },
     "Choppas": {
+      "Name": "Choppas",
       "Effects": "Models with this ability get +1 Strength in the first round of close combat and cannot benefit from the parry rule",
-      "Cost": 5,
-      "Name": "Choppas"
+      "Cost": 5
     },
     "Deathblow": {
+      "Name": "Deathblow",
       "Effects": "If a model with this ability is taken out of action in Close Combat, it will immediately make a single Attack back against the model that took it out of acction before being removed",
-      "Cost": 5,
-      "Name": "Deathblow"
+      "Cost": 5
     },
     "Dwarven Crafted": {
+      "Name": "Dwarven Crafted",
       "Effects": "This model re-rolls all to hit rolls of 1 when using handguns, pistols and crossbows",
-      "Cost": 5,
-      "Name": "Dwarven Crafted"
+      "Cost": 5
     },
     "Lion Rampant": {
+      "Name": "Lion Rampant",
       "Effects": "Two handed weapons used by a model with this ability gain the Parry ability",
-      "Cost": 5,
-      "Name": "Lion Rampant"
+      "Cost": 5
     },
     "Martial Prowess": {
+      "Name": "Martial Prowess",
       "Effects": "This model re-rolls 1's when rolling to hit in close combat",
-      "Cost": 5,
-      "Name": "Martial Prowess"
+      "Cost": 5
     },
     "Murderous Prowess": {
+      "Name": "Murderous Prowess",
       "Effects": "This model re-rolls 1's when rolling to wound in close combat",
-      "Cost": 5,
-      "Name": "Murderous Prowess"
+      "Cost": 5
     },
     "Short and Nimble": {
+      "Name": "Short and Nimble",
       "Effects": "Enemies attacking models with this rule suffer -1 To Hit in close combat",
-      "Cost": 5,
-      "Name": "Short and Nimble"
+      "Cost": 5
     },
     "The Knight's Vow": {
+      "Name": "The Knight's Vow",
       "Effects": "This Model gains +1 Weapon Skill",
-      "Cost": 5,
-      "Name": "The Knight's Vow"
+      "Cost": 5
     },
     "Unbreakable": {
+      "Name": "Unbreakable",
       "Effects": "This Model automatically passes any cool checks it is required to make",
-      "Cost": 5,
-      "Name": "Unbreakable"
+      "Cost": 5
     },
     "Way of the Warrior": {
+      "Name": "Way of the Warrior",
       "Effects": "Issue Challenge Basic Action - Choose an enemy fighter within 12\". Until the end of this round, or until the chosen fighter is attacked by a friendly fighter, they must make a Intelligence check if they wish to make a ranged or close combat attack that targets any fighter other than the fighter who issued the challenge",
-      "Cost": 5,
-      "Name": "Way of the Warrior"
+      "Cost": 5
     },
     "Will of Chaos": {
+      "Name": "Will of Chaos",
       "Effects": "This model counts as passing its first failed cool check",
-      "Cost": 5,
-      "Name": "Will of Chaos"
+      "Cost": 5
     },
     "Infiltrate": {
+      "Name": "Infiltrate",
       "Effects": "If this fighter should be set up at the start of a battle, they may instead placed to one side. Then, immediately before the start of the first round, their controlling player may set them up anywhere on the battlefield that is not visible to any enemy fighters, and not within 6\u2019\u2019 of any of them. If both players have fighters with this skill, take turns to set one up, starting with the winner of a roll-off.",
-      "Cost": 10,
-      "Name": "Infiltrate"
+      "Cost": 10
     },
     "Crushing Blow": {
+      "Name": "Crushing Blow",
       "Effects": "Before rolling to hit for the fighter's close combat attacks, the controlling player can nominate one dice to make a Crushing Blow. If that dice hits, the attack\u2019s Strength and Damage are each increased by one.",
-      "Cost": 10,
-      "Name": "Crushing Blow"
+      "Cost": 10
     },
     "Dodge (Close Combat)": {
+      "Name": "Dodge (Close Combat)",
       "Effects": "6+ Ward vs Close Combat weapons when on foot",
-      "Cost": 10,
-      "Name": "Dodge (Close Combat)"
+      "Cost": 10
     },
     "Dodge (Ranged)": {
+      "Name": "Dodge (Ranged)",
       "Effects": "6+ Ward vs Ranged weapons when on foot",
-      "Cost": 10,
-      "Name": "Dodge (Ranged)"
+      "Cost": 10
     },
     "Iron Will": {
+      "Name": "Iron Will",
       "Effects": "Subtract 1 from the result of any Bottle rolls whilst this fighter is on the battlefield and is not Seriously Injured.",
-      "Cost": 10,
-      "Name": "Iron Will"
+      "Cost": 10
     },
     "Mark of Khorne": {
+      "Name": "Mark of Khorne",
       "Effects": "This model gains +1 Attack",
-      "Cost": 10,
-      "Name": "Mark of Khorne"
+      "Cost": 10
     },
     "Markof Nurgle": {
+      "Name": "Markof Nurgle",
       "Effects": "This model gains +1 Toughness and -2 Initiative",
-      "Cost": 10,
-      "Name": "Markof Nurgle"
+      "Cost": 10
     },
     "Poison Attacks": {
+      "Name": "Poison Attacks",
       "Effects": "A Model with this ability gets +1 to any wound rolls made in close combat",
-      "Cost": 10,
-      "Name": "Poison Attacks"
+      "Cost": 10
     },
     "Quadrupedal": {
+      "Name": "Quadrupedal",
       "Effects": "This Model gains +1 Movement",
-      "Cost": 10,
-      "Name": "Quadrupedal"
+      "Cost": 10
     },
     "Red Devil": {
+      "Name": "Red Devil",
       "Effects": "This Model gets +1 Attack",
-      "Cost": 10,
-      "Name": "Red Devil"
+      "Cost": 10
     },
     "The Questing Vow": {
+      "Name": "The Questing Vow",
       "Effects": "This Model gains +1 Strength",
-      "Cost": 10,
-      "Name": "The Questing Vow"
+      "Cost": 10
     },
     "True Grit": {
+      "Name": "True Grit",
       "Effects": "When making an Injury roll for the fighter, roll one less Injury dice (for example, a Damage 2 weapon would roll one dice). Against attacks with Damage 1, roll two dice \u2013 the player controlling the fighter with True Grit, can then choose one dice to discard before the effects of the other are resolved.",
-      "Cost": 10,
-      "Name": "True Grit"
+      "Cost": 10
     },
     "Waaagh!": {
+      "Name": "Waaagh!",
       "Effects": "Once per game, when this Model is activated it may call a Waaagh! As a free action. In the turn a Waaagh! is called, every model in the warband may add 1 to their Movement Characteristic ",
-      "Cost": 10,
-      "Name": "Waaagh!"
+      "Cost": 10
     },
     "Blessing of the Lady": {
+      "Name": "Blessing of the Lady",
       "Effects": "This Model gains a 6+ ward save",
-      "Cost": 15,
-      "Name": "Blessing of the Lady"
+      "Cost": 15
     },
     "Frenzy": {
+      "Name": "Frenzy",
       "Effects": "In the turn this fighter moves into Engagement range with an enemy fighter, they gain an additional D3 Attacks. However, their hit rolls suffer a -1 modifier.",
-      "Cost": 15,
-      "Name": "Frenzy"
+      "Cost": 15
     },
     "Mark of Tzeentch": {
+      "Name": "Mark of Tzeentch",
       "Effects": "This Model gains a 6+ ward save",
-      "Cost": 15,
-      "Name": "Mark of Tzeentch"
+      "Cost": 15
     },
     "Resilient": {
+      "Name": "Resilient",
       "Effects": "This Model gains +1 Toughness",
-      "Cost": 15,
-      "Name": "Resilient"
+      "Cost": 15
     },
     "Warpaint": {
+      "Name": "Warpaint",
       "Effects": "This Model gains a 6+ ward save",
-      "Cost": 15,
-      "Name": "Warpaint"
+      "Cost": 15
     },
     "Counter-Attack": {
+      "Name": "Counter-Attack",
       "Effects": "When this fighter makes Reaction attacks in close combat, they roll one additional Attack dice for each of the attacker\u2019s Attacks that failed to hit",
-      "Cost": 20,
-      "Name": "Counter-Attack"
+      "Cost": 20
     },
     "Extra Extremities": {
+      "Name": "Extra Extremities",
       "Effects": "This Model gains +1 Attack",
-      "Cost": 20,
-      "Name": "Extra Extremities"
+      "Cost": 20
     },
     "Step Aside": {
+      "Name": "Step Aside",
       "Effects": "If the fighter is hit in close combat, the fighter can attempt to step aside. Make an Initiative check for them. If the check is passed, the attack misses. This skill can only\nbe used once per enemy in each round or close combat",
-      "Cost": 20,
-      "Name": "Step Aside"
+      "Cost": 20
     },
     "The Grail Vow": {
+      "Name": "The Grail Vow",
       "Effects": "Models with the Questing Vow must also take the Knight's Vow and The Questing Vow\nThis model gains +1 Toughness\nThis model gains +1 Attack\nThis Model gains a 6+ ward save",
-      "Cost": 20,
-      "Name": "The Grail Vow"
+      "Cost": 20
     },
     "Blessings of Asuryan": {
+      "Name": "Blessings of Asuryan",
       "Effects": "This model has a 4+ Ward save",
-      "Cost": 30,
-      "Name": "Blessings of Asuryan"
+      "Cost": 30
     },
     "Bred for War": {
+      "Name": "Bred for War",
       "Effects": "-This Mount gets +1 Attack and +1 Weapon Skill\n -If this This Model would be pinned subtract 3\" from its movement the next time it activates instead (This penalty does not stack)",
-      "Cost": 30,
-      "Name": "Bred for War"
+      "Cost": 30
     },
     "Rain of Blows": {
+      "Name": "Rain of Blows",
       "Effects": "This fighter treats the Fight action as Fight (Simple) rather than Fight (Basic). In other words, this fighter may make two Fight (Simple) actions when activated.",
-      "Cost": 30,
-      "Name": "Rain of Blows"
+      "Cost": 30
     },
     "Trollblooded": {
+      "Name": "Trollblooded",
       "Effects": "This Model gains a 5+ Ward Save",
-      "Cost": 30,
-      "Name": "Trollblooded"
+      "Cost": 30
     },
     "Regeneration": {
+      "Name": "Regeneration",
       "Effects": "This model gains a 4+ ward save",
-      "Cost": 50,
-      "Name": "Regeneration"
+      "Cost": 50
     },
     "Bred to the Saddle": {
+      "Name": "Bred to the Saddle",
       "Effects": "This model must start the game mounted",
-      "Cost": 0,
-      "Name": "Bred to the Saddle"
+      "Cost": 0
     },
     "Cavalry": {
+      "Name": "Cavalry",
       "Effects": "-",
-      "Cost": 0,
-      "Name": "Cavalry"
+      "Cost": 0
     },
     "Duty": {
+      "Name": "Duty",
       "Effects": "Whent his Fighter fails a Cool check roll the check again. If passed on the second attmept, this Fighter falls back as normal but will automatically regroup at the end of the round",
-      "Cost": 0,
-      "Name": "Duty"
+      "Cost": 0
     },
     "Horse Lords": {
+      "Name": "Horse Lords",
       "Effects": "Mounts used by this model do not suffer the normal -1 to Movement for Barding",
-      "Cost": 0,
-      "Name": "Horse Lords"
+      "Cost": 0
     },
     "Monstrous Cavalry": {
+      "Name": "Monstrous Cavalry",
       "Effects": "This model gets +1 Wound",
-      "Cost": 0,
-      "Name": "Monstrous Cavalry"
+      "Cost": 0
     },
     "Shield Wall!": {
+      "Name": "Shield Wall!",
       "Effects": "If this fighter is within 2\" of 2 other friendly fighters with the Shieldwall ability, who are equipped with a shield and Standing, add 1 to this fighter's Shield Roll ",
-      "Cost": 0,
-      "Name": "Shield Wall!"
+      "Cost": 0
     },
     "Valhalla": {
+      "Name": "Valhalla",
       "Effects": "This Fighter does not take Cool checks when friendly fighters within 3\" are taken out of action",
-      "Cost": 0,
-      "Name": "Valhalla"
+      "Cost": 0
     },
     "Scout": {
+      "Name": "Scout",
       "Effects": "This Fighter can make up to 2 move activations prior to the beginning of the first round. If enemy fighters also have this ability roll of to determine who activates first",
-      "Cost": 10,
-      "Name": "Scout"
+      "Cost": 10
     },
     "Hit and Run Specialist": {
+      "Name": "Hit and Run Specialist",
       "Effects": "After resolving a charge activation, this fighter may choose to take an intitiative test. If successful, thid fighter may disengage from this combat and make a consolidation move of up to 2\"",
-      "Cost": 0,
-      "Name": "Hit and Run Specialist"
+      "Cost": 0
     },
     "Skirmisher": {
+      "Name": "Skirmisher",
       "Effects": "The fighter may move up to double their Movement characteristic and then make an attack with a ranged weapons. The hit roll suffers an additional -1 modifier",
-      "Cost": 10,
-      "Name": "Skirmisher"
+      "Cost": 10
     },
     "Commander": {
+      "Name": "Commander",
       "Effects": "Order (Basic) \u2013 Pick a friendly fighter within 6\u2019\u2019. That fighter can immediately make two actions as though it were their turn to activate, even if they are not Ready. If they are Ready, these actions do not remove their Ready marker.",
-      "Cost": 0,
-      "Name": "Commander"
+      "Cost": 0
     },
     "Lead by Example": {
+      "Name": "Lead by Example",
       "Effects": "Whenever this fighter takes an enemy fighter out of action in close combat, friendly fighters within 6\" get +1 to hit until the end of the round",
-      "Cost": 0,
-      "Name": "Lead by Example"
+      "Cost": 0
     },
     "Jihad": {
+      "Name": "Jihad",
       "Effects": "Once per game, when this Model is activated it may call a Jihad As a free action. In the turn a Jihad is called, every model in the warband may add 1 to their Movement Characteristic ",
-      "Cost": 0,
-      "Name": "Jihad"
+      "Cost": 0
     },
     "Ambush Expert": {
+      "Name": "Ambush Expert",
       "Effects": "Select up to two fighters in the warband. This model gains the Infiltrate ability",
-      "Cost": 0,
-      "Name": "Ambush Expert"
+      "Cost": 0
     },
     "Barbed Arrows": {
+      "Name": "Barbed Arrows",
       "Effects": "Ranged attacks made with Barbed Arrows get +1 to wound",
-      "Cost": 5,
-      "Name": "Barbed Arrows"
+      "Cost": 5
     },
     "Elven Cloak": {
+      "Name": "Elven Cloak",
       "Effects": "Ranged attacks made against a Fighter equipped with an Elven Cloak are resolved at -1 to hit",
-      "Cost": 5,
-      "Name": "Elven Cloak"
+      "Cost": 5
     },
     "Condemn": {
+      "Name": "Condemn",
       "Effects": "At the beginningof the game this Fighter elects a single enemy Fighter to condemn. This Fighter wounds the condemned fighter on 2+ with close ocmbat and ranged attacks",
-      "Cost": 10,
-      "Name": "Condemn"
+      "Cost": 10
     }
   },
   "armour": {
     "Light armour": {
+      "Name": "Light armour",
       "Armour Value CC": "6+",
       "Armour Value R": "6+",
       "Effects": null,
       "Cost": 10,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Light armour"
+      "Armour Effect vs R": 1
     },
     "Medium Armour": {
+      "Name": "Medium Armour",
       "Armour Value CC": "5+",
       "Armour Value R": "5+",
       "Effects": null,
       "Cost": 20,
       "Armour Effect vs CC": 2,
-      "Armour Effect vs R": 2,
-      "Name": "Medium Armour"
+      "Armour Effect vs R": 2
     },
     "Heavy Armour": {
+      "Name": "Heavy Armour",
       "Armour Value CC": "4+",
       "Armour Value R": "4+",
       "Effects": null,
       "Cost": 30,
       "Armour Effect vs CC": 3,
-      "Armour Effect vs R": 3,
-      "Name": "Heavy Armour"
+      "Armour Effect vs R": 3
     },
     "Plate armour": {
+      "Name": "Plate armour",
       "Armour Value CC": "3+",
       "Armour Value R": "3+",
       "Effects": null,
       "Cost": 40,
       "Armour Effect vs CC": 4,
-      "Armour Effect vs R": 4,
-      "Name": "Plate armour"
+      "Armour Effect vs R": 4
     },
     "Shield": {
+      "Name": "Shield",
       "Armour Value CC": "6+",
       "Armour Value R": "6+",
       "Effects": null,
       "Cost": 10,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Shield"
+      "Armour Effect vs R": 1
     },
     "Gromril": {
+      "Name": "Gromril",
       "Armour Value CC": "6+",
       "Armour Value R": "6+",
       "Effects": null,
       "Cost": 10,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Gromril"
+      "Armour Effect vs R": 1
     },
     "White Lion Cloak": {
+      "Name": "White Lion Cloak",
       "Armour Value CC": null,
       "Armour Value R": "6+",
       "Effects": null,
       "Cost": 5,
       "Armour Effect vs CC": 0,
-      "Armour Effect vs R": 1,
-      "Name": "White Lion Cloak"
+      "Armour Effect vs R": 1
     },
     "Sea Dragon Cloak": {
+      "Name": "Sea Dragon Cloak",
       "Armour Value CC": null,
       "Armour Value R": "6+",
       "Effects": null,
       "Cost": 5,
       "Armour Effect vs CC": 0,
-      "Armour Effect vs R": 1,
-      "Name": "Sea Dragon Cloak"
+      "Armour Effect vs R": 1
     },
     "Mantlet": {
+      "Name": "Mantlet",
       "Armour Value CC": "4+",
       "Armour Value R": null,
       "Effects": "-A model equipped with a Mantlet loses the benefits of a Mantlet if it moves from its starting location",
       "Cost": 5,
       "Armour Effect vs CC": 0,
-      "Armour Effect vs R": 3,
-      "Name": "Mantlet"
+      "Armour Effect vs R": 3
     },
     "Horo Cloak": {
+      "Name": "Horo Cloak",
       "Armour Value CC": null,
       "Armour Value R": "6+",
       "Effects": null,
       "Cost": 5,
       "Armour Effect vs CC": 0,
-      "Armour Effect vs R": 1,
-      "Name": "Horo Cloak"
+      "Armour Effect vs R": 1
     },
     "Pavise": {
+      "Name": "Pavise",
       "Armour Value CC": "4+",
       "Armour Value R": null,
       "Effects": null,
       "Cost": 10,
       "Armour Effect vs CC": 0,
-      "Armour Effect vs R": 3,
-      "Name": "Pavise"
+      "Armour Effect vs R": 3
     },
     "Barding": {
+      "Name": "Barding",
       "Armour Value CC": "6+",
       "Armour Value R": "6+",
       "Effects": "-Models with Barding Subtract 1 from their Movement Characteristic",
       "Cost": 5,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Barding"
+      "Armour Effect vs R": 1
     },
     "Ithilmar Barding": {
+      "Name": "Ithilmar Barding",
       "Armour Value CC": "6+",
       "Armour Value R": "6+",
       "Effects": null,
       "Cost": 10,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Ithilmar Barding"
+      "Armour Effect vs R": 1
     },
     "Scaly Skin": {
+      "Name": "Scaly Skin",
       "Armour Value CC": "6+",
       "Armour Value R": "6+",
       "Effects": null,
       "Cost": 10,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Scaly Skin"
+      "Armour Effect vs R": 1
     },
     "Chaos Plate Armour": {
+      "Name": "Chaos Plate Armour",
       "Armour Value CC": "3+",
       "Armour Value R": "3+",
       "Effects": null,
       "Cost": 35,
       "Armour Effect vs CC": 4,
-      "Armour Effect vs R": 4,
-      "Name": "Chaos Plate Armour"
+      "Armour Effect vs R": 4
     },
     "Buckler": {
+      "Name": "Buckler",
       "Armour Value CC": "6+",
       "Armour Value R": null,
       "Effects": "Parry",
       "Cost": 10,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 0,
-      "Name": "Buckler"
+      "Armour Effect vs R": 0
     },
     "Armour Transplants": {
+      "Name": "Armour Transplants",
       "Armour Value CC": "5+",
       "Armour Value R": "5+",
       "Effects": null,
       "Cost": 20,
       "Armour Effect vs CC": 2,
-      "Armour Effect vs R": 2,
-      "Name": "Armour Transplants"
+      "Armour Effect vs R": 2
     },
     "Helmet": {
+      "Name": "Helmet",
       "Armour Value CC": "10+",
       "Armour Value R": "10+",
       "Effects": "- A Fighter with a helmet treats wound rolls of 1-6 made against it as Flesh Wounds",
       "Cost": 10,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Helmet"
+      "Armour Effect vs R": 1
     },
     "Mail": {
+      "Name": "Mail",
       "Armour Value CC": "9+",
       "Armour Value R": "9+",
       "Effects": null,
       "Cost": 30,
       "Armour Effect vs CC": 2,
-      "Armour Effect vs R": 2,
-      "Name": "Mail"
+      "Armour Effect vs R": 2
     },
     "Scale Mail": {
+      "Name": "Scale Mail",
       "Armour Value CC": "10+",
       "Armour Value R": "10+",
       "Effects": "-Reduce the AP of attacks made against this model by 1",
       "Cost": 20,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Scale Mail"
+      "Armour Effect vs R": 1
     },
     "Padded Armour": {
+      "Name": "Padded Armour",
       "Armour Value CC": "10+",
       "Armour Value R": "10+",
       "Effects": null,
       "Cost": 15,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Padded Armour"
+      "Armour Effect vs R": 1
     },
     "Small Shield": {
+      "Name": "Small Shield",
       "Armour Value CC": "10+",
       "Armour Value R": "10+",
       "Effects": "-A Fighter equipped with a Small Shield shield gains a 10+ Shield save\n -A shield can only be utilized in conjuntion with a single Melee weapon without the Unwieldly trait when engaged in Close Combat",
       "Cost": 15,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 1,
-      "Name": "Small Shield"
+      "Armour Effect vs R": 1
     },
     "Large Shield": {
+      "Name": "Large Shield",
       "Armour Value CC": "10+",
       "Armour Value R": "9+",
       "Effects": "-A Fighter equipped with a Large Shield shield gains a 9+ Shield save\n -A shield can only be utilized in conjuntion with a single Melee weapon without the Unwieldly trait when engaged in Close Combat",
       "Cost": 25,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 2,
-      "Name": "Large Shield"
+      "Armour Effect vs R": 2
     },
     "Mail over Padded Armour": {
+      "Name": "Mail over Padded Armour",
       "Armour Value CC": "7+",
       "Armour Value R": "7+",
       "Effects": "-Reduce the AP of attacks made against this model by 1\n -Reduce the Movement Characteristic of this Fighter by 1",
       "Cost": 45,
       "Armour Effect vs CC": 4,
-      "Armour Effect vs R": 4,
-      "Name": "Mail over Padded Armour"
+      "Armour Effect vs R": 4
     },
     "Scale Mail over Padded Armour": {
+      "Name": "Scale Mail over Padded Armour",
       "Armour Value CC": "8+",
       "Armour Value R": "8+",
       "Effects": "-Reduce the AP of attacks made against this model by 2",
       "Cost": 40,
       "Armour Effect vs CC": 3,
-      "Armour Effect vs R": 3,
-      "Name": "Scale Mail over Padded Armour"
+      "Armour Effect vs R": 3
     },
     "Targe": {
+      "Name": "Targe",
       "Armour Value CC": "10+",
       "Armour Value R": null,
       "Effects": "Parry",
       "Cost": 15,
       "Armour Effect vs CC": 1,
-      "Armour Effect vs R": 0,
-      "Name": "Targe"
+      "Armour Effect vs R": 0
+    }
+  },
+  "weapons": null,
+  "mounts": {
+    "Arabic_Warhorse": {
+      "Name": "Arabic_Warhorse",
+      "M": 10,
+      "WS": 6,
+      "BS": 7,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 6,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 85,
+      "Abilities": []
+    },
+    "European_Warhorse": {
+      "Name": "European_Warhorse",
+      "M": 8,
+      "WS": 6,
+      "BS": 7,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 6,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 90,
+      "Abilities": []
+    },
+    "Warhorse": {
+      "Name": "Warhorse",
+      "M": 9,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 70,
+      "Abilities": []
+    },
+    "Elven_Warhorse": {
+      "Name": "Elven_Warhorse",
+      "M": 10,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 75,
+      "Abilities": []
+    },
+    "Chaos_Warhorse": {
+      "Name": "Chaos_Warhorse",
+      "M": 9,
+      "WS": 4,
+      "BS": 4,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 85,
+      "Abilities": []
+    },
+    "Cold_One": {
+      "Name": "Cold_One",
+      "M": 7,
+      "WS": 4,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 4,
+      "A": 2,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 110,
+      "Abilities": []
+    },
+    "Rat_Ogre_Bonebreaker": {
+      "Name": "Rat_Ogre_Bonebreaker",
+      "M": 6,
+      "WS": 4,
+      "BS": 4,
+      "S": 5,
+      "T": 4,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 215,
+      "Abilities": []
+    },
+    "Demigryph": {
+      "Name": "Demigryph",
+      "M": 8,
+      "WS": 3,
+      "BS": 4,
+      "S": 5,
+      "T": 4,
+      "W": 3,
+      "I": 3,
+      "A": 3,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 215,
+      "Abilities": []
     }
   },
   "ruleset": {
@@ -587,8 +710,8 @@
       ],
       "units": {
         "Empire_State_Troop": {
-          "Unit_Name": "Empire_State_Troop",
           "Faction": "Empire",
+          "Name": "Empire_State_Troop",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -599,6 +722,7 @@
           "A": 1,
           "Cl": 7,
           "Int": 7,
+          "Points": 55,
           "Abilities": [
             "Counter Charge"
           ],
@@ -631,8 +755,8 @@
           "Mounts": []
         },
         "Empire_State_Troop_Skirmisher": {
-          "Unit_Name": "Empire_State_Troop_Skirmisher",
           "Faction": "Empire",
+          "Name": "Empire_State_Troop_Skirmisher",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -643,6 +767,7 @@
           "A": 1,
           "Cl": 7,
           "Int": 7,
+          "Points": 55,
           "Abilities": [
             "Support Fire"
           ],
@@ -671,8 +796,8 @@
           "Mounts": []
         },
         "Reiksguard": {
-          "Unit_Name": "Reiksguard",
           "Faction": "Empire",
+          "Name": "Reiksguard",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -680,9 +805,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 5,
           "Int": 7,
+          "Points": 110,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -711,8 +837,8 @@
           "Mounts": []
         },
         "Empire_Captain": {
-          "Unit_Name": "Empire_Captain",
           "Faction": "Empire",
+          "Name": "Empire_Captain",
           "M": 5,
           "WS": 3,
           "BS": 3,
@@ -720,9 +846,10 @@
           "T": 4,
           "W": 3,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 6,
+          "Points": 230,
           "Abilities": [
             "Hold the Line"
           ],
@@ -764,8 +891,8 @@
           ]
         },
         "Halfling": {
-          "Unit_Name": "Halfling",
           "Faction": "Empire",
+          "Name": "Halfling",
           "M": 5,
           "WS": 5,
           "BS": 3,
@@ -776,6 +903,7 @@
           "A": 1,
           "Cl": 7,
           "Int": 6,
+          "Points": 30,
           "Abilities": [
             "Short and Nimble"
           ],
@@ -803,8 +931,8 @@
           "Mounts": []
         },
         "Master_Engineer": {
-          "Unit_Name": "Master_Engineer",
           "Faction": "Empire",
+          "Name": "Master_Engineer",
           "M": 5,
           "WS": 4,
           "BS": 3,
@@ -815,6 +943,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 5,
+          "Points": 90,
           "Abilities": [],
           "Weaponry": [
             "Dagger",
@@ -839,8 +968,8 @@
           "Mounts": []
         },
         "Counts_Guard": {
-          "Unit_Name": "Counts_Guard",
           "Faction": "Empire",
+          "Name": "Counts_Guard",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -851,6 +980,7 @@
           "A": 1,
           "Cl": 5,
           "Int": 7,
+          "Points": 60,
           "Abilities": [
             "Counter Charge"
           ],
@@ -882,8 +1012,8 @@
           "Mounts": []
         },
         "Mounted_Empire_Captain": {
-          "Unit_Name": "Mounted_Empire_Captain",
           "Faction": "Empire",
+          "Name": "Mounted_Empire_Captain",
           "M": 5,
           "WS": 3,
           "BS": 3,
@@ -891,9 +1021,10 @@
           "T": 4,
           "W": 3,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 6,
+          "Points": 230,
           "Abilities": [
             "Hold the Line"
           ],
@@ -925,8 +1056,8 @@
           ]
         },
         "Mounted_Reiksguard": {
-          "Unit_Name": "Mounted_Reiksguard",
           "Faction": "Empire",
+          "Name": "Mounted_Reiksguard",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -934,9 +1065,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 5,
           "Int": 7,
+          "Points": 110,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -962,9 +1094,46 @@
             "Warhorse"
           ]
         },
+        "Witch_Hunter": {
+          "Faction": "Empire",
+          "Name": "Witch_Hunter",
+          "M": 5,
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 3,
+          "Cl": 4,
+          "Int": 5,
+          "Points": 140,
+          "Abilities": [
+            "Condemn"
+          ],
+          "Weaponry": [
+            "Axe",
+            "Dagger",
+            "Sword"
+          ],
+          "Two_Hand_Weaponry": [
+            "Two handed sword"
+          ],
+          "Ranged_Weaponry": [
+            "Crossbow",
+            "Pistol"
+          ],
+          "Armour": [
+            "Light armour"
+          ],
+          "Shield": [],
+          "Other Armour": [],
+          "Upgrades": [],
+          "Mounts": []
+        },
         "Swordmaster": {
-          "Unit_Name": "Swordmaster",
           "Faction": "High_Elves",
+          "Name": "Swordmaster",
           "M": 6,
           "WS": 3,
           "BS": 4,
@@ -972,9 +1141,10 @@
           "T": 3,
           "W": 1,
           "I": 2,
-          "A": 2,
+          "A": 3,
           "Cl": 6,
           "Int": 6,
+          "Points": 145,
           "Abilities": [
             "Dodge (Ranged)",
             "Dodge (Close Combat)",
@@ -996,8 +1166,8 @@
           "Mounts": []
         },
         "White_Lion": {
-          "Unit_Name": "White_Lion",
           "Faction": "High_Elves",
+          "Name": "White_Lion",
           "M": 6,
           "WS": 3,
           "BS": 4,
@@ -1005,9 +1175,10 @@
           "T": 3,
           "W": 1,
           "I": 2,
-          "A": 1,
+          "A": 2,
           "Cl": 5,
           "Int": 6,
+          "Points": 140,
           "Abilities": [
             "Lion Rampant",
             "Dodge (Close Combat)",
@@ -1030,8 +1201,8 @@
           "Mounts": []
         },
         "Phoenix_Guard": {
-          "Unit_Name": "Phoenix_Guard",
           "Faction": "High_Elves",
+          "Name": "Phoenix_Guard",
           "M": 6,
           "WS": 3,
           "BS": 4,
@@ -1039,9 +1210,10 @@
           "T": 3,
           "W": 1,
           "I": 2,
-          "A": 1,
+          "A": 2,
           "Cl": 5,
           "Int": 6,
+          "Points": 150,
           "Abilities": [
             "Blessings of Asuryan",
             "Dodge (Close Combat)",
@@ -1063,8 +1235,8 @@
           "Mounts": []
         },
         "Archer": {
-          "Unit_Name": "Archer",
           "Faction": "High_Elves",
+          "Name": "Archer",
           "M": 6,
           "WS": 4,
           "BS": 3,
@@ -1075,6 +1247,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 90,
           "Abilities": [
             "Dodge (Close Combat)",
             "Martial Prowess"
@@ -1096,8 +1269,8 @@
           "Mounts": []
         },
         "Noble": {
-          "Unit_Name": "Noble",
           "Faction": "High_Elves",
+          "Name": "Noble",
           "M": 6,
           "WS": 2,
           "BS": 2,
@@ -1105,9 +1278,10 @@
           "T": 3,
           "W": 3,
           "I": 2,
-          "A": 3,
+          "A": 4,
           "Cl": 4,
           "Int": 5,
+          "Points": 260,
           "Abilities": [
             "Dodge (Close Combat)",
             "Martial Prowess"
@@ -1138,8 +1312,8 @@
           "Mounts": []
         },
         "Mounted_Noble": {
-          "Unit_Name": "Mounted_Noble",
           "Faction": "High_Elves",
+          "Name": "Mounted_Noble",
           "M": 6,
           "WS": 2,
           "BS": 2,
@@ -1147,9 +1321,10 @@
           "T": 3,
           "W": 3,
           "I": 2,
-          "A": 3,
+          "A": 4,
           "Cl": 4,
           "Int": 5,
+          "Points": 260,
           "Abilities": [
             "Dodge (Close Combat)",
             "Martial Prowess"
@@ -1178,8 +1353,8 @@
           ]
         },
         "Silver_Helm": {
-          "Unit_Name": "Silver_Helm",
           "Faction": "High_Elves",
+          "Name": "Silver_Helm",
           "M": 6,
           "WS": 3,
           "BS": 4,
@@ -1190,6 +1365,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 90,
           "Abilities": [
             "Dodge (Close Combat)",
             "Martial Prowess"
@@ -1216,8 +1392,8 @@
           ]
         },
         "Shadow_Warrior": {
-          "Unit_Name": "Shadow_Warrior",
           "Faction": "High_Elves",
+          "Name": "Shadow_Warrior",
           "M": 6,
           "WS": 3,
           "BS": 2,
@@ -1228,6 +1404,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 118,
           "Abilities": [
             "Dodge (Close Combat)",
             "Martial Prowess",
@@ -1253,8 +1430,8 @@
           "Mounts": []
         },
         "Sea_Guard": {
-          "Unit_Name": "Sea_Guard",
           "Faction": "High_Elves",
+          "Name": "Sea_Guard",
           "M": 6,
           "WS": 3,
           "BS": 3,
@@ -1265,6 +1442,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 100,
           "Abilities": [
             "Dodge (Close Combat)",
             "Martial Prowess"
@@ -1293,8 +1471,8 @@
           "Mounts": []
         },
         "Big_'Un": {
-          "Unit_Name": "Big_'Un",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Big_'Un",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -1302,9 +1480,10 @@
           "T": 4,
           "W": 1,
           "I": 5,
-          "A": 1,
+          "A": 2,
           "Cl": 7,
           "Int": 8,
+          "Points": 110,
           "Abilities": [
             "Choppas"
           ],
@@ -1331,8 +1510,8 @@
           "Mounts": []
         },
         "Black_Orc": {
-          "Unit_Name": "Black_Orc",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Black_Orc",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -1340,9 +1519,10 @@
           "T": 4,
           "W": 1,
           "I": 5,
-          "A": 2,
+          "A": 3,
           "Cl": 6,
           "Int": 7,
+          "Points": 135,
           "Abilities": [
             "Choppas"
           ],
@@ -1372,8 +1552,8 @@
           "Mounts": []
         },
         "Savage_orc": {
-          "Unit_Name": "Savage_orc",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Savage_orc",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -1381,9 +1561,10 @@
           "T": 4,
           "W": 1,
           "I": 5,
-          "A": 2,
+          "A": 3,
           "Cl": 6,
           "Int": 9,
+          "Points": 125,
           "Abilities": [
             "Choppas",
             "Warpaint"
@@ -1408,8 +1589,8 @@
           "Mounts": []
         },
         "Savage_Orc_Big_Un": {
-          "Unit_Name": "Savage_Orc_Big_Un",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Savage_Orc_Big_Un",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -1417,9 +1598,10 @@
           "T": 4,
           "W": 1,
           "I": 5,
-          "A": 2,
+          "A": 3,
           "Cl": 6,
           "Int": 9,
+          "Points": 150,
           "Abilities": [
             "Choppas",
             "Warpaint"
@@ -1444,8 +1626,8 @@
           "Mounts": []
         },
         "Orc_Big_Boss": {
-          "Unit_Name": "Orc_Big_Boss",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Orc_Big_Boss",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -1453,9 +1635,10 @@
           "T": 5,
           "W": 3,
           "I": 5,
-          "A": 3,
+          "A": 4,
           "Cl": 6,
           "Int": 7,
+          "Points": 220,
           "Abilities": [
             "Choppas",
             "Waaagh!"
@@ -1486,8 +1669,8 @@
           "Mounts": []
         },
         "Arrer_Boy": {
-          "Unit_Name": "Arrer_Boy",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Arrer_Boy",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -1498,6 +1681,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 8,
+          "Points": 60,
           "Abilities": [
             "Choppas"
           ],
@@ -1522,8 +1706,8 @@
           "Mounts": []
         },
         "Troll": {
-          "Unit_Name": "Troll",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Troll",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -1531,9 +1715,10 @@
           "T": 4,
           "W": 3,
           "I": 5,
-          "A": 3,
+          "A": 4,
           "Cl": 7,
           "Int": 10,
+          "Points": 250,
           "Abilities": [
             "Regeneration"
           ],
@@ -1551,8 +1736,8 @@
           "Mounts": []
         },
         "Night_Goblin": {
-          "Unit_Name": "Night_Goblin",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Night_Goblin",
           "M": 5,
           "WS": 5,
           "BS": 4,
@@ -1563,6 +1748,7 @@
           "A": 1,
           "Cl": 9,
           "Int": 8,
+          "Points": 30,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -1588,8 +1774,8 @@
           "Mounts": []
         },
         "Night_Goblin_Big_Boss": {
-          "Unit_Name": "Night_Goblin_Big_Boss",
           "Faction": "Orcs_and_Goblins",
+          "Name": "Night_Goblin_Big_Boss",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -1600,6 +1786,7 @@
           "A": 3,
           "Cl": 7,
           "Int": 7,
+          "Points": 120,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -1628,8 +1815,8 @@
           "Mounts": []
         },
         "Peasant": {
-          "Unit_Name": "Peasant",
           "Faction": "Brettonia",
+          "Name": "Peasant",
           "M": 5,
           "WS": 5,
           "BS": 5,
@@ -1640,6 +1827,7 @@
           "A": 1,
           "Cl": 9,
           "Int": 8,
+          "Points": 25,
           "Abilities": [
             "Peasant's Duty"
           ],
@@ -1664,8 +1852,8 @@
           "Mounts": []
         },
         "Bowman": {
-          "Unit_Name": "Bowman",
           "Faction": "Brettonia",
+          "Name": "Bowman",
           "M": 5,
           "WS": 5,
           "BS": 4,
@@ -1676,6 +1864,7 @@
           "A": 1,
           "Cl": 9,
           "Int": 8,
+          "Points": 35,
           "Abilities": [
             "Peasants Duty"
           ],
@@ -1698,8 +1887,8 @@
           "Mounts": []
         },
         "Brettonian_Foot_Knight": {
-          "Unit_Name": "Brettonian_Foot_Knight",
           "Faction": "Brettonia",
+          "Name": "Brettonian_Foot_Knight",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -1707,9 +1896,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 6,
           "Int": 7,
+          "Points": 95,
           "Abilities": [
             "Blessing of the Lady",
             "Horse Lords"
@@ -1744,8 +1934,8 @@
           "Mounts": []
         },
         "Brettonian_Knight": {
-          "Unit_Name": "Brettonian_Knight",
           "Faction": "Brettonia",
+          "Name": "Brettonian_Knight",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -1753,9 +1943,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 6,
           "Int": 7,
+          "Points": 95,
           "Abilities": [
             "Blessing of the Lady",
             "Horse Lords"
@@ -1788,8 +1979,8 @@
           ]
         },
         "Duke": {
-          "Unit_Name": "Duke",
           "Faction": "Brettonia",
+          "Name": "Duke",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -1797,9 +1988,10 @@
           "T": 4,
           "W": 1,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 6,
+          "Points": 165,
           "Abilities": [
             "Blessing of the Lady",
             "Horse Lords",
@@ -1833,8 +2025,8 @@
           ]
         },
         "Skavenslave": {
-          "Unit_Name": "Skavenslave",
           "Faction": "Skaven",
+          "Name": "Skavenslave",
           "M": 6,
           "WS": 5,
           "BS": 5,
@@ -1845,6 +2037,7 @@
           "A": 1,
           "Cl": 9,
           "Int": 8,
+          "Points": 35,
           "Abilities": [
             "Strength in Numbers"
           ],
@@ -1866,8 +2059,8 @@
           "Mounts": []
         },
         "Clan_Rat": {
-          "Unit_Name": "Clan_Rat",
           "Faction": "Skaven",
+          "Name": "Clan_Rat",
           "M": 6,
           "WS": 4,
           "BS": 4,
@@ -1878,6 +2071,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 7,
+          "Points": 60,
           "Abilities": [
             "Strength in Numbers"
           ],
@@ -1905,8 +2099,8 @@
           "Mounts": []
         },
         "Gutter_Runner": {
-          "Unit_Name": "Gutter_Runner",
           "Faction": "Skaven",
+          "Name": "Gutter_Runner",
           "M": 6,
           "WS": 4,
           "BS": 3,
@@ -1917,6 +2111,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 6,
+          "Points": 70,
           "Abilities": [
             "Infiltrate",
             "Strength in Numbers"
@@ -1946,8 +2141,8 @@
           "Mounts": []
         },
         "Storm_Vermin": {
-          "Unit_Name": "Storm_Vermin",
           "Faction": "Skaven",
+          "Name": "Storm_Vermin",
           "M": 6,
           "WS": 3,
           "BS": 4,
@@ -1955,9 +2150,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 7,
           "Int": 6,
+          "Points": 95,
           "Abilities": [
             "Strength in Numbers"
           ],
@@ -1986,8 +2182,8 @@
           "Mounts": []
         },
         "Claw_Leader": {
-          "Unit_Name": "Claw_Leader",
           "Faction": "Skaven",
+          "Name": "Claw_Leader",
           "M": 6,
           "WS": 3,
           "BS": 3,
@@ -1995,9 +2191,10 @@
           "T": 4,
           "W": 2,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 6,
           "Int": 5,
+          "Points": 205,
           "Abilities": [
             "Strength in Numbers"
           ],
@@ -2031,8 +2228,8 @@
           "Mounts": []
         },
         "Mounted_Claw_Leader": {
-          "Unit_Name": "Mounted_Claw_Leader",
           "Faction": "Skaven",
+          "Name": "Mounted_Claw_Leader",
           "M": 6,
           "WS": 3,
           "BS": 3,
@@ -2040,9 +2237,10 @@
           "T": 4,
           "W": 2,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 6,
           "Int": 5,
+          "Points": 205,
           "Abilities": [
             "Strength in Numbers"
           ],
@@ -2073,8 +2271,8 @@
           ]
         },
         "Rat_Ogre": {
-          "Unit_Name": "Rat_Ogre",
           "Faction": "Skaven",
+          "Name": "Rat_Ogre",
           "M": 6,
           "WS": 4,
           "BS": 4,
@@ -2085,6 +2283,7 @@
           "A": 4,
           "Cl": 5,
           "Int": 9,
+          "Points": 225,
           "Abilities": [],
           "Weaponry": [
             "Monstrous Claws"
@@ -2105,8 +2304,8 @@
           "Mounts": []
         },
         "Dwarf_Warrior": {
-          "Unit_Name": "Dwarf_Warrior",
           "Faction": "Dwarf",
+          "Name": "Dwarf_Warrior",
           "M": 4,
           "WS": 4,
           "BS": 4,
@@ -2117,6 +2316,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 65,
           "Abilities": [
             "Dwarven Crafted"
           ],
@@ -2146,8 +2346,8 @@
           "Mounts": []
         },
         "Slayer": {
-          "Unit_Name": "Slayer",
           "Faction": "Dwarf",
+          "Name": "Slayer",
           "M": 4,
           "WS": 3,
           "BS": 4,
@@ -2155,9 +2355,10 @@
           "T": 4,
           "W": 1,
           "I": 5,
-          "A": 1,
+          "A": 2,
           "Cl": 5,
           "Int": 6,
+          "Points": 105,
           "Abilities": [
             "Unbreakable",
             "Deathblow"
@@ -2178,8 +2379,8 @@
           "Mounts": []
         },
         "Ironbreaker": {
-          "Unit_Name": "Ironbreaker",
           "Faction": "Dwarf",
+          "Name": "Ironbreaker",
           "M": 4,
           "WS": 3,
           "BS": 4,
@@ -2187,9 +2388,10 @@
           "T": 4,
           "W": 1,
           "I": 5,
-          "A": 1,
+          "A": 2,
           "Cl": 5,
           "Int": 6,
+          "Points": 115,
           "Abilities": [
             "Dwarven Crafted"
           ],
@@ -2218,8 +2420,8 @@
           "Mounts": []
         },
         "Hammerer": {
-          "Unit_Name": "Hammerer",
           "Faction": "Dwarf",
+          "Name": "Hammerer",
           "M": 4,
           "WS": 3,
           "BS": 4,
@@ -2227,9 +2429,10 @@
           "T": 4,
           "W": 1,
           "I": 5,
-          "A": 2,
+          "A": 3,
           "Cl": 5,
           "Int": 6,
+          "Points": 130,
           "Abilities": [],
           "Weaponry": [],
           "Two_Hand_Weaponry": [
@@ -2251,8 +2454,8 @@
           "Mounts": []
         },
         "Dwarf_Captain": {
-          "Unit_Name": "Dwarf_Captain",
           "Faction": "Dwarf",
+          "Name": "Dwarf_Captain",
           "M": 4,
           "WS": 3,
           "BS": 3,
@@ -2260,9 +2463,10 @@
           "T": 5,
           "W": 3,
           "I": 5,
-          "A": 3,
+          "A": 4,
           "Cl": 4,
           "Int": 5,
+          "Points": 235,
           "Abilities": [
             "Dwarven Crafted"
           ],
@@ -2297,8 +2501,8 @@
           "Mounts": []
         },
         "Warrior_of_Chaos": {
-          "Unit_Name": "Warrior_of_Chaos",
           "Faction": "Chaos",
+          "Name": "Warrior_of_Chaos",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -2306,9 +2510,10 @@
           "T": 4,
           "W": 1,
           "I": 3,
-          "A": 2,
+          "A": 3,
           "Cl": 6,
           "Int": 7,
+          "Points": 145,
           "Abilities": [
             "Will of Chaos"
           ],
@@ -2345,8 +2550,8 @@
           "Mounts": []
         },
         "Chaos_Knight": {
-          "Unit_Name": "Chaos_Knight",
           "Faction": "Chaos",
+          "Name": "Chaos_Knight",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -2354,9 +2559,10 @@
           "T": 4,
           "W": 1,
           "I": 3,
-          "A": 2,
+          "A": 3,
           "Cl": 6,
           "Int": 7,
+          "Points": 145,
           "Abilities": [
             "Will of Chaos"
           ],
@@ -2390,8 +2596,8 @@
           ]
         },
         "Marauder": {
-          "Unit_Name": "Marauder",
           "Faction": "Chaos",
+          "Name": "Marauder",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -2402,6 +2608,7 @@
           "A": 1,
           "Cl": 7,
           "Int": 8,
+          "Points": 55,
           "Abilities": [
             "Will of Chaos"
           ],
@@ -2437,8 +2644,8 @@
           "Mounts": []
         },
         "Mounted_Exalted_Champion": {
-          "Unit_Name": "Mounted_Exalted_Champion",
           "Faction": "Chaos",
+          "Name": "Mounted_Exalted_Champion",
           "M": 5,
           "WS": 2,
           "BS": 4,
@@ -2446,9 +2653,10 @@
           "T": 4,
           "W": 3,
           "I": 2,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 7,
+          "Points": 250,
           "Abilities": [
             "Will of Chaos"
           ],
@@ -2481,8 +2689,8 @@
           ]
         },
         "Exalted_Champion": {
-          "Unit_Name": "Exalted_Champion",
           "Faction": "Chaos",
+          "Name": "Exalted_Champion",
           "M": 5,
           "WS": 2,
           "BS": 4,
@@ -2490,9 +2698,10 @@
           "T": 4,
           "W": 3,
           "I": 2,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 7,
+          "Points": 250,
           "Abilities": [
             "Will of Chaos"
           ],
@@ -2529,8 +2738,8 @@
           "Mounts": []
         },
         "Dark_Elf_Warrior": {
-          "Unit_Name": "Dark_Elf_Warrior",
           "Faction": "Dark_Elves",
+          "Name": "Dark_Elf_Warrior",
           "M": 6,
           "WS": 3,
           "BS": 3,
@@ -2541,6 +2750,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 100,
           "Abilities": [
             "Murderous Prowess",
             "Dodge (Close Combat)"
@@ -2570,8 +2780,8 @@
           "Mounts": []
         },
         "Dreadknight": {
-          "Unit_Name": "Dreadknight",
           "Faction": "Dark_Elves",
+          "Name": "Dreadknight",
           "M": 6,
           "WS": 3,
           "BS": 3,
@@ -2582,6 +2792,7 @@
           "A": 2,
           "Cl": 5,
           "Int": 6,
+          "Points": 140,
           "Abilities": [
             "Murderous Prowess",
             "Dodge (Close Combat)"
@@ -2618,8 +2829,8 @@
           ]
         },
         "Witch_Elf": {
-          "Unit_Name": "Witch_Elf",
           "Faction": "Dark_Elves",
+          "Name": "Witch_Elf",
           "M": 7,
           "WS": 3,
           "BS": 4,
@@ -2630,6 +2841,7 @@
           "A": 2,
           "Cl": 5,
           "Int": 7,
+          "Points": 135,
           "Abilities": [
             "Murderous Prowess",
             "Dodge (Close Combat)",
@@ -2649,8 +2861,8 @@
           "Mounts": []
         },
         "Dark_Elf_Corsair": {
-          "Unit_Name": "Dark_Elf_Corsair",
           "Faction": "Dark_Elves",
+          "Name": "Dark_Elf_Corsair",
           "M": 6,
           "WS": 3,
           "BS": 3,
@@ -2661,6 +2873,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 100,
           "Abilities": [
             "Murderous Prowess",
             "Dodge (Close Combat)"
@@ -2688,8 +2901,8 @@
           "Mounts": []
         },
         "Executioner": {
-          "Unit_Name": "Executioner",
           "Faction": "Dark_Elves",
+          "Name": "Executioner",
           "M": 6,
           "WS": 3,
           "BS": 4,
@@ -2697,9 +2910,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 6,
           "Int": 6,
+          "Points": 125,
           "Abilities": [
             "Murderous Prowess",
             "Dodge (Close Combat)"
@@ -2720,8 +2934,8 @@
           "Mounts": []
         },
         "Shade": {
-          "Unit_Name": "Shade",
           "Faction": "Dark_Elves",
+          "Name": "Shade",
           "M": 6,
           "WS": 3,
           "BS": 2,
@@ -2732,6 +2946,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 120,
           "Abilities": [
             "Murderous Prowess",
             "Dodge (Close Combat)",
@@ -2762,8 +2977,8 @@
           "Mounts": []
         },
         "Mounted_Dark_Elf_Master": {
-          "Unit_Name": "Mounted_Dark_Elf_Master",
           "Faction": "Dark_Elves",
+          "Name": "Mounted_Dark_Elf_Master",
           "M": 6,
           "WS": 2,
           "BS": 2,
@@ -2771,9 +2986,10 @@
           "T": 3,
           "W": 1,
           "I": 2,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 4,
+          "Points": 205,
           "Abilities": [
             "Murderous Prowess",
             "Dodge (Close Combat)"
@@ -2808,8 +3024,8 @@
           ]
         },
         "Dark_Elf_Master": {
-          "Unit_Name": "Dark_Elf_Master",
           "Faction": "Dark_Elves",
+          "Name": "Dark_Elf_Master",
           "M": 6,
           "WS": 2,
           "BS": 2,
@@ -2817,9 +3033,10 @@
           "T": 3,
           "W": 1,
           "I": 2,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 4,
+          "Points": 205,
           "Abilities": [
             "Murderous Prowess",
             "Dodge (Close Combat)"
@@ -2854,8 +3071,8 @@
           "Mounts": []
         },
         "Cathayan_Captain": {
-          "Unit_Name": "Cathayan_Captain",
           "Faction": "Cathay",
+          "Name": "Cathayan_Captain",
           "M": 5,
           "WS": 3,
           "BS": 3,
@@ -2863,9 +3080,10 @@
           "T": 3,
           "W": 3,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 5,
+          "Points": 210,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -2902,8 +3120,8 @@
           "Mounts": []
         },
         "Mounted_Cathayan_Captain": {
-          "Unit_Name": "Mounted_Cathayan_Captain",
           "Faction": "Cathay",
+          "Name": "Mounted_Cathayan_Captain",
           "M": 5,
           "WS": 3,
           "BS": 3,
@@ -2911,9 +3129,10 @@
           "T": 3,
           "W": 3,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 5,
+          "Points": 210,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -2946,8 +3165,8 @@
           ]
         },
         "Dragon_Cavalry": {
-          "Unit_Name": "Dragon_Cavalry",
           "Faction": "Cathay",
+          "Name": "Dragon_Cavalry",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -2955,9 +3174,10 @@
           "T": 3,
           "W": 1,
           "I": 4,
-          "A": 1,
+          "A": 2,
           "Cl": 6,
           "Int": 7,
+          "Points": 85,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -2989,8 +3209,8 @@
           ]
         },
         "Imperial_Infantry": {
-          "Unit_Name": "Imperial_Infantry",
           "Faction": "Cathay",
+          "Name": "Imperial_Infantry",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -3001,6 +3221,7 @@
           "A": 1,
           "Cl": 7,
           "Int": 7,
+          "Points": 50,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -3034,8 +3255,8 @@
           ]
         },
         "Levy-Infantry": {
-          "Unit_Name": "Levy-Infantry",
           "Faction": "Cathay",
+          "Name": "Levy-Infantry",
           "M": 5,
           "WS": 5,
           "BS": 5,
@@ -3046,6 +3267,7 @@
           "A": 1,
           "Cl": 9,
           "Int": 7,
+          "Points": 20,
           "Abilities": [],
           "Weaponry": [
             "Axe",
@@ -3072,8 +3294,8 @@
           "Mounts": []
         },
         "Dragonblade": {
-          "Unit_Name": "Dragonblade",
           "Faction": "Cathay",
+          "Name": "Dragonblade",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -3081,9 +3303,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 2,
+          "A": 3,
           "Cl": 6,
           "Int": 6,
+          "Points": 110,
           "Abilities": [],
           "Weaponry": [],
           "Two_Hand_Weaponry": [
@@ -3100,8 +3323,8 @@
           "Mounts": []
         },
         "Imperial_Guard": {
-          "Unit_Name": "Imperial_Guard",
           "Faction": "Cathay",
+          "Name": "Imperial_Guard",
           "M": 5,
           "WS": 3,
           "BS": 4,
@@ -3109,9 +3332,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 6,
           "Int": 6,
+          "Points": 90,
           "Abilities": [],
           "Weaponry": [],
           "Two_Hand_Weaponry": [
@@ -3128,8 +3352,8 @@
           "Mounts": []
         },
         "Temple_Dog": {
-          "Unit_Name": "Temple_Dog",
           "Faction": "Cathay",
+          "Name": "Temple_Dog",
           "M": 7,
           "WS": 4,
           "BS": 4,
@@ -3137,9 +3361,10 @@
           "T": 5,
           "W": 2,
           "I": 3,
-          "A": 2,
+          "A": 3,
           "Cl": 6,
           "Int": 9,
+          "Points": 180,
           "Abilities": [],
           "Weaponry": [],
           "Two_Hand_Weaponry": [],
@@ -3151,8 +3376,8 @@
           "Mounts": []
         },
         "Hatamoto": {
-          "Unit_Name": "Hatamoto",
           "Faction": "Nippon",
+          "Name": "Hatamoto",
           "M": 5,
           "WS": 3,
           "BS": 2,
@@ -3160,9 +3385,10 @@
           "T": 3,
           "W": 3,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 5,
+          "Points": 220,
           "Abilities": [
             "Way of the Warrior"
           ],
@@ -3193,8 +3419,8 @@
           "Mounts": []
         },
         "Mounted_Hatamoto": {
-          "Unit_Name": "Mounted_Hatamoto",
           "Faction": "Nippon",
+          "Name": "Mounted_Hatamoto",
           "M": 5,
           "WS": 3,
           "BS": 2,
@@ -3202,9 +3428,10 @@
           "T": 3,
           "W": 3,
           "I": 3,
-          "A": 3,
+          "A": 4,
           "Cl": 5,
           "Int": 5,
+          "Points": 220,
           "Abilities": [
             "Way of the Warrior"
           ],
@@ -3235,8 +3462,8 @@
           ]
         },
         "Samurai": {
-          "Unit_Name": "Samurai",
           "Faction": "Nippon",
+          "Name": "Samurai",
           "M": 5,
           "WS": 3,
           "BS": 3,
@@ -3244,9 +3471,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 6,
           "Int": 6,
+          "Points": 100,
           "Abilities": [
             "Way of the Warrior"
           ],
@@ -3281,8 +3509,8 @@
           "Mounts": []
         },
         "Mounted_Samurai": {
-          "Unit_Name": "Mounted_Samurai",
           "Faction": "Nippon",
+          "Name": "Mounted_Samurai",
           "M": 5,
           "WS": 3,
           "BS": 3,
@@ -3290,9 +3518,10 @@
           "T": 3,
           "W": 1,
           "I": 3,
-          "A": 1,
+          "A": 2,
           "Cl": 6,
           "Int": 6,
+          "Points": 100,
           "Abilities": [
             "Way of the Warrior"
           ],
@@ -3325,8 +3554,8 @@
           ]
         },
         "Ashiguru": {
-          "Unit_Name": "Ashiguru",
           "Faction": "Nippon",
+          "Name": "Ashiguru",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -3337,6 +3566,7 @@
           "A": 1,
           "Cl": 7,
           "Int": 8,
+          "Points": 50,
           "Abilities": [],
           "Weaponry": [
             "Dagger"
@@ -3362,8 +3592,8 @@
           "Mounts": []
         },
         "Nipponese_Leves": {
-          "Unit_Name": "Nipponese_Leves",
           "Faction": "Nippon",
+          "Name": "Nipponese_Leves",
           "M": 5,
           "WS": 5,
           "BS": 5,
@@ -3374,6 +3604,7 @@
           "A": 1,
           "Cl": 9,
           "Int": 9,
+          "Points": 20,
           "Abilities": [],
           "Weaponry": [
             "Dagger"
@@ -3431,8 +3662,10 @@
       ],
       "units": {
         "Earl": {
-          "Unit_Name": "Earl",
+          "Name": "Earl",
           "Faction": "Saxons",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 4,
           "BS": 5,
@@ -3443,6 +3676,7 @@
           "A": 4,
           "Cl": 6,
           "Int": 5,
+          "Points": 270,
           "Abilities": [
             "Duty",
             "Shield Wall!"
@@ -3483,8 +3717,10 @@
           ]
         },
         "Thegn": {
-          "Unit_Name": "Thegn",
+          "Name": "Thegn",
           "Faction": "Saxons",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 4,
           "BS": 5,
@@ -3495,6 +3731,7 @@
           "A": 3,
           "Cl": 6,
           "Int": 7,
+          "Points": 215,
           "Abilities": [
             "Duty",
             "Shield Wall!"
@@ -3534,8 +3771,10 @@
           ]
         },
         "Huscarl": {
-          "Unit_Name": "Huscarl",
+          "Name": "Huscarl",
           "Faction": "Saxons",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 5,
           "BS": 6,
@@ -3546,6 +3785,7 @@
           "A": 2,
           "Cl": 7,
           "Int": 8,
+          "Points": 120,
           "Abilities": [
             "Duty",
             "Shield Wall!"
@@ -3582,8 +3822,10 @@
           ]
         },
         "Fyrd": {
-          "Unit_Name": "Fyrd",
+          "Name": "Fyrd",
           "Faction": "Saxons",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 7,
           "BS": 7,
@@ -3594,6 +3836,7 @@
           "A": 1,
           "Cl": 9,
           "Int": 9,
+          "Points": 35,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)"
@@ -3621,8 +3864,10 @@
           "Upgrades": []
         },
         "Mounted_Duke": {
-          "Unit_Name": "Mounted_Duke",
+          "Name": "Mounted_Duke",
           "Faction": "Normans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 3,
           "BS": 7,
@@ -3633,6 +3878,7 @@
           "A": 4,
           "Cl": 5,
           "Int": 7,
+          "Points": 260,
           "Abilities": [
             "Lead by Example"
           ],
@@ -3666,8 +3912,10 @@
           "Upgrades": []
         },
         "Norman_Duke": {
-          "Unit_Name": "Norman_Duke",
+          "Name": "Norman_Duke",
           "Faction": "Normans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 3,
           "BS": 7,
@@ -3678,6 +3926,7 @@
           "A": 4,
           "Cl": 5,
           "Int": 7,
+          "Points": 260,
           "Abilities": [
             "Lead by Example"
           ],
@@ -3710,8 +3959,10 @@
           "Upgrades": []
         },
         "Mounted_Norman_Noble": {
-          "Unit_Name": "Mounted_Norman_Noble",
+          "Name": "Mounted_Norman_Noble",
           "Faction": "Normans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 4,
           "BS": 7,
@@ -3722,6 +3973,7 @@
           "A": 3,
           "Cl": 6,
           "Int": 8,
+          "Points": 195,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)"
@@ -3755,8 +4007,10 @@
           "Upgrades": []
         },
         "Militie": {
-          "Unit_Name": "Militie",
+          "Name": "Militie",
           "Faction": "Normans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 6,
           "BS": 6,
@@ -3767,6 +4021,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 8,
+          "Points": 70,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)",
@@ -3794,8 +4049,10 @@
           "Upgrades": []
         },
         "Norman_Skirmisher": {
-          "Unit_Name": "Norman_Skirmisher",
+          "Name": "Norman_Skirmisher",
           "Faction": "Normans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 7,
           "BS": 5,
@@ -3806,6 +4063,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 8,
+          "Points": 70,
           "Abilities": [],
           "Two_Hand_Weaponry": [],
           "Weaponry": [
@@ -3830,8 +4088,10 @@
           "Upgrades": []
         },
         "Mounted_Strategos": {
-          "Unit_Name": "Mounted_Strategos",
+          "Name": "Mounted_Strategos",
           "Faction": "Romans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 4,
           "BS": 5,
@@ -3842,6 +4102,7 @@
           "A": 3,
           "Cl": 5,
           "Int": 5,
+          "Points": 245,
           "Abilities": [
             "Commander"
           ],
@@ -3879,8 +4140,10 @@
           "Upgrades": []
         },
         "Strategos": {
-          "Unit_Name": "Strategos",
+          "Name": "Strategos",
           "Faction": "Romans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 4,
           "BS": 5,
@@ -3891,6 +4154,7 @@
           "A": 3,
           "Cl": 5,
           "Int": 5,
+          "Points": 245,
           "Abilities": [
             "Commander"
           ],
@@ -3925,8 +4189,10 @@
           "Upgrades": []
         },
         "Varangian_Guard": {
-          "Unit_Name": "Varangian_Guard",
+          "Name": "Varangian_Guard",
           "Faction": "Romans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 5,
           "BS": 6,
@@ -3937,6 +4203,7 @@
           "A": 2,
           "Cl": 6,
           "Int": 8,
+          "Points": 145,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)",
@@ -3970,8 +4237,10 @@
           "Upgrades": []
         },
         "Thematic_Infantry": {
-          "Unit_Name": "Thematic_Infantry",
+          "Name": "Thematic_Infantry",
           "Faction": "Romans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 6,
           "BS": 6,
@@ -3982,6 +4251,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 8,
+          "Points": 70,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)"
@@ -4007,8 +4277,10 @@
           "Upgrades": []
         },
         "Theamtic_Skirmisher": {
-          "Unit_Name": "Theamtic_Skirmisher",
+          "Name": "Theamtic_Skirmisher",
           "Faction": "Romans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 6,
           "BS": 5,
@@ -4019,6 +4291,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 8,
+          "Points": 80,
           "Abilities": [],
           "Two_Hand_Weaponry": [],
           "Weaponry": [
@@ -4043,8 +4316,10 @@
           "Upgrades": []
         },
         "Tagmatic_Infantry": {
-          "Unit_Name": "Tagmatic_Infantry",
+          "Name": "Tagmatic_Infantry",
           "Faction": "Romans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 5,
           "BS": 6,
@@ -4055,6 +4330,7 @@
           "A": 2,
           "Cl": 6,
           "Int": 7,
+          "Points": 120,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)"
@@ -4087,8 +4363,10 @@
           "Upgrades": []
         },
         "Tagmatic_Skirmisher": {
-          "Unit_Name": "Tagmatic_Skirmisher",
+          "Name": "Tagmatic_Skirmisher",
           "Faction": "Romans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 6,
           "BS": 5,
@@ -4099,6 +4377,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 7,
+          "Points": 100,
           "Abilities": [],
           "Two_Hand_Weaponry": [],
           "Weaponry": [
@@ -4128,8 +4407,10 @@
           "Upgrades": []
         },
         "Tagmatic_Cavalry": {
-          "Unit_Name": "Tagmatic_Cavalry",
+          "Name": "Tagmatic_Cavalry",
           "Faction": "Romans",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 5,
           "BS": 5,
@@ -4140,6 +4421,7 @@
           "A": 2,
           "Cl": 6,
           "Int": 7,
+          "Points": 130,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)"
@@ -4176,8 +4458,10 @@
           "Upgrades": []
         },
         "Jarl": {
-          "Unit_Name": "Jarl",
+          "Name": "Jarl",
           "Faction": "Vikings",
+          "AB Points": "",
+          "": "",
           "M": 6,
           "WS": 3,
           "BS": 5,
@@ -4188,6 +4472,7 @@
           "A": 5,
           "Cl": 6,
           "Int": 6,
+          "Points": 320,
           "Abilities": [
             "Valhalla",
             "Shield Wall!",
@@ -4229,8 +4514,10 @@
           ]
         },
         "Hersir": {
-          "Unit_Name": "Hersir",
+          "Name": "Hersir",
           "Faction": "Vikings",
+          "AB Points": "",
+          "": "",
           "M": 6,
           "WS": 4,
           "BS": 5,
@@ -4241,6 +4528,7 @@
           "A": 3,
           "Cl": 6,
           "Int": 8,
+          "Points": 220,
           "Abilities": [
             "Valhalla",
             "Shield Wall!"
@@ -4280,8 +4568,10 @@
           ]
         },
         "Hirdmen": {
-          "Unit_Name": "Hirdmen",
+          "Name": "Hirdmen",
           "Faction": "Vikings",
+          "AB Points": "",
+          "": "",
           "M": 6,
           "WS": 4,
           "BS": 6,
@@ -4292,6 +4582,7 @@
           "A": 2,
           "Cl": 6,
           "Int": 8,
+          "Points": 160,
           "Abilities": [
             "Valhalla",
             "Shield Wall!"
@@ -4329,8 +4620,10 @@
           ]
         },
         "Shield_Maiden": {
-          "Unit_Name": "Shield_Maiden",
+          "Name": "Shield_Maiden",
           "Faction": "Vikings",
+          "AB Points": "",
+          "": "",
           "M": 6,
           "WS": 4,
           "BS": 5,
@@ -4341,6 +4634,7 @@
           "A": 2,
           "Cl": 5,
           "Int": 7,
+          "Points": 155,
           "Abilities": [
             "Valhalla",
             "Shield Wall!"
@@ -4377,8 +4671,10 @@
           ]
         },
         "Berserker": {
-          "Unit_Name": "Berserker",
+          "Name": "Berserker",
           "Faction": "Vikings",
+          "AB Points": "",
+          "": "",
           "M": 6,
           "WS": 6,
           "BS": 7,
@@ -4389,6 +4685,7 @@
           "A": 4,
           "Cl": 4,
           "Int": 9,
+          "Points": 195,
           "Abilities": [
             "Valhalla"
           ],
@@ -4417,8 +4714,10 @@
           ]
         },
         "Bondi": {
-          "Unit_Name": "Bondi",
+          "Name": "Bondi",
           "Faction": "Vikings",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 6,
           "BS": 5,
@@ -4429,6 +4728,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 8,
+          "Points": 80,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)"
@@ -4454,8 +4754,10 @@
           "Upgrades": []
         },
         "Celtic_Chief": {
-          "Unit_Name": "Celtic_Chief",
+          "Name": "Celtic_Chief",
           "Faction": "Celts",
+          "AB Points": "",
+          "": "",
           "M": 7,
           "WS": 4,
           "BS": 4,
@@ -4466,6 +4768,7 @@
           "A": 4,
           "Cl": 6,
           "Int": 6,
+          "Points": 295,
           "Abilities": [
             "Hit and Run Specialist",
             "Skirmisher",
@@ -4502,8 +4805,10 @@
           "Upgrades": []
         },
         "Kern": {
-          "Unit_Name": "Kern",
+          "Name": "Kern",
           "Faction": "Celts",
+          "AB Points": "",
+          "": "",
           "M": 7,
           "WS": 6,
           "BS": 5,
@@ -4514,6 +4819,7 @@
           "A": 1,
           "Cl": 8,
           "Int": 8,
+          "Points": 100,
           "Abilities": [
             "Hit and Run Specialist",
             "Skirmisher"
@@ -4544,8 +4850,10 @@
           "Upgrades": []
         },
         "Lucht_Tighe": {
-          "Unit_Name": "Lucht_Tighe",
+          "Name": "Lucht_Tighe",
           "Faction": "Celts",
+          "AB Points": "",
+          "": "",
           "M": 7,
           "WS": 5,
           "BS": 6,
@@ -4556,6 +4864,7 @@
           "A": 2,
           "Cl": 7,
           "Int": 7,
+          "Points": 145,
           "Abilities": [
             "Hit and Run Specialist",
             "Skirmisher"
@@ -4589,8 +4898,10 @@
           "Upgrades": []
         },
         "Arab_General": {
-          "Unit_Name": "Arab_General",
+          "Name": "Arab_General",
           "Faction": "Arabs",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 4,
           "BS": 4,
@@ -4601,6 +4912,7 @@
           "A": 3,
           "Cl": 5,
           "Int": 4,
+          "Points": 275,
           "Abilities": [
             "Commander",
             "Jihad"
@@ -4634,8 +4946,10 @@
           "Upgrades": []
         },
         "Abna_al_dawla_infantry": {
-          "Unit_Name": "Abna_al_dawla_infantry",
+          "Name": "Abna_al_dawla_infantry",
           "Faction": "Arabs",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 5,
           "BS": 6,
@@ -4646,6 +4960,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 105,
           "Abilities": [],
           "Two_Hand_Weaponry": [
             "Spear (Two Handed)"
@@ -4674,8 +4989,10 @@
           "Upgrades": []
         },
         "Abna_al_dawla_skirmisher": {
-          "Unit_Name": "Abna_al_dawla_skirmisher",
+          "Name": "Abna_al_dawla_skirmisher",
           "Faction": "Arabs",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 5,
           "BS": 5,
@@ -4686,6 +5003,7 @@
           "A": 1,
           "Cl": 6,
           "Int": 6,
+          "Points": 115,
           "Abilities": [],
           "Two_Hand_Weaponry": [],
           "Weaponry": [
@@ -4708,8 +5026,10 @@
           "Upgrades": []
         },
         "Khurasaniyya_heavy_cavalry": {
-          "Unit_Name": "Khurasaniyya_heavy_cavalry",
+          "Name": "Khurasaniyya_heavy_cavalry",
           "Faction": "Arabs",
+          "AB Points": "",
+          "": "",
           "M": 5,
           "WS": 4,
           "BS": 6,
@@ -4720,6 +5040,7 @@
           "A": 2,
           "Cl": 6,
           "Int": 6,
+          "Points": 135,
           "Abilities": [],
           "Two_Hand_Weaponry": [],
           "Weaponry": [

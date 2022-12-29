@@ -1,10 +1,13 @@
 class SHEETS:
     BASELINE_STATS = "Baseline_Stats"
+    MOUNTS = "Mounts"
     FACTIONS = "Factions"
     UNITS = "Units"
     ABILITIES = "Abilities"
     ARMOUR = "Armour"
     RELATIONS = "Relations"
+    WEAPONS = "Weapons"
+    WEAPON_TRAITS = "Weapon_Traits"
 
 
 class BASELINE_SHEET:
