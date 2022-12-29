@@ -1,7 +1,12 @@
 from pylightxl import Database
 
 from constants import SHEETS
-from utils import get_table_from_sheet, get_table_size, build_object_from_table_on_index
+from utils import (
+    get_table_from_sheet,
+    get_table_size,
+    build_object_from_table_on_index,
+    transform_set_name,
+)
 
 
 def _get_abilities_sheet(db: Database):
@@ -14,12 +19,6 @@ def _transform_empty_cost_to_zero(ability):
     return ability
 
 
-def _transform_ability_label_to_name(ability):
-    ability["Name"] = ability["Ability"]
-    del ability["Ability"]
-    return ability
-
-
 def parse_abilities(db: Database):
     sheet = _get_abilities_sheet(db)
     table = get_table_from_sheet(sheet)
@@ -29,7 +28,7 @@ def parse_abilities(db: Database):
     for index in range(table_size):
         ability = build_object_from_table_on_index(table, index)
         ability = _transform_empty_cost_to_zero(ability)
-        ability = _transform_ability_label_to_name(ability)
+        ability = transform_set_name(ability, "Ability")
 
         name = ability["Name"]
         abilities[name] = ability

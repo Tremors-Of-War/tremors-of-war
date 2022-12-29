@@ -38,3 +38,9 @@ def get_table_size(table):
 
 def build_object_from_table_on_index(table, index):
     return {column: table[column][index] for column in table.keys()}
+
+
+def transform_set_name(obj, key):
+    obj["Name"] = obj[key]
+    del obj[key]
+    return obj

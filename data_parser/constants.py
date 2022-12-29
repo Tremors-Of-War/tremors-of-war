@@ -3,6 +3,7 @@ class SHEETS:
     FACTIONS = "Factions"
     UNITS = "Units"
     ABILITIES = "Abilities"
+    ARMOUR = "Armour"
     RELATIONS = "Relations"
 
 

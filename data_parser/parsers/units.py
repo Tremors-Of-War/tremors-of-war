@@ -69,7 +69,7 @@ def _add_relations_to_unit(unit, relations):
 # TODO: Determine cost of units
 def parse_units(db: Database, ruleset):
     sheet = _get_units_sheet(db, ruleset)
-    relations = parse_relations(db)
+    relations = parse_relations(db, ruleset)
 
     table = get_table_from_headers(sheet, HEADERS)
     num_units = get_table_size(table)

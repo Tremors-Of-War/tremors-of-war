@@ -1,11 +1,12 @@
 from pylightxl import Database
 
 from constants import SHEETS
-from utils import get_table_from_sheet
+from utils import get_table_from_sheet, join_pascal_snake_case
 
 
-def _get_relations_sheet(db: Database):
-    return db.ws(SHEETS.RELATIONS)
+def _get_relations_sheet(db: Database, ruleset):
+    name = join_pascal_snake_case(ruleset, SHEETS.RELATIONS)
+    return db.ws(name)
 
 
 def _get_relation_name_from_cell(unit_name, cell):
@@ -20,8 +21,8 @@ def _get_relation_name_from_cell(unit_name, cell):
 _cell_is_relation_name = _get_relation_name_from_cell
 
 
-def parse_relations(db: Database):
-    sheet = _get_relations_sheet(db)
+def parse_relations(db: Database, ruleset):
+    sheet = _get_relations_sheet(db, ruleset)
 
     table = get_table_from_sheet(sheet)
     unit_relations = {}
