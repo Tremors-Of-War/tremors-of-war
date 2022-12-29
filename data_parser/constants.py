@@ -42,3 +42,6 @@ STAT_HEADER_LIST = [
     STAT_NAMES.COOL,
     STAT_NAMES.INTELLIGENCE,
 ]
+
+DATABASE = "../Database.xlsx"
+OUTPUT_FILE = "../src/data.json"
