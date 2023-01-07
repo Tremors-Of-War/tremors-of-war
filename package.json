@@ -31,6 +31,7 @@
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
     "babel-loader": "^8.3.0",
+    "color2k": "^2.0.1",
     "eslint": "^8.31.0",
     "prettier": "^2.8.1",
     "typescript": "^4.9.3",
