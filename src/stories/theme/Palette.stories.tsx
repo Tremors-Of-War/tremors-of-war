@@ -24,7 +24,9 @@ interface ColorBoxProps {
   colorScheme: keyof Palette;
 }
 
-const ColorBox: FunctionComponent<ColorBoxProps> = ({ colorScheme }: ColorBoxProps) => {
+const ColorBox: FunctionComponent<ColorBoxProps> = ({
+  colorScheme,
+}: ColorBoxProps) => {
   const theme = useTheme();
   const color = theme.palette[colorScheme] as PaletteColor;
 
