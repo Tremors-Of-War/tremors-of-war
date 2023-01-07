@@ -1,9 +1,9 @@
-import { Grid, Paper, Typography } from "@mui/material";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import React from "react";
+import { Grid, Paper, Typography } from '@mui/material';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
 
 export default {
-  title: "Theme/Paper",
+  title: 'Theme/Paper',
   component: Paper,
 } as ComponentMeta<typeof Paper>;
 
@@ -21,7 +21,10 @@ const Template: ComponentStory<typeof Paper> = function () {
           width={300}
           height={300}
         >
-          <Typography>Elevation: {elevation}</Typography>
+          <Typography>
+            Elevation:
+            {elevation}
+          </Typography>
         </Grid>
       ))}
     </Grid>

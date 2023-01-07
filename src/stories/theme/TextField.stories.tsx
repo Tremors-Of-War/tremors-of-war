@@ -1,18 +1,18 @@
-import React from "react";
-import { Grid, InputAdornment, TextField } from "@mui/material";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from 'react';
+import { Grid, InputAdornment, TextField } from '@mui/material';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
-  title: "Theme/TextField",
+  title: 'Theme/TextField',
   component: TextField,
 } as ComponentMeta<typeof TextField>;
 
 const variants: any[] = [
-  { label: "default" },
-  { label: "With value", value: "something" },
-  { label: "Error", error: true, helperText: "You fool" },
+  { label: 'default' },
+  { label: 'With value', value: 'something' },
+  { label: 'Error', error: true, helperText: 'You fool' },
   {
-    label: "Adornment",
+    label: 'Adornment',
     InputProps: {
       startAdornment: <InputAdornment position="start">$</InputAdornment>,
     },

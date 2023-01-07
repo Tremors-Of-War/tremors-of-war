@@ -1,9 +1,9 @@
-import { Grid, Card } from "@mui/material";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import React from "react";
+import { Grid, Card } from '@mui/material';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
 
 export default {
-  title: "Theme/Card",
+  title: 'Theme/Card',
   component: Card,
 } as ComponentMeta<typeof Card>;
 

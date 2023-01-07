@@ -4,35 +4,35 @@ import {
   Typography,
   Palette,
   PaletteColor,
-} from "@mui/material";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import React, { FunctionComponent } from "react";
-import capitalize from "lodash/capitalize";
-import { toHex, toRgba } from "color2k";
+} from '@mui/material';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React, { FunctionComponent } from 'react';
+import capitalize from 'lodash/capitalize';
+import { toHex, toRgba } from 'color2k';
 
-const fields: (keyof PaletteColor)[] = ["main", "light", "dark"];
+const fields: (keyof PaletteColor)[] = ['main', 'light', 'dark'];
 const schemes: (keyof Palette)[] = [
-  "primary",
-  "secondary",
-  "error",
-  "warning",
-  "info",
-  "success",
+  'primary',
+  'secondary',
+  'error',
+  'warning',
+  'info',
+  'success',
 ];
 
 interface ColorBoxProps {
   colorScheme: keyof Palette;
 }
 
-const ColorBox: FunctionComponent<ColorBoxProps> = ({ colorScheme }) => {
+const ColorBox: FunctionComponent<ColorBoxProps> = ({ colorScheme }: ColorBoxProps) => {
   const theme = useTheme();
   const color = theme.palette[colorScheme] as PaletteColor;
 
   const getTextColor = (field: keyof PaletteColor) => {
     switch (field) {
-      case "dark":
+      case 'dark':
         return color.light;
-      case "light":
+      case 'light':
         return color.dark;
       default:
         return color.contrastText;
@@ -48,8 +48,6 @@ const ColorBox: FunctionComponent<ColorBoxProps> = ({ colorScheme }) => {
         {fields.map((field) => {
           const textColor = getTextColor(field);
           const c = color[field];
-
-          console.log("Color", c, toRgba(c), toHex(c));
           return (
             <Grid
               container
@@ -85,7 +83,7 @@ const Template: ComponentStory<typeof ColorBox> = function () {
 };
 
 export default {
-  title: "Theme/Palette",
+  title: 'Theme/Palette',
   component: ColorBox,
 } as ComponentMeta<typeof ColorBox>;
 
