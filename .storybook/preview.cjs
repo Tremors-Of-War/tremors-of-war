@@ -1,3 +1,4 @@
+import withThemeDecorator from '../src/stories/decorators/withThemeDecorator'
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +8,5 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [withThemeDecorator]; 

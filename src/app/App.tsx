@@ -5,10 +5,11 @@ import * as React from "react";
 export interface Props {}
 
 const App = (props: Props) => {
-  return <Box>
-
-    <Typography>marsaac</Typography>
-  </Box>;
+  return (
+    <Box>
+      <Typography>marsaac</Typography>
+    </Box>
+  );
 };
 
 export default App;

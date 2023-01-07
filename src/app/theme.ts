@@ -1,7 +1,9 @@
-const theme = createTheme({
-    status: {
-      danger: orange[500],
-    },
-  });
+import { createTheme } from "@mui/material";
 
-export default theme
+const theme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
+
+export default theme;

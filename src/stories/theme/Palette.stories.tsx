@@ -8,7 +8,7 @@ import {
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React, { FunctionComponent } from "react";
 import capitalize from "lodash/capitalize";
-import {toHex, toRgba} from "color2k";
+import { toHex, toRgba } from "color2k";
 
 const fields: (keyof PaletteColor)[] = ["main", "light", "dark"];
 const schemes: (keyof Palette)[] = [
@@ -49,7 +49,7 @@ const ColorBox: FunctionComponent<ColorBoxProps> = ({ colorScheme }) => {
           const textColor = getTextColor(field);
           const c = color[field];
 
-          console.log('Color', c, toRgba(c), toHex(c))
+          console.log("Color", c, toRgba(c), toHex(c));
           return (
             <Grid
               container
