@@ -1,12 +1,25 @@
-import { Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import { Grid } from '@mui/material';
 import * as React from 'react';
+import ContentContainer from '../components/ContentContainer';
+import StartScreen from '../components/StartScreen';
+import BackgroundIMG from '../assets/backgrounds/default.jpg';
 
 function App() {
   return (
-    <Box>
-      <Typography>marsaac</Typography>
-    </Box>
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      sx={{
+        background: `url(${BackgroundIMG})`,
+        height: '100vh',
+        backgroundSize: 'cover',
+      }}
+    >
+      <ContentContainer>
+        <StartScreen />
+      </ContentContainer>
+    </Grid>
   );
 }
 

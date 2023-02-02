@@ -1,16 +1,16 @@
-import { Typography } from '@mui/material';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import ContentContainer from '../../components/ContentContainer';
+import StartScreen from '../../components/StartScreen';
 import BackgroundIMG from '../../assets/backgrounds/default.jpg';
+import ContentContainer from '../../components/ContentContainer';
 
 export default {
-  title: 'Layout/ContentContainer',
-  component: ContentContainer,
-} as ComponentMeta<typeof ContentContainer>;
+  title: 'Layout/StartScreen',
+  component: StartScreen,
+} as ComponentMeta<typeof StartScreen>;
 
-const Template: ComponentStory<typeof ContentContainer> = function () {
+const Template: ComponentStory<typeof StartScreen> = function () {
   return (
     <Grid
       container
@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof ContentContainer> = function () {
       }}
     >
       <ContentContainer>
-        <Typography variant="h1">MARZAAC</Typography>
+        <StartScreen />
       </ContentContainer>
     </Grid>
   );
