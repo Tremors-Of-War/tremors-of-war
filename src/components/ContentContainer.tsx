@@ -7,6 +7,9 @@ interface Props {
 
 const ContentContainer: FunctionComponent<Props> = ({ children }) => (
   <Grid
+    container
+    justifyContent="center"
+    alignItems="center"
     sx={(theme) => ({
       padding: theme.spacing(4),
       width: theme.spacing(106),
