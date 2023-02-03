@@ -5,7 +5,6 @@ import StartLogo from '../assets/images/start_logo.png';
 
 const StartScreen = () => (
   <>
-    {/* <Grid container height="100%" direction="column" justifyContent="center"> */}
     <Grid
       container
       justifyContent="center"
