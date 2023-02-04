@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 import * as React from 'react';
 import ContentContainer from '../components/ContentContainer';
-import StartScreen from '../components/StartScreen';
+import StartScreenView from '../views/StartScreenView/StartScreenView';
 import BackgroundIMG from '../assets/backgrounds/default.jpg';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       }}
     >
       <ContentContainer>
-        <StartScreen />
+        <StartScreenView />
       </ContentContainer>
     </Grid>
   );

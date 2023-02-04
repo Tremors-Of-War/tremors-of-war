@@ -1,10 +1,11 @@
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Button } from '@mui/material';
-import StartLogo from '../assets/images/start_logo.png';
+import StartLogo from '../../assets/images/start_logo.png';
+import ContentContainer from '../../components/ContentContainer';
 
-const StartScreen = () => (
-  <>
+const StartScreenView = () => (
+  <ContentContainer>
     <Grid
       container
       justifyContent="center"
@@ -28,7 +29,7 @@ const StartScreen = () => (
       <Button variant="outlined">IMPORT LIST</Button>
       <Button variant="contained">NEW LIST</Button>
     </Grid>
-  </>
+  </ContentContainer>
 );
 
-export default StartScreen;
+export default StartScreenView;

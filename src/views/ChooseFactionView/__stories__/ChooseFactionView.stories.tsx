@@ -1,16 +1,16 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import StartScreen from '../../components/StartScreen';
-import BackgroundIMG from '../../assets/backgrounds/default.jpg';
-import ContentContainer from '../../components/ContentContainer';
+import ChooseFactionView from '../ChooseFaction';
+import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
+import ContentContainer from '../../../components/ContentContainer';
 
 export default {
   title: 'Layout/StartScreen',
-  component: StartScreen,
-} as ComponentMeta<typeof StartScreen>;
+  component: ChooseFactionView,
+} as ComponentMeta<typeof ChooseFactionView>;
 
-const Template: ComponentStory<typeof StartScreen> = function () {
+const Template: ComponentStory<typeof ChooseFactionView> = function () {
   return (
     <Grid
       container
@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof StartScreen> = function () {
       }}
     >
       <ContentContainer>
-        <StartScreen />
+        <ChooseFactionView />
       </ContentContainer>
     </Grid>
   );

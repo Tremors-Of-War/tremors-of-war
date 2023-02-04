@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import ContentContainer from '../../components/ContentContainer';
+import ContentContainer from '../ContentContainer';
 import BackgroundIMG from '../../assets/backgrounds/default.jpg';
 
 export default {
