@@ -10,7 +10,7 @@ export default {
   component: ContentContainer,
 } as ComponentMeta<typeof ContentContainer>;
 
-const Template: ComponentStory<typeof ContentContainer> = function () {
+const Template: ComponentStory<typeof ContentContainer> = function (args: any) {
   return (
     <Grid
       container
@@ -24,8 +24,8 @@ const Template: ComponentStory<typeof ContentContainer> = function () {
         backgroundSize: 'cover',
       }}
     >
-      <ContentContainer>
-        <Typography variant="h1">MARZAAC</Typography>
+      <ContentContainer {...args}>
+        <Typography>Content Container</Typography>
       </ContentContainer>
     </Grid>
   );
@@ -33,3 +33,6 @@ const Template: ComponentStory<typeof ContentContainer> = function () {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const HiddenLogo = Template.bind({});
+HiddenLogo.args = { hideTopLogo: true };

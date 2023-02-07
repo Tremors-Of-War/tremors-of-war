@@ -3,10 +3,9 @@ import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import ChooseFactionView from '../ChooseFaction';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
-import ContentContainer from '../../../components/ContentContainer';
 
 export default {
-  title: 'Layout/StartScreen',
+  title: 'Layout/ChooseFactionView',
   component: ChooseFactionView,
 } as ComponentMeta<typeof ChooseFactionView>;
 
@@ -24,9 +23,7 @@ const Template: ComponentStory<typeof ChooseFactionView> = function () {
         backgroundSize: 'cover',
       }}
     >
-      <ContentContainer>
-        <ChooseFactionView />
-      </ContentContainer>
+      <ChooseFactionView />
     </Grid>
   );
 };

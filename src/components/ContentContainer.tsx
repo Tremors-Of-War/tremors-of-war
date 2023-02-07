@@ -1,17 +1,19 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
+import TopLogo from '../assets/images/top_logo.png';
 
 interface Props {
   children: ReactElement[] | ReactElement;
+  hideTopLogo?: boolean;
 }
 
-const ContentContainer: FunctionComponent<Props> = ({ children }) => (
+const ContentContainer: FunctionComponent<Props> = ({ children, hideTopLogo = false }) => (
   <Grid
     container
-    justifyContent="center"
-    alignItems="center"
+    justifyContent="flex-start"
+    direction="column"
     sx={(theme) => ({
-      padding: theme.spacing(4),
+      padding: theme.spacing(5),
       width: theme.spacing(106),
       height: theme.spacing(103),
       background: 'linear-gradient(132.92deg, #000000 0.61%, rgba(0, 0, 0, 0.6) 100%)',
@@ -20,6 +22,18 @@ const ContentContainer: FunctionComponent<Props> = ({ children }) => (
       borderRadius: '40px',
     })}
   >
+    {!hideTopLogo && (
+      <Grid
+        sx={{
+          background: `url(${TopLogo})`,
+          backgroundSize: '304px 72px',
+          height: 72,
+          width: '100%',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+      />
+    )}
     {children}
   </Grid>
 );
