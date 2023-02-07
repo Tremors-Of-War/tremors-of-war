@@ -5,17 +5,19 @@ import StartLogo from '../../assets/images/start_logo.png';
 import ContentContainer from '../../components/ContentContainer';
 
 const StartScreenView = () => (
-  <ContentContainer>
+  <ContentContainer hideTopLogo>
     <Grid
       container
       justifyContent="center"
       alignItems="center"
-      sx={(theme) => ({
-        height: theme.spacing(21),
-        width: theme.spacing(88),
+      sx={{
+        height: '100%',
+        width: '100%',
         background: `url(${StartLogo})`,
         backgroundRepeat: 'no-repeat',
-      })}
+        backgroundPosition: 'center',
+        backgroundSize: '684px 164px',
+      }}
     />
     <Grid
       container

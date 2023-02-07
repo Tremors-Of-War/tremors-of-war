@@ -1,15 +1,16 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import StartScreenView from '../StartScreenView';
+import ChooseRuleSetButton from '../ChooseRuleSetButton';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
+import ContentContainer from '../../../components/ContentContainer';
 
 export default {
-  title: 'Layout/StartScreen',
-  component: StartScreenView,
-} as ComponentMeta<typeof StartScreenView>;
+  title: 'Layout/ChooseRuleSetButton',
+  component: ChooseRuleSetButton,
+} as ComponentMeta<typeof ChooseRuleSetButton>;
 
-const Template: ComponentStory<typeof StartScreenView> = function () {
+const Template: ComponentStory<typeof ChooseRuleSetButton> = function () {
   return (
     <Grid
       container
@@ -23,7 +24,9 @@ const Template: ComponentStory<typeof StartScreenView> = function () {
         backgroundSize: 'cover',
       }}
     >
-      <StartScreenView />
+      <ContentContainer>
+        <ChooseRuleSetButton />
+      </ContentContainer>
     </Grid>
   );
 };
