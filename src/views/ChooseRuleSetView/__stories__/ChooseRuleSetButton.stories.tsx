@@ -2,8 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import ChooseRuleSetButton from '../ChooseRuleSetButton';
-import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
-import ContentContainer from '../../../components/ContentContainer';
+import image from '../../../assets/rulesets/fantasy.jpg';
 
 export default {
   title: 'Layout/ChooseRuleSetButton',
@@ -16,17 +15,12 @@ const Template: ComponentStory<typeof ChooseRuleSetButton> = function () {
       container
       justifyContent="center"
       alignItems="center"
-      sx={{
-        background: `url(${BackgroundIMG})`,
-        width: '100vw',
-        height: '100vh',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-      }}
+      sx={(theme) => ({
+        width: theme.spacing(48),
+        height: theme.spacing(68),
+      })}
     >
-      <ContentContainer>
-        <ChooseRuleSetButton />
-      </ContentContainer>
+      <ChooseRuleSetButton image={image} ruleSetName="Fantasy" />
     </Grid>
   );
 };
