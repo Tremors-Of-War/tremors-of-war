@@ -1,9 +1,10 @@
+import { Grid } from '@mui/material';
 import React, { FunctionComponent, ReactElement } from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
+// import Grid from '@mui/material/Unstable_Grid2';
 import TopLogo from '../assets/images/top_logo.png';
 
 interface Props {
-  children: ReactElement[] | ReactElement;
+  children: ReactElement[] | ReactComponent[];
   hideTopLogo?: boolean;
 }
 
@@ -24,6 +25,7 @@ const ContentContainer: FunctionComponent<Props> = ({ children, hideTopLogo = fa
   >
     {!hideTopLogo && (
       <Grid
+        item
         sx={{
           background: `url(${TopLogo})`,
           backgroundSize: '304px 72px',
@@ -34,7 +36,9 @@ const ContentContainer: FunctionComponent<Props> = ({ children, hideTopLogo = fa
         }}
       />
     )}
-    {children}
+    <Grid conatiner justifyContent="space-around">
+      {children}
+    </Grid>
   </Grid>
 );
 

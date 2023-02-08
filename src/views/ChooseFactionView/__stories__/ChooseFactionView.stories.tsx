@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import ChooseFactionView from '../ChooseFaction';
+import ChooseFactionView from '../ChooseFactionView';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 
 export default {
@@ -9,7 +9,7 @@ export default {
   component: ChooseFactionView,
 } as ComponentMeta<typeof ChooseFactionView>;
 
-const Template: ComponentStory<typeof ChooseFactionView> = function () {
+const Template: ComponentStory<typeof ChooseFactionView> = function (args: any) {
   return (
     <Grid
       container
@@ -23,10 +23,13 @@ const Template: ComponentStory<typeof ChooseFactionView> = function () {
         backgroundSize: 'cover',
       }}
     >
-      <ChooseFactionView />
+      <ChooseFactionView {...args} />
     </Grid>
   );
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Fantasy = Template.bind({});
+Fantasy.args = { ruleSet: 'FantasyFactions' };
+
+export const DarkAges = Template.bind({});
+DarkAges.args = { ruleSet: 'DarkAgesFactions' };

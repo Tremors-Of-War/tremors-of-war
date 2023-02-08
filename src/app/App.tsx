@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 import * as React from 'react';
 import BackgroundIMG from '../assets/backgrounds/default.jpg';
-import ChooseRuleSetView from '../views/ChooseRuleSetView/ChooseRuleSetView';
+import ChooseFactionView from '../views/ChooseFactionView/ChooseFactionView';
 import AppProvider from './AppProvider';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           backgroundSize: 'cover',
         }}
       >
-        <ChooseRuleSetView />
+        <ChooseFactionView />
       </Grid>
     </AppProvider>
   );
