@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import React, { FunctionComponent } from 'react';
 
@@ -19,8 +19,10 @@ const ChooseRuleSetButton: FunctionComponent<Props> = ({ image, ruleSetName }) =
       },
     }}
   >
-    <Grid
+    <Button
+      variant="outlined"
       sx={{
+        padding: 0,
         width: '100%',
         height: '100%',
         borderRadius: '20px',
@@ -45,7 +47,7 @@ const ChooseRuleSetButton: FunctionComponent<Props> = ({ image, ruleSetName }) =
           <Typography variant="h4">{ruleSetName}</Typography>
         </Grid>
       </Grid>
-    </Grid>
+    </Button>
   </Grid>
 );
 
