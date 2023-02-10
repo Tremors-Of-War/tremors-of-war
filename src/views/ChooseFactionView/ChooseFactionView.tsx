@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import { Button, Grid, Typography } from '@mui/material';
-// import Grid from '@mui/material/Unstable_Grid2';
+import { Button, Typography } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 import { Box } from '@mui/system';
 import ContentContainer from '../../components/ContentContainer';
 import ChooseFactionButton from './ChooseFactionButton';
@@ -16,10 +16,9 @@ const ChooseFactionView: FunctionComponent<Props> = ({ ruleSet }) => (
       <Typography variant="h3">FACTION</Typography>
     </Box>
 
-    <Grid container spacing={2}>
+    <Grid container spacing={2} marginTop="2px">
       {Factions[ruleSet].map((faction) => (
         <Grid
-          item
           xs={6}
           sx={(theme) => ({
             height: theme.spacing(12),

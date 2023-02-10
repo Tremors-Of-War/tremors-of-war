@@ -24,8 +24,6 @@ const ChooseFactionButton: FunctionComponent<Props> = ({ image, factionName }) =
         padding: '0px',
         ' :hover': {
           backgroundImage: `url(${image})`,
-          // color: 'white',
-          // borderColor: 'white',
           backgroundSize: 'cover',
           shrink: 'true',
           transition: 'all .3s ease-in-out',
