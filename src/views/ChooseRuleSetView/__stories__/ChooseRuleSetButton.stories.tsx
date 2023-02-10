@@ -20,7 +20,7 @@ const Template: ComponentStory<typeof ChooseRuleSetButton> = function () {
         height: theme.spacing(68),
       })}
     >
-      <ChooseRuleSetButton image={image} ruleSetName="Fantasy" />
+      <ChooseRuleSetButton image={image} ruleSetName="FANTASY" />
     </Grid>
   );
 };

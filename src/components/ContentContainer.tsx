@@ -1,5 +1,6 @@
-import React, { FunctionComponent, ReactElement } from 'react';
+import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
+import React, { FunctionComponent, ReactElement } from 'react';
 import TopLogo from '../assets/images/top_logo.png';
 
 interface Props {
@@ -34,7 +35,7 @@ const ContentContainer: FunctionComponent<Props> = ({ children, hideTopLogo = fa
         }}
       />
     )}
-    {children}
+    <Box>{children}</Box>
   </Grid>
 );
 
