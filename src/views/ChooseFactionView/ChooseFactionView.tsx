@@ -21,7 +21,7 @@ const ChooseFactionView: FunctionComponent<Props> = ({ ruleSet }) => (
         <Grid
           xs={6}
           sx={(theme) => ({
-            height: theme.spacing(12),
+            height: theme.spacing(13),
           })}
         >
           <ChooseFactionButton image={faction.img} factionName={faction.name} />
