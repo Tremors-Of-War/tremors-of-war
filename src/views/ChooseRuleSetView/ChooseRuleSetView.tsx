@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import ContentContainer from '../../components/ContentContainer';
 import ChooseRuleSetButton from './ChooseRuleSetButton';
@@ -8,9 +8,9 @@ import darkAgesIMG from '../../assets/rulesets/dark_ages.jpg';
 
 const ChooseRuleSetView = () => (
   <ContentContainer>
-    <Box sx={{ marginTop: 2 }}>
+    <Grid>
       <Typography variant="h3">RULE SET</Typography>
-    </Box>
+    </Grid>
     <Grid
       container
       alignItems="center"

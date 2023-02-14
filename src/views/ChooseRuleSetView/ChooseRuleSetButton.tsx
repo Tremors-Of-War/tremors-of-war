@@ -11,6 +11,7 @@ const ChooseRuleSetButton: FunctionComponent<Props> = ({ image, ruleSetName }) =
   <Grid
     container
     sx={{
+      marginTop: 2,
       width: '100%',
       height: '100%',
       '& :hover': {
