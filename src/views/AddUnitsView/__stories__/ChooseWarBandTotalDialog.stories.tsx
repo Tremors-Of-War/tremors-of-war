@@ -5,7 +5,7 @@ import { Button } from '@mui/material';
 import ChooseWarBandTotalDialog from '../ChooseWarBandTotalDialog';
 
 export default {
-  title: 'Layout/ChooseWarBandTotalDialog',
+  title: 'Layout/Component/ChooseWarBandTotalDialog',
   component: ChooseWarBandTotalDialog,
 } as ComponentMeta<typeof ChooseWarBandTotalDialog>;
 

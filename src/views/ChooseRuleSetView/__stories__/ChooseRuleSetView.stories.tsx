@@ -5,7 +5,7 @@ import ChooseRuleSetView from '../ChooseRuleSetView';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 
 export default {
-  title: 'Layout/ChooseRuleSetView',
+  title: 'Layout/View/ChooseRuleSetView',
   component: ChooseRuleSetView,
 } as ComponentMeta<typeof ChooseRuleSetView>;
 

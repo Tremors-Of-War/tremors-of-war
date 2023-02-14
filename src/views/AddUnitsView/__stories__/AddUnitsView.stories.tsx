@@ -5,7 +5,7 @@ import AddUnitsView from '../AddUnitsView';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 
 export default {
-  title: 'Layout/AddUnitsView',
+  title: 'Layout/View/AddUnitsView',
   component: AddUnitsView,
 } as ComponentMeta<typeof AddUnitsView>;
 

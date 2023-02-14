@@ -6,7 +6,7 @@ import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 import ContentContainer from '../../../components/ContentContainer';
 
 export default {
-  title: 'Layout/AddUnitsZeroState',
+  title: 'Layout/Component/AddUnitsZeroState',
   component: AddUnitsZeroState,
 } as ComponentMeta<typeof AddUnitsZeroState>;
 
