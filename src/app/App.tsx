@@ -17,7 +17,7 @@ function App() {
           backgroundSize: 'cover',
         }}
       >
-        <ChooseFactionView />
+        <ChooseFactionView ruleSet="FantasyFactions" />
       </Grid>
     </AppProvider>
   );
