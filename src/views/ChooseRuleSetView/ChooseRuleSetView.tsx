@@ -26,16 +26,7 @@ const ChooseRuleSetView = () => (
         <ChooseRuleSetButton image={darkAgesIMG} ruleSetName="DARK AGES" />
       </Grid>
     </Grid>
-    <Grid
-      container
-      alignItems="center"
-      justifyContent="flex-start"
-      gap="10px"
-      // position="absolute"
-      // bottom="32px"
-      // left="32px"
-      // marginTop="2px"
-    >
+    <Grid container alignItems="center" justifyContent="flex-start" gap="10px">
       <Button variant="outlined">BACK</Button>
     </Grid>
   </ContentContainer>
