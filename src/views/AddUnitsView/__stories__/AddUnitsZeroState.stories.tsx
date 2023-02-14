@@ -1,15 +1,16 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import AddUnitsView from '../AddUnitsView';
+import AddUnitsZeroState from '../AddUnitsZeroState';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
+import ContentContainer from '../../../components/ContentContainer';
 
 export default {
-  title: 'Layout/AddUnitsView',
-  component: AddUnitsView,
-} as ComponentMeta<typeof AddUnitsView>;
+  title: 'Layout/AddUnitsZeroState',
+  component: AddUnitsZeroState,
+} as ComponentMeta<typeof AddUnitsZeroState>;
 
-const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
+const Template: ComponentStory<typeof AddUnitsZeroState> = function () {
   return (
     <Grid
       container
@@ -23,10 +24,12 @@ const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
         backgroundSize: 'cover',
       }}
     >
-      <AddUnitsView {...args} />
+      <ContentContainer>
+        <AddUnitsZeroState />
+      </ContentContainer>
     </Grid>
   );
 };
 
 export const Default = Template.bind({});
-Default.args = { faction: 'BRETTONIA' };
+Default.args = {};

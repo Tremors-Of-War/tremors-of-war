@@ -35,7 +35,9 @@ const ContentContainer: FunctionComponent<Props> = ({ children, hideTopLogo = fa
         }}
       />
     )}
-    <Box>{children}</Box>
+    <Box className="content-box" sx={{ height: 'calc(100% - 72px)' }}>
+      {children}
+    </Box>
   </Grid>
 );
 
