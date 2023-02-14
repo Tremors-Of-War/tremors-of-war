@@ -14,6 +14,7 @@ const AddUnitsZeroState = () => (
     justifyContent="center"
     alignItems="center"
     gap="10px"
+    paddingBottom="112px"
     sx={{ height: '100%', width: '100%' }}
   >
     <Typography>You do not have any units.</Typography>

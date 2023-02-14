@@ -8,10 +8,7 @@ interface Props {
   hideTopLogo?: boolean;
 }
 
-const ContentContainer: FunctionComponent<Props> = ({
-  children,
-  hideTopLogo = false,
-}) => (
+const ContentContainer: FunctionComponent<Props> = ({ children, hideTopLogo = false }) => (
   <Grid
     container
     justifyContent="flex-start"
@@ -21,8 +18,7 @@ const ContentContainer: FunctionComponent<Props> = ({
       padding: theme.spacing(5),
       width: theme.spacing(106),
       height: theme.spacing(103),
-      background:
-        'linear-gradient(132.92deg, #000000 0.61%, rgba(0, 0, 0, 0.6) 100%)',
+      background: 'linear-gradient(132.92deg, #000000 0.61%, rgba(0, 0, 0, 0.6) 100%)',
       boxShadow: '1px 30px 45px 10px rgba(0, 0, 0, 0.25)',
       backdropFilter: 'blur(20px)',
       borderRadius: '40px',
@@ -31,18 +27,11 @@ const ContentContainer: FunctionComponent<Props> = ({
     {!hideTopLogo && (
       <Grid container width="100%" justifyContent="center">
         <Grid>
-          <img
-            src={TopLogo}
-            height={72}
-            width={304}
-            alt="Tremors of War Title"
-          />
+          <img src={TopLogo} height={72} width={304} alt="Tremors of War Title" />
         </Grid>
       </Grid>
     )}
-    <Box className="content-box" sx={{ height: 'calc(100% - 72px)' }}>
-      {children}
-    </Box>
+    <Box>{children}</Box>
   </Grid>
 );
 

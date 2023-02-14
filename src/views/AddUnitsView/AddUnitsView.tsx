@@ -14,35 +14,26 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction }) => {
   return (
     <>
       <ContentContainer>
-        <Grid
-          container
-          gap="16px"
-          direction="column"
-          justifyContent="flex-end"
-          sx={{ marginTop: 2 }}
-        >
-          <Typography variant="h3">{faction}</Typography>
-          <Typography variant="h5">UNITS</Typography>
-        </Grid>
-
-        <Grid container justifyContent="center" alignItems="center">
-          <AddUnitsZeroState />
-        </Grid>
-
-        <Grid
-          container
-          alignItems="center"
-          justifyContent="space-between"
-          gap="10px"
-          position="absolute"
-          bottom="32px"
-          right="32px"
-          left="32px"
-        >
-          <Button variant="outlined">BACK</Button>
-          <Button onClick={() => setOpen(!open)} variant="outlined">
-            EDIT WARBAND TOTAL
-          </Button>
+        <Grid container height="100%" direction="column" justifyContent="space-between">
+          <Grid
+            container
+            gap="16px"
+            direction="column"
+            justifyContent="flex-end"
+            sx={{ marginTop: 2 }}
+          >
+            <Typography variant="h3">{faction}</Typography>
+            <Typography variant="h5">UNITS:</Typography>
+          </Grid>
+          <Grid>
+            <AddUnitsZeroState />
+          </Grid>
+          <Grid container alignItems="center" justifyContent="space-between">
+            <Button variant="outlined">BACK</Button>
+            <Button onClick={() => setOpen(!open)} variant="outlined">
+              EDIT WARBAND TOTAL
+            </Button>
+          </Grid>
         </Grid>
       </ContentContainer>
       <ChooseWarBandTotalDialog open={open} onClose={() => setOpen(!open)} />
