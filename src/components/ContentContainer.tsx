@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import React, { FunctionComponent, ReactElement } from 'react';
 import TopLogo from '../assets/images/top_logo.png';
@@ -31,7 +30,15 @@ const ContentContainer: FunctionComponent<Props> = ({ children, hideTopLogo = fa
         </Grid>
       </Grid>
     )}
-    <Box>{children}</Box>
+    <Grid
+      container
+      height="100%"
+      direction="column"
+      justifyContent="space-between"
+      className="content-box"
+    >
+      {children}
+    </Grid>
   </Grid>
 );
 

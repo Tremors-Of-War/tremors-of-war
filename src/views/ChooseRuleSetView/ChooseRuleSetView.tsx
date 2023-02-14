@@ -31,10 +31,10 @@ const ChooseRuleSetView = () => (
       alignItems="center"
       justifyContent="flex-start"
       gap="10px"
-      position="absolute"
-      bottom="32px"
-      left="32px"
-      marginTop="2px"
+      // position="absolute"
+      // bottom="32px"
+      // left="32px"
+      // marginTop="2px"
     >
       <Button variant="outlined">BACK</Button>
     </Grid>
