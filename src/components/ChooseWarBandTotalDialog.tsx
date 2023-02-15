@@ -2,7 +2,7 @@ import {
   Box, Button, Dialog, DialogContent, DialogTitle, Grid, TextField,
 } from '@mui/material';
 import React, { FunctionComponent } from 'react';
-import theme from '../../app/theme';
+import theme from '../app/theme';
 
 export interface Props {
   open: boolean;

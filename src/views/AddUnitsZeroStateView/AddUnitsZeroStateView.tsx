@@ -2,8 +2,8 @@ import React, { FunctionComponent } from 'react';
 import { Button, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import ContentContainer from '../../components/ContentContainer';
-import ChooseWarBandTotalDialog from './ChooseWarBandTotalDialog';
-import AddUnitsZeroState from './AddUnitsZeroState';
+import ChooseWarBandTotalDialog from '../../components/ChooseWarBandTotalDialog';
+import AddUnitsZeroState from './AddUnitsZeroStateAction';
 
 interface Props {
   faction: string;
@@ -16,7 +16,7 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction }) => {
       <ContentContainer>
         <Grid
           container
-          gap="16px"
+          gap="8px"
           direction="column"
           justifyContent="flex-end"
           sx={{ marginTop: 2 }}

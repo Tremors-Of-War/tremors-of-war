@@ -1,16 +1,16 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import AddUnitsZeroState from '../AddUnitsZeroState';
+import AddUnitsZeroStateAction from '../AddUnitsZeroStateAction';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 import ContentContainer from '../../../components/ContentContainer';
 
 export default {
-  title: 'Layout/Component/AddUnitsZeroState',
-  component: AddUnitsZeroState,
-} as ComponentMeta<typeof AddUnitsZeroState>;
+  title: 'Layout/Component/AddUnitsZeroStateAction',
+  component: AddUnitsZeroStateAction,
+} as ComponentMeta<typeof AddUnitsZeroStateAction>;
 
-const Template: ComponentStory<typeof AddUnitsZeroState> = function () {
+const Template: ComponentStory<typeof AddUnitsZeroStateAction> = function () {
   return (
     <Grid
       container
@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof AddUnitsZeroState> = function () {
       }}
     >
       <ContentContainer>
-        <AddUnitsZeroState />
+        <AddUnitsZeroStateAction />
       </ContentContainer>
     </Grid>
   );

@@ -1,11 +1,11 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import AddUnitsView from '../AddUnitsView';
+import AddUnitsView from '../AddUnitsZeroStateView';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 
 export default {
-  title: 'Layout/View/AddUnitsView',
+  title: 'Layout/View/AddUnitsZeroStateView',
   component: AddUnitsView,
 } as ComponentMeta<typeof AddUnitsView>;
 
