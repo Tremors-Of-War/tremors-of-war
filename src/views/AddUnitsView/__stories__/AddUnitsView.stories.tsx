@@ -1,11 +1,11 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import AddUnitsView from '../AddUnitsZeroStateView';
+import AddUnitsView from '../AddUnitsView';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 
 export default {
-  title: 'Layout/View/AddUnitsZeroStateView',
+  title: 'Layout/View/AddUnitsView',
   component: AddUnitsView,
 } as ComponentMeta<typeof AddUnitsView>;
 
@@ -29,4 +29,4 @@ const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
 };
 
 export const Default = Template.bind({});
-Default.args = { faction: 'BRETTONIA' };
+Default.args = { faction: 'BRETTONIA', num: 2500 };

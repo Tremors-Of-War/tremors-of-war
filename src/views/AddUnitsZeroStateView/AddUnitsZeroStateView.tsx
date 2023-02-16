@@ -3,13 +3,13 @@ import { Button, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import ContentContainer from '../../components/ContentContainer';
 import ChooseWarBandTotalDialog from '../../components/ChooseWarBandTotalDialog';
-import AddUnitsZeroState from './AddUnitsZeroStateAction';
+import AddUnitsZeroStateAction from './AddUnitsZeroStateAction';
 
 interface Props {
   faction: string;
 }
 
-const AddUnitsView: FunctionComponent<Props> = ({ faction }) => {
+const AddUnitsZeroStateView: FunctionComponent<Props> = ({ faction }) => {
   const [open, setOpen] = React.useState(true);
   return (
     <>
@@ -25,7 +25,7 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction }) => {
           <Typography variant="h5">UNITS:</Typography>
         </Grid>
         <Grid>
-          <AddUnitsZeroState />
+          <AddUnitsZeroStateAction />
         </Grid>
         <Grid container alignItems="center" justifyContent="space-between">
           <Button variant="outlined">BACK</Button>
@@ -39,4 +39,4 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction }) => {
   );
 };
 
-export default AddUnitsView;
+export default AddUnitsZeroStateView;

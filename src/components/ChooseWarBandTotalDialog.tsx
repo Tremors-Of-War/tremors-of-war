@@ -1,36 +1,96 @@
 import {
-  Box, Button, Dialog, DialogContent, DialogTitle, Grid, TextField,
+  Alert,
+  Box,
+  Button,
+  Collapse,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  Grid,
+  IconButton,
+  TextField,
 } from '@mui/material';
 import React, { FunctionComponent } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
 import theme from '../app/theme';
+import { MAX_WARBAND_TOTAL } from '../constants';
 
 export interface Props {
   open: boolean;
-  onClose: () => void;
+  onClose: (value: number) => void;
+  selectedValue: number;
 }
 
-const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({ onClose, open }) => (
-  <Dialog onClose={onClose} open={open} sx={{ minHeight: 188, minWidth: 444 }}>
-    <DialogTitle color={theme.palette.primary.main}>WARBAND TOTAL</DialogTitle>
-    <Grid container>
-      <DialogContent sx={{ padding: '0px 24px' }}>
-        <Box sx={{ minWidth: 444 }}>
-          <TextField
-            autoFocus
-            variant="filled"
-            id="warband-total"
-            label="CHOOSE VALUE"
-            type="number"
-            color="secondary"
-            fullWidth
-          />
-        </Box>
-        <Grid container padding="8px" justifyContent="flex-end" alignItems="flex-end">
-          <Button onClick={onClose}>SAVE</Button>
-        </Grid>
-      </DialogContent>
-    </Grid>
-  </Dialog>
-);
+const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({ onClose, selectedValue, open }) => {
+  const [value, setValue] = React.useState<number>(selectedValue);
+  const [openAlert, setOpenAlert] = React.useState<boolean>(false);
 
+  const handleClose = () => onClose(selectedValue);
+
+  const handleSave = () => onClose(value);
+
+  const handleChange = (event: any) => {
+    const parsedInputValue = parseInt(event.target.value, 10);
+    if (parsedInputValue > MAX_WARBAND_TOTAL) {
+      setValue(MAX_WARBAND_TOTAL);
+      setOpenAlert(true);
+    } else {
+      setValue(parsedInputValue);
+    }
+  };
+
+  return (
+    <Dialog
+      onChange={handleChange}
+      onClose={handleClose}
+      open={open}
+      sx={{ minHeight: 188, minWidth: 444 }}
+    >
+      <Box sx={{ width: '100%' }}>
+        <Collapse sx={{ margin: 0 }} in={openAlert}>
+          <Alert
+            variant="filled"
+            severity="error"
+            action={(
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpenAlert(!openAlert);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            )}
+          >
+            Maximum Warband Total is 99,999
+          </Alert>
+        </Collapse>
+      </Box>
+      <DialogTitle color={theme.palette.primary.main}>WARBAND TOTAL</DialogTitle>
+      <Grid container>
+        <DialogContent sx={{ padding: '0px 24px' }}>
+          <Box sx={{ minWidth: 444 }}>
+            <TextField
+              autoFocus
+              variant="filled"
+              id="value"
+              value={value}
+              label="CHOOSE VALUE"
+              defaultValue={selectedValue}
+              type="number"
+              color="secondary"
+              onChange={handleChange}
+              fullWidth
+            />
+          </Box>
+          <Grid container padding="8px" justifyContent="flex-end" alignItems="flex-end">
+            <Button onClick={handleSave}>SAVE</Button>
+          </Grid>
+        </DialogContent>
+      </Grid>
+    </Dialog>
+  );
+};
 export default ChooseWarBandTotalDialog;
