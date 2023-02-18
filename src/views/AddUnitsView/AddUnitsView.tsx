@@ -14,7 +14,6 @@ interface Props {
 const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
   const [open, setOpen] = React.useState(true);
   const [selectedValue, setSelectedValue] = React.useState(0);
-  console.log({ selectedValue, selectedValueType: typeof selectedValue });
 
   const handleClose = (value: number) => {
     setOpen(!open);
