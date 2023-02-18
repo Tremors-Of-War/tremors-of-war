@@ -2,7 +2,8 @@
   "extends": [
     "airbnb",
     "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "plugins": ["unused-imports", "@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
@@ -16,6 +17,7 @@
     "@typescript-eslint/no-empty-interface": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
     "func-names": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/no-explicit-any": "off",
