@@ -5,7 +5,7 @@ import StartScreenView from '../StartScreenView';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 
 export default {
-  title: 'Layout/StartScreen',
+  title: 'Layout/View/StartScreen',
   component: StartScreenView,
 } as ComponentMeta<typeof StartScreenView>;
 

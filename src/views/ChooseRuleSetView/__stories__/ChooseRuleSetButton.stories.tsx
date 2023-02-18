@@ -5,7 +5,7 @@ import ChooseRuleSetButton from '../ChooseRuleSetButton';
 import image from '../../../assets/rulesets/fantasy.jpg';
 
 export default {
-  title: 'Layout/ChooseRuleSetButton',
+  title: 'Layout/Component/ChooseRuleSetButton',
   component: ChooseRuleSetButton,
 } as ComponentMeta<typeof ChooseRuleSetButton>;
 

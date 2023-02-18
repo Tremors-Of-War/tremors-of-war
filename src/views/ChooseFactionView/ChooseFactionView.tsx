@@ -14,30 +14,21 @@ const ChooseFactionView: FunctionComponent<Props> = ({ ruleSet }) => (
   <ContentContainer>
     <Box sx={{ marginTop: 2 }}>
       <Typography variant="h3">FACTION</Typography>
+
+      <Grid container spacing={2} marginTop="2px">
+        {Factions[ruleSet].map((faction) => (
+          <Grid
+            xs={6}
+            sx={(theme) => ({
+              height: theme.spacing(13),
+            })}
+          >
+            <ChooseFactionButton image={faction.img} factionName={faction.name} />
+          </Grid>
+        ))}
+      </Grid>
     </Box>
-
-    <Grid container spacing={2} marginTop="2px">
-      {Factions[ruleSet].map((faction) => (
-        <Grid
-          xs={6}
-          sx={(theme) => ({
-            height: theme.spacing(13),
-          })}
-        >
-          <ChooseFactionButton image={faction.img} factionName={faction.name} />
-        </Grid>
-      ))}
-    </Grid>
-
-    <Grid
-      container
-      alignItems="center"
-      justifyContent="flex-start"
-      gap="10px"
-      position="absolute"
-      bottom="32px"
-      left="32px"
-    >
+    <Grid container alignItems="center" justifyContent="flex-start" gap="10px">
       <Button variant="outlined">BACK</Button>
     </Grid>
   </ContentContainer>

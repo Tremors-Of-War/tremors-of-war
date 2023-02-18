@@ -5,7 +5,7 @@ import ChooseFactionButton from '../ChooseFactionButton';
 import BackgroundIMG from '../../../assets/factions/fantasy/brettonia.jpg';
 
 export default {
-  title: 'Layout/ChooseFactionButton',
+  title: 'Layout/Component/ChooseFactionButton',
   component: ChooseFactionButton,
 } as ComponentMeta<typeof ChooseFactionButton>;
 

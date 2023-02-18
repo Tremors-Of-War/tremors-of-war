@@ -25,8 +25,8 @@ const StartScreenView = () => (
       justifyContent="flex-end"
       gap="10px"
       position="absolute"
-      bottom="32px"
-      right="32px"
+      bottom="40px"
+      right="40px"
     >
       <Button variant="outlined">IMPORT LIST</Button>
       <Button variant="contained">NEW LIST</Button>

@@ -6,7 +6,7 @@ import ContentContainer from '../ContentContainer';
 import BackgroundIMG from '../../assets/backgrounds/default.jpg';
 
 export default {
-  title: 'Layout/ContentContainer',
+  title: 'Layout/Component/ContentContainer',
   component: ContentContainer,
 } as ComponentMeta<typeof ContentContainer>;
 

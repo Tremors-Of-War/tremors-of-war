@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import ChooseRuleSetView from '../ChooseRuleSetView';
+import AddUnitsView from '../AddUnitsZeroStateView';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 
 export default {
-  title: 'Layout/View/ChooseRuleSetView',
-  component: ChooseRuleSetView,
-} as ComponentMeta<typeof ChooseRuleSetView>;
+  title: 'Layout/View/AddUnitsZeroStateView',
+  component: AddUnitsView,
+} as ComponentMeta<typeof AddUnitsView>;
 
-const Template: ComponentStory<typeof ChooseRuleSetView> = function () {
+const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
   return (
     <Grid
       container
@@ -23,10 +23,10 @@ const Template: ComponentStory<typeof ChooseRuleSetView> = function () {
         backgroundSize: 'cover',
       }}
     >
-      <ChooseRuleSetView />
+      <AddUnitsView {...args} />
     </Grid>
   );
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = { faction: 'BRETTONIA' };

@@ -5,7 +5,7 @@ import ChooseFactionView from '../ChooseFactionView';
 import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
 
 export default {
-  title: 'Layout/ChooseFactionView',
+  title: 'Layout/View/ChooseFactionView',
   component: ChooseFactionView,
 } as ComponentMeta<typeof ChooseFactionView>;
 
