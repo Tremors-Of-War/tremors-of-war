@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import { Button, Typography } from '@mui/material';
+import { Button, Typography, Box, Tooltip } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import { Box, Tooltip } from '@material-ui/core';
 import AddIcon from '@mui/icons-material/Add';
 import ContentContainer from '../../components/ContentContainer';
 import ChooseWarBandTotalDialog from '../../components/ChooseWarBandTotalDialog';

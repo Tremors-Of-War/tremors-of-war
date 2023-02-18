@@ -35,6 +35,7 @@ const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({ onClose, selectedV
       setValue(MAX_WARBAND_TOTAL);
       setOpenAlert(true);
     } else {
+      setOpenAlert(false);
       setValue(parsedInputValue);
     }
   };
