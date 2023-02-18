@@ -1,5 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import { Button, Typography, Box, Tooltip } from '@mui/material';
+import {
+  Button, Typography, Box, Tooltip,
+} from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import AddIcon from '@mui/icons-material/Add';
 import ContentContainer from '../../components/ContentContainer';
@@ -48,11 +50,16 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
               </Box>
               <Box>
                 <Tooltip title="Warband Total">
-                  <Typography variant="h5">
-                    {num}
-                    /
-                    {selectedValue.toLocaleString('en-US')}
-                  </Typography>
+                  <Grid container width="100%" justifyContent="flex-end" direction="row">
+                    <Typography variant="h5">
+                      {num.toLocaleString('en-US')}
+                      &nbsp;
+                    </Typography>
+                    <Typography variant="h5" sx={{ color: 'text.disabled' }}>
+                      {'/ '}
+                      {selectedValue.toLocaleString('en-US')}
+                    </Typography>
+                  </Grid>
                 </Tooltip>
               </Box>
             </Grid>
