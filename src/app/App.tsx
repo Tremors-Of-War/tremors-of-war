@@ -1,8 +1,9 @@
 import { Grid } from '@mui/material';
 import * as React from 'react';
+import { RouterProvider } from "react-router-dom";
 import BackgroundIMG from '../assets/backgrounds/default.jpg';
-import ChooseFactionView from '../views/ChooseFactionView/ChooseFactionView';
 import AppProvider from './AppProvider';
+import router from "./router";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           backgroundSize: 'cover',
         }}
       >
-        <ChooseFactionView ruleSet="FantasyFactions" />
+          <RouterProvider router={router} />
       </Grid>
     </AppProvider>
   );

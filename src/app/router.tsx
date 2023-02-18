@@ -1,34 +1,34 @@
 import React from "react";
-import { createBrowserRouter, RouteObject } from "react-router-dom";
+import {createBrowserRouter, createMemoryRouter, RouteObject} from "react-router-dom";
 import StartScreenView from "../views/StartScreenView/StartScreenView";
 import AddUnitsView from "../views/AddUnitsView/AddUnitsView";
 import AddUnitsZeroStateView from "../views/AddUnitsZeroStateView/AddUnitsZeroStateView";
 import ChooseFactionView from "../views/ChooseFactionView/ChooseFactionView";
 import ChooseRuleSetView from "../views/ChooseRuleSetView/ChooseRuleSetView";
+import ROUTES from "./routes";
 
-export const ROUTES: { [path: string]: Partial<RouteObject> } = {
-  START_SCREEN: {
+const routes = [
+   {
     element: <StartScreenView />,
+    path: ROUTES.START_SCREEN
   },
-  ADD_UNITS: {
+   {
     element: <AddUnitsView />,
+    path: ROUTES.ADD_UNITS
   },
-  ADD_UNITS_ZERO_STATE: {
+   {
     element: <AddUnitsZeroStateView />,
+    path: ROUTES.ADD_UNITS_ZERO_STATE
   },
-  CHOOSE_FACTION: {
+   {
     element: <ChooseFactionView />,
+    path: ROUTES.CHOOSE_FACTION
   },
-  CHOOSE_RULESET: {
+   {
     element: <ChooseRuleSetView />,
+    path: ROUTES.CHOOSE_RULESET
   },
-};
+];
 
-const buildRoutes = (): RouteObject[] =>
-  Object.entries(ROUTES).map(([path, routeObj]) => ({
-    path,
-    ...routeObj,
-  }));
-
-const router = createBrowserRouter(buildRoutes());
+const router = createBrowserRouter(Object.values(routes));
 export default router;
