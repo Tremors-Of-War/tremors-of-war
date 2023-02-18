@@ -1,6 +1,7 @@
-import React, { ReactElement } from 'react';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import theme from './theme';
+import React, { ReactElement } from "react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import theme from "./theme";
+import { initialState, StateContext } from "./state";
 
 interface AppProviderProps {
   children: ReactElement[] | ReactElement;
@@ -11,7 +12,9 @@ const AppProvider: React.FC<AppProviderProps> = function ({ children }) {
     <React.StrictMode>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {children}
+        <StateContext.Provider value={initialState}>
+          {children}
+        </StateContext.Provider>
       </ThemeProvider>
     </React.StrictMode>
   );

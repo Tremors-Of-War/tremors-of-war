@@ -6,7 +6,7 @@ import AddUnitsZeroStateView from "../views/AddUnitsZeroStateView/AddUnitsZeroSt
 import ChooseFactionView from "../views/ChooseFactionView/ChooseFactionView";
 import ChooseRuleSetView from "../views/ChooseRuleSetView/ChooseRuleSetView";
 
-const ROUTES: { [path: string]: Partial<RouteObject> } = {
+export const ROUTES: { [path: string]: Partial<RouteObject> } = {
   START_SCREEN: {
     element: <StartScreenView />,
   },

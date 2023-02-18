@@ -1,15 +1,14 @@
-import React, { FunctionComponent } from 'react';
-import { Button, Typography } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
-import ContentContainer from '../../components/ContentContainer';
-import ChooseWarBandTotalDialog from '../../components/ChooseWarBandTotalDialog';
-import AddUnitsZeroStateAction from './AddUnitsZeroStateAction';
+import React, { FunctionComponent } from "react";
+import { Button, Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
+import ContentContainer from "../../components/ContentContainer";
+import ChooseWarBandTotalDialog from "../../components/ChooseWarBandTotalDialog";
+import AddUnitsZeroStateAction from "./AddUnitsZeroStateAction";
 
-interface Props {
-  faction: string;
-}
+const AddUnitsZeroStateView: FunctionComponent = () => {
+  // TODO: GET VALUES FROM STATE
+  const faction = "Brettonia";
 
-const AddUnitsZeroStateView: FunctionComponent<Props> = ({ faction }) => {
   const [open, setOpen] = React.useState(true);
   return (
     <>
