@@ -7,7 +7,7 @@ export interface Props {
   onClose: () => void;
 }
 
-const AddUnitsZeroState = () => (
+const AddUnitsZeroStateAction = () => (
   <Grid
     container
     direction="column"
@@ -24,4 +24,4 @@ const AddUnitsZeroState = () => (
   </Grid>
 );
 
-export default AddUnitsZeroState;
+export default AddUnitsZeroStateAction;
