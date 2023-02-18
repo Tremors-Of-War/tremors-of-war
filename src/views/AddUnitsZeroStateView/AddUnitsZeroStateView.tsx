@@ -32,7 +32,6 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({ faction }) => {
           <Grid container justifyContent="space-between" gap="8px" sx={{ marginTop: 2 }}>
             <Box>
               <Typography variant="h3">{faction}</Typography>
-              {/* <Typography variant="h5">UNITS:</Typography> */}
             </Box>
             <Grid
               container
