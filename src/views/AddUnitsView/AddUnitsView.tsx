@@ -36,7 +36,6 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
               <Typography variant="h5">UNITS:</Typography>
             </Box>
             <Grid
-              className="MIAMIAMIA"
               container
               gap="8px"
               direction="column"

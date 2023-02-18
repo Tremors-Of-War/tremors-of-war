@@ -64,7 +64,9 @@ const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({ onClose, selectedV
               </IconButton>
             )}
           >
-            Maximum Warband Total is 99,999
+            Maximum Warband Total is
+            {' '}
+            {MAX_WARBAND_TOTAL.toLocaleString('en-US')}
           </Alert>
         </Collapse>
       </Box>
