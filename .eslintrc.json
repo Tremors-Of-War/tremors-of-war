@@ -2,7 +2,8 @@
   "extends": [
     "airbnb",
     "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "plugins": ["unused-imports", "@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
