@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import theme from './theme';
+import React, { ReactElement } from "react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import theme from "./theme";
 
 interface AppProviderProps {
   children: ReactElement[] | ReactElement;

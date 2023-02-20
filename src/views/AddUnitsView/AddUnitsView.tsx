@@ -1,9 +1,9 @@
-import React, { FunctionComponent } from 'react';
-import { Button, Typography, Box, Tooltip } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
-import AddIcon from '@mui/icons-material/Add';
-import ContentContainer from '../../components/ContentContainer';
-import ChooseWarBandTotalDialog from '../../components/ChooseWarBandTotalDialog';
+import React, { FunctionComponent } from "react";
+import { Button, Typography, Box, Tooltip } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
+import AddIcon from "@mui/icons-material/Add";
+import ContentContainer from "../../components/ContentContainer";
+import ChooseWarBandTotalDialog from "../../components/ChooseWarBandTotalDialog";
 
 interface Props {
   faction: string;
@@ -29,7 +29,12 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
           justifyContent="space-between"
           height="100%"
         >
-          <Grid container justifyContent="space-between" gap="8px" sx={{ marginTop: 2 }}>
+          <Grid
+            container
+            justifyContent="space-between"
+            gap="8px"
+            sx={{ marginTop: 2 }}
+          >
             <Box>
               <Typography variant="h3">{faction}</Typography>
               <Typography variant="h5">UNITS:</Typography>
@@ -42,16 +47,18 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
               justifyContent="flex-end"
             >
               <Box>
-                <Button startIcon={<AddIcon />} variant="contained" size="large">
+                <Button
+                  startIcon={<AddIcon />}
+                  variant="contained"
+                  size="large"
+                >
                   ADD UNIT
                 </Button>
               </Box>
               <Box>
                 <Tooltip title="Warband Total">
                   <Typography variant="h5">
-                    {num}
-                    /
-                    {selectedValue.toLocaleString('en-US')}
+                    {num}/{selectedValue.toLocaleString("en-US")}
                   </Typography>
                 </Tooltip>
               </Box>
@@ -64,7 +71,12 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
 
           <Grid container alignItems="center" justifyContent="space-between">
             <Button variant="outlined">BACK</Button>
-            <Grid container direction="row" justifyContent="flex-end" gap="10px">
+            <Grid
+              container
+              direction="row"
+              justifyContent="flex-end"
+              gap="10px"
+            >
               <Button onClick={() => setOpen(!open)} variant="outlined">
                 EDIT WARBAND TOTAL
               </Button>
@@ -73,7 +85,11 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
           </Grid>
         </Grid>
       </ContentContainer>
-      <ChooseWarBandTotalDialog open={!open} selectedValue={selectedValue} onClose={handleClose} />
+      <ChooseWarBandTotalDialog
+        open={!open}
+        selectedValue={selectedValue}
+        onClose={handleClose}
+      />
     </>
   );
 };
