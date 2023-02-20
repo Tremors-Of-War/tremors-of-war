@@ -9,10 +9,12 @@ import ROUTES, { INITIAL_ROUTE } from "./routes";
 
 interface State {
   ruleSet: RuleSet | null;
+  faction: Faction | null;
 }
 
 const initialState: State = {
   ruleSet: null,
+  faction: null,
 };
 
 const AppView: FunctionComponent = () => {
@@ -42,6 +44,10 @@ const AppView: FunctionComponent = () => {
         <ChooseFactionView
           ruleSet={state.ruleSet!}
           onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_RULESET)}
+          setFaction={(faction) => {
+            setState({ ...state, faction });
+            setCurrentRoute(ROUTES.ADD_UNITS_ZERO_STATE);
+          }}
         />
       );
     case ROUTES.ADD_UNITS:

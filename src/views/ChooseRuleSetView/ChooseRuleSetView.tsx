@@ -32,14 +32,14 @@ const ChooseRuleSetView: FunctionComponent<Props> = ({
         <ChooseRuleSetButton
           image={fantasyIMG}
           ruleSetName="FANTASY"
-          onClick={() => setRuleSet("Fantasy")}
+          onClick={() => setRuleSet("fantasy")}
         />
       </Grid>
       <Grid xs height="100%">
         <ChooseRuleSetButton
           image={darkAgesIMG}
           ruleSetName="DARK AGES"
-          onClick={() => setRuleSet("DarkAges")}
+          onClick={() => setRuleSet("dark_ages")}
         />
       </Grid>
     </Grid>

@@ -14,93 +14,100 @@ import NORMANS from "../../assets/factions/dark_ages/normans.jpg";
 import ROMANS from "../../assets/factions/dark_ages/romans.jpg";
 import SAXONS from "../../assets/factions/dark_ages/saxons.jpg";
 import VIKINGS from "../../assets/factions/dark_ages/vikings.jpg";
+import { Faction } from "../../types";
 
-const FantasyFactions = [
+export interface FactionButton {
+  id: Faction;
+  name: string;
+  image: string;
+}
+
+const FantasyFactions: FactionButton[] = [
   {
     id: "Brettonia",
     name: "Brettonia",
-    img: BRETTONIA,
+    image: BRETTONIA,
   },
   {
     id: "Cathay",
     name: "Cathay",
-    img: CATHAY,
+    image: CATHAY,
   },
   {
     id: "Chaos",
     name: "Chaos",
-    img: CHAOS,
+    image: CHAOS,
   },
   {
     id: "Dark_Elves",
     name: "Dark Elves",
-    img: DARK_ELVES,
+    image: DARK_ELVES,
   },
   {
     id: "Dwarf",
     name: "Dwarf",
-    img: DWARF,
+    image: DWARF,
   },
   {
     id: "Empire",
     name: "Empire",
-    img: EMPIRE,
+    image: EMPIRE,
   },
   {
     id: "High_Elves",
     name: "High Elves",
-    img: HIGH_ELVES,
+    image: HIGH_ELVES,
   },
   {
     id: "Orcs_and_Goblins",
     name: "Orcs and Goblins",
-    img: ORCS_AND_GOBLINS,
+    image: ORCS_AND_GOBLINS,
   },
   {
     id: "Nippon",
     name: "Nippon",
-    img: NIPPON,
+    image: NIPPON,
   },
   {
     id: "Skaven",
     name: "Skaven",
-    img: SKAVEN,
+    image: SKAVEN,
   },
 ];
-const DarkAgesFactions = [
+const DarkAgesFactions: FactionButton[] = [
   {
     id: "Arabs",
     name: "Arabs",
-    img: ARABS,
+    image: ARABS,
   },
   {
     id: "Celts",
     name: "Celts",
-    img: CELTS,
+    image: CELTS,
   },
   {
     id: "Normans",
     name: "Normans",
-    img: NORMANS,
+    image: NORMANS,
   },
   {
     id: "Romans",
     name: "Romans",
-    img: ROMANS,
+    image: ROMANS,
   },
   {
     id: "Saxons",
     name: "Saxons",
-    img: SAXONS,
+    image: SAXONS,
   },
   {
     id: "Vikings",
     name: "Vikings",
-    img: VIKINGS,
+    image: VIKINGS,
   },
 ];
 
 export default {
-  Fantasy: FantasyFactions,
-  DarkAges: DarkAgesFactions,
+  fantasy: FantasyFactions,
+  dark_ages: DarkAgesFactions,
 };

@@ -4,17 +4,19 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Box } from "@mui/system";
 import ContentContainer from "../../components/ContentContainer";
 import ChooseFactionButton from "./ChooseFactionButton";
-import Factions from "./ChooseFactionList";
-import { RuleSet } from "../../types";
+import Factions from "./factionsList";
+import { Faction, RuleSet } from "../../types";
 
 interface Props {
   ruleSet: RuleSet;
   onClickBack: () => void;
+  setFaction: (faction: Faction) => void;
 }
 
 const ChooseFactionView: FunctionComponent<Props> = ({
   ruleSet,
   onClickBack,
+  setFaction,
 }) => (
   <ContentContainer>
     <Box sx={{ marginTop: 2 }}>
@@ -30,8 +32,8 @@ const ChooseFactionView: FunctionComponent<Props> = ({
             })}
           >
             <ChooseFactionButton
-              image={faction.img}
-              factionName={faction.name}
+              onClick={() => setFaction(faction.id)}
+              {...faction}
             />
           </Grid>
         ))}

@@ -1,15 +1,16 @@
 import { Button } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import React, { FunctionComponent } from "react";
+import { FactionButton } from "./factionsList";
 
-interface Props {
-  factionName: string;
-  image: any;
+interface Props extends FactionButton {
+  onClick: () => void;
 }
 
 const ChooseFactionButton: FunctionComponent<Props> = ({
   image,
-  factionName,
+  name,
+  onClick,
 }) => (
   <Grid
     container
@@ -20,6 +21,7 @@ const ChooseFactionButton: FunctionComponent<Props> = ({
   >
     <Button
       variant="outlined"
+      onClick={onClick}
       sx={{
         width: "100%",
         height: "100%",
@@ -42,7 +44,7 @@ const ChooseFactionButton: FunctionComponent<Props> = ({
         alignItems="center"
         sx={{ height: "100%", width: "100%", opacity: 1 }}
       >
-        {factionName}
+        {name}
       </Grid>
     </Button>
   </Grid>
