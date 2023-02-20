@@ -49,6 +49,7 @@ const AppView: FunctionComponent = () => {
     case ROUTES.ADD_UNITS_ZERO_STATE:
       return <AddUnitsZeroStateView faction="DarkAges" />; // TODO: THESE VALUES
     default:
+      // eslint-disable-next-line no-console
       console.error(`Unknown route: ${currentRoute}`);
       return <p>Unknown route</p>;
   }

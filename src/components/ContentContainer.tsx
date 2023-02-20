@@ -10,7 +10,7 @@ interface Props {
 const ContentContainer: FunctionComponent<Props> = ({
   children,
   hideTopLogo = false,
-}) => (
+}: Props) => (
   <Grid
     container
     justifyContent="flex-start"
