@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import StartScreenView from '../StartScreenView';
-import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from "react";
+import Grid from "@mui/material/Unstable_Grid2";
+import StartScreenView from "../StartScreenView";
+import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
-  title: 'Layout/View/StartScreen',
+  title: "Layout/View/StartScreen",
   component: StartScreenView,
 } as ComponentMeta<typeof StartScreenView>;
 
@@ -17,10 +17,10 @@ const Template: ComponentStory<typeof StartScreenView> = function () {
       alignItems="center"
       sx={{
         background: `url(${BackgroundIMG})`,
-        width: '100vw',
-        height: '100vh',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        width: "100vw",
+        height: "100vh",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
       <StartScreenView />

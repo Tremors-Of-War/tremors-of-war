@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import ChooseRuleSetButton from '../ChooseRuleSetButton';
-import image from '../../../assets/rulesets/fantasy.jpg';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from "react";
+import Grid from "@mui/material/Unstable_Grid2";
+import ChooseRuleSetButton from "../ChooseRuleSetButton";
+import image from "../../../assets/rulesets/fantasy.jpg";
 
 export default {
-  title: 'Layout/Component/ChooseRuleSetButton',
+  title: "Layout/Component/ChooseRuleSetButton",
   component: ChooseRuleSetButton,
 } as ComponentMeta<typeof ChooseRuleSetButton>;
 

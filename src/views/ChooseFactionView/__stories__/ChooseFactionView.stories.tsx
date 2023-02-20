@@ -1,15 +1,17 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import ChooseFactionView from '../ChooseFactionView';
-import BackgroundIMG from '../../../assets/backgrounds/default.jpg';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from "react";
+import Grid from "@mui/material/Unstable_Grid2";
+import ChooseFactionView from "../ChooseFactionView";
+import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
-  title: 'Layout/View/ChooseFactionView',
+  title: "Layout/View/ChooseFactionView",
   component: ChooseFactionView,
 } as ComponentMeta<typeof ChooseFactionView>;
 
-const Template: ComponentStory<typeof ChooseFactionView> = function (args: any) {
+const Template: ComponentStory<typeof ChooseFactionView> = function (
+  args: any
+) {
   return (
     <Grid
       container
@@ -17,10 +19,10 @@ const Template: ComponentStory<typeof ChooseFactionView> = function (args: any) 
       alignItems="center"
       sx={{
         background: `url(${BackgroundIMG})`,
-        width: '100vw',
-        height: '100vh',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        width: "100vw",
+        height: "100vh",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
       <ChooseFactionView {...args} />
@@ -29,7 +31,7 @@ const Template: ComponentStory<typeof ChooseFactionView> = function (args: any) 
 };
 
 export const Fantasy = Template.bind({});
-Fantasy.args = { ruleSet: 'FantasyFactions' };
+Fantasy.args = { ruleSet: "FantasyFactions" };
 
 export const DarkAges = Template.bind({});
-DarkAges.args = { ruleSet: 'DarkAgesFactions' };
+DarkAges.args = { ruleSet: "DarkAgesFactions" };
