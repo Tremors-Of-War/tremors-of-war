@@ -31,7 +31,7 @@ const Template: ComponentStory<typeof ChooseFactionView> = function (
 };
 
 export const Fantasy = Template.bind({});
-Fantasy.args = { ruleSet: "FantasyFactions" };
+Fantasy.args = { ruleSet: "Fantasy" };
 
 export const DarkAges = Template.bind({});
-DarkAges.args = { ruleSet: "DarkAgesFactions" };
+DarkAges.args = { ruleSet: "DarkAges" };

@@ -23,7 +23,10 @@ const Template: ComponentStory<typeof ChooseRuleSetView> = function () {
         backgroundSize: "cover",
       }}
     >
-      <ChooseRuleSetView />
+      <ChooseRuleSetView
+        onClickBack={() => alert("Clicked back!")}
+        setRuleSet={(ruleSet) => alert(`Set ruleset to ${ruleSet}`)}
+      />
     </Grid>
   );
 };

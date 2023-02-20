@@ -23,7 +23,7 @@ const Template: ComponentStory<typeof StartScreenView> = function () {
         backgroundSize: "cover",
       }}
     >
-      <StartScreenView />
+      <StartScreenView onClickNewList={() => alert("Clicked new list!")} />
     </Grid>
   );
 };
