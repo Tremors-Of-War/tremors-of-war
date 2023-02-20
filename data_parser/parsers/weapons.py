@@ -73,3 +73,5 @@ def parse_weapons(db: Database):
 
         name = weapon["Name"]
         weapons[name] = weapon
+
+    return weapons
