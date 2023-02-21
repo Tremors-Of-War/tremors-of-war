@@ -76,7 +76,6 @@ const AppView: FunctionComponent = () => {
           }
         />
       );
-    // TODO: THESE VALUES
     default:
       // eslint-disable-next-line no-console
       console.error(`Unknown route: ${currentRoute}`);
