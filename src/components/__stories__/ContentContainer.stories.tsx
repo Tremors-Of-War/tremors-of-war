@@ -1,12 +1,12 @@
-import { Typography } from '@mui/material';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import ContentContainer from '../ContentContainer';
-import BackgroundIMG from '../../assets/backgrounds/default.jpg';
+import { Typography } from "@mui/material";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from "react";
+import Grid from "@mui/material/Unstable_Grid2";
+import ContentContainer from "../ContentContainer";
+import BackgroundIMG from "../../assets/backgrounds/default.jpg";
 
 export default {
-  title: 'Layout/Component/ContentContainer',
+  title: "Layout/Component/ContentContainer",
   component: ContentContainer,
 } as ComponentMeta<typeof ContentContainer>;
 
@@ -18,10 +18,10 @@ const Template: ComponentStory<typeof ContentContainer> = function (args: any) {
       alignItems="center"
       sx={{
         background: `url(${BackgroundIMG})`,
-        width: '100vw',
-        height: '100vh',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        width: "100vw",
+        height: "100vh",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
       <ContentContainer {...args}>

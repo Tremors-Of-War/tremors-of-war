@@ -1,8 +1,8 @@
-import { Grid } from '@mui/material';
-import * as React from 'react';
-import BackgroundIMG from '../assets/backgrounds/default.jpg';
-import ChooseFactionView from '../views/ChooseFactionView/ChooseFactionView';
-import AppProvider from './AppProvider';
+import { Grid } from "@mui/material";
+import * as React from "react";
+import BackgroundIMG from "../assets/backgrounds/default.jpg";
+import AppProvider from "./AppProvider";
+import AppView from "../views/AppView/AppView";
 
 function App() {
   return (
@@ -13,11 +13,11 @@ function App() {
         alignItems="center"
         sx={{
           background: `url(${BackgroundIMG})`,
-          height: '100vh',
-          backgroundSize: 'cover',
+          height: "100vh",
+          backgroundSize: "cover",
         }}
       >
-        <ChooseFactionView ruleSet="FantasyFactions" />
+        <AppView />
       </Grid>
     </AppProvider>
   );

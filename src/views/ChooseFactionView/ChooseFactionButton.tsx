@@ -1,34 +1,39 @@
-import { Button } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
-import React, { FunctionComponent } from 'react';
+import { Button } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
+import React, { FunctionComponent } from "react";
+import { FactionButton } from "./factionsList";
 
-interface Props {
-  factionName: string;
-  image: any;
+interface Props extends FactionButton {
+  onClick: () => void;
 }
 
-const ChooseFactionButton: FunctionComponent<Props> = ({ image, factionName }) => (
+const ChooseFactionButton: FunctionComponent<Props> = ({
+  image,
+  name,
+  onClick,
+}) => (
   <Grid
     container
     sx={{
-      width: '100%',
-      height: '100%',
+      width: "100%",
+      height: "100%",
     }}
   >
     <Button
       variant="outlined"
+      onClick={onClick}
       sx={{
-        width: '100%',
-        height: '100%',
-        borderRadius: '4px',
-        padding: '0px',
-        ' :hover': {
+        width: "100%",
+        height: "100%",
+        borderRadius: "4px",
+        padding: "0px",
+        " :hover": {
           backgroundImage: `url(${image})`,
-          backgroundSize: 'cover',
-          shrink: 'true',
-          transition: 'all .3s ease-in-out',
+          backgroundSize: "cover",
+          shrink: "true",
+          transition: "all .3s ease-in-out",
         },
-        '& :hover': {
+        "& :hover": {
           opacity: 0,
         },
       }}
@@ -37,9 +42,9 @@ const ChooseFactionButton: FunctionComponent<Props> = ({ image, factionName }) =
         container
         justifyContent="center"
         alignItems="center"
-        sx={{ height: '100%', width: '100%', opacity: 1 }}
+        sx={{ height: "100%", width: "100%", opacity: 1 }}
       >
-        {factionName}
+        {name}
       </Grid>
     </Button>
   </Grid>

@@ -1,9 +1,9 @@
-import { Typography } from '@mui/material';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
+import { Typography } from "@mui/material";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from "react";
 
 export default {
-  title: 'Theme/Typography',
+  title: "Theme/Typography",
   component: Typography,
 } as ComponentMeta<typeof Typography>;
 

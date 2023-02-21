@@ -1,9 +1,9 @@
-import { Grid, Button } from '@mui/material';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
+import { Grid, Button } from "@mui/material";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from "react";
 
 export default {
-  title: 'Theme/Button',
+  title: "Theme/Button",
   component: Button,
 } as ComponentMeta<typeof Button>;
 

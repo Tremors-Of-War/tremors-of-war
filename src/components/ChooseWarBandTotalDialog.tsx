@@ -9,11 +9,11 @@ import {
   Grid,
   IconButton,
   TextField,
-} from '@mui/material';
-import React, { FunctionComponent } from 'react';
-import CloseIcon from '@mui/icons-material/Close';
-import theme from '../app/theme';
-import { MAX_WARBAND_TOTAL } from '../constants';
+} from "@mui/material";
+import React, { FunctionComponent } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import theme from "../app/theme";
+import { MAX_WARBAND_TOTAL } from "../constants";
 
 export interface Props {
   open: boolean;
@@ -21,7 +21,11 @@ export interface Props {
   selectedValue: number;
 }
 
-const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({ onClose, selectedValue, open }) => {
+const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({
+  onClose,
+  selectedValue,
+  open,
+}) => {
   const [value, setValue] = React.useState<number>(selectedValue);
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
 
@@ -47,12 +51,12 @@ const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({ onClose, selectedV
       open={open}
       sx={{ minHeight: 188, minWidth: 444 }}
     >
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: "100%" }}>
         <Collapse sx={{ margin: 0 }} in={openAlert}>
           <Alert
             variant="filled"
             severity="error"
-            action={(
+            action={
               <IconButton
                 aria-label="close"
                 color="inherit"
@@ -63,17 +67,17 @@ const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({ onClose, selectedV
               >
                 <CloseIcon fontSize="inherit" />
               </IconButton>
-            )}
+            }
           >
-            Maximum Warband Total is
-            {' '}
-            {MAX_WARBAND_TOTAL.toLocaleString('en-US')}
+            Maximum Warband Total is {MAX_WARBAND_TOTAL.toLocaleString("en-US")}
           </Alert>
         </Collapse>
       </Box>
-      <DialogTitle color={theme.palette.primary.main}>WARBAND TOTAL</DialogTitle>
+      <DialogTitle color={theme.palette.primary.main}>
+        WARBAND TOTAL
+      </DialogTitle>
       <Grid container>
-        <DialogContent sx={{ padding: '0px 24px' }}>
+        <DialogContent sx={{ padding: "0px 24px" }}>
           <Box sx={{ minWidth: 444 }}>
             <TextField
               autoFocus
@@ -88,7 +92,12 @@ const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({ onClose, selectedV
               fullWidth
             />
           </Box>
-          <Grid container padding="8px" justifyContent="flex-end" alignItems="flex-end">
+          <Grid
+            container
+            padding="8px"
+            justifyContent="flex-end"
+            alignItems="flex-end"
+          >
             <Button onClick={handleSave}>SAVE</Button>
           </Grid>
         </DialogContent>

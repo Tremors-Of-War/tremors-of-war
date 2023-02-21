@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import ChooseFactionButton from '../ChooseFactionButton';
-import BackgroundIMG from '../../../assets/factions/fantasy/brettonia.jpg';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from "react";
+import Grid from "@mui/material/Unstable_Grid2";
+import ChooseFactionButton from "../ChooseFactionButton";
+import BackgroundIMG from "../../../assets/factions/fantasy/brettonia.jpg";
 
 export default {
-  title: 'Layout/Component/ChooseFactionButton',
+  title: "Layout/Component/ChooseFactionButton",
   component: ChooseFactionButton,
 } as ComponentMeta<typeof ChooseFactionButton>;
 
