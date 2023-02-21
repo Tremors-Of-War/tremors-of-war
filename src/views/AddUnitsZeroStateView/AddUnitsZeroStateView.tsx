@@ -6,18 +6,26 @@ import AddIcon from "@mui/icons-material/Add";
 import ContentContainer from "../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../components/ChooseWarBandTotalDialog";
 import AddUnitsZeroStateAction from "./AddUnitsZeroStateAction";
+import { Faction } from "../../types";
 
 interface Props {
-  faction: string;
+  faction: Faction;
+  warbandTotal: number;
+  onClickBack: () => void;
+  setWarbandTotal: (warbandTotal: number) => void;
 }
 
-const AddUnitsZeroStateView: FunctionComponent<Props> = ({ faction }) => {
-  const [open, setOpen] = React.useState(true);
-  const [selectedValue, setSelectedValue] = React.useState(0);
+const AddUnitsZeroStateView: FunctionComponent<Props> = ({
+  faction,
+  warbandTotal,
+  setWarbandTotal,
+  onClickBack
+}) => {
+  const [open, setOpen] = React.useState(warbandTotal === 0);
 
   const handleClose = (value: number) => {
     setOpen(!open);
-    setSelectedValue(value);
+    setWarbandTotal(value);
   };
   return (
     <>
@@ -65,7 +73,7 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({ faction }) => {
                     <Typography variant="h5">0&nbsp;</Typography>
                     <Typography variant="h5" sx={{ color: "text.disabled" }}>
                       {"/ "}
-                      {selectedValue.toLocaleString("en-US")}
+                      {warbandTotal.toLocaleString("en-US")}
                     </Typography>
                   </Grid>
                 </Tooltip>
@@ -76,7 +84,9 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({ faction }) => {
             <AddUnitsZeroStateAction />
           </Grid>
           <Grid container alignItems="center" justifyContent="space-between">
-            <Button variant="outlined">BACK</Button>
+            <Button variant="outlined" onClick={onClickBack}>
+              BACK
+            </Button>
             <Button onClick={() => setOpen(!open)} variant="outlined">
               EDIT WARBAND TOTAL
             </Button>
@@ -85,7 +95,7 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({ faction }) => {
       </ContentContainer>
       <ChooseWarBandTotalDialog
         open={open}
-        selectedValue={selectedValue}
+        selectedValue={warbandTotal}
         onClose={handleClose}
       />
     </>

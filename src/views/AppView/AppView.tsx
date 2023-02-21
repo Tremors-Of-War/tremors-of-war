@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from "react";
-import { RuleSet } from "../../types";
+import { Faction, RuleSet } from "../../types";
 import AddUnitsView from "../AddUnitsView/AddUnitsView";
 import AddUnitsZeroStateView from "../AddUnitsZeroStateView/AddUnitsZeroStateView";
 import ChooseFactionView from "../ChooseFactionView/ChooseFactionView";
@@ -10,11 +10,13 @@ import ROUTES, { INITIAL_ROUTE } from "./routes";
 interface State {
   ruleSet: RuleSet | null;
   faction: Faction | null;
+  warbandTotal: number;
 }
 
 const initialState: State = {
   ruleSet: null,
   faction: null,
+  warbandTotal: 0
 };
 
 const AppView: FunctionComponent = () => {
@@ -53,7 +55,16 @@ const AppView: FunctionComponent = () => {
     case ROUTES.ADD_UNITS:
       return <AddUnitsView faction="DarkAges" num={1} />; // TODO: THESE VALUES
     case ROUTES.ADD_UNITS_ZERO_STATE:
-      return <AddUnitsZeroStateView faction="DarkAges" />; // TODO: THESE VALUES
+      return (
+        <AddUnitsZeroStateView
+          faction={state.faction!}
+          warbandTotal={state.warbandTotal}
+          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
+          setWarbandTotal={(warbandTotal) =>
+            setState({ ...state, warbandTotal })
+          }
+        />
+      ); // TODO: THESE VALUES
     default:
       // eslint-disable-next-line no-console
       console.error(`Unknown route: ${currentRoute}`);
