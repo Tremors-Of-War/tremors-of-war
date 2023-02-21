@@ -57,9 +57,21 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
               </Box>
               <Box>
                 <Tooltip title="Warband Total">
-                  <Typography variant="h5">
-                    {num}/{selectedValue.toLocaleString("en-US")}
-                  </Typography>
+                  <Grid
+                    container
+                    width="100%"
+                    justifyContent="flex-end"
+                    direction="row"
+                  >
+                    <Typography variant="h5">
+                      {num.toLocaleString("en-US")}
+                      &nbsp;
+                    </Typography>
+                    <Typography variant="h5" sx={{ color: "text.disabled" }}>
+                      {"/ "}
+                      {selectedValue.toLocaleString("en-US")}
+                    </Typography>
+                  </Grid>
                 </Tooltip>
               </Box>
             </Grid>
