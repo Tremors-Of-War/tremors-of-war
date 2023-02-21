@@ -1,12 +1,13 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
+import { action } from "@storybook/addon-actions";
 import ChooseFactionView from "../ChooseFactionView";
 import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
   title: "Layout/View/ChooseFactionView",
-  component: ChooseFactionView,
+  component: ChooseFactionView
 } as ComponentMeta<typeof ChooseFactionView>;
 
 const Template: ComponentStory<typeof ChooseFactionView> = function (
@@ -22,7 +23,7 @@ const Template: ComponentStory<typeof ChooseFactionView> = function (
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundSize: "cover"
       }}
     >
       <ChooseFactionView {...args} />
@@ -31,7 +32,15 @@ const Template: ComponentStory<typeof ChooseFactionView> = function (
 };
 
 export const Fantasy = Template.bind({});
-Fantasy.args = { ruleSet: "Fantasy" };
+Fantasy.args = {
+  ruleSet: "fantasy",
+  onClickBack: action("Clicked Back!"),
+  setFaction: action("Faction Selected")
+};
 
 export const DarkAges = Template.bind({});
-DarkAges.args = { ruleSet: "DarkAges" };
+DarkAges.args = {
+  ruleSet: "dark_ages",
+  onClickBack: action("Clicked Back!"),
+  setFaction: action("Faction Selected")
+};

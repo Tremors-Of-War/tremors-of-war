@@ -52,8 +52,7 @@ const AppView: FunctionComponent = () => {
           }}
         />
       );
-    case ROUTES.ADD_UNITS:
-      return <AddUnitsView faction="DarkAges" num={1} />; // TODO: THESE VALUES
+    // TODO: THESE VALUES
     case ROUTES.ADD_UNITS_ZERO_STATE:
       return (
         <AddUnitsZeroStateView
@@ -64,7 +63,20 @@ const AppView: FunctionComponent = () => {
             setState({ ...state, warbandTotal })
           }
         />
-      ); // TODO: THESE VALUES
+      );
+    case ROUTES.ADD_UNITS:
+      return (
+        <AddUnitsView
+          faction={state.faction!}
+          warbandTotal={state.warbandTotal}
+          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
+          onClickPlay={() => alert("Navigate to play screen")}
+          setWarbandTotal={(warbandTotal) =>
+            setState({ ...state, warbandTotal })
+          }
+        />
+      );
+    // TODO: THESE VALUES
     default:
       // eslint-disable-next-line no-console
       console.error(`Unknown route: ${currentRoute}`);
