@@ -95,7 +95,7 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({
       </ContentContainer>
       <ChooseWarBandTotalDialog
         open={open}
-        selectedValue={warbandTotal}
+        warbandTotal={warbandTotal}
         onClose={handleClose}
       />
     </>

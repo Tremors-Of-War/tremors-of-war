@@ -18,18 +18,18 @@ import { MAX_WARBAND_TOTAL } from "../constants";
 export interface Props {
   open: boolean;
   onClose: (value: number) => void;
-  selectedValue: number;
+  warbandTotal: number;
 }
 
 const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({
   onClose,
-  selectedValue,
+  warbandTotal,
   open
 }) => {
-  const [value, setValue] = React.useState<number>(selectedValue);
+  const [value, setValue] = React.useState<number>(warbandTotal);
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
 
-  const handleClose = () => onClose(selectedValue);
+  const handleClose = () => onClose(warbandTotal);
 
   const handleSave = () => onClose(value);
 
@@ -85,7 +85,7 @@ const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({
               id="value"
               value={value}
               label="CHOOSE VALUE"
-              defaultValue={selectedValue}
+              defaultValue={warbandTotal}
               type="number"
               color="secondary"
               onChange={handleChange}
