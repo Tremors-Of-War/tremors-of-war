@@ -1,6 +1,6 @@
-import { Button, Grid, Typography } from '@mui/material';
-import React from 'react';
-import AddIcon from '@mui/icons-material/Add';
+import { Button, Grid, Typography } from "@mui/material";
+import React from "react";
+import AddIcon from "@mui/icons-material/Add";
 
 export interface Props {
   open: boolean;
@@ -15,7 +15,7 @@ const AddUnitsZeroStateAction = () => (
     alignItems="center"
     gap="10px"
     paddingBottom="112px"
-    sx={{ height: '100%', width: '100%' }}
+    sx={{ height: "100%", width: "100%" }}
   >
     <Typography>You do not have any units.</Typography>
     <Button size="large" startIcon={<AddIcon />} variant="contained">
