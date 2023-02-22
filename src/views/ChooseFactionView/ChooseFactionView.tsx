@@ -18,7 +18,7 @@ const ChooseFactionView: FunctionComponent<Props> = ({
   setFaction
 }) => (
   <ContentContainer>
-    <Grid sx={{ marginTop: 2 }}>
+    <Grid>
       <Typography variant="h3">FACTION</Typography>
 
       <Grid container spacing={2} marginTop="2px">

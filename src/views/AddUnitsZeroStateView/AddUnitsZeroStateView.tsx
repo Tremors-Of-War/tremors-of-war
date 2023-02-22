@@ -37,12 +37,7 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({
           justifyContent="space-between"
           height="100%"
         >
-          <Grid
-            container
-            justifyContent="space-between"
-            gap="8px"
-            sx={{ marginTop: 2 }}
-          >
+          <Grid container justifyContent="space-between" gap="8px">
             <Box>
               <Typography variant="h3">{faction}</Typography>
             </Box>
