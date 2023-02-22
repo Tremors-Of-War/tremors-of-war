@@ -4,7 +4,7 @@ import AntiqueRoman from "../assets/fonts/AntiqueRoman.ttf";
 const theme = createTheme({
   typography: {
     h3: {
-      fontFamily: ["AntiqueRoman", "sans-serif"].join(",")
+      fontFamily: "AntiqueRoman sans-serif"
     }
   },
   palette: {
