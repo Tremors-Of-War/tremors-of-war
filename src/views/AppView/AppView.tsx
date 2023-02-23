@@ -4,6 +4,7 @@ import AddUnitsView from "../AddUnitsView/AddUnitsView";
 import AddUnitsZeroStateView from "../AddUnitsZeroStateView/AddUnitsZeroStateView";
 import ChooseFactionView from "../ChooseFactionView/ChooseFactionView";
 import ChooseRuleSetView from "../ChooseRuleSetView/ChooseRuleSetView";
+import SetUnitView from "../SetUnitView/SetUnitView";
 import StartScreenView from "../StartScreenView/StartScreenView";
 import ROUTES, { INITIAL_ROUTE } from "./routes";
 
@@ -58,7 +59,7 @@ const AppView: FunctionComponent = () => {
         <AddUnitsZeroStateView
           faction={state.faction!}
           warbandTotal={state.warbandTotal}
-          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
+          onClickBack={() => setCurrentRoute(ROUTES.SET_UNIT)}
           setWarbandTotal={(warbandTotal) =>
             setState({ ...state, warbandTotal })
           }
@@ -74,6 +75,12 @@ const AppView: FunctionComponent = () => {
           setWarbandTotal={(warbandTotal) =>
             setState({ ...state, warbandTotal })
           }
+        />
+      );
+    case ROUTES.SET_UNIT:
+      return (
+        <SetUnitView
+          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
         />
       );
     default:

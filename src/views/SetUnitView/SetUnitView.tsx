@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import { Button, Typography, TextField } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
+import SetUnitTabs from "./SetUnitTabs";
 
 interface Props {
   onClickBack: () => void;
@@ -9,7 +10,12 @@ interface Props {
 
 const SetUnitView: FunctionComponent<Props> = ({ onClickBack }) => {
   const [unitName, setUnitName] = React.useState<string>();
-  const handleChange = (event: any) => {
+  const [tabValue, setTabValue] = React.useState(0);
+
+  const handleTabChange = (event: any, newValue: number) => {
+    setTabValue(newValue);
+  };
+  const handleNameChange = (event: any) => {
     const parsedInputValue = event.target.value;
     setUnitName(parsedInputValue);
   };
@@ -23,43 +29,86 @@ const SetUnitView: FunctionComponent<Props> = ({ onClickBack }) => {
         justifyContent="space-between"
         height="100%"
       >
-        <Grid
-          container
-          justifyContent="space-between"
-          gap="8px"
-          sx={{ marginTop: 2 }}
-        >
-          <TextField
-            id="value"
-            value={unitName}
-            label="NAME"
-            variant="filled"
-            color="secondary"
-            defaultValue={unitName}
-            onChange={handleChange}
-          />
-
+        <Grid container direction="column">
           <Grid
             container
-            direction="column"
-            alignItems="flex-end"
-            justifyContent="flex-end"
+            justifyContent="space-between"
+            gap="8px"
+            sx={{ marginTop: 2 }}
           >
-            <Typography variant="h5" color="primary">
-              SELECT UNIT
-            </Typography>
+            <TextField
+              id="value"
+              value={unitName}
+              label="NAME"
+              variant="filled"
+              color="secondary"
+              defaultValue={unitName}
+              onChange={handleNameChange}
+            />
 
-            <Typography color="secondary" variant="subtitle1">
-              0 POINTS
-            </Typography>
-            <Typography sx={{ color: "text.disabled" }} variant="subtitle2">
-              1500 POINTS REMAINING
-            </Typography>
+            <Grid
+              container
+              direction="column"
+              alignItems="flex-end"
+              justifyContent="flex-end"
+            >
+              <Typography variant="h5" color="primary">
+                SELECT UNIT
+              </Typography>
+
+              <Typography color="secondary" variant="subtitle1">
+                0 POINTS
+              </Typography>
+              <Typography sx={{ color: "text.disabled" }} variant="subtitle2">
+                1500 POINTS REMAINING
+              </Typography>
+            </Grid>
           </Grid>
-        </Grid>
+          <Grid>
+            <SetUnitTabs value={tabValue} handleChange={handleTabChange} />
+            <Grid
+              container
+              maxWidth="6200px"
+              maxHeight="435px"
+              sx={{
+                overflowX: "hidden",
+                overflowY: "scroll",
+                "::-webkit-scrollbar": {
+                  display: "none"
+                }
+              }}
+            >
+              {(() => {
+                switch (tabValue) {
+                  case 0:
+                    return (
+                      <Typography variant="h3">
+                        In publishing and graphic design, Lorem ipsum is a
+                        placeholder text commonly used to demonstrate the visual
+                        form of a document or a typeface without relying on
+                        meaningful content. Lorem ipsum may be used as a
+                        placeholder before final copy is available.In publishing
+                        and graphic design, Lorem ipsum is a placeholder text
+                        commonly used to demonstrate the visual form of a
+                        document or a typeface without relying on meaningful
+                        content. Lorem ipsum may be used as a placeholder before
+                        final copy is available.
+                      </Typography>
+                    );
+                  case 1:
+                    return <Typography>two</Typography>;
+                  case 2:
+                    return <Typography>three</Typography>;
+                  case 3:
+                    return <Typography>four</Typography>;
 
-        <Grid container maxHeight="524px">
-          <Typography>middle</Typography>
+                  default:
+                    // eslint-disable-next-line no-console
+                    return <p>Unknown tab</p>;
+                }
+              })()}
+            </Grid>
+          </Grid>
         </Grid>
 
         <Grid container alignItems="center" justifyContent="space-between">
