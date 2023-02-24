@@ -752,8 +752,8 @@
       "D": 1,
       "Cost": 40,
       "Traits": [
-        "Multi-Shot (3)",
-        "Black Powder"
+        "Black Powder",
+        "Multi-Shot (3)"
       ]
     },
     "Shortbow": {
@@ -801,8 +801,8 @@
       "D": 1,
       "Cost": 30,
       "Traits": [
-        "Multi-Shot (3)",
-        "Black Powder"
+        "Black Powder",
+        "Multi-Shot (3)"
       ]
     },
     "Throwing Axe": {
@@ -900,9 +900,9 @@
       "D": 2,
       "Cost": 45,
       "Traits": [
-        "Unwieldly",
         "Hooked Head",
         "Versatile",
+        "Unwieldly",
         "Melee"
       ]
     },
@@ -936,9 +936,9 @@
       "D": 2,
       "Cost": 35,
       "Traits": [
+        "Unwieldly",
         "Versatile",
         "Rending",
-        "Unwieldly",
         "Melee"
       ]
     },
@@ -1060,9 +1060,9 @@
       "D": 1,
       "Cost": 40,
       "Traits": [
-        "Lance",
         "Ride By",
         "Versatile",
+        "Lance",
         "Melee"
       ]
     },
@@ -1129,9 +1129,9 @@
       "D": 2,
       "Cost": 40,
       "Traits": [
-        "Unwieldly",
         "Pulverise",
         "Versatile",
+        "Unwieldly",
         "Melee"
       ]
     },
@@ -1166,8 +1166,8 @@
       "D": 1,
       "Cost": 30,
       "Traits": [
-        "Unwieldly",
         "Versatile",
+        "Unwieldly",
         "Strike First",
         "Melee"
       ]
@@ -1236,9 +1236,9 @@
       "D": 2,
       "Cost": 0,
       "Traits": [
-        "Unwieldly",
         "Sever",
         "Versatile",
+        "Unwieldly",
         "Melee"
       ]
     },
@@ -1255,8 +1255,8 @@
       "D": 2,
       "Cost": 35,
       "Traits": [
-        "Unwieldly",
         "Versatile",
+        "Unwieldly",
         "Melee"
       ]
     },
@@ -5813,6 +5813,8688 @@
           }
         }
       }
+    }
+  },
+  "factions": {
+    "Empire": {
+      "Empire_State_Troop": {
+        "Faction": "Empire",
+        "Name": "Empire_State_Troop",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 7,
+        "Int": 7,
+        "Points": 55,
+        "Abilities": [
+          "Counter Charge"
+        ],
+        "Weaponry": [
+          "Sword",
+          "Axe",
+          "Mace",
+          "Dagger",
+          "Spear (Used with Shield)"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Halberd"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin",
+          "Throwing Knives",
+          "Pistol"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield",
+          "Buckler"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Empire_State_Troop_Skirmisher": {
+        "Faction": "Empire",
+        "Name": "Empire_State_Troop_Skirmisher",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 7,
+        "Int": 7,
+        "Points": 55,
+        "Abilities": [
+          "Support Fire"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Crossbow",
+          "Handgun"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield",
+          "Buckler"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "Scout"
+        ],
+        "Mounts": []
+      },
+      "Reiksguard": {
+        "Faction": "Empire",
+        "Name": "Reiksguard",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 110,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Poleaxe",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Plate armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Empire_Captain": {
+        "Faction": "Empire",
+        "Name": "Empire_Captain",
+        "M": 5,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 3,
+        "A": 4,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 230,
+        "Abilities": [
+          "Hold the Line"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Two handed Axe",
+          "Two handed sword",
+          "Halberd",
+          "Poleaxe"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Crossbow",
+          "Handgun",
+          "Throwing Knives",
+          "Pistol"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Plate armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Warhorse"
+        ]
+      },
+      "Halfling": {
+        "Faction": "Empire",
+        "Name": "Halfling",
+        "M": 5,
+        "WS": 5,
+        "BS": 3,
+        "S": 2,
+        "T": 2,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 7,
+        "Int": 6,
+        "Points": 30,
+        "Abilities": [
+          "Short and Nimble"
+        ],
+        "Weaponry": [
+          "Spear (Used with Shield)",
+          "Dagger"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Shortbow",
+          "Sling"
+        ],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "Scout"
+        ],
+        "Mounts": []
+      },
+      "Master_Engineer": {
+        "Faction": "Empire",
+        "Name": "Master_Engineer",
+        "M": 5,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 4,
+        "A": 1,
+        "Cl": 6,
+        "Int": 5,
+        "Points": 90,
+        "Abilities": [],
+        "Weaponry": [
+          "Dagger",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Crossbow",
+          "Handgun",
+          "Hochland Long Rifle",
+          "Pistol",
+          "Repeater Handgun"
+        ],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Counts_Guard": {
+        "Faction": "Empire",
+        "Name": "Counts_Guard",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 60,
+        "Abilities": [
+          "Counter Charge"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Poleaxe",
+          "Spear (Two Handed)",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Mounted_Empire_Captain": {
+        "Faction": "Empire",
+        "Name": "Mounted_Empire_Captain",
+        "M": 5,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 3,
+        "A": 4,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 230,
+        "Abilities": [
+          "Hold the Line"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Pistol"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Plate armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Warhorse",
+          "Demigryph"
+        ]
+      },
+      "Mounted_Reiksguard": {
+        "Faction": "Empire",
+        "Name": "Mounted_Reiksguard",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 110,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Plate armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Warhorse"
+        ]
+      },
+      "Witch_Hunter": {
+        "Faction": "Empire",
+        "Name": "Witch_Hunter",
+        "M": 5,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 3,
+        "Cl": 4,
+        "Int": 5,
+        "Points": 140,
+        "Abilities": [
+          "Condemn"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Crossbow",
+          "Pistol"
+        ],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      }
+    },
+    "High_Elves": {
+      "Swordmaster": {
+        "Faction": "High_Elves",
+        "Name": "Swordmaster",
+        "M": 6,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 3,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 145,
+        "Abilities": [
+          "Dodge (Ranged)",
+          "Dodge (Close Combat)",
+          "Martial Prowess"
+        ],
+        "Weaponry": [],
+        "Two_Hand_Weaponry": [
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "White_Lion": {
+        "Faction": "High_Elves",
+        "Name": "White_Lion",
+        "M": 6,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 2,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 140,
+        "Abilities": [
+          "Lion Rampant",
+          "Dodge (Close Combat)",
+          "Martial Prowess"
+        ],
+        "Weaponry": [],
+        "Two_Hand_Weaponry": [
+          "Two handed Axe"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [
+          "White Lion Cloak"
+        ],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Phoenix_Guard": {
+        "Faction": "High_Elves",
+        "Name": "Phoenix_Guard",
+        "M": 6,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 2,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 150,
+        "Abilities": [
+          "Blessings of Asuryan",
+          "Dodge (Close Combat)",
+          "Martial Prowess"
+        ],
+        "Weaponry": [],
+        "Two_Hand_Weaponry": [
+          "Halberd"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Archer": {
+        "Faction": "High_Elves",
+        "Name": "Archer",
+        "M": 6,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 90,
+        "Abilities": [
+          "Dodge (Close Combat)",
+          "Martial Prowess"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Elven Longbow"
+        ],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Noble": {
+        "Faction": "High_Elves",
+        "Name": "Noble",
+        "M": 6,
+        "WS": 2,
+        "BS": 2,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 2,
+        "A": 4,
+        "Cl": 4,
+        "Int": 5,
+        "Points": 260,
+        "Abilities": [
+          "Dodge (Close Combat)",
+          "Martial Prowess"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Spear (Two Handed)",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Elven Longbow"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Mounted_Noble": {
+        "Faction": "High_Elves",
+        "Name": "Mounted_Noble",
+        "M": 6,
+        "WS": 2,
+        "BS": 2,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 2,
+        "A": 4,
+        "Cl": 4,
+        "Int": 5,
+        "Points": 260,
+        "Abilities": [
+          "Dodge (Close Combat)",
+          "Martial Prowess"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Sword",
+          "Lance"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Bow"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Elven_Warhorse"
+        ]
+      },
+      "Silver_Helm": {
+        "Faction": "High_Elves",
+        "Name": "Silver_Helm",
+        "M": 6,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 90,
+        "Abilities": [
+          "Dodge (Close Combat)",
+          "Martial Prowess"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Sword",
+          "Lance"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Elven_Warhorse"
+        ]
+      },
+      "Shadow_Warrior": {
+        "Faction": "High_Elves",
+        "Name": "Shadow_Warrior",
+        "M": 6,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 118,
+        "Abilities": [
+          "Dodge (Close Combat)",
+          "Martial Prowess",
+          "Infiltrate"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Elven Longbow"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [
+          "Scout"
+        ],
+        "Mounts": []
+      },
+      "Sea_Guard": {
+        "Faction": "High_Elves",
+        "Name": "Sea_Guard",
+        "M": 6,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 100,
+        "Abilities": [
+          "Dodge (Close Combat)",
+          "Martial Prowess"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Bow"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      }
+    },
+    "Orcs_and_Goblins": {
+      "Big_'Un": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Big_'Un",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Cl": 7,
+        "Int": 8,
+        "Points": 110,
+        "Abilities": [
+          "Choppas"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Black_Orc": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Black_Orc",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 3,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 135,
+        "Abilities": [
+          "Choppas"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Savage_orc": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Savage_orc",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 3,
+        "Cl": 6,
+        "Int": 9,
+        "Points": 125,
+        "Abilities": [
+          "Choppas",
+          "Warpaint"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Savage_Orc_Big_Un": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Savage_Orc_Big_Un",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 3,
+        "Cl": 6,
+        "Int": 9,
+        "Points": 150,
+        "Abilities": [
+          "Choppas",
+          "Warpaint"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Orc_Big_Boss": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Orc_Big_Boss",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 5,
+        "W": 3,
+        "I": 5,
+        "A": 4,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 220,
+        "Abilities": [
+          "Choppas",
+          "Waaagh!"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Arrer_Boy": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Arrer_Boy",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Cl": 8,
+        "Int": 8,
+        "Points": 60,
+        "Abilities": [
+          "Choppas"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Bow"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Troll": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Troll",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 5,
+        "T": 4,
+        "W": 3,
+        "I": 5,
+        "A": 4,
+        "Cl": 7,
+        "Int": 10,
+        "Points": 250,
+        "Abilities": [
+          "Regeneration"
+        ],
+        "Weaponry": [
+          "Pick"
+        ],
+        "Two_Hand_Weaponry": [
+          "Troll Club"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Night_Goblin": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Night_Goblin",
+        "M": 5,
+        "WS": 5,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 9,
+        "Int": 8,
+        "Points": 30,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Shortbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Night_Goblin_Big_Boss": {
+        "Faction": "Orcs_and_Goblins",
+        "Name": "Night_Goblin_Big_Boss",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 3,
+        "A": 3,
+        "Cl": 7,
+        "Int": 7,
+        "Points": 120,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Shortbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      }
+    },
+    "Brettonia": {
+      "Peasant": {
+        "Faction": "Brettonia",
+        "Name": "Peasant",
+        "M": 5,
+        "WS": 5,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 9,
+        "Int": 8,
+        "Points": 25,
+        "Abilities": [
+          "Peasant's Duty"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Spear (Used with Shield)"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Bowman": {
+        "Faction": "Brettonia",
+        "Name": "Bowman",
+        "M": 5,
+        "WS": 5,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 9,
+        "Int": 8,
+        "Points": 35,
+        "Abilities": [
+          "Peasants Duty"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Longbow"
+        ],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Brettonian_Foot_Knight": {
+        "Faction": "Brettonia",
+        "Name": "Brettonian_Foot_Knight",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 95,
+        "Abilities": [
+          "Blessing of the Lady",
+          "Horse Lords"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Poleaxe",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "The Knight's Vow",
+          "The Questing Vow",
+          "The Grail Vow"
+        ],
+        "Mounts": []
+      },
+      "Brettonian_Knight": {
+        "Faction": "Brettonia",
+        "Name": "Brettonian_Knight",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 95,
+        "Abilities": [
+          "Blessing of the Lady",
+          "Horse Lords"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "The Knight's Vow",
+          "The Questing Vow",
+          "The Grail Vow"
+        ],
+        "Mounts": [
+          "Warhorse"
+        ]
+      },
+      "Duke": {
+        "Faction": "Brettonia",
+        "Name": "Duke",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 4,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 165,
+        "Abilities": [
+          "Blessing of the Lady",
+          "Horse Lords",
+          "Bred to the Saddle"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "The Knight's Vow",
+          "The Questing Vow",
+          "The Grail Vow"
+        ],
+        "Mounts": [
+          "Warhorse"
+        ]
+      }
+    },
+    "Skaven": {
+      "Skavenslave": {
+        "Faction": "Skaven",
+        "Name": "Skavenslave",
+        "M": 6,
+        "WS": 5,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 9,
+        "Int": 8,
+        "Points": 35,
+        "Abilities": [
+          "Strength in Numbers"
+        ],
+        "Weaponry": [
+          "Sling",
+          "Throwing Knives",
+          "Dagger",
+          "Spear (Two Handed)",
+          "Spear (Used with Shield)"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Clan_Rat": {
+        "Faction": "Skaven",
+        "Name": "Clan_Rat",
+        "M": 6,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 8,
+        "Int": 7,
+        "Points": 60,
+        "Abilities": [
+          "Strength in Numbers"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Sling",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Gutter_Runner": {
+        "Faction": "Skaven",
+        "Name": "Gutter_Runner",
+        "M": 6,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 8,
+        "Int": 6,
+        "Points": 70,
+        "Abilities": [
+          "Infiltrate",
+          "Strength in Numbers"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Sling",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "Poison Attacks"
+        ],
+        "Mounts": []
+      },
+      "Storm_Vermin": {
+        "Faction": "Skaven",
+        "Name": "Storm_Vermin",
+        "M": 6,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 7,
+        "Int": 6,
+        "Points": 95,
+        "Abilities": [
+          "Strength in Numbers"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd"
+        ],
+        "Ranged_Weaponry": [
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Claw_Leader": {
+        "Faction": "Skaven",
+        "Name": "Claw_Leader",
+        "M": 6,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 3,
+        "A": 4,
+        "Cl": 6,
+        "Int": 5,
+        "Points": 205,
+        "Abilities": [
+          "Strength in Numbers"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Poisonwind Grenade",
+          "Sling",
+          "Throwing Knives",
+          "Warplock Pistol"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Mounted_Claw_Leader": {
+        "Faction": "Skaven",
+        "Name": "Mounted_Claw_Leader",
+        "M": 6,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 3,
+        "A": 4,
+        "Cl": 6,
+        "Int": 5,
+        "Points": 205,
+        "Abilities": [
+          "Strength in Numbers"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Sling",
+          "Throwing Knives",
+          "Warplock Pistol"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Rat_Ogre_Bonebreaker"
+        ]
+      },
+      "Rat_Ogre": {
+        "Faction": "Skaven",
+        "Name": "Rat_Ogre",
+        "M": 6,
+        "WS": 4,
+        "BS": 4,
+        "S": 5,
+        "T": 4,
+        "W": 3,
+        "I": 3,
+        "A": 4,
+        "Cl": 5,
+        "Int": 9,
+        "Points": 225,
+        "Abilities": [],
+        "Weaponry": [
+          "Monstrous Claws"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Armour Transplants"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [
+          "Extra Extremities",
+          "Quadrupedal",
+          "Resilient",
+          "Trollblooded"
+        ],
+        "Mounts": []
+      }
+    },
+    "Dwarf": {
+      "Dwarf_Warrior": {
+        "Faction": "Dwarf",
+        "Name": "Dwarf_Warrior",
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 65,
+        "Abilities": [
+          "Dwarven Crafted"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace"
+        ],
+        "Two_Hand_Weaponry": [
+          "Two handed Axe"
+        ],
+        "Ranged_Weaponry": [
+          "Crossbow",
+          "Handgun",
+          "Throwing Axe"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Slayer": {
+        "Faction": "Dwarf",
+        "Name": "Slayer",
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 105,
+        "Abilities": [
+          "Unbreakable",
+          "Deathblow"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace"
+        ],
+        "Two_Hand_Weaponry": [
+          "Two handed Axe"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Ironbreaker": {
+        "Faction": "Dwarf",
+        "Name": "Ironbreaker",
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 115,
+        "Abilities": [
+          "Dwarven Crafted"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace"
+        ],
+        "Two_Hand_Weaponry": [
+          "Two handed Axe"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Plate armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [
+          "Gromril"
+        ],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Hammerer": {
+        "Faction": "Dwarf",
+        "Name": "Hammerer",
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 3,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 130,
+        "Abilities": [],
+        "Weaponry": [],
+        "Two_Hand_Weaponry": [
+          "Two Handed Hammer"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [
+          "Gromril"
+        ],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Dwarf_Captain": {
+        "Faction": "Dwarf",
+        "Name": "Dwarf_Captain",
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 5,
+        "W": 3,
+        "I": 5,
+        "A": 4,
+        "Cl": 4,
+        "Int": 5,
+        "Points": 235,
+        "Abilities": [
+          "Dwarven Crafted"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Two handed Axe"
+        ],
+        "Ranged_Weaponry": [
+          "Crossbow",
+          "Handgun",
+          "Pistol",
+          "Throwing Axe"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Plate armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [
+          "Gromril"
+        ],
+        "Upgrades": [],
+        "Mounts": []
+      }
+    },
+    "Chaos": {
+      "Warrior_of_Chaos": {
+        "Faction": "Chaos",
+        "Name": "Warrior_of_Chaos",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 3,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 145,
+        "Abilities": [
+          "Will of Chaos"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Poleaxe",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Throwing Axe"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Chaos Plate Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "Mark of Tzeentch",
+          "Markof Nurgle",
+          "Mark of Khorne"
+        ],
+        "Mounts": []
+      },
+      "Chaos_Knight": {
+        "Faction": "Chaos",
+        "Name": "Chaos_Knight",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 3,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 145,
+        "Abilities": [
+          "Will of Chaos"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Chaos Plate Armour",
+          "Shield"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "Mark of Tzeentch",
+          "Markof Nurgle",
+          "Mark of Khorne"
+        ],
+        "Mounts": [
+          "Chaos_Warhorse"
+        ]
+      },
+      "Marauder": {
+        "Faction": "Chaos",
+        "Name": "Marauder",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 7,
+        "Int": 8,
+        "Points": 55,
+        "Abilities": [
+          "Will of Chaos"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Poleaxe",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin",
+          "Shortbow",
+          "Throwing Axe"
+        ],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "Mark of Tzeentch",
+          "Markof Nurgle",
+          "Mark of Khorne"
+        ],
+        "Mounts": []
+      },
+      "Mounted_Exalted_Champion": {
+        "Faction": "Chaos",
+        "Name": "Mounted_Exalted_Champion",
+        "M": 5,
+        "WS": 2,
+        "BS": 4,
+        "S": 5,
+        "T": 4,
+        "W": 3,
+        "I": 2,
+        "A": 4,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 250,
+        "Abilities": [
+          "Will of Chaos"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Chaos Plate Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "Mark of Tzeentch",
+          "Markof Nurgle",
+          "Mark of Khorne"
+        ],
+        "Mounts": [
+          "Chaos_Warhorse"
+        ]
+      },
+      "Exalted_Champion": {
+        "Faction": "Chaos",
+        "Name": "Exalted_Champion",
+        "M": 5,
+        "WS": 2,
+        "BS": 4,
+        "S": 5,
+        "T": 4,
+        "W": 3,
+        "I": 2,
+        "A": 4,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 250,
+        "Abilities": [
+          "Will of Chaos"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Poleaxe",
+          "Two handed Axe",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Throwing Axe"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour",
+          "Chaos Plate Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [
+          "Mark of Tzeentch",
+          "Markof Nurgle",
+          "Mark of Khorne"
+        ],
+        "Mounts": []
+      }
+    },
+    "Dark_Elves": {
+      "Dark_Elf_Warrior": {
+        "Faction": "Dark_Elves",
+        "Name": "Dark_Elf_Warrior",
+        "M": 6,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 100,
+        "Abilities": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Lance",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Repeater Crossbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Dreadknight": {
+        "Faction": "Dark_Elves",
+        "Name": "Dreadknight",
+        "M": 6,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 5,
+        "Int": 6,
+        "Points": 140,
+        "Abilities": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Hand Crossbow"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)"
+        ],
+        "Upgrades": [],
+        "Mounts": [
+          "Cold_One",
+          "Warhorse"
+        ]
+      },
+      "Witch_Elf": {
+        "Faction": "Dark_Elves",
+        "Name": "Witch_Elf",
+        "M": 7,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 2,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 135,
+        "Abilities": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)",
+          "Poison Attacks"
+        ],
+        "Weaponry": [
+          "Dagger"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Dark_Elf_Corsair": {
+        "Faction": "Dark_Elves",
+        "Name": "Dark_Elf_Corsair",
+        "M": 6,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 100,
+        "Abilities": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)"
+        ],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Hand Crossbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [
+          "Sea Dragon Cloak"
+        ],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Executioner": {
+        "Faction": "Dark_Elves",
+        "Name": "Executioner",
+        "M": 6,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 125,
+        "Abilities": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)"
+        ],
+        "Weaponry": [],
+        "Two_Hand_Weaponry": [
+          "Executioner's Blade"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Shade": {
+        "Faction": "Dark_Elves",
+        "Name": "Shade",
+        "M": 6,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 120,
+        "Abilities": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)",
+          "Infiltrate"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Mace",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Hand Crossbow",
+          "Repeater Crossbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [
+          "Scout"
+        ],
+        "Mounts": []
+      },
+      "Mounted_Dark_Elf_Master": {
+        "Faction": "Dark_Elves",
+        "Name": "Mounted_Dark_Elf_Master",
+        "M": 6,
+        "WS": 2,
+        "BS": 2,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 4,
+        "Cl": 5,
+        "Int": 4,
+        "Points": 205,
+        "Abilities": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Hand Crossbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Cold_One",
+          "Warhorse"
+        ]
+      },
+      "Dark_Elf_Master": {
+        "Faction": "Dark_Elves",
+        "Name": "Dark_Elf_Master",
+        "M": 6,
+        "WS": 2,
+        "BS": 2,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 4,
+        "Cl": 5,
+        "Int": 4,
+        "Points": 205,
+        "Abilities": [
+          "Murderous Prowess",
+          "Dodge (Close Combat)"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword",
+          "Cost"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Spear (Two Handed)",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Hand Crossbow",
+          "Repeater Crossbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      }
+    },
+    "Cathay": {
+      "Cathayan_Captain": {
+        "Faction": "Cathay",
+        "Name": "Cathayan_Captain",
+        "M": 5,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 3,
+        "A": 4,
+        "Cl": 5,
+        "Int": 5,
+        "Points": 210,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Cathayan Longsword",
+          "Halberd",
+          "Spear (Two Handed)",
+          "Two handed sword"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Cathayan Repeater Crossbow",
+          "Crossbow",
+          "Handgun",
+          "Pistol",
+          "Three-Eyed Gun",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Mounted_Cathayan_Captain": {
+        "Faction": "Cathay",
+        "Name": "Mounted_Cathayan_Captain",
+        "M": 5,
+        "WS": 3,
+        "BS": 3,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 3,
+        "A": 4,
+        "Cl": 5,
+        "Int": 5,
+        "Points": 210,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Pistol",
+          "Three-Eyed Gun",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Warhorse"
+        ]
+      },
+      "Dragon_Cavalry": {
+        "Faction": "Cathay",
+        "Name": "Dragon_Cavalry",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 2,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 85,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Fire Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Pistol",
+          "Three-Eyed Gun",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Warhorse"
+        ]
+      },
+      "Imperial_Infantry": {
+        "Faction": "Cathay",
+        "Name": "Imperial_Infantry",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 7,
+        "Int": 7,
+        "Points": 50,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Cathayan Repeater Crossbow",
+          "Crossbow",
+          "Handgun",
+          "Three-Eyed Gun"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": [
+          "Warhorse"
+        ]
+      },
+      "Levy-Infantry": {
+        "Faction": "Cathay",
+        "Name": "Levy-Infantry",
+        "M": 5,
+        "WS": 5,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 9,
+        "Int": 7,
+        "Points": 20,
+        "Abilities": [],
+        "Weaponry": [
+          "Axe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Bow"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Shield"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Dragonblade": {
+        "Faction": "Cathay",
+        "Name": "Dragonblade",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 3,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 110,
+        "Abilities": [],
+        "Weaponry": [],
+        "Two_Hand_Weaponry": [
+          "Cathayan Longsword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Imperial_Guard": {
+        "Faction": "Cathay",
+        "Name": "Imperial_Guard",
+        "M": 5,
+        "WS": 3,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 90,
+        "Abilities": [],
+        "Weaponry": [],
+        "Two_Hand_Weaponry": [
+          "Halberd"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Temple_Dog": {
+        "Faction": "Cathay",
+        "Name": "Temple_Dog",
+        "M": 7,
+        "WS": 4,
+        "BS": 4,
+        "S": 4,
+        "T": 5,
+        "W": 2,
+        "I": 3,
+        "A": 3,
+        "Cl": 6,
+        "Int": 9,
+        "Points": 180,
+        "Abilities": [],
+        "Weaponry": [],
+        "Two_Hand_Weaponry": [],
+        "Ranged_Weaponry": [],
+        "Armour": [],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      }
+    },
+    "Nippon": {
+      "Hatamoto": {
+        "Faction": "Nippon",
+        "Name": "Hatamoto",
+        "M": 5,
+        "WS": 3,
+        "BS": 2,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 3,
+        "A": 4,
+        "Cl": 5,
+        "Int": 5,
+        "Points": 220,
+        "Abilities": [
+          "Way of the Warrior"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Katana"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Katana (Two handed)",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Handgun",
+          "Longbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [
+          "Horo Cloak"
+        ],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Mounted_Hatamoto": {
+        "Faction": "Nippon",
+        "Name": "Mounted_Hatamoto",
+        "M": 5,
+        "WS": 3,
+        "BS": 2,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 3,
+        "A": 4,
+        "Cl": 5,
+        "Int": 5,
+        "Points": 220,
+        "Abilities": [
+          "Way of the Warrior"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Katana"
+        ],
+        "Two_Hand_Weaponry": [
+          "Katana (Two handed)",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [
+          "Horo Cloak"
+        ],
+        "Upgrades": [],
+        "Mounts": [
+          "Warhorse"
+        ]
+      },
+      "Samurai": {
+        "Faction": "Nippon",
+        "Name": "Samurai",
+        "M": 5,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 100,
+        "Abilities": [
+          "Way of the Warrior"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Katana"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Katana (Two handed)",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Handgun",
+          "Longbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [
+          "Mantlet"
+        ],
+        "Other Armour": [
+          "Horo Cloak"
+        ],
+        "Upgrades": [
+          "Red Devil"
+        ],
+        "Mounts": []
+      },
+      "Mounted_Samurai": {
+        "Faction": "Nippon",
+        "Name": "Mounted_Samurai",
+        "M": 5,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 100,
+        "Abilities": [
+          "Way of the Warrior"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Katana"
+        ],
+        "Two_Hand_Weaponry": [
+          "Katana (Two handed)",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour",
+          "Heavy Armour"
+        ],
+        "Shield": [],
+        "Other Armour": [
+          "Horo Cloak"
+        ],
+        "Upgrades": [
+          "Red Devil"
+        ],
+        "Mounts": [
+          "Warhorse"
+        ]
+      },
+      "Ashiguru": {
+        "Faction": "Nippon",
+        "Name": "Ashiguru",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 7,
+        "Int": 8,
+        "Points": 50,
+        "Abilities": [],
+        "Weaponry": [
+          "Dagger"
+        ],
+        "Two_Hand_Weaponry": [
+          "Halberd",
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [
+          "Handgun",
+          "Longbow",
+          "Throwing Knives"
+        ],
+        "Armour": [
+          "Light armour",
+          "Medium Armour"
+        ],
+        "Shield": [
+          "Mantlet"
+        ],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      },
+      "Nipponese_Leves": {
+        "Faction": "Nippon",
+        "Name": "Nipponese_Leves",
+        "M": 5,
+        "WS": 5,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 9,
+        "Int": 9,
+        "Points": 20,
+        "Abilities": [],
+        "Weaponry": [
+          "Dagger"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Light armour"
+        ],
+        "Shield": [],
+        "Other Armour": [],
+        "Upgrades": [],
+        "Mounts": []
+      }
+    },
+    "Saxons": {
+      "Earl": {
+        "Name": "Earl",
+        "Faction": "Saxons",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 4,
+        "BS": 5,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 5,
+        "A": 4,
+        "Cl": 6,
+        "Int": 5,
+        "Points": 270,
+        "Abilities": [
+          "Duty",
+          "Shield Wall!"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": [
+          "Iron Will",
+          "Rain of Blows",
+          "Step Aside",
+          "Counter-Attack",
+          "True Grit",
+          "Crushing Blow"
+        ]
+      },
+      "Thegn": {
+        "Name": "Thegn",
+        "Faction": "Saxons",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 4,
+        "BS": 5,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 5,
+        "A": 3,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 215,
+        "Abilities": [
+          "Duty",
+          "Shield Wall!"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": [
+          "Rain of Blows",
+          "Step Aside",
+          "Counter-Attack",
+          "True Grit",
+          "Crushing Blow"
+        ]
+      },
+      "Huscarl": {
+        "Name": "Huscarl",
+        "Faction": "Saxons",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 5,
+        "BS": 6,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 6,
+        "A": 2,
+        "Cl": 7,
+        "Int": 8,
+        "Points": 120,
+        "Abilities": [
+          "Duty",
+          "Shield Wall!"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": [
+          "Step Aside",
+          "Counter-Attack"
+        ]
+      },
+      "Fyrd": {
+        "Name": "Fyrd",
+        "Faction": "Saxons",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 7,
+        "BS": 7,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 7,
+        "A": 1,
+        "Cl": 9,
+        "Int": 9,
+        "Points": 35,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Sling",
+          "Javellin"
+        ],
+        "Armour": [],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      }
+    },
+    "Normans": {
+      "Mounted_Duke": {
+        "Name": "Mounted_Duke",
+        "Faction": "Normans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 3,
+        "BS": 7,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 4,
+        "A": 4,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 260,
+        "Abilities": [
+          "Lead by Example"
+        ],
+        "Two_Hand_Weaponry": [],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [
+          "European_Warhorse"
+        ],
+        "Upgrades": []
+      },
+      "Norman_Duke": {
+        "Name": "Norman_Duke",
+        "Faction": "Normans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 3,
+        "BS": 7,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 4,
+        "A": 4,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 260,
+        "Abilities": [
+          "Lead by Example"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Mounted_Norman_Noble": {
+        "Name": "Mounted_Norman_Noble",
+        "Faction": "Normans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 4,
+        "BS": 7,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 4,
+        "A": 3,
+        "Cl": 6,
+        "Int": 8,
+        "Points": 195,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [
+          "European_Warhorse"
+        ],
+        "Upgrades": []
+      },
+      "Militie": {
+        "Name": "Militie",
+        "Faction": "Normans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 6,
+        "BS": 6,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 6,
+        "A": 1,
+        "Cl": 8,
+        "Int": 8,
+        "Points": 70,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "."
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Norman_Skirmisher": {
+        "Name": "Norman_Skirmisher",
+        "Faction": "Normans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 7,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 6,
+        "A": 1,
+        "Cl": 8,
+        "Int": 8,
+        "Points": 70,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Crossbow"
+        ],
+        "Armour": [
+          "Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      }
+    },
+    "Romans": {
+      "Mounted_Strategos": {
+        "Name": "Mounted_Strategos",
+        "Faction": "Romans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 4,
+        "BS": 5,
+        "S": 3,
+        "T": 4,
+        "W": 3,
+        "I": 4,
+        "A": 3,
+        "Cl": 5,
+        "Int": 5,
+        "Points": 245,
+        "Abilities": [
+          "Commander"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [
+          "European_Warhorse"
+        ],
+        "Upgrades": []
+      },
+      "Strategos": {
+        "Name": "Strategos",
+        "Faction": "Romans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 4,
+        "BS": 5,
+        "S": 3,
+        "T": 4,
+        "W": 3,
+        "I": 4,
+        "A": 3,
+        "Cl": 5,
+        "Int": 5,
+        "Points": 245,
+        "Abilities": [
+          "Commander"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Varangian_Guard": {
+        "Name": "Varangian_Guard",
+        "Faction": "Romans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 5,
+        "BS": 6,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Cl": 6,
+        "Int": 8,
+        "Points": 145,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Thematic_Infantry": {
+        "Name": "Thematic_Infantry",
+        "Faction": "Romans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 6,
+        "BS": 6,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 6,
+        "A": 1,
+        "Cl": 8,
+        "Int": 8,
+        "Points": 70,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Theamtic_Skirmisher": {
+        "Name": "Theamtic_Skirmisher",
+        "Faction": "Romans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 6,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 6,
+        "A": 1,
+        "Cl": 8,
+        "Int": 8,
+        "Points": 80,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Sling",
+          "Javellin"
+        ],
+        "Armour": [
+          "Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Tagmatic_Infantry": {
+        "Name": "Tagmatic_Infantry",
+        "Faction": "Romans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 5,
+        "BS": 6,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 120,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Tagmatic_Skirmisher": {
+        "Name": "Tagmatic_Skirmisher",
+        "Faction": "Romans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 6,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 100,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin",
+          "Bow"
+        ],
+        "Armour": [
+          "Mail",
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Tagmatic_Cavalry": {
+        "Name": "Tagmatic_Cavalry",
+        "Faction": "Romans",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 5,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Cl": 6,
+        "Int": 7,
+        "Points": 130,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin",
+          "Bow"
+        ],
+        "Armour": [
+          "Mail",
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [
+          "European_Warhorse"
+        ],
+        "Upgrades": []
+      }
+    },
+    "Vikings": {
+      "Jarl": {
+        "Name": "Jarl",
+        "Faction": "Vikings",
+        "AB Points": "",
+        "": "",
+        "M": 6,
+        "WS": 3,
+        "BS": 5,
+        "S": 4,
+        "T": 5,
+        "W": 3,
+        "I": 4,
+        "A": 5,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 320,
+        "Abilities": [
+          "Valhalla",
+          "Shield Wall!",
+          "Lead by Example"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": [
+          "Iron Will",
+          "Rain of Blows",
+          "Step Aside",
+          "Counter-Attack",
+          "True Grit",
+          "Crushing Blow"
+        ]
+      },
+      "Hersir": {
+        "Name": "Hersir",
+        "Faction": "Vikings",
+        "AB Points": "",
+        "": "",
+        "M": 6,
+        "WS": 4,
+        "BS": 5,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 4,
+        "A": 3,
+        "Cl": 6,
+        "Int": 8,
+        "Points": 220,
+        "Abilities": [
+          "Valhalla",
+          "Shield Wall!"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": [
+          "Rain of Blows",
+          "Step Aside",
+          "Counter-Attack",
+          "True Grit",
+          "Crushing Blow"
+        ]
+      },
+      "Hirdmen": {
+        "Name": "Hirdmen",
+        "Faction": "Vikings",
+        "AB Points": "",
+        "": "",
+        "M": 6,
+        "WS": 4,
+        "BS": 6,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Cl": 6,
+        "Int": 8,
+        "Points": 160,
+        "Abilities": [
+          "Valhalla",
+          "Shield Wall!"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": [
+          "Step Aside",
+          "Counter-Attack"
+        ]
+      },
+      "Shield_Maiden": {
+        "Name": "Shield_Maiden",
+        "Faction": "Vikings",
+        "AB Points": "",
+        "": "",
+        "M": 6,
+        "WS": 4,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 2,
+        "Cl": 5,
+        "Int": 7,
+        "Points": 155,
+        "Abilities": [
+          "Valhalla",
+          "Shield Wall!"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": [
+          "Step Aside",
+          "Counter-Attack"
+        ]
+      },
+      "Berserker": {
+        "Name": "Berserker",
+        "Faction": "Vikings",
+        "AB Points": "",
+        "": "",
+        "M": 6,
+        "WS": 6,
+        "BS": 7,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 6,
+        "A": 4,
+        "Cl": 4,
+        "Int": 9,
+        "Points": 195,
+        "Abilities": [
+          "Valhalla"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Dane Axe"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": [
+          "Frenzy"
+        ]
+      },
+      "Bondi": {
+        "Name": "Bondi",
+        "Faction": "Vikings",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 6,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 6,
+        "A": 1,
+        "Cl": 8,
+        "Int": 8,
+        "Points": 80,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Javellin"
+        ],
+        "Armour": [],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      }
+    },
+    "Celts": {
+      "Celtic_Chief": {
+        "Name": "Celtic_Chief",
+        "Faction": "Celts",
+        "AB Points": "",
+        "": "",
+        "M": 7,
+        "WS": 4,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 3,
+        "A": 4,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 295,
+        "Abilities": [
+          "Hit and Run Specialist",
+          "Skirmisher",
+          "Ambush Expert"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Two Handed Sword"
+        ],
+        "Weaponry": [
+          "Battleaxe",
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Javellin"
+        ],
+        "Armour": [
+          "Mail",
+          "Padded Armour",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield",
+          "Targe"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Kern": {
+        "Name": "Kern",
+        "Faction": "Celts",
+        "AB Points": "",
+        "": "",
+        "M": 7,
+        "WS": 6,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 1,
+        "Cl": 8,
+        "Int": 8,
+        "Points": 100,
+        "Abilities": [
+          "Hit and Run Specialist",
+          "Skirmisher"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Battleaxe",
+          "Spear (Used with Shield)"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Javellin"
+        ],
+        "Armour": [
+          "Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Targe"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Lucht_Tighe": {
+        "Name": "Lucht_Tighe",
+        "Faction": "Celts",
+        "AB Points": "",
+        "": "",
+        "M": 7,
+        "WS": 5,
+        "BS": 6,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 4,
+        "A": 2,
+        "Cl": 7,
+        "Int": 7,
+        "Points": 145,
+        "Abilities": [
+          "Hit and Run Specialist",
+          "Skirmisher"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)",
+          "Two Handed Sword"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Battleaxe",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Bow",
+          "Javellin"
+        ],
+        "Armour": [
+          "Padded Armour",
+          "Mail"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Targe"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      }
+    },
+    "Arabs": {
+      "Arab_General": {
+        "Name": "Arab_General",
+        "Faction": "Arabs",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 4,
+        "A": 3,
+        "Cl": 5,
+        "Int": 4,
+        "Points": 275,
+        "Abilities": [
+          "Commander",
+          "Jihad"
+        ],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Bow"
+        ],
+        "Armour": [
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Abna_al_dawla_infantry": {
+        "Name": "Abna_al_dawla_infantry",
+        "Faction": "Arabs",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 5,
+        "BS": 6,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 105,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [
+          "Spear (Two Handed)"
+        ],
+        "Weaponry": [
+          "Dagger",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [],
+        "Armour": [
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Abna_al_dawla_skirmisher": {
+        "Name": "Abna_al_dawla_skirmisher",
+        "Faction": "Arabs",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 5,
+        "BS": 5,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 115,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [],
+        "Weaponry": [
+          "Dagger",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Bow"
+        ],
+        "Armour": [
+          "Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [],
+        "Upgrades": []
+      },
+      "Khurasaniyya_heavy_cavalry": {
+        "Name": "Khurasaniyya_heavy_cavalry",
+        "Faction": "Arabs",
+        "AB Points": "",
+        "": "",
+        "M": 5,
+        "WS": 4,
+        "BS": 6,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 2,
+        "Cl": 6,
+        "Int": 6,
+        "Points": 135,
+        "Abilities": [],
+        "Two_Hand_Weaponry": [],
+        "Weaponry": [
+          "Dagger",
+          "Lance",
+          "Mace",
+          "Spear (Used with Shield)",
+          "Sword"
+        ],
+        "Ranged_Weaponry": [
+          "Javellin"
+        ],
+        "Armour": [
+          "Scale Mail",
+          "Padded Armour",
+          "Scale Mail over Padded Armour",
+          "Mail",
+          "Mail over Padded Armour"
+        ],
+        "Shield": [
+          "Small Shield",
+          "Large Shield"
+        ],
+        "Helmet": [
+          "Helmet"
+        ],
+        "Mounts": [
+          "Arabic_Warhorse"
+        ],
+        "Upgrades": []
+      }
+    }
+  },
+  "units": {
+    "Empire_State_Troop": {
+      "Faction": "Empire",
+      "Name": "Empire_State_Troop",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 55,
+      "Abilities": [
+        "Counter Charge"
+      ],
+      "Weaponry": [
+        "Sword",
+        "Axe",
+        "Mace",
+        "Dagger",
+        "Spear (Used with Shield)"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Halberd"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin",
+        "Throwing Knives",
+        "Pistol"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield",
+        "Buckler"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Empire_State_Troop_Skirmisher": {
+      "Faction": "Empire",
+      "Name": "Empire_State_Troop_Skirmisher",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 55,
+      "Abilities": [
+        "Support Fire"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Crossbow",
+        "Handgun"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield",
+        "Buckler"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "Scout"
+      ],
+      "Mounts": []
+    },
+    "Reiksguard": {
+      "Faction": "Empire",
+      "Name": "Reiksguard",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 110,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Poleaxe",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Plate armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Empire_Captain": {
+      "Faction": "Empire",
+      "Name": "Empire_Captain",
+      "M": 5,
+      "WS": 3,
+      "BS": 3,
+      "S": 4,
+      "T": 4,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 230,
+      "Abilities": [
+        "Hold the Line"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Two handed Axe",
+        "Two handed sword",
+        "Halberd",
+        "Poleaxe"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Crossbow",
+        "Handgun",
+        "Throwing Knives",
+        "Pistol"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Plate armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Halfling": {
+      "Faction": "Empire",
+      "Name": "Halfling",
+      "M": 5,
+      "WS": 5,
+      "BS": 3,
+      "S": 2,
+      "T": 2,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 7,
+      "Int": 6,
+      "Points": 30,
+      "Abilities": [
+        "Short and Nimble"
+      ],
+      "Weaponry": [
+        "Spear (Used with Shield)",
+        "Dagger"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Shortbow",
+        "Sling"
+      ],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "Scout"
+      ],
+      "Mounts": []
+    },
+    "Master_Engineer": {
+      "Faction": "Empire",
+      "Name": "Master_Engineer",
+      "M": 5,
+      "WS": 4,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 2,
+      "I": 4,
+      "A": 1,
+      "Cl": 6,
+      "Int": 5,
+      "Points": 90,
+      "Abilities": [],
+      "Weaponry": [
+        "Dagger",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Crossbow",
+        "Handgun",
+        "Hochland Long Rifle",
+        "Pistol",
+        "Repeater Handgun"
+      ],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Counts_Guard": {
+      "Faction": "Empire",
+      "Name": "Counts_Guard",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 60,
+      "Abilities": [
+        "Counter Charge"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Poleaxe",
+        "Spear (Two Handed)",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Mounted_Empire_Captain": {
+      "Faction": "Empire",
+      "Name": "Mounted_Empire_Captain",
+      "M": 5,
+      "WS": 3,
+      "BS": 3,
+      "S": 4,
+      "T": 4,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 230,
+      "Abilities": [
+        "Hold the Line"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Pistol"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Plate armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Warhorse",
+        "Demigryph"
+      ]
+    },
+    "Mounted_Reiksguard": {
+      "Faction": "Empire",
+      "Name": "Mounted_Reiksguard",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 110,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Plate armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Witch_Hunter": {
+      "Faction": "Empire",
+      "Name": "Witch_Hunter",
+      "M": 5,
+      "WS": 3,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 3,
+      "Cl": 4,
+      "Int": 5,
+      "Points": 140,
+      "Abilities": [
+        "Condemn"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Crossbow",
+        "Pistol"
+      ],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Swordmaster": {
+      "Faction": "High_Elves",
+      "Name": "Swordmaster",
+      "M": 6,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 2,
+      "A": 3,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 145,
+      "Abilities": [
+        "Dodge (Ranged)",
+        "Dodge (Close Combat)",
+        "Martial Prowess"
+      ],
+      "Weaponry": [],
+      "Two_Hand_Weaponry": [
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "White_Lion": {
+      "Faction": "High_Elves",
+      "Name": "White_Lion",
+      "M": 6,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 2,
+      "A": 2,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 140,
+      "Abilities": [
+        "Lion Rampant",
+        "Dodge (Close Combat)",
+        "Martial Prowess"
+      ],
+      "Weaponry": [],
+      "Two_Hand_Weaponry": [
+        "Two handed Axe"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [
+        "White Lion Cloak"
+      ],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Phoenix_Guard": {
+      "Faction": "High_Elves",
+      "Name": "Phoenix_Guard",
+      "M": 6,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 2,
+      "A": 2,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 150,
+      "Abilities": [
+        "Blessings of Asuryan",
+        "Dodge (Close Combat)",
+        "Martial Prowess"
+      ],
+      "Weaponry": [],
+      "Two_Hand_Weaponry": [
+        "Halberd"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Archer": {
+      "Faction": "High_Elves",
+      "Name": "Archer",
+      "M": 6,
+      "WS": 4,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 90,
+      "Abilities": [
+        "Dodge (Close Combat)",
+        "Martial Prowess"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Elven Longbow"
+      ],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Noble": {
+      "Faction": "High_Elves",
+      "Name": "Noble",
+      "M": 6,
+      "WS": 2,
+      "BS": 2,
+      "S": 4,
+      "T": 3,
+      "W": 3,
+      "I": 2,
+      "A": 4,
+      "Cl": 4,
+      "Int": 5,
+      "Points": 260,
+      "Abilities": [
+        "Dodge (Close Combat)",
+        "Martial Prowess"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Spear (Two Handed)",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Elven Longbow"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Mounted_Noble": {
+      "Faction": "High_Elves",
+      "Name": "Mounted_Noble",
+      "M": 6,
+      "WS": 2,
+      "BS": 2,
+      "S": 4,
+      "T": 3,
+      "W": 3,
+      "I": 2,
+      "A": 4,
+      "Cl": 4,
+      "Int": 5,
+      "Points": 260,
+      "Abilities": [
+        "Dodge (Close Combat)",
+        "Martial Prowess"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Sword",
+        "Lance"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Bow"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Elven_Warhorse"
+      ]
+    },
+    "Silver_Helm": {
+      "Faction": "High_Elves",
+      "Name": "Silver_Helm",
+      "M": 6,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 90,
+      "Abilities": [
+        "Dodge (Close Combat)",
+        "Martial Prowess"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Sword",
+        "Lance"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Elven_Warhorse"
+      ]
+    },
+    "Shadow_Warrior": {
+      "Faction": "High_Elves",
+      "Name": "Shadow_Warrior",
+      "M": 6,
+      "WS": 3,
+      "BS": 2,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 118,
+      "Abilities": [
+        "Dodge (Close Combat)",
+        "Martial Prowess",
+        "Infiltrate"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Elven Longbow"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [
+        "Scout"
+      ],
+      "Mounts": []
+    },
+    "Sea_Guard": {
+      "Faction": "High_Elves",
+      "Name": "Sea_Guard",
+      "M": 6,
+      "WS": 3,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 100,
+      "Abilities": [
+        "Dodge (Close Combat)",
+        "Martial Prowess"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Bow"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Big_'Un": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Big_'Un",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 2,
+      "Cl": 7,
+      "Int": 8,
+      "Points": 110,
+      "Abilities": [
+        "Choppas"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Black_Orc": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Black_Orc",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 3,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 135,
+      "Abilities": [
+        "Choppas"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Savage_orc": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Savage_orc",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 3,
+      "Cl": 6,
+      "Int": 9,
+      "Points": 125,
+      "Abilities": [
+        "Choppas",
+        "Warpaint"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Savage_Orc_Big_Un": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Savage_Orc_Big_Un",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 3,
+      "Cl": 6,
+      "Int": 9,
+      "Points": 150,
+      "Abilities": [
+        "Choppas",
+        "Warpaint"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Orc_Big_Boss": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Orc_Big_Boss",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 5,
+      "W": 3,
+      "I": 5,
+      "A": 4,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 220,
+      "Abilities": [
+        "Choppas",
+        "Waaagh!"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Arrer_Boy": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Arrer_Boy",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 60,
+      "Abilities": [
+        "Choppas"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Bow"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Troll": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Troll",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 5,
+      "T": 4,
+      "W": 3,
+      "I": 5,
+      "A": 4,
+      "Cl": 7,
+      "Int": 10,
+      "Points": 250,
+      "Abilities": [
+        "Regeneration"
+      ],
+      "Weaponry": [
+        "Pick"
+      ],
+      "Two_Hand_Weaponry": [
+        "Troll Club"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Night_Goblin": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Night_Goblin",
+      "M": 5,
+      "WS": 5,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 9,
+      "Int": 8,
+      "Points": 30,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Shortbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Night_Goblin_Big_Boss": {
+      "Faction": "Orcs_and_Goblins",
+      "Name": "Night_Goblin_Big_Boss",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 2,
+      "I": 3,
+      "A": 3,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 120,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Shortbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Peasant": {
+      "Faction": "Brettonia",
+      "Name": "Peasant",
+      "M": 5,
+      "WS": 5,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 9,
+      "Int": 8,
+      "Points": 25,
+      "Abilities": [
+        "Peasant's Duty"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Spear (Used with Shield)"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Bowman": {
+      "Faction": "Brettonia",
+      "Name": "Bowman",
+      "M": 5,
+      "WS": 5,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 9,
+      "Int": 8,
+      "Points": 35,
+      "Abilities": [
+        "Peasants Duty"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Longbow"
+      ],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Brettonian_Foot_Knight": {
+      "Faction": "Brettonia",
+      "Name": "Brettonian_Foot_Knight",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 95,
+      "Abilities": [
+        "Blessing of the Lady",
+        "Horse Lords"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Poleaxe",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "The Knight's Vow",
+        "The Questing Vow",
+        "The Grail Vow"
+      ],
+      "Mounts": []
+    },
+    "Brettonian_Knight": {
+      "Faction": "Brettonia",
+      "Name": "Brettonian_Knight",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 95,
+      "Abilities": [
+        "Blessing of the Lady",
+        "Horse Lords"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "The Knight's Vow",
+        "The Questing Vow",
+        "The Grail Vow"
+      ],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Duke": {
+      "Faction": "Brettonia",
+      "Name": "Duke",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 4,
+      "W": 1,
+      "I": 3,
+      "A": 4,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 165,
+      "Abilities": [
+        "Blessing of the Lady",
+        "Horse Lords",
+        "Bred to the Saddle"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "The Knight's Vow",
+        "The Questing Vow",
+        "The Grail Vow"
+      ],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Skavenslave": {
+      "Faction": "Skaven",
+      "Name": "Skavenslave",
+      "M": 6,
+      "WS": 5,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 9,
+      "Int": 8,
+      "Points": 35,
+      "Abilities": [
+        "Strength in Numbers"
+      ],
+      "Weaponry": [
+        "Sling",
+        "Throwing Knives",
+        "Dagger",
+        "Spear (Two Handed)",
+        "Spear (Used with Shield)"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Clan_Rat": {
+      "Faction": "Skaven",
+      "Name": "Clan_Rat",
+      "M": 6,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 8,
+      "Int": 7,
+      "Points": 60,
+      "Abilities": [
+        "Strength in Numbers"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Sling",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Gutter_Runner": {
+      "Faction": "Skaven",
+      "Name": "Gutter_Runner",
+      "M": 6,
+      "WS": 4,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 8,
+      "Int": 6,
+      "Points": 70,
+      "Abilities": [
+        "Infiltrate",
+        "Strength in Numbers"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Sling",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "Poison Attacks"
+      ],
+      "Mounts": []
+    },
+    "Storm_Vermin": {
+      "Faction": "Skaven",
+      "Name": "Storm_Vermin",
+      "M": 6,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 7,
+      "Int": 6,
+      "Points": 95,
+      "Abilities": [
+        "Strength in Numbers"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd"
+      ],
+      "Ranged_Weaponry": [
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Claw_Leader": {
+      "Faction": "Skaven",
+      "Name": "Claw_Leader",
+      "M": 6,
+      "WS": 3,
+      "BS": 3,
+      "S": 4,
+      "T": 4,
+      "W": 2,
+      "I": 3,
+      "A": 4,
+      "Cl": 6,
+      "Int": 5,
+      "Points": 205,
+      "Abilities": [
+        "Strength in Numbers"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Poisonwind Grenade",
+        "Sling",
+        "Throwing Knives",
+        "Warplock Pistol"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Mounted_Claw_Leader": {
+      "Faction": "Skaven",
+      "Name": "Mounted_Claw_Leader",
+      "M": 6,
+      "WS": 3,
+      "BS": 3,
+      "S": 4,
+      "T": 4,
+      "W": 2,
+      "I": 3,
+      "A": 4,
+      "Cl": 6,
+      "Int": 5,
+      "Points": 205,
+      "Abilities": [
+        "Strength in Numbers"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Sling",
+        "Throwing Knives",
+        "Warplock Pistol"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Rat_Ogre_Bonebreaker"
+      ]
+    },
+    "Rat_Ogre": {
+      "Faction": "Skaven",
+      "Name": "Rat_Ogre",
+      "M": 6,
+      "WS": 4,
+      "BS": 4,
+      "S": 5,
+      "T": 4,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 5,
+      "Int": 9,
+      "Points": 225,
+      "Abilities": [],
+      "Weaponry": [
+        "Monstrous Claws"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Armour Transplants"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [
+        "Extra Extremities",
+        "Quadrupedal",
+        "Resilient",
+        "Trollblooded"
+      ],
+      "Mounts": []
+    },
+    "Dwarf_Warrior": {
+      "Faction": "Dwarf",
+      "Name": "Dwarf_Warrior",
+      "M": 4,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 65,
+      "Abilities": [
+        "Dwarven Crafted"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace"
+      ],
+      "Two_Hand_Weaponry": [
+        "Two handed Axe"
+      ],
+      "Ranged_Weaponry": [
+        "Crossbow",
+        "Handgun",
+        "Throwing Axe"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Slayer": {
+      "Faction": "Dwarf",
+      "Name": "Slayer",
+      "M": 4,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 2,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 105,
+      "Abilities": [
+        "Unbreakable",
+        "Deathblow"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace"
+      ],
+      "Two_Hand_Weaponry": [
+        "Two handed Axe"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Ironbreaker": {
+      "Faction": "Dwarf",
+      "Name": "Ironbreaker",
+      "M": 4,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 2,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 115,
+      "Abilities": [
+        "Dwarven Crafted"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace"
+      ],
+      "Two_Hand_Weaponry": [
+        "Two handed Axe"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Plate armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [
+        "Gromril"
+      ],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Hammerer": {
+      "Faction": "Dwarf",
+      "Name": "Hammerer",
+      "M": 4,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 3,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 130,
+      "Abilities": [],
+      "Weaponry": [],
+      "Two_Hand_Weaponry": [
+        "Two Handed Hammer"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [
+        "Gromril"
+      ],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Dwarf_Captain": {
+      "Faction": "Dwarf",
+      "Name": "Dwarf_Captain",
+      "M": 4,
+      "WS": 3,
+      "BS": 3,
+      "S": 4,
+      "T": 5,
+      "W": 3,
+      "I": 5,
+      "A": 4,
+      "Cl": 4,
+      "Int": 5,
+      "Points": 235,
+      "Abilities": [
+        "Dwarven Crafted"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Two handed Axe"
+      ],
+      "Ranged_Weaponry": [
+        "Crossbow",
+        "Handgun",
+        "Pistol",
+        "Throwing Axe"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Plate armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [
+        "Gromril"
+      ],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Warrior_of_Chaos": {
+      "Faction": "Chaos",
+      "Name": "Warrior_of_Chaos",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 3,
+      "A": 3,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 145,
+      "Abilities": [
+        "Will of Chaos"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Poleaxe",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Throwing Axe"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Chaos Plate Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "Mark of Tzeentch",
+        "Markof Nurgle",
+        "Mark of Khorne"
+      ],
+      "Mounts": []
+    },
+    "Chaos_Knight": {
+      "Faction": "Chaos",
+      "Name": "Chaos_Knight",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 3,
+      "A": 3,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 145,
+      "Abilities": [
+        "Will of Chaos"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Chaos Plate Armour",
+        "Shield"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "Mark of Tzeentch",
+        "Markof Nurgle",
+        "Mark of Khorne"
+      ],
+      "Mounts": [
+        "Chaos_Warhorse"
+      ]
+    },
+    "Marauder": {
+      "Faction": "Chaos",
+      "Name": "Marauder",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 7,
+      "Int": 8,
+      "Points": 55,
+      "Abilities": [
+        "Will of Chaos"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Poleaxe",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin",
+        "Shortbow",
+        "Throwing Axe"
+      ],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "Mark of Tzeentch",
+        "Markof Nurgle",
+        "Mark of Khorne"
+      ],
+      "Mounts": []
+    },
+    "Mounted_Exalted_Champion": {
+      "Faction": "Chaos",
+      "Name": "Mounted_Exalted_Champion",
+      "M": 5,
+      "WS": 2,
+      "BS": 4,
+      "S": 5,
+      "T": 4,
+      "W": 3,
+      "I": 2,
+      "A": 4,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 250,
+      "Abilities": [
+        "Will of Chaos"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Chaos Plate Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "Mark of Tzeentch",
+        "Markof Nurgle",
+        "Mark of Khorne"
+      ],
+      "Mounts": [
+        "Chaos_Warhorse"
+      ]
+    },
+    "Exalted_Champion": {
+      "Faction": "Chaos",
+      "Name": "Exalted_Champion",
+      "M": 5,
+      "WS": 2,
+      "BS": 4,
+      "S": 5,
+      "T": 4,
+      "W": 3,
+      "I": 2,
+      "A": 4,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 250,
+      "Abilities": [
+        "Will of Chaos"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Poleaxe",
+        "Two handed Axe",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Throwing Axe"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour",
+        "Chaos Plate Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [
+        "Mark of Tzeentch",
+        "Markof Nurgle",
+        "Mark of Khorne"
+      ],
+      "Mounts": []
+    },
+    "Dark_Elf_Warrior": {
+      "Faction": "Dark_Elves",
+      "Name": "Dark_Elf_Warrior",
+      "M": 6,
+      "WS": 3,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 100,
+      "Abilities": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Lance",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Repeater Crossbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Dreadknight": {
+      "Faction": "Dark_Elves",
+      "Name": "Dreadknight",
+      "M": 6,
+      "WS": 3,
+      "BS": 3,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 5,
+      "Int": 6,
+      "Points": 140,
+      "Abilities": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Hand Crossbow"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)"
+      ],
+      "Upgrades": [],
+      "Mounts": [
+        "Cold_One",
+        "Warhorse"
+      ]
+    },
+    "Witch_Elf": {
+      "Faction": "Dark_Elves",
+      "Name": "Witch_Elf",
+      "M": 7,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 2,
+      "A": 2,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 135,
+      "Abilities": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)",
+        "Poison Attacks"
+      ],
+      "Weaponry": [
+        "Dagger"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Dark_Elf_Corsair": {
+      "Faction": "Dark_Elves",
+      "Name": "Dark_Elf_Corsair",
+      "M": 6,
+      "WS": 3,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 100,
+      "Abilities": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)"
+      ],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Hand Crossbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [
+        "Sea Dragon Cloak"
+      ],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Executioner": {
+      "Faction": "Dark_Elves",
+      "Name": "Executioner",
+      "M": 6,
+      "WS": 3,
+      "BS": 4,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 125,
+      "Abilities": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)"
+      ],
+      "Weaponry": [],
+      "Two_Hand_Weaponry": [
+        "Executioner's Blade"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Shade": {
+      "Faction": "Dark_Elves",
+      "Name": "Shade",
+      "M": 6,
+      "WS": 3,
+      "BS": 2,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 120,
+      "Abilities": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)",
+        "Infiltrate"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Mace",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Hand Crossbow",
+        "Repeater Crossbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [
+        "Scout"
+      ],
+      "Mounts": []
+    },
+    "Mounted_Dark_Elf_Master": {
+      "Faction": "Dark_Elves",
+      "Name": "Mounted_Dark_Elf_Master",
+      "M": 6,
+      "WS": 2,
+      "BS": 2,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 2,
+      "A": 4,
+      "Cl": 5,
+      "Int": 4,
+      "Points": 205,
+      "Abilities": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Hand Crossbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Cold_One",
+        "Warhorse"
+      ]
+    },
+    "Dark_Elf_Master": {
+      "Faction": "Dark_Elves",
+      "Name": "Dark_Elf_Master",
+      "M": 6,
+      "WS": 2,
+      "BS": 2,
+      "S": 4,
+      "T": 3,
+      "W": 1,
+      "I": 2,
+      "A": 4,
+      "Cl": 5,
+      "Int": 4,
+      "Points": 205,
+      "Abilities": [
+        "Murderous Prowess",
+        "Dodge (Close Combat)"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword",
+        "Cost"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Spear (Two Handed)",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Hand Crossbow",
+        "Repeater Crossbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Cathayan_Captain": {
+      "Faction": "Cathay",
+      "Name": "Cathayan_Captain",
+      "M": 5,
+      "WS": 3,
+      "BS": 3,
+      "S": 4,
+      "T": 3,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 5,
+      "Int": 5,
+      "Points": 210,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Cathayan Longsword",
+        "Halberd",
+        "Spear (Two Handed)",
+        "Two handed sword"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Cathayan Repeater Crossbow",
+        "Crossbow",
+        "Handgun",
+        "Pistol",
+        "Three-Eyed Gun",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Mounted_Cathayan_Captain": {
+      "Faction": "Cathay",
+      "Name": "Mounted_Cathayan_Captain",
+      "M": 5,
+      "WS": 3,
+      "BS": 3,
+      "S": 4,
+      "T": 3,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 5,
+      "Int": 5,
+      "Points": 210,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Pistol",
+        "Three-Eyed Gun",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Dragon_Cavalry": {
+      "Faction": "Cathay",
+      "Name": "Dragon_Cavalry",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 2,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 85,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Fire Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Pistol",
+        "Three-Eyed Gun",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Imperial_Infantry": {
+      "Faction": "Cathay",
+      "Name": "Imperial_Infantry",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 50,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Cathayan Repeater Crossbow",
+        "Crossbow",
+        "Handgun",
+        "Three-Eyed Gun"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Levy-Infantry": {
+      "Faction": "Cathay",
+      "Name": "Levy-Infantry",
+      "M": 5,
+      "WS": 5,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 9,
+      "Int": 7,
+      "Points": 20,
+      "Abilities": [],
+      "Weaponry": [
+        "Axe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Bow"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Shield"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Dragonblade": {
+      "Faction": "Cathay",
+      "Name": "Dragonblade",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 3,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 110,
+      "Abilities": [],
+      "Weaponry": [],
+      "Two_Hand_Weaponry": [
+        "Cathayan Longsword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Imperial_Guard": {
+      "Faction": "Cathay",
+      "Name": "Imperial_Guard",
+      "M": 5,
+      "WS": 3,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 90,
+      "Abilities": [],
+      "Weaponry": [],
+      "Two_Hand_Weaponry": [
+        "Halberd"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Temple_Dog": {
+      "Faction": "Cathay",
+      "Name": "Temple_Dog",
+      "M": 7,
+      "WS": 4,
+      "BS": 4,
+      "S": 4,
+      "T": 5,
+      "W": 2,
+      "I": 3,
+      "A": 3,
+      "Cl": 6,
+      "Int": 9,
+      "Points": 180,
+      "Abilities": [],
+      "Weaponry": [],
+      "Two_Hand_Weaponry": [],
+      "Ranged_Weaponry": [],
+      "Armour": [],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Hatamoto": {
+      "Faction": "Nippon",
+      "Name": "Hatamoto",
+      "M": 5,
+      "WS": 3,
+      "BS": 2,
+      "S": 4,
+      "T": 3,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 5,
+      "Int": 5,
+      "Points": 220,
+      "Abilities": [
+        "Way of the Warrior"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Katana"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Katana (Two handed)",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Handgun",
+        "Longbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [
+        "Horo Cloak"
+      ],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Mounted_Hatamoto": {
+      "Faction": "Nippon",
+      "Name": "Mounted_Hatamoto",
+      "M": 5,
+      "WS": 3,
+      "BS": 2,
+      "S": 4,
+      "T": 3,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 5,
+      "Int": 5,
+      "Points": 220,
+      "Abilities": [
+        "Way of the Warrior"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Katana"
+      ],
+      "Two_Hand_Weaponry": [
+        "Katana (Two handed)",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [
+        "Horo Cloak"
+      ],
+      "Upgrades": [],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Samurai": {
+      "Faction": "Nippon",
+      "Name": "Samurai",
+      "M": 5,
+      "WS": 3,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 100,
+      "Abilities": [
+        "Way of the Warrior"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Katana"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Katana (Two handed)",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Handgun",
+        "Longbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [
+        "Mantlet"
+      ],
+      "Other Armour": [
+        "Horo Cloak"
+      ],
+      "Upgrades": [
+        "Red Devil"
+      ],
+      "Mounts": []
+    },
+    "Mounted_Samurai": {
+      "Faction": "Nippon",
+      "Name": "Mounted_Samurai",
+      "M": 5,
+      "WS": 3,
+      "BS": 3,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 3,
+      "A": 2,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 100,
+      "Abilities": [
+        "Way of the Warrior"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Katana"
+      ],
+      "Two_Hand_Weaponry": [
+        "Katana (Two handed)",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour",
+        "Heavy Armour"
+      ],
+      "Shield": [],
+      "Other Armour": [
+        "Horo Cloak"
+      ],
+      "Upgrades": [
+        "Red Devil"
+      ],
+      "Mounts": [
+        "Warhorse"
+      ]
+    },
+    "Ashiguru": {
+      "Faction": "Nippon",
+      "Name": "Ashiguru",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 7,
+      "Int": 8,
+      "Points": 50,
+      "Abilities": [],
+      "Weaponry": [
+        "Dagger"
+      ],
+      "Two_Hand_Weaponry": [
+        "Halberd",
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [
+        "Handgun",
+        "Longbow",
+        "Throwing Knives"
+      ],
+      "Armour": [
+        "Light armour",
+        "Medium Armour"
+      ],
+      "Shield": [
+        "Mantlet"
+      ],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Nipponese_Leves": {
+      "Faction": "Nippon",
+      "Name": "Nipponese_Leves",
+      "M": 5,
+      "WS": 5,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 9,
+      "Int": 9,
+      "Points": 20,
+      "Abilities": [],
+      "Weaponry": [
+        "Dagger"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Light armour"
+      ],
+      "Shield": [],
+      "Other Armour": [],
+      "Upgrades": [],
+      "Mounts": []
+    },
+    "Earl": {
+      "Name": "Earl",
+      "Faction": "Saxons",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 4,
+      "BS": 5,
+      "S": 4,
+      "T": 4,
+      "W": 3,
+      "I": 5,
+      "A": 4,
+      "Cl": 6,
+      "Int": 5,
+      "Points": 270,
+      "Abilities": [
+        "Duty",
+        "Shield Wall!"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": [
+        "Iron Will",
+        "Rain of Blows",
+        "Step Aside",
+        "Counter-Attack",
+        "True Grit",
+        "Crushing Blow"
+      ]
+    },
+    "Thegn": {
+      "Name": "Thegn",
+      "Faction": "Saxons",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 4,
+      "BS": 5,
+      "S": 4,
+      "T": 4,
+      "W": 2,
+      "I": 5,
+      "A": 3,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 215,
+      "Abilities": [
+        "Duty",
+        "Shield Wall!"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": [
+        "Rain of Blows",
+        "Step Aside",
+        "Counter-Attack",
+        "True Grit",
+        "Crushing Blow"
+      ]
+    },
+    "Huscarl": {
+      "Name": "Huscarl",
+      "Faction": "Saxons",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 5,
+      "BS": 6,
+      "S": 3,
+      "T": 4,
+      "W": 1,
+      "I": 6,
+      "A": 2,
+      "Cl": 7,
+      "Int": 8,
+      "Points": 120,
+      "Abilities": [
+        "Duty",
+        "Shield Wall!"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": [
+        "Step Aside",
+        "Counter-Attack"
+      ]
+    },
+    "Fyrd": {
+      "Name": "Fyrd",
+      "Faction": "Saxons",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 7,
+      "BS": 7,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 7,
+      "A": 1,
+      "Cl": 9,
+      "Int": 9,
+      "Points": 35,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Sling",
+        "Javellin"
+      ],
+      "Armour": [],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Mounted_Duke": {
+      "Name": "Mounted_Duke",
+      "Faction": "Normans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 3,
+      "BS": 7,
+      "S": 4,
+      "T": 4,
+      "W": 3,
+      "I": 4,
+      "A": 4,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 260,
+      "Abilities": [
+        "Lead by Example"
+      ],
+      "Two_Hand_Weaponry": [],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [
+        "European_Warhorse"
+      ],
+      "Upgrades": []
+    },
+    "Norman_Duke": {
+      "Name": "Norman_Duke",
+      "Faction": "Normans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 3,
+      "BS": 7,
+      "S": 4,
+      "T": 4,
+      "W": 3,
+      "I": 4,
+      "A": 4,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 260,
+      "Abilities": [
+        "Lead by Example"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Mounted_Norman_Noble": {
+      "Name": "Mounted_Norman_Noble",
+      "Faction": "Normans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 4,
+      "BS": 7,
+      "S": 4,
+      "T": 4,
+      "W": 2,
+      "I": 4,
+      "A": 3,
+      "Cl": 6,
+      "Int": 8,
+      "Points": 195,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [
+        "European_Warhorse"
+      ],
+      "Upgrades": []
+    },
+    "Militie": {
+      "Name": "Militie",
+      "Faction": "Normans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 6,
+      "BS": 6,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 6,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 70,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "."
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Norman_Skirmisher": {
+      "Name": "Norman_Skirmisher",
+      "Faction": "Normans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 7,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 6,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 70,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Crossbow"
+      ],
+      "Armour": [
+        "Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Mounted_Strategos": {
+      "Name": "Mounted_Strategos",
+      "Faction": "Romans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 4,
+      "BS": 5,
+      "S": 3,
+      "T": 4,
+      "W": 3,
+      "I": 4,
+      "A": 3,
+      "Cl": 5,
+      "Int": 5,
+      "Points": 245,
+      "Abilities": [
+        "Commander"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [
+        "European_Warhorse"
+      ],
+      "Upgrades": []
+    },
+    "Strategos": {
+      "Name": "Strategos",
+      "Faction": "Romans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 4,
+      "BS": 5,
+      "S": 3,
+      "T": 4,
+      "W": 3,
+      "I": 4,
+      "A": 3,
+      "Cl": 5,
+      "Int": 5,
+      "Points": 245,
+      "Abilities": [
+        "Commander"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Varangian_Guard": {
+      "Name": "Varangian_Guard",
+      "Faction": "Romans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 5,
+      "BS": 6,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 2,
+      "Cl": 6,
+      "Int": 8,
+      "Points": 145,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Thematic_Infantry": {
+      "Name": "Thematic_Infantry",
+      "Faction": "Romans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 6,
+      "BS": 6,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 6,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 70,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Theamtic_Skirmisher": {
+      "Name": "Theamtic_Skirmisher",
+      "Faction": "Romans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 6,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 6,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 80,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Sling",
+        "Javellin"
+      ],
+      "Armour": [
+        "Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Tagmatic_Infantry": {
+      "Name": "Tagmatic_Infantry",
+      "Faction": "Romans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 5,
+      "BS": 6,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 5,
+      "A": 2,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 120,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Tagmatic_Skirmisher": {
+      "Name": "Tagmatic_Skirmisher",
+      "Faction": "Romans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 6,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 5,
+      "A": 1,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 100,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin",
+        "Bow"
+      ],
+      "Armour": [
+        "Mail",
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Tagmatic_Cavalry": {
+      "Name": "Tagmatic_Cavalry",
+      "Faction": "Romans",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 5,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 5,
+      "A": 2,
+      "Cl": 6,
+      "Int": 7,
+      "Points": 130,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin",
+        "Bow"
+      ],
+      "Armour": [
+        "Mail",
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [
+        "European_Warhorse"
+      ],
+      "Upgrades": []
+    },
+    "Jarl": {
+      "Name": "Jarl",
+      "Faction": "Vikings",
+      "AB Points": "",
+      "": "",
+      "M": 6,
+      "WS": 3,
+      "BS": 5,
+      "S": 4,
+      "T": 5,
+      "W": 3,
+      "I": 4,
+      "A": 5,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 320,
+      "Abilities": [
+        "Valhalla",
+        "Shield Wall!",
+        "Lead by Example"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": [
+        "Iron Will",
+        "Rain of Blows",
+        "Step Aside",
+        "Counter-Attack",
+        "True Grit",
+        "Crushing Blow"
+      ]
+    },
+    "Hersir": {
+      "Name": "Hersir",
+      "Faction": "Vikings",
+      "AB Points": "",
+      "": "",
+      "M": 6,
+      "WS": 4,
+      "BS": 5,
+      "S": 4,
+      "T": 4,
+      "W": 2,
+      "I": 4,
+      "A": 3,
+      "Cl": 6,
+      "Int": 8,
+      "Points": 220,
+      "Abilities": [
+        "Valhalla",
+        "Shield Wall!"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": [
+        "Rain of Blows",
+        "Step Aside",
+        "Counter-Attack",
+        "True Grit",
+        "Crushing Blow"
+      ]
+    },
+    "Hirdmen": {
+      "Name": "Hirdmen",
+      "Faction": "Vikings",
+      "AB Points": "",
+      "": "",
+      "M": 6,
+      "WS": 4,
+      "BS": 6,
+      "S": 4,
+      "T": 4,
+      "W": 1,
+      "I": 5,
+      "A": 2,
+      "Cl": 6,
+      "Int": 8,
+      "Points": 160,
+      "Abilities": [
+        "Valhalla",
+        "Shield Wall!"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": [
+        "Step Aside",
+        "Counter-Attack"
+      ]
+    },
+    "Shield_Maiden": {
+      "Name": "Shield_Maiden",
+      "Faction": "Vikings",
+      "AB Points": "",
+      "": "",
+      "M": 6,
+      "WS": 4,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 2,
+      "Cl": 5,
+      "Int": 7,
+      "Points": 155,
+      "Abilities": [
+        "Valhalla",
+        "Shield Wall!"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": [
+        "Step Aside",
+        "Counter-Attack"
+      ]
+    },
+    "Berserker": {
+      "Name": "Berserker",
+      "Faction": "Vikings",
+      "AB Points": "",
+      "": "",
+      "M": 6,
+      "WS": 6,
+      "BS": 7,
+      "S": 4,
+      "T": 4,
+      "W": 2,
+      "I": 6,
+      "A": 4,
+      "Cl": 4,
+      "Int": 9,
+      "Points": 195,
+      "Abilities": [
+        "Valhalla"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Dane Axe"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": [
+        "Frenzy"
+      ]
+    },
+    "Bondi": {
+      "Name": "Bondi",
+      "Faction": "Vikings",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 6,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 6,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 80,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Javellin"
+      ],
+      "Armour": [],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Celtic_Chief": {
+      "Name": "Celtic_Chief",
+      "Faction": "Celts",
+      "AB Points": "",
+      "": "",
+      "M": 7,
+      "WS": 4,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 3,
+      "I": 3,
+      "A": 4,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 295,
+      "Abilities": [
+        "Hit and Run Specialist",
+        "Skirmisher",
+        "Ambush Expert"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Two Handed Sword"
+      ],
+      "Weaponry": [
+        "Battleaxe",
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Javellin"
+      ],
+      "Armour": [
+        "Mail",
+        "Padded Armour",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield",
+        "Targe"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Kern": {
+      "Name": "Kern",
+      "Faction": "Celts",
+      "AB Points": "",
+      "": "",
+      "M": 7,
+      "WS": 6,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 4,
+      "A": 1,
+      "Cl": 8,
+      "Int": 8,
+      "Points": 100,
+      "Abilities": [
+        "Hit and Run Specialist",
+        "Skirmisher"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Battleaxe",
+        "Spear (Used with Shield)"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Javellin"
+      ],
+      "Armour": [
+        "Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Targe"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Lucht_Tighe": {
+      "Name": "Lucht_Tighe",
+      "Faction": "Celts",
+      "AB Points": "",
+      "": "",
+      "M": 7,
+      "WS": 5,
+      "BS": 6,
+      "S": 3,
+      "T": 4,
+      "W": 1,
+      "I": 4,
+      "A": 2,
+      "Cl": 7,
+      "Int": 7,
+      "Points": 145,
+      "Abilities": [
+        "Hit and Run Specialist",
+        "Skirmisher"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)",
+        "Two Handed Sword"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Battleaxe",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Bow",
+        "Javellin"
+      ],
+      "Armour": [
+        "Padded Armour",
+        "Mail"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Targe"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Arab_General": {
+      "Name": "Arab_General",
+      "Faction": "Arabs",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 4,
+      "BS": 4,
+      "S": 4,
+      "T": 4,
+      "W": 3,
+      "I": 4,
+      "A": 3,
+      "Cl": 5,
+      "Int": 4,
+      "Points": 275,
+      "Abilities": [
+        "Commander",
+        "Jihad"
+      ],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Bow"
+      ],
+      "Armour": [
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Abna_al_dawla_infantry": {
+      "Name": "Abna_al_dawla_infantry",
+      "Faction": "Arabs",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 5,
+      "BS": 6,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 5,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 105,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [
+        "Spear (Two Handed)"
+      ],
+      "Weaponry": [
+        "Dagger",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [],
+      "Armour": [
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Abna_al_dawla_skirmisher": {
+      "Name": "Abna_al_dawla_skirmisher",
+      "Faction": "Arabs",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 5,
+      "BS": 5,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 5,
+      "A": 1,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 115,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [],
+      "Weaponry": [
+        "Dagger",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Bow"
+      ],
+      "Armour": [
+        "Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [],
+      "Upgrades": []
+    },
+    "Khurasaniyya_heavy_cavalry": {
+      "Name": "Khurasaniyya_heavy_cavalry",
+      "Faction": "Arabs",
+      "AB Points": "",
+      "": "",
+      "M": 5,
+      "WS": 4,
+      "BS": 6,
+      "S": 3,
+      "T": 3,
+      "W": 1,
+      "I": 5,
+      "A": 2,
+      "Cl": 6,
+      "Int": 6,
+      "Points": 135,
+      "Abilities": [],
+      "Two_Hand_Weaponry": [],
+      "Weaponry": [
+        "Dagger",
+        "Lance",
+        "Mace",
+        "Spear (Used with Shield)",
+        "Sword"
+      ],
+      "Ranged_Weaponry": [
+        "Javellin"
+      ],
+      "Armour": [
+        "Scale Mail",
+        "Padded Armour",
+        "Scale Mail over Padded Armour",
+        "Mail",
+        "Mail over Padded Armour"
+      ],
+      "Shield": [
+        "Small Shield",
+        "Large Shield"
+      ],
+      "Helmet": [
+        "Helmet"
+      ],
+      "Mounts": [
+        "Arabic_Warhorse"
+      ],
+      "Upgrades": []
     }
   }
 }
