@@ -3,6 +3,8 @@ import { Button, Typography, TextField } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./SetUnitTabs";
+import SetUnitUnit from "./SetUnitUnit";
+import SetUnitUnitHeader from "./SetUnitUnitHeader";
 
 interface Props {
   onClickBack: () => void;
@@ -66,6 +68,7 @@ const SetUnitView: FunctionComponent<Props> = ({ onClickBack }) => {
           </Grid>
           <Grid>
             <SetUnitTabs value={tabValue} handleChange={handleTabChange} />
+            {tabValue === 0 && <SetUnitUnitHeader />}
             <Grid
               container
               maxWidth="6200px"
@@ -82,18 +85,18 @@ const SetUnitView: FunctionComponent<Props> = ({ onClickBack }) => {
                 switch (tabValue) {
                   case 0:
                     return (
-                      <Typography variant="h3">
-                        In publishing and graphic design, Lorem ipsum is a
-                        placeholder text commonly used to demonstrate the visual
-                        form of a document or a typeface without relying on
-                        meaningful content. Lorem ipsum may be used as a
-                        placeholder before final copy is available.In publishing
-                        and graphic design, Lorem ipsum is a placeholder text
-                        commonly used to demonstrate the visual form of a
-                        document or a typeface without relying on meaningful
-                        content. Lorem ipsum may be used as a placeholder before
-                        final copy is available.
-                      </Typography>
+                      <>
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                        <SetUnitUnit />
+                      </>
                     );
                   case 1:
                     return <Typography>two</Typography>;
