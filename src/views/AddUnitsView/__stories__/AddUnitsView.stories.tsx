@@ -1,15 +1,18 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Unstable_Grid2";
+import { action } from "@storybook/addon-actions";
 import AddUnitsView from "../AddUnitsView";
 import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
   title: "Layout/View/AddUnitsView",
-  component: AddUnitsView,
+  component: AddUnitsView
 } as ComponentMeta<typeof AddUnitsView>;
 
 const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
+  const [warbandTotal, setWarbandTotal] = useState(0);
+
   return (
     <Grid
       container
@@ -20,13 +23,21 @@ const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundSize: "cover"
       }}
     >
-      <AddUnitsView {...args} />
+      <AddUnitsView
+        {...args}
+        warbandTotal={warbandTotal}
+        setWarbandTotal={setWarbandTotal}
+      />
     </Grid>
   );
 };
 
 export const Default = Template.bind({});
-Default.args = { faction: "BRETTONIA", num: 2500 };
+Default.args = {
+  faction: "Brettonia",
+  onClickBack: action("Clicked Back"),
+  onClickPlay: action("Clicked Play")
+};

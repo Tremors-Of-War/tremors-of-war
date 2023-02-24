@@ -1,12 +1,13 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
+import { action } from "@storybook/addon-actions";
 import ChooseRuleSetView from "../ChooseRuleSetView";
 import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
   title: "Layout/View/ChooseRuleSetView",
-  component: ChooseRuleSetView,
+  component: ChooseRuleSetView
 } as ComponentMeta<typeof ChooseRuleSetView>;
 
 const Template: ComponentStory<typeof ChooseRuleSetView> = function () {
@@ -20,12 +21,12 @@ const Template: ComponentStory<typeof ChooseRuleSetView> = function () {
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundSize: "cover"
       }}
     >
       <ChooseRuleSetView
-        onClickBack={() => alert("Clicked back!")}
-        setRuleSet={(ruleSet) => alert(`Set ruleset to ${ruleSet}`)}
+        onClickBack={action("Clicked Back!")}
+        setRuleSet={action("Selected Rule Set")}
       />
     </Grid>
   );

@@ -14,7 +14,7 @@ interface Props {
 
 const ChooseRuleSetView: FunctionComponent<Props> = ({
   onClickBack,
-  setRuleSet,
+  setRuleSet
 }) => (
   <ContentContainer>
     <Grid>
@@ -43,7 +43,13 @@ const ChooseRuleSetView: FunctionComponent<Props> = ({
         />
       </Grid>
     </Grid>
-    <Grid container alignItems="center" justifyContent="flex-start" gap="10px">
+    <Grid
+      container
+      marginTop="8px"
+      alignItems="center"
+      justifyContent="flex-start"
+      gap="10px"
+    >
       <Button variant="outlined" onClick={onClickBack}>
         BACK
       </Button>

@@ -4,19 +4,28 @@ import Grid from "@mui/material/Unstable_Grid2";
 import AddIcon from "@mui/icons-material/Add";
 import ContentContainer from "../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../components/ChooseWarBandTotalDialog";
+import { Faction } from "../../types";
 
 interface Props {
-  faction: string;
-  num: number;
+  faction: Faction;
+  warbandTotal: number;
+  onClickBack: () => void;
+  onClickPlay: () => void;
+  setWarbandTotal: (warbandTotal: number) => void;
 }
 
-const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
+const AddUnitsView: FunctionComponent<Props> = ({
+  faction,
+  warbandTotal,
+  setWarbandTotal,
+  onClickBack,
+  onClickPlay
+}) => {
   const [open, setOpen] = React.useState(true);
-  const [selectedValue, setSelectedValue] = React.useState(0);
 
   const handleClose = (value: number) => {
     setOpen(!open);
-    setSelectedValue(value);
+    setWarbandTotal(value);
   };
 
   return (
@@ -63,13 +72,10 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
                     justifyContent="flex-end"
                     direction="row"
                   >
-                    <Typography variant="h5">
-                      {num.toLocaleString("en-US")}
-                      &nbsp;
-                    </Typography>
+                    <Typography variant="h5">unitsCost &nbsp;</Typography>
                     <Typography variant="h5" sx={{ color: "text.disabled" }}>
                       {"/ "}
-                      {selectedValue.toLocaleString("en-US")}
+                      {warbandTotal.toLocaleString("en-US")}
                     </Typography>
                   </Grid>
                 </Tooltip>
@@ -82,7 +88,9 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
           </Grid>
 
           <Grid container alignItems="center" justifyContent="space-between">
-            <Button variant="outlined">BACK</Button>
+            <Button variant="outlined" onClick={onClickBack}>
+              BACK
+            </Button>
             <Grid
               container
               direction="row"
@@ -92,14 +100,16 @@ const AddUnitsView: FunctionComponent<Props> = ({ faction, num }) => {
               <Button onClick={() => setOpen(!open)} variant="outlined">
                 EDIT WARBAND TOTAL
               </Button>
-              <Button variant="contained">PLAY</Button>
+              <Button variant="contained" onClick={onClickPlay}>
+                PLAY
+              </Button>
             </Grid>
           </Grid>
         </Grid>
       </ContentContainer>
       <ChooseWarBandTotalDialog
         open={!open}
-        selectedValue={selectedValue}
+        warbandTotal={warbandTotal}
         onClose={handleClose}
       />
     </>
