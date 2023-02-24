@@ -4,12 +4,12 @@ from constants import DATABASE
 from parsers.abilities import parse_abilities
 from parsers.armour import parse_armour
 from parsers.mounts import parse_mounts
-from parsers.ruleset import parse_rulesets, RULESET
+from parsers.ruleset import parse_rulesets
 from parsers.weapons import parse_weapons
 
 
 def get_factions_from_rulesets(rulesets):
-    return {**rulesets['fantasy']['factions'], **rulesets['dark_ages']['factions']}
+    return {**rulesets["fantasy"]["factions"], **rulesets["dark_ages"]["factions"]}
 
 
 def get_units_from_factions(factions):
