@@ -80,6 +80,8 @@ const AppView: FunctionComponent = () => {
     case ROUTES.SET_UNIT:
       return (
         <SetUnitView
+          faction={state.faction!}
+          warbandTotal={state.warbandTotal}
           onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
         />
       );

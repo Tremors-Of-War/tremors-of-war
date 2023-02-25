@@ -1,84 +1,80 @@
 import { Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { FunctionComponent } from "react";
+import theme from "../../app/theme";
+import { Unit } from "../../types";
 
-const SetUnitUnit = () => (
-  <Grid
-    container
-    marginBottom="16px"
-    alignItems="center"
-    justifyContent="space-around"
-    flexWrap="nowrap"
-    padding="8px 16px"
-    direction="row"
-    sx={(theme) => ({
-      width: "100%",
-      gap: "auto",
-      minHeight: theme.spacing(9),
-      background:
-        "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
-      borderRadius: "4px"
-    })}
-  >
-    <Grid
-      container
-      direction="column"
-      justifyContent="flex-start"
-      width="143px"
-    >
-      <Typography variant="body1">KNIGHT</Typography>
-      <Typography variant="body1" sx={{ color: "text.disabled" }}>
-        230 Points
-      </Typography>
-    </Grid>
+interface Props {
+  unit: Unit;
+  handleClick: () => void;
+  isSelected: boolean;
+}
 
+const SetUnitUnit: FunctionComponent<Props> = ({
+  unit,
+  handleClick,
+  isSelected
+}) => {
+  const defaultBackground =
+    "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212";
+  const selectedBackground = theme.palette.primary.main;
+  const { m, ws, bs, s, t, w, i, a, cl, int } = unit;
+  const stats = [m, ws, bs, s, t, w, i, a, cl, int];
+
+  return (
     <Grid
+      onClick={handleClick}
       container
-      direction="row"
+      marginBottom="16px"
+      alignItems="center"
       justifyContent="space-between"
-      width="410px"
+      flexWrap="nowrap"
+      padding="8px 16px"
+      direction="row"
+      sx={{
+        width: "100%",
+        gap: "auto",
+        minHeight: theme.spacing(9),
+        background: isSelected ? selectedBackground : defaultBackground,
+        borderRadius: "4px"
+      }}
     >
-      <Grid component={Typography} width="27px" variant="body1">
-        8
+      <Grid
+        container
+        direction="column"
+        justifyContent="flex-start"
+        wrap="wrap"
+        width="125px"
+      >
+        <Typography variant="body1">{unit.name}</Typography>
+        <Typography variant="body1" sx={{ color: "text.disabled" }}>
+          {unit.points} Points
+        </Typography>
       </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        6
-      </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        7
-      </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        5
-      </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        3
-      </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        0
-      </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        9
-      </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        9
-      </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        1
-      </Grid>
-      <Grid component={Typography} width="27px" variant="body1">
-        1
-      </Grid>
-    </Grid>
 
-    <Grid
-      container
-      direction="column"
-      justifyContent="flexs-start"
-      width="143px"
-    >
-      {/* MAP FUNCTION */}
-      <Typography variant="caption">&#8226; Hit and Run Specialist</Typography>
-      <Typography variant="caption">&#8226; Strength in Numbers</Typography>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-between"
+        width="410px"
+      >
+        {stats.map((statValue) => (
+          <Grid component={Typography} width="27px" variant="body1">
+            {statValue}
+          </Grid>
+        ))}
+      </Grid>
+
+      <Grid
+        container
+        direction="column"
+        justifyContent="flexs-start"
+        width="143px"
+      >
+        {unit.abilities.map((ability) => (
+          <Typography variant="caption">&#8226; {ability}</Typography>
+        ))}
+      </Grid>
     </Grid>
-  </Grid>
-);
+  );
+};
 export default SetUnitUnit;
