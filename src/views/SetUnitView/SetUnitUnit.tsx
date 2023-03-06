@@ -1,7 +1,8 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../app/theme";
 import { Unit } from "../../types";
+import data from "../../data.json";
 
 interface Props {
   unit: Unit;
@@ -71,7 +72,9 @@ const SetUnitUnit: FunctionComponent<Props> = ({
         width="143px"
       >
         {unit.abilities.map((ability) => (
-          <Typography variant="caption">&#8226; {ability}</Typography>
+          <Tooltip title={data.abilities[ability].Effects}>
+            <Typography variant="caption">&#8226; {ability}</Typography>
+          </Tooltip>
         ))}
       </Grid>
     </Grid>

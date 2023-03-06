@@ -12,25 +12,38 @@ import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./SetUnitTabs";
 import SetUnitUnit from "./SetUnitUnit";
 import SetUnitUnitHeader from "./SetUnitUnitHeader";
-import { Faction, Unit } from "../../types";
+import { Faction, Unit, Model } from "../../types";
 import data from "../../data.json";
 
 interface Props {
   faction: Faction;
   onClickBack: () => void;
   warbandTotal: number;
+  onClickSave: (model: Model) => void;
 }
+// TODO MODEL ID LOGIC
+const modelId = 0;
 
+const blankModel: Model = {
+  id: 0,
+  unit: null,
+  name: "",
+  armour: [],
+  shield: [],
+  upgrades: [],
+  mounts: []
+};
 const SetUnitView: FunctionComponent<Props> = ({
   faction,
   onClickBack,
-  warbandTotal
+  warbandTotal,
+  onClickSave
 }) => {
-  const [unitName, setUnitName] = React.useState<string>();
   const [tabValue, setTabValue] = React.useState(0);
   const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
   const [unitCost, setUnitCost] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
+  const [model, setModel] = React.useState<Model>(blankModel);
 
   const handleTabChange = (event: any, newValue: number) => {
     setTabValue(newValue);
@@ -38,7 +51,12 @@ const SetUnitView: FunctionComponent<Props> = ({
 
   const handleNameChange = (event: any) => {
     const parsedInputValue = event.target.value;
-    setUnitName(parsedInputValue);
+    setModel({ ...model, name: parsedInputValue });
+  };
+
+  const handleSave = () => {
+    setModel({ ...model, id: modelId });
+    onClickSave(model);
   };
 
   const calculatePointsRemaining = useMemo(() => {
@@ -52,6 +70,7 @@ const SetUnitView: FunctionComponent<Props> = ({
   }, [warbandTotal, unitCost]);
 
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
+
   return (
     <>
       <ContentContainer>
@@ -71,11 +90,11 @@ const SetUnitView: FunctionComponent<Props> = ({
             >
               <TextField
                 id="value"
-                value={unitName}
+                value={model.name}
                 label="NAME"
                 variant="filled"
                 color="secondary"
-                defaultValue={unitName}
+                defaultValue={model.name}
                 onChange={handleNameChange}
               />
 
@@ -134,6 +153,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                               handleClick={() => {
                                 setSelectedUnit(unit.name);
                                 setUnitCost(unit.points);
+                                setModel({ ...model, unit });
                               }}
                               isSelected={selectedUnit === unit.name}
                             />
@@ -172,7 +192,7 @@ const SetUnitView: FunctionComponent<Props> = ({
               gap="10px"
             >
               <Button variant="outlined">REMOVE UNIT</Button>
-              <Button variant="contained" onClick={() => alert(`${unitName}`)}>
+              <Button variant="contained" onClick={handleSave}>
                 SAVE
               </Button>
             </Grid>

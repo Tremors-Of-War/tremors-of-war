@@ -24,7 +24,7 @@ export interface Unit {
   cl: number;
   int: number;
   points: number;
-  abilities: string[];
+  abilities: Abilities[];
   weaponry: Weapons[];
   twoHandWeaponry: Weapons[];
   rangedWeaponry: Weapons[];
@@ -35,6 +35,11 @@ export interface Unit {
 }
 
 export interface Model {
-  unit: Unit;
+  id: number;
+  unit: Unit | null;
   name: string;
+  armour: Armour[];
+  shield: Armour[];
+  upgrades: [];
+  mounts: Mounts[];
 }
