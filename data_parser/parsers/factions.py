@@ -8,7 +8,7 @@ def parse_factions_list(db: Database, ruleset):
 
     factions = {}
     for unit_id, unit in units.items():
-        faction = unit['Faction']
+        faction = unit["faction"]
 
         if faction not in factions:
             factions[faction] = {}

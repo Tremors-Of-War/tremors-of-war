@@ -42,3 +42,12 @@ def transform_multi_columns_to_list(obj, column_base, num_columns, full_name):
     obj[full_name] = values
 
     return obj
+
+
+def pascal_snake_case_to_camel_case(s: str) -> str:
+    ls = s.split("_")  # [ Empire, State, Troop ]
+    return ls[0].lower() + "".join(ls[1:])
+
+
+def set_camel_case_keys(obj):
+    return {pascal_snake_case_to_camel_case(k): v for k, v in obj.items()}

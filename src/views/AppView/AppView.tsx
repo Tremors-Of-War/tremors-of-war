@@ -1,9 +1,10 @@
 import React, { FunctionComponent, useState } from "react";
-import { Faction, RuleSet } from "../../types";
+import { Faction, RuleSet, Model } from "../../types";
 import AddUnitsView from "../AddUnitsView/AddUnitsView";
 import AddUnitsZeroStateView from "../AddUnitsZeroStateView/AddUnitsZeroStateView";
 import ChooseFactionView from "../ChooseFactionView/ChooseFactionView";
 import ChooseRuleSetView from "../ChooseRuleSetView/ChooseRuleSetView";
+import SetUnitView from "../SetUnitView/SetUnitView";
 import StartScreenView from "../StartScreenView/StartScreenView";
 import ROUTES, { INITIAL_ROUTE } from "./routes";
 
@@ -11,18 +12,20 @@ interface State {
   ruleSet: RuleSet | null;
   faction: Faction | null;
   warbandTotal: number;
+  models: Model[];
 }
 
 const initialState: State = {
   ruleSet: null,
   faction: null,
-  warbandTotal: 0
+  warbandTotal: 0,
+  models: []
 };
 
 const AppView: FunctionComponent = () => {
   const [currentRoute, setCurrentRoute] = useState(INITIAL_ROUTE);
   const [state, setState] = useState<State>(initialState);
-
+  console.log(state);
   // TODO: VALIDATE ROUTES
   switch (currentRoute) {
     case ROUTES.START_SCREEN:
@@ -58,7 +61,7 @@ const AppView: FunctionComponent = () => {
         <AddUnitsZeroStateView
           faction={state.faction!}
           warbandTotal={state.warbandTotal}
-          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
+          onClickBack={() => setCurrentRoute(ROUTES.SET_UNIT)}
           setWarbandTotal={(warbandTotal) =>
             setState({ ...state, warbandTotal })
           }
@@ -73,6 +76,20 @@ const AppView: FunctionComponent = () => {
           onClickPlay={() => alert("Navigate to play screen")}
           setWarbandTotal={(warbandTotal) =>
             setState({ ...state, warbandTotal })
+          }
+        />
+      );
+    case ROUTES.SET_UNIT:
+      return (
+        <SetUnitView
+          faction={state.faction!}
+          warbandTotal={state.warbandTotal}
+          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
+          onClickSave={(model) =>
+            setState({
+              ...state,
+              models: { ...state.models, [model.id]: model }
+            })
           }
         />
       );

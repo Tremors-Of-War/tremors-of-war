@@ -1,7 +1,6 @@
 from pylightxl import Database
 import logging
 
-
 from constants import SHEETS
 from parsers.relations import parse_relations
 from utils import (
@@ -10,6 +9,7 @@ from utils import (
     build_object_from_table_on_index,
     transform_multi_columns_to_list,
     get_table_from_sheet,
+    set_camel_case_keys,
 )
 
 logger = logging.getLogger(__name__)
@@ -46,8 +46,9 @@ def parse_units(db: Database, ruleset):
         unit = build_object_from_table_on_index(table, index)
         unit = transform_multi_columns_to_list(unit, "AB", 3, "Abilities")
         unit = _add_relations_to_unit(unit, relations)
+        unit = set_camel_case_keys(unit)
 
-        name = unit["Name"]
+        name = unit["name"]
         units[name] = unit
 
     return units
