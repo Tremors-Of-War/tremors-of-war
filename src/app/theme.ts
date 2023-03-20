@@ -14,6 +14,10 @@ const theme = createTheme({
     },
     secondary: {
       main: "#F3F4F6"
+    },
+    warning: {
+      main: "#FF8A3C",
+      light: "#FF8A3C"
     }
   },
   components: {

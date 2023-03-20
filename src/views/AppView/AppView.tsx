@@ -25,7 +25,7 @@ const initialState: State = {
 const AppView: FunctionComponent = () => {
   const [currentRoute, setCurrentRoute] = useState(INITIAL_ROUTE);
   const [state, setState] = useState<State>(initialState);
-  console.log(state);
+
   // TODO: VALIDATE ROUTES
   switch (currentRoute) {
     case ROUTES.START_SCREEN:

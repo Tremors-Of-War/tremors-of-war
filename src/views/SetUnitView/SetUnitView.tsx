@@ -14,6 +14,7 @@ import SetUnitUnit from "./SetUnitUnit";
 import SetUnitUnitHeader from "./SetUnitUnitHeader";
 import { Faction, Unit, Model } from "../../types";
 import data from "../../data.json";
+import SetUnitArmour from "./SetUnitArmour";
 
 interface Props {
   faction: Faction;
@@ -39,13 +40,15 @@ const SetUnitView: FunctionComponent<Props> = ({
   warbandTotal,
   onClickSave
 }) => {
-  const [tabValue, setTabValue] = React.useState(0);
+  const [tabValue, setTabValue] = React.useState("unitTab");
   const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
   const [unitCost, setUnitCost] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
   const [model, setModel] = React.useState<Model>(blankModel);
+  const [mount, setMount] = React.useState<boolean>(false);
+  const [upgrades, setUpgrades] = React.useState<boolean>(false);
 
-  const handleTabChange = (event: any, newValue: number) => {
+  const handleTabChange = (event: any, newValue: string) => {
     setTabValue(newValue);
   };
 
@@ -53,6 +56,22 @@ const SetUnitView: FunctionComponent<Props> = ({
     const parsedInputValue = event.target.value;
     setModel({ ...model, name: parsedInputValue });
   };
+
+  useMemo(() => {
+    if (model.unit?.mounts.length > 0) {
+      setMount(true);
+    } else {
+      setMount(false);
+    }
+  }, [model.unit]);
+
+  useMemo(() => {
+    if (model.unit?.upgrades.length > 0) {
+      setUpgrades(true);
+    } else {
+      setUpgrades(false);
+    }
+  }, [model.unit]);
 
   const handleSave = () => {
     setModel({ ...model, id: modelId });
@@ -128,8 +147,13 @@ const SetUnitView: FunctionComponent<Props> = ({
               </Grid>
             </Grid>
             <Grid>
-              <SetUnitTabs value={tabValue} handleChange={handleTabChange} />
-              {tabValue === 0 && <SetUnitUnitHeader />}
+              <SetUnitTabs
+                showMount={mount}
+                showUpgrades={upgrades}
+                value={tabValue}
+                handleChange={handleTabChange}
+              />
+              {tabValue === "unitTab" && <SetUnitUnitHeader />}
               <Grid
                 container
                 maxWidth="6200px"
@@ -144,7 +168,7 @@ const SetUnitView: FunctionComponent<Props> = ({
               >
                 {(() => {
                   switch (tabValue) {
-                    case 0:
+                    case "unitTab":
                       return (
                         <>
                           {unitOptions.map((unit) => (
@@ -152,6 +176,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                               unit={unit}
                               handleClick={() => {
                                 setSelectedUnit(unit.name);
+
                                 setUnitCost(unit.points);
                                 setModel({ ...model, unit });
                               }}
@@ -160,12 +185,40 @@ const SetUnitView: FunctionComponent<Props> = ({
                           ))}
                         </>
                       );
-                    case 1:
+                    case "weaponTab":
                       return <Typography>two</Typography>;
-                    case 2:
-                      return <Typography>three</Typography>;
-                    case 3:
-                      return <Typography>four</Typography>;
+                    case "armourTab":
+                      return (
+                        <>
+                          {model.unit?.armour.length > 0 && (
+                            <SetUnitArmour
+                              armoury={model.unit?.armour}
+                              dropdownTitle="ARMOUR"
+                            />
+                          )}
+                          {model.unit?.shield.length > 0 && (
+                            <SetUnitArmour
+                              armoury={model.unit?.shield}
+                              dropdownTitle="SHIELD"
+                            />
+                          )}
+                          {!model.unit && (
+                            <Grid container width="100%" alignItems="center">
+                              <Alert
+                                sx={{ width: "100%" }}
+                                variant="outlined"
+                                severity="warning"
+                              >
+                                You must select a Unit before selecting armour.
+                              </Alert>
+                            </Grid>
+                          )}
+                        </>
+                      );
+                    case "mountTab":
+                      return <Typography>mount</Typography>;
+                    case "upgradesTab":
+                      return <Typography>upgrades</Typography>;
 
                     default:
                       // eslint-disable-next-line no-console
