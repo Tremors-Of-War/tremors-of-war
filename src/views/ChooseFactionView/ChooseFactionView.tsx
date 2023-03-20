@@ -21,7 +21,19 @@ const ChooseFactionView: FunctionComponent<Props> = ({
     <Grid>
       <Typography variant="h3">FACTION</Typography>
 
-      <Grid container spacing={2} marginTop="2px">
+      <Grid
+        container
+        spacing={2}
+        marginTop="16px"
+        maxHeight="520px"
+        sx={{
+          overflowX: "hidden",
+          overflowY: "scroll",
+          "::-webkit-scrollbar": {
+            display: "none"
+          }
+        }}
+      >
         {Factions[ruleSet].map((faction) => (
           <Grid
             key={faction.name}
