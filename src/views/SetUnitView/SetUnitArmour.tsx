@@ -94,7 +94,6 @@ const SetUnitArmour: FunctionComponent<Props> = ({
                 >
                   <Grid
                     width="50px"
-                    direction="column"
                     alignItems="flex-start"
                     justifyContent="center"
                   >
