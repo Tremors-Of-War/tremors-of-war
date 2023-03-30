@@ -12,7 +12,7 @@ import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./SetUnitTabs";
 import SetUnitUnit from "./SetUnitUnit";
 import SetUnitUnitHeader from "./SetUnitUnitHeader";
-import { Faction, Unit, Model } from "../../types";
+import { Faction, Unit, Model, Armour } from "../../types";
 import data from "../../data.json";
 import SetUnitArmour from "./SetUnitArmour";
 import SetUnitUpgrades from "./SetUnitUpgrades";
@@ -61,7 +61,10 @@ const SetUnitView: FunctionComponent<Props> = ({
     const parsedInputValue = event.target.value;
     setModel({ ...model, name: parsedInputValue });
   };
-
+  const getCurrentArmoury = (armoury: Armour[]) => {
+    const selectedArmour = armoury.length > 0 ? Object.values(armoury)[0] : "";
+    return selectedArmour;
+  };
   useMemo(() => {
     if (model.unit?.mounts.length > 0) {
       setMount(true);
@@ -90,7 +93,6 @@ const SetUnitView: FunctionComponent<Props> = ({
     setModel({ ...model, id: modelId });
     onClickSave(model);
   };
-
   const calculatePointsRemaining = useMemo(() => {
     const value = warbandTotal - unitCost;
     if (value < 0) {
@@ -218,6 +220,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                           {model.unit?.armour.length > 0 && (
                             <SetUnitArmour
                               armoury={model.unit?.armour}
+                              currentArmoury={getCurrentArmoury(model.armour)}
                               dropdownTitle="ARMOUR"
                               handleSelect={(selected) => {
                                 model.armour = model.armour.filter(
@@ -225,12 +228,13 @@ const SetUnitView: FunctionComponent<Props> = ({
                                 );
                                 model.armour.push(selected);
                                 setModel(model);
-                              }}
+\                              }}
                             />
                           )}
                           {model.unit?.shield.length > 0 && (
                             <SetUnitArmour
                               armoury={model.unit?.shield}
+                              currentArmoury={getCurrentArmoury(model.shield)}
                               dropdownTitle="SHIELD"
                               handleSelect={(selected) => {
                                 model.shield = model.shield.filter(
@@ -245,6 +249,9 @@ const SetUnitView: FunctionComponent<Props> = ({
                           {model.unit?.otherArmour?.length > 0 && (
                             <SetUnitArmour
                               armoury={model.unit?.otherArmour}
+                              currentArmoury={getCurrentArmoury(
+                                model.otherArmour
+                              )}
                               dropdownTitle="OTHER ARMOUR"
                               handleSelect={(selected) => {
                                 model.shield = model.otherArmour.filter(
@@ -258,6 +265,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                           {model.unit?.helmet?.length > 0 && (
                             <SetUnitArmour
                               armoury={model.unit?.helmet}
+                              currentArmoury={getCurrentArmoury(model.helmet)}
                               dropdownTitle="HELMET"
                               handleSelect={(selected) => {
                                 model.shield = model.helmet.filter(

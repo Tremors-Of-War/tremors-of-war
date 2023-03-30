@@ -16,15 +16,17 @@ import data from "../../data.json";
 interface Props {
   dropdownTitle: string;
   armoury: Armour[];
+  currentArmoury: string;
   handleSelect: (selected: string) => void;
 }
 
 const SetUnitArmour: FunctionComponent<Props> = ({
   dropdownTitle,
   armoury,
+  currentArmoury,
   handleSelect
 }) => {
-  const [armourSelect, setArmourSelect] = React.useState("");
+  const [armourSelect, setArmourSelect] = React.useState(currentArmoury);
 
   return (
     <>
