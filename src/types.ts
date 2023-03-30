@@ -30,6 +30,8 @@ export interface Unit {
   rangedWeaponry: Weapons[];
   armour: Armour[];
   shield: Armour[];
+  otherArmour: Armour[];
+  helmet: Armour[];
   upgrades: [];
   mounts: Mounts[];
 }
@@ -37,9 +39,12 @@ export interface Unit {
 export interface Model {
   id: number;
   unit: Unit | null;
+  cost: number;
   name: string;
   armour: Armour[];
   shield: Armour[];
+  otherArmour: Armour[];
+  helmet: Armour[];
   upgrades: [];
   mounts: Mounts[];
 }

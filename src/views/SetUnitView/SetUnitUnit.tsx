@@ -20,7 +20,6 @@ const SetUnitUnit: FunctionComponent<Props> = ({
   const selectedBackground = theme.palette.primary.main;
   const { m, ws, bs, s, t, w, i, a, cl, int } = unit;
   const stats = [m, ws, bs, s, t, w, i, a, cl, int];
-
   return (
     <Grid
       onClick={handleClick}

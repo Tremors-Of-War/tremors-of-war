@@ -15,6 +15,7 @@ import SetUnitUnitHeader from "./SetUnitUnitHeader";
 import { Faction, Unit, Model } from "../../types";
 import data from "../../data.json";
 import SetUnitArmour from "./SetUnitArmour";
+import SetUnitUpgrades from "./SetUnitUpgrades";
 
 interface Props {
   faction: Faction;
@@ -28,12 +29,16 @@ const modelId = 0;
 const blankModel: Model = {
   id: 0,
   unit: null,
+  cost: 0,
   name: "",
   armour: [],
   shield: [],
+  otherArmour: [],
+  helmet: [],
   upgrades: [],
   mounts: []
 };
+
 const SetUnitView: FunctionComponent<Props> = ({
   faction,
   onClickBack,
@@ -66,6 +71,14 @@ const SetUnitView: FunctionComponent<Props> = ({
   }, [model.unit]);
 
   useMemo(() => {
+    model.armour = [];
+    model.upgrades = [];
+    model.shield = [];
+    model.helmet = [];
+    model.otherArmour = [];
+  }, [model.unit]);
+
+  useMemo(() => {
     if (model.unit?.upgrades.length > 0) {
       setUpgrades(true);
     } else {
@@ -87,9 +100,7 @@ const SetUnitView: FunctionComponent<Props> = ({
     }
     return value;
   }, [warbandTotal, unitCost]);
-
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
-
   return (
     <>
       <ContentContainer>
@@ -176,7 +187,6 @@ const SetUnitView: FunctionComponent<Props> = ({
                               unit={unit}
                               handleClick={() => {
                                 setSelectedUnit(unit.name);
-
                                 setUnitCost(unit.points);
                                 setModel({ ...model, unit });
                               }}
@@ -186,7 +196,22 @@ const SetUnitView: FunctionComponent<Props> = ({
                         </>
                       );
                     case "weaponTab":
-                      return <Typography>two</Typography>;
+                      return (
+                        <>
+                          {model.unit && <Typography>you did it</Typography>}
+                          {!model.unit && (
+                            <Grid container width="100%" alignItems="center">
+                              <Alert
+                                sx={{ width: "100%" }}
+                                variant="outlined"
+                                severity="warning"
+                              >
+                                You must select a Unit before selecting weapons.
+                              </Alert>
+                            </Grid>
+                          )}
+                        </>
+                      );
                     case "armourTab":
                       return (
                         <>
@@ -194,12 +219,53 @@ const SetUnitView: FunctionComponent<Props> = ({
                             <SetUnitArmour
                               armoury={model.unit?.armour}
                               dropdownTitle="ARMOUR"
+                              handleSelect={(selected) => {
+                                model.armour = model.armour.filter(
+                                  (remove) => remove === selected
+                                );
+                                model.armour.push(selected);
+                                setModel(model);
+                              }}
                             />
                           )}
                           {model.unit?.shield.length > 0 && (
                             <SetUnitArmour
                               armoury={model.unit?.shield}
                               dropdownTitle="SHIELD"
+                              handleSelect={(selected) => {
+                                model.shield = model.shield.filter(
+                                  (remove) => remove === selected
+                                );
+                                model.shield.push(selected);
+                                setModel(model);
+                              }}
+                            />
+                          )}
+
+                          {model.unit?.otherArmour?.length > 0 && (
+                            <SetUnitArmour
+                              armoury={model.unit?.otherArmour}
+                              dropdownTitle="OTHER ARMOUR"
+                              handleSelect={(selected) => {
+                                model.shield = model.otherArmour.filter(
+                                  (remove) => remove === selected
+                                );
+                                model.otherArmour.push(selected);
+                                setModel(model);
+                              }}
+                            />
+                          )}
+                          {model.unit?.helmet?.length > 0 && (
+                            <SetUnitArmour
+                              armoury={model.unit?.helmet}
+                              dropdownTitle="HELMET"
+                              handleSelect={(selected) => {
+                                model.shield = model.helmet.filter(
+                                  (remove) => remove === selected
+                                );
+                                model.helmet.push(selected);
+                                setModel(model);
+                              }}
                             />
                           )}
                           {!model.unit && (
@@ -218,7 +284,28 @@ const SetUnitView: FunctionComponent<Props> = ({
                     case "mountTab":
                       return <Typography>mount</Typography>;
                     case "upgradesTab":
-                      return <Typography>upgrades</Typography>;
+                      return (
+                        // eslint-disable-next-line
+                        <>
+                          {model.unit?.upgrades.map((upgrade) => (
+                            <SetUnitUpgrades
+                              upgrade={upgrade}
+                              currentUpgrades={model.upgrades}
+                              handleClick={(selected) => {
+                                if (selected) {
+                                  model.upgrades.push(upgrade);
+                                  setModel(model);
+                                } else {
+                                  model.upgrades = model.upgrades.filter(
+                                    (remove) => remove !== upgrade
+                                  );
+                                  setModel(model);
+                                }
+                              }}
+                            />
+                          ))}
+                        </>
+                      );
 
                     default:
                       // eslint-disable-next-line no-console

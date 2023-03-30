@@ -16,11 +16,13 @@ import data from "../../data.json";
 interface Props {
   dropdownTitle: string;
   armoury: Armour[];
+  handleSelect: (selected: string) => void;
 }
 
 const SetUnitArmour: FunctionComponent<Props> = ({
   dropdownTitle,
-  armoury
+  armoury,
+  handleSelect
 }) => {
   const [armourSelect, setArmourSelect] = React.useState("");
 
@@ -47,6 +49,7 @@ const SetUnitArmour: FunctionComponent<Props> = ({
                   onChange={(event: SelectChangeEvent) => {
                     const value = event.target.value as string;
                     setArmourSelect(value);
+                    handleSelect(value);
                   }}
                 >
                   {armoury.map((item) => (
@@ -109,7 +112,6 @@ const SetUnitArmour: FunctionComponent<Props> = ({
                     width="50px"
                     justifyContent="center"
                     alignItems="flex-start"
-                    direction="column"
                   >
                     <Grid component={Tooltip} title="Close Combat">
                       <Typography color="text.disabled">CC</Typography>
