@@ -228,7 +228,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                                 );
                                 model.armour.push(selected);
                                 setModel(model);
-\                              }}
+                              }}
                             />
                           )}
                           {model.unit?.shield.length > 0 && (
