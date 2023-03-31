@@ -12,7 +12,7 @@ import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./SetUnitTabs";
 import SetUnitUnit from "./SetUnitUnit";
 import SetUnitUnitHeader from "./SetUnitUnitHeader";
-import { Faction, Unit, Model, Armour } from "../../types";
+import { Faction, Unit, Model } from "../../types";
 import data from "../../data.json";
 import SetUnitArmour from "./SetUnitArmour";
 import SetUnitUpgrades from "./SetUnitUpgrades";
@@ -31,12 +31,12 @@ const blankModel: Model = {
   unit: null,
   cost: 0,
   name: "",
-  armour: [],
-  shield: [],
-  otherArmour: [],
-  helmet: [],
+  armour: undefined,
+  shield: undefined,
+  otherArmour: undefined,
+  helmet: undefined,
   upgrades: [],
-  mounts: []
+  mounts: undefined
 };
 
 const SetUnitView: FunctionComponent<Props> = ({
@@ -61,12 +61,9 @@ const SetUnitView: FunctionComponent<Props> = ({
     const parsedInputValue = event.target.value;
     setModel({ ...model, name: parsedInputValue });
   };
-  const getCurrentArmoury = (armoury: Armour[]) => {
-    const selectedArmour = armoury.length > 0 ? Object.values(armoury)[0] : "";
-    return selectedArmour;
-  };
+
   useMemo(() => {
-    if (model.unit?.mounts.length > 0) {
+    if (model.unit?.mounts) {
       setMount(true);
     } else {
       setMount(false);
@@ -74,15 +71,11 @@ const SetUnitView: FunctionComponent<Props> = ({
   }, [model.unit]);
 
   useMemo(() => {
-    model.armour = [];
-    model.upgrades = [];
-    model.shield = [];
-    model.helmet = [];
-    model.otherArmour = [];
+    setModel({ ...blankModel, unit: model.unit });
   }, [model.unit]);
 
   useMemo(() => {
-    if (model.unit?.upgrades.length > 0) {
+    if (model.unit?.upgrades && model.unit?.upgrades.length > 0) {
       setUpgrades(true);
     } else {
       setUpgrades(false);
@@ -217,62 +210,44 @@ const SetUnitView: FunctionComponent<Props> = ({
                     case "armourTab":
                       return (
                         <>
-                          {model.unit?.armour.length > 0 && (
+                          {model.unit?.armour && (
                             <SetUnitArmour
                               armoury={model.unit?.armour}
-                              currentArmoury={getCurrentArmoury(model.armour)}
+                              currentArmoury={model.armour}
                               dropdownTitle="ARMOUR"
-                              handleSelect={(selected) => {
-                                model.armour = model.armour.filter(
-                                  (remove) => remove === selected
-                                );
-                                model.armour.push(selected);
-                                setModel(model);
+                              handleSelect={(armour) => {
+                                setModel({ ...model, armour });
                               }}
                             />
                           )}
-                          {model.unit?.shield.length > 0 && (
+                          {model.unit?.shield && (
                             <SetUnitArmour
                               armoury={model.unit?.shield}
-                              currentArmoury={getCurrentArmoury(model.shield)}
+                              currentArmoury={model.shield}
                               dropdownTitle="SHIELD"
-                              handleSelect={(selected) => {
-                                model.shield = model.shield.filter(
-                                  (remove) => remove === selected
-                                );
-                                model.shield.push(selected);
-                                setModel(model);
+                              handleSelect={(shield) => {
+                                setModel({ ...model, shield });
                               }}
                             />
                           )}
 
-                          {model.unit?.otherArmour?.length > 0 && (
+                          {model.unit?.otherArmour && (
                             <SetUnitArmour
                               armoury={model.unit?.otherArmour}
-                              currentArmoury={getCurrentArmoury(
-                                model.otherArmour
-                              )}
+                              currentArmoury={model.otherArmour}
                               dropdownTitle="OTHER ARMOUR"
-                              handleSelect={(selected) => {
-                                model.shield = model.otherArmour.filter(
-                                  (remove) => remove === selected
-                                );
-                                model.otherArmour.push(selected);
-                                setModel(model);
+                              handleSelect={(otherArmour) => {
+                                setModel({ ...model, otherArmour });
                               }}
                             />
                           )}
-                          {model.unit?.helmet?.length > 0 && (
+                          {model.unit?.helmet && (
                             <SetUnitArmour
                               armoury={model.unit?.helmet}
-                              currentArmoury={getCurrentArmoury(model.helmet)}
+                              currentArmoury={model.helmet}
                               dropdownTitle="HELMET"
-                              handleSelect={(selected) => {
-                                model.shield = model.helmet.filter(
-                                  (remove) => remove === selected
-                                );
-                                model.helmet.push(selected);
-                                setModel(model);
+                              handleSelect={(helmet) => {
+                                setModel({ ...model, helmet });
                               }}
                             />
                           )}
