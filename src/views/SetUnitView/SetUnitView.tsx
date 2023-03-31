@@ -5,7 +5,7 @@ import {
   TextField,
   Tooltip,
   Snackbar,
-  Alert
+  Alert,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
@@ -36,14 +36,14 @@ const blankModel: Model = {
   otherArmour: [],
   helmet: [],
   upgrades: [],
-  mounts: []
+  mounts: [],
 };
 
 const SetUnitView: FunctionComponent<Props> = ({
   faction,
   onClickBack,
   warbandTotal,
-  onClickSave
+  onClickSave,
 }) => {
   const [tabValue, setTabValue] = React.useState("unitTab");
   const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
@@ -150,7 +150,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                       color:
                         calculatePointsRemaining < 0
                           ? theme.palette.error.main
-                          : "text.disabled"
+                          : "text.disabled",
                     })}
                     variant="subtitle2"
                   >
@@ -175,8 +175,8 @@ const SetUnitView: FunctionComponent<Props> = ({
                   overflowX: "hidden",
                   overflowY: "scroll",
                   "::-webkit-scrollbar": {
-                    display: "none"
-                  }
+                    display: "none",
+                  },
                 }}
               >
                 {(() => {
@@ -186,6 +186,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                         <>
                           {unitOptions.map((unit) => (
                             <SetUnitUnit
+                              key={unit.name}
                               unit={unit}
                               handleClick={() => {
                                 setSelectedUnit(unit.name);
@@ -297,6 +298,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                         <>
                           {model.unit?.upgrades.map((upgrade) => (
                             <SetUnitUpgrades
+                              key={upgrade}
                               upgrade={upgrade}
                               currentUpgrades={model.upgrades}
                               handleClick={(selected) => {
@@ -351,7 +353,7 @@ const SetUnitView: FunctionComponent<Props> = ({
         open={openAlert}
         anchorOrigin={{
           vertical: "top",
-          horizontal: "right"
+          horizontal: "right",
         }}
       >
         <Alert severity="error" variant="filled" sx={{ width: "100%" }}>
