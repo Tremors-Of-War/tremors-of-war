@@ -12,7 +12,7 @@ const SetUnitTabs: FunctionComponent<Props> = ({
   handleChange,
   value,
   showMount,
-  showUpgrades
+  showUpgrades,
 }) => (
   <Box sx={{ marginBottom: 3, width: "100%" }}>
     <Tabs value={value} onChange={handleChange}>

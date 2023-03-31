@@ -7,7 +7,7 @@ import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
   title: "Layout/View/SetUnitView",
-  component: SetUnitView
+  component: SetUnitView,
 } as ComponentMeta<typeof SetUnitView>;
 
 const Template: ComponentStory<typeof SetUnitView> = function (args: any) {
@@ -21,7 +21,7 @@ const Template: ComponentStory<typeof SetUnitView> = function (args: any) {
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       <SetUnitView {...args} />
@@ -31,5 +31,5 @@ const Template: ComponentStory<typeof SetUnitView> = function (args: any) {
 
 export const Default = Template.bind({});
 Default.args = {
-  onClickBack: action("Clicked Back")
+  onClickBack: action("Clicked Back"),
 };

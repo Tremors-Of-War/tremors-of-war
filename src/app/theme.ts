@@ -4,21 +4,21 @@ import AntiqueRoman from "../assets/fonts/AntiqueRoman.ttf";
 const theme = createTheme({
   typography: {
     h3: {
-      fontFamily: "AntiqueRoman sans-serif"
-    }
+      fontFamily: "AntiqueRoman sans-serif",
+    },
   },
   palette: {
     mode: "dark",
     primary: {
-      main: "#FF8A3C"
+      main: "#FF8A3C",
     },
     secondary: {
-      main: "#F3F4F6"
+      main: "#F3F4F6",
     },
     warning: {
       main: "#FF8A3C",
-      light: "#FF8A3C"
-    }
+      light: "#FF8A3C",
+    },
   },
   components: {
     MuiCssBaseline: {
@@ -27,9 +27,9 @@ const theme = createTheme({
         font-family: 'AntiqueRoman';
         src: url(${AntiqueRoman}) format("truetype")
     }
-      `
-    }
-  }
+      `,
+    },
+  },
 });
 
 export default theme;

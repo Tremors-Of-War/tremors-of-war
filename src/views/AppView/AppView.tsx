@@ -19,7 +19,7 @@ const initialState: State = {
   ruleSet: null,
   faction: null,
   warbandTotal: 0,
-  models: []
+  models: [],
 };
 
 const AppView: FunctionComponent = () => {
@@ -88,7 +88,7 @@ const AppView: FunctionComponent = () => {
           onClickSave={(model) =>
             setState({
               ...state,
-              models: { ...state.models, [model.id]: model }
+              models: { ...state.models, [model.id]: model },
             })
           }
         />

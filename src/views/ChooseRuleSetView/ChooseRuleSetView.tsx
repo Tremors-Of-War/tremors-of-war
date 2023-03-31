@@ -14,7 +14,7 @@ interface Props {
 
 const ChooseRuleSetView: FunctionComponent<Props> = ({
   onClickBack,
-  setRuleSet
+  setRuleSet,
 }) => (
   <ContentContainer>
     <Grid>

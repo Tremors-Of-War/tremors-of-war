@@ -19,7 +19,7 @@ const AddUnitsView: FunctionComponent<Props> = ({
   warbandTotal,
   setWarbandTotal,
   onClickBack,
-  onClickPlay
+  onClickPlay,
 }) => {
   const [open, setOpen] = React.useState(true);
 
