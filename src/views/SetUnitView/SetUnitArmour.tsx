@@ -16,8 +16,8 @@ import data from "../../data.json";
 interface Props {
   dropdownTitle: string;
   armoury: Armour[];
-  currentArmoury: string;
-  handleSelect: (selected: string) => void;
+  currentArmoury?: Armour;
+  handleSelect: (selected: Armour) => void;
 }
 
 const SetUnitArmour: FunctionComponent<Props> = ({
@@ -47,9 +47,9 @@ const SetUnitArmour: FunctionComponent<Props> = ({
               <FormControl fullWidth variant="filled" size="small">
                 <InputLabel variant="filled">SELECT {dropdownTitle}</InputLabel>
                 <Select
-                  value={armourSelect}
+                  value={armourSelect || ""}
                   onChange={(event: SelectChangeEvent) => {
-                    const value = event.target.value as string;
+                    const value = event.target.value as Armour;
                     setArmourSelect(value);
                     handleSelect(value);
                   }}
@@ -147,4 +147,3 @@ const SetUnitArmour: FunctionComponent<Props> = ({
     </>
   );
 };
-export default SetUnitArmour;

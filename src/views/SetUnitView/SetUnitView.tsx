@@ -12,7 +12,7 @@ import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./SetUnitTabs";
 import SetUnitUnit from "./SetUnitUnit";
 import SetUnitUnitHeader from "./SetUnitUnitHeader";
-import { Faction, Unit, Model, Armour } from "../../types";
+import { Faction, Unit, Model } from "../../types";
 import data from "../../data.json";
 import SetUnitArmour from "./SetUnitArmour";
 import SetUnitUpgrades from "./SetUnitUpgrades";
@@ -31,12 +31,12 @@ const blankModel: Model = {
   unit: null,
   cost: 0,
   name: "",
-  armour: [],
-  shield: [],
-  otherArmour: [],
-  helmet: [],
+  armour: undefined,
+  shield: undefined,
+  otherArmour: undefined,
+  helmet: undefined,
   upgrades: [],
-  mounts: [],
+  mounts: undefined,
 };
 
 const SetUnitView: FunctionComponent<Props> = ({
@@ -50,8 +50,6 @@ const SetUnitView: FunctionComponent<Props> = ({
   const [unitCost, setUnitCost] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
   const [model, setModel] = React.useState<Model>(blankModel);
-  const [mount, setMount] = React.useState<boolean>(false);
-  const [upgrades, setUpgrades] = React.useState<boolean>(false);
 
   const handleTabChange = (event: any, newValue: string) => {
     setTabValue(newValue);
@@ -61,32 +59,9 @@ const SetUnitView: FunctionComponent<Props> = ({
     const parsedInputValue = event.target.value;
     setModel({ ...model, name: parsedInputValue });
   };
-  const getCurrentArmoury = (armoury: Armour[]) => {
-    const selectedArmour = armoury.length > 0 ? Object.values(armoury)[0] : "";
-    return selectedArmour;
-  };
-  useMemo(() => {
-    if (model.unit?.mounts.length > 0) {
-      setMount(true);
-    } else {
-      setMount(false);
-    }
-  }, [model.unit]);
 
   useMemo(() => {
-    model.armour = [];
-    model.upgrades = [];
-    model.shield = [];
-    model.helmet = [];
-    model.otherArmour = [];
-  }, [model.unit]);
-
-  useMemo(() => {
-    if (model.unit?.upgrades.length > 0) {
-      setUpgrades(true);
-    } else {
-      setUpgrades(false);
-    }
+    setModel({ ...blankModel, unit: model.unit });
   }, [model.unit]);
 
   const handleSave = () => {
@@ -161,8 +136,8 @@ const SetUnitView: FunctionComponent<Props> = ({
             </Grid>
             <Grid>
               <SetUnitTabs
-                showMount={mount}
-                showUpgrades={upgrades}
+                showMount={!!model?.unit?.mounts}
+                showUpgrades={!!model?.unit?.upgrades}
                 value={tabValue}
                 handleChange={handleTabChange}
               />
@@ -218,65 +193,51 @@ const SetUnitView: FunctionComponent<Props> = ({
                     case "armourTab":
                       return (
                         <>
-                          {model.unit?.armour.length > 0 && (
-                            <SetUnitArmour
-                              armoury={model.unit?.armour}
-                              currentArmoury={getCurrentArmoury(model.armour)}
-                              dropdownTitle="ARMOUR"
-                              handleSelect={(selected) => {
-                                model.armour = model.armour.filter(
-                                  (remove) => remove === selected
-                                );
-                                model.armour.push(selected);
-                                setModel(model);
-                              }}
-                            />
-                          )}
-                          {model.unit?.shield.length > 0 && (
-                            <SetUnitArmour
-                              armoury={model.unit?.shield}
-                              currentArmoury={getCurrentArmoury(model.shield)}
-                              dropdownTitle="SHIELD"
-                              handleSelect={(selected) => {
-                                model.shield = model.shield.filter(
-                                  (remove) => remove === selected
-                                );
-                                model.shield.push(selected);
-                                setModel(model);
-                              }}
-                            />
-                          )}
+                          {model.unit?.armour &&
+                            model.unit.armour.length > 0 && (
+                              <SetUnitArmour
+                                armoury={model.unit?.armour}
+                                currentArmoury={model.armour}
+                                dropdownTitle="ARMOUR"
+                                handleSelect={(armour) => {
+                                  setModel({ ...model, armour });
+                                }}
+                              />
+                            )}
+                          {model.unit?.shield &&
+                            model.unit.shield.length > 0 && (
+                              <SetUnitArmour
+                                armoury={model.unit?.shield}
+                                currentArmoury={model.shield}
+                                dropdownTitle="SHIELD"
+                                handleSelect={(shield) => {
+                                  setModel({ ...model, shield });
+                                }}
+                              />
+                            )}
 
-                          {model.unit?.otherArmour?.length > 0 && (
-                            <SetUnitArmour
-                              armoury={model.unit?.otherArmour}
-                              currentArmoury={getCurrentArmoury(
-                                model.otherArmour
-                              )}
-                              dropdownTitle="OTHER ARMOUR"
-                              handleSelect={(selected) => {
-                                model.shield = model.otherArmour.filter(
-                                  (remove) => remove === selected
-                                );
-                                model.otherArmour.push(selected);
-                                setModel(model);
-                              }}
-                            />
-                          )}
-                          {model.unit?.helmet?.length > 0 && (
-                            <SetUnitArmour
-                              armoury={model.unit?.helmet}
-                              currentArmoury={getCurrentArmoury(model.helmet)}
-                              dropdownTitle="HELMET"
-                              handleSelect={(selected) => {
-                                model.shield = model.helmet.filter(
-                                  (remove) => remove === selected
-                                );
-                                model.helmet.push(selected);
-                                setModel(model);
-                              }}
-                            />
-                          )}
+                          {model.unit?.otherArmour &&
+                            model.unit.otherArmour.length > 0 && (
+                              <SetUnitArmour
+                                armoury={model.unit?.otherArmour}
+                                currentArmoury={model.otherArmour}
+                                dropdownTitle="OTHER ARMOUR"
+                                handleSelect={(otherArmour) => {
+                                  setModel({ ...model, otherArmour });
+                                }}
+                              />
+                            )}
+                          {model.unit?.helmet &&
+                            model.unit.helmet.length > 0 && (
+                              <SetUnitArmour
+                                armoury={model.unit?.helmet}
+                                currentArmoury={model.helmet}
+                                dropdownTitle="HELMET"
+                                handleSelect={(helmet) => {
+                                  setModel({ ...model, helmet });
+                                }}
+                              />
+                            )}
                           {!model.unit && (
                             <Grid container width="100%" alignItems="center">
                               <Alert

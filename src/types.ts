@@ -41,10 +41,10 @@ export interface Model {
   unit: Unit | null;
   cost: number;
   name: string;
-  armour: Armour[];
-  shield: Armour[];
-  otherArmour: Armour[];
-  helmet: Armour[];
+  armour?: Armour;
+  shield?: Armour;
+  otherArmour?: Armour;
+  helmet?: Armour;
   upgrades: [];
-  mounts: Mounts[];
+  mounts?: Mounts;
 }
