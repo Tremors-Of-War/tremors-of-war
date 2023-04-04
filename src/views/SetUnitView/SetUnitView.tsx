@@ -5,7 +5,7 @@ import {
   TextField,
   Tooltip,
   Snackbar,
-  Alert,
+  Alert
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
@@ -36,14 +36,14 @@ const blankModel: Model = {
   otherArmour: undefined,
   helmet: undefined,
   upgrades: [],
-  mounts: undefined,
+  mounts: undefined
 };
 
 const SetUnitView: FunctionComponent<Props> = ({
   faction,
   onClickBack,
   warbandTotal,
-  onClickSave,
+  onClickSave
 }) => {
   const [tabValue, setTabValue] = React.useState("unitTab");
   const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
@@ -68,6 +68,7 @@ const SetUnitView: FunctionComponent<Props> = ({
     setModel({ ...model, id: modelId });
     onClickSave(model);
   };
+
   const calculatePointsRemaining = useMemo(() => {
     const value = warbandTotal - unitCost;
     if (value < 0) {
@@ -125,7 +126,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                       color:
                         calculatePointsRemaining < 0
                           ? theme.palette.error.main
-                          : "text.disabled",
+                          : "text.disabled"
                     })}
                     variant="subtitle2"
                   >
@@ -136,8 +137,10 @@ const SetUnitView: FunctionComponent<Props> = ({
             </Grid>
             <Grid>
               <SetUnitTabs
-                showMount={!!model?.unit?.mounts}
-                showUpgrades={!!model?.unit?.upgrades}
+                showMount={model?.unit?.mounts && model.unit.mounts.length > 0}
+                showUpgrades={
+                  model?.unit?.upgrades && model.unit.upgrades.length > 0
+                }
                 value={tabValue}
                 handleChange={handleTabChange}
               />
@@ -150,8 +153,8 @@ const SetUnitView: FunctionComponent<Props> = ({
                   overflowX: "hidden",
                   overflowY: "scroll",
                   "::-webkit-scrollbar": {
-                    display: "none",
-                  },
+                    display: "none"
+                  }
                 }}
               >
                 {(() => {
@@ -314,7 +317,7 @@ const SetUnitView: FunctionComponent<Props> = ({
         open={openAlert}
         anchorOrigin={{
           vertical: "top",
-          horizontal: "right",
+          horizontal: "right"
         }}
       >
         <Alert severity="error" variant="filled" sx={{ width: "100%" }}>
