@@ -59,7 +59,16 @@ const SetUnitView: FunctionComponent<Props> = ({
     const parsedInputValue = event.target.value;
     setModel({ ...model, name: parsedInputValue });
   };
-
+  const checkWeaponry = () => {
+    if (
+      (model?.unit?.weaponry && model.unit.weaponry.length > 0) ||
+      (model?.unit?.rangedWeaponry && model.unit.rangedWeaponry.length > 0) ||
+      (model?.unit?.twoHandWeaponry && model.unit.twoHandWeaponry.length > 0)
+    ) {
+      return true;
+    }
+    return false;
+  };
   useMemo(() => {
     setModel({ ...blankModel, unit: model.unit });
   }, [model.unit]);
@@ -137,6 +146,8 @@ const SetUnitView: FunctionComponent<Props> = ({
             </Grid>
             <Grid>
               <SetUnitTabs
+                showWeaponry={checkWeaponry}
+                showArmour={model?.unit?.armour && model.unit.armour.length > 0}
                 showMount={model?.unit?.mounts && model.unit.mounts.length > 0}
                 showUpgrades={
                   model?.unit?.upgrades && model.unit.upgrades.length > 0
