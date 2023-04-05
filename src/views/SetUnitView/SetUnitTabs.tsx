@@ -21,7 +21,7 @@ const SetUnitTabs: FunctionComponent<Props> = ({
   <Box sx={{ marginBottom: 3, width: "100%" }}>
     <Tabs value={value} onChange={handleChange}>
       <Tab value="unitTab" label="UNIT" />
-      {showWeaponry && <Tab value="weaponTab" label="WEAPONS" />}
+      {showWeaponry && <Tab value="weaponTab" label="WEAPONRY" />}
       {showArmour && <Tab value="armourTab" label="ARMOUR" />}
       {showMount && <Tab value="mountTab" label="MOUNT" />}
       {showUpgrades && <Tab value="upgradesTab" label="Upgrades" />}

@@ -16,6 +16,7 @@ import { Faction, Unit, Model } from "../../types";
 import data from "../../data.json";
 import SetUnitArmour from "./SetUnitArmour";
 import SetUnitUpgrades from "./SetUnitUpgrades";
+import SetUnitWeaponry from "./SetUnitWeaponry";
 
 interface Props {
   faction: Faction;
@@ -190,7 +191,39 @@ const SetUnitView: FunctionComponent<Props> = ({
                     case "weaponTab":
                       return (
                         <>
-                          {model.unit && <Typography>you did it</Typography>}
+                          {model.unit?.weaponry &&
+                            model.unit.weaponry.length > 0 && (
+                              <SetUnitWeaponry
+                                weaponry={model.unit?.weaponry}
+                                currentWeaponry={model.handWeapon}
+                                dropdownTitle="HAND WEAPON"
+                                handleSelect={(handWeapon) => {
+                                  setModel({ ...model, handWeapon });
+                                }}
+                              />
+                            )}
+                          {model.unit?.twoHandWeaponry &&
+                            model.unit.twoHandWeaponry.length > 0 && (
+                              <SetUnitWeaponry
+                                weaponry={model.unit?.twoHandWeaponry}
+                                currentWeaponry={model.twoHandedWeapon}
+                                dropdownTitle="TWO HANDED WEAPON"
+                                handleSelect={(twoHandedWeapon) => {
+                                  setModel({ ...model, twoHandedWeapon });
+                                }}
+                              />
+                            )}
+                          {model.unit?.rangedWeaponry &&
+                            model.unit.rangedWeaponry.length > 0 && (
+                              <SetUnitWeaponry
+                                weaponry={model.unit?.rangedWeaponry}
+                                currentWeaponry={model.rangedWeapon}
+                                dropdownTitle="RANGED WEAPON"
+                                handleSelect={(rangedWeapon) => {
+                                  setModel({ ...model, rangedWeapon });
+                                }}
+                              />
+                            )}
                           {!model.unit && (
                             <Grid container width="100%" alignItems="center">
                               <Alert
