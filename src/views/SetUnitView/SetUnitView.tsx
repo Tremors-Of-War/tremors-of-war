@@ -17,6 +17,7 @@ import data from "../../data.json";
 import SetUnitArmour from "./SetUnitArmour";
 import SetUnitUpgrades from "./SetUnitUpgrades";
 import SetUnitWeaponry from "./SetUnitWeaponry";
+import SetUnitMounts from "./SetUnitMounts";
 
 interface Props {
   faction: Faction;
@@ -71,7 +72,7 @@ const SetUnitView: FunctionComponent<Props> = ({
     return false;
   };
   useMemo(() => {
-    setModel({ ...blankModel, unit: model.unit });
+    setModel({ ...blankModel, unit: model.unit, name: model.name });
   }, [model.unit]);
 
   const handleSave = () => {
@@ -89,6 +90,7 @@ const SetUnitView: FunctionComponent<Props> = ({
     return value;
   }, [warbandTotal, unitCost]);
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
+
   return (
     <>
       <ContentContainer>
@@ -299,7 +301,28 @@ const SetUnitView: FunctionComponent<Props> = ({
                         </>
                       );
                     case "mountTab":
-                      return <Typography>mount</Typography>;
+                      return (
+                        // eslint-disable-next-line
+                        <>
+                          {model.unit?.mounts.map((mounts) => (
+                            <SetUnitMounts
+                              key={mounts}
+                              mounts={mounts}
+                              currentMounts={model.mounts}
+                              handleSelect={(selectedMount) => {
+                                if (selectedMount !== model.mounts) {
+                                  setModel({ ...model, mounts });
+                                } else {
+                                  setModel({
+                                    ...model,
+                                    mounts: blankModel.mounts
+                                  });
+                                }
+                              }}
+                            />
+                          ))}
+                        </>
+                      );
                     case "upgradesTab":
                       return (
                         // eslint-disable-next-line

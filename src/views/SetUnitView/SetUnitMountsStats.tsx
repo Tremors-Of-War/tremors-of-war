@@ -1,32 +1,39 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../types";
+import { Mounts } from "../../types";
 import data from "../../data.json";
 
 interface Props {
-  weapon: Weapons;
+  mounts: Mounts;
 }
 const header = [
-  { title: "RS", description: "Range Short" },
-  { title: "RL", description: "Range Long" },
-  { title: "AS", description: "Accuracy Short" },
-  { title: "AL", description: "Accuracy Long" },
-  { title: "S", description: "S" },
-  { title: "AP", description: "AP" },
-  { title: "D", description: "D" }
+  { title: "M", description: "Movement" },
+  { title: "WS", description: "Weapon Skill" },
+  { title: "BS", description: "Ballistic Skill" },
+  { title: "S", description: "Strength" },
+  { title: "T", description: "Toughness" },
+  { title: "W", description: "Wounds" },
+  { title: "I", description: "Initiative" },
+  { title: "A", description: "Attacks" },
+  { title: "CL", description: "Cool" },
+  { title: "INT", description: "Intelligence" }
 ];
-
-const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
-  const { RS, RL, AS, AL, S, AP, D } = data.weapons[weapon];
-  const stats = [RS, RL, AS, AL, S, AP, D];
+const SetUnitMountsStats: FunctionComponent<Props> = ({ mounts }) => {
+  const { M, WS, BS, S, T, W, I, A, Cl, Int } = data.mounts[mounts];
+  const stats = [M, WS, BS, S, T, W, I, A, Cl, Int];
   return (
-    <Grid container justifyContent="flex-start" width="465px">
+    <Grid
+      container
+      justifyContent="flex-start"
+      width="512px"
+      paddingRight="32px"
+    >
       <Grid container direction="column">
         <Grid container direction="row" justifyContent="space-between">
           {header.map(({ title, description }) => (
             <Grid container justifyContent="center" width="27px" key={title}>
               <Tooltip title={description}>
-                <Typography color="text.disabled" variant="body2">
+                <Typography color="text.disabled" variant="body1">
                   {title}
                 </Typography>
               </Tooltip>
@@ -36,7 +43,7 @@ const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
         <Grid container direction="row" justifyContent="space-between">
           {stats.map((stat, index) => (
             <Grid container justifyContent="center" width="27px" key={index}>
-              {stat !== 0 && <Typography variant="body2">{stat}</Typography>}
+              {stat !== 0 && <Typography variant="body1">{stat}</Typography>}
               {stat === 0 && (
                 <Typography color="text.disabled" variant="body2">
                   -
@@ -49,4 +56,4 @@ const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
     </Grid>
   );
 };
-export default SetUnitWeaponryStats;
+export default SetUnitMountsStats;
