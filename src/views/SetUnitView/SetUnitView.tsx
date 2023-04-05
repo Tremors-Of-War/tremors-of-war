@@ -147,7 +147,7 @@ const SetUnitView: FunctionComponent<Props> = ({
             </Grid>
             <Grid>
               <SetUnitTabs
-                showWeaponry={checkWeaponry}
+                showWeaponry={checkWeaponry()}
                 showArmour={model?.unit?.armour && model.unit.armour.length > 0}
                 showMount={model?.unit?.mounts && model.unit.mounts.length > 0}
                 showUpgrades={

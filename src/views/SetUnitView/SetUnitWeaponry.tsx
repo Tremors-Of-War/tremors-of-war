@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../app/theme";
-import { Unit, Weapons } from "../../types";
+import { Weapons } from "../../types";
 import data from "../../data.json";
 import SetUnitWeaponryStats from "./SetUnitWeaponryStats";
 
@@ -18,15 +18,13 @@ interface Props {
   weaponry: Weapons[];
   currentWeaponry?: Weapons;
   handleSelect: (selected: Weapons) => void;
-  unit: Unit;
 }
 
 const SetUnitWeaponry: FunctionComponent<Props> = ({
   dropdownTitle,
   weaponry,
   currentWeaponry,
-  handleSelect,
-  unit
+  handleSelect
 }) => {
   const [weaponSelect, setWeaponSelect] = React.useState(currentWeaponry);
 
