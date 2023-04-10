@@ -37,7 +37,7 @@ export interface Unit {
 }
 
 export interface Model {
-  id: number;
+  id: string;
   unit: Unit | null;
   cost: number;
   name: string;

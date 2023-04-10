@@ -5,12 +5,16 @@ import AddIcon from "@mui/icons-material/Add";
 import ContentContainer from "../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../components/ChooseWarBandTotalDialog";
 import { Faction } from "../../types";
+import AddUnitUnit from "./AddUnitUnit";
 
 interface Props {
   faction: Faction;
   warbandTotal: number;
   onClickBack: () => void;
   onClickPlay: () => void;
+  onClickAdd: () => void;
+  models: models;
+  tempFunc: () => void;
   setWarbandTotal: (warbandTotal: number) => void;
 }
 
@@ -19,7 +23,10 @@ const AddUnitsView: FunctionComponent<Props> = ({
   warbandTotal,
   setWarbandTotal,
   onClickBack,
+  onClickAdd,
   onClickPlay,
+  tempFunc,
+  models
 }) => {
   const [open, setOpen] = React.useState(true);
 
@@ -28,6 +35,8 @@ const AddUnitsView: FunctionComponent<Props> = ({
     setWarbandTotal(value);
   };
 
+  const modelArr = Object.entries(models);
+  console.log(modelArr);
   return (
     <>
       <ContentContainer>
@@ -46,7 +55,6 @@ const AddUnitsView: FunctionComponent<Props> = ({
           >
             <Box>
               <Typography variant="h3">{faction}</Typography>
-              <Typography variant="h5">UNITS:</Typography>
             </Box>
             <Grid
               container
@@ -60,6 +68,7 @@ const AddUnitsView: FunctionComponent<Props> = ({
                   startIcon={<AddIcon />}
                   variant="contained"
                   size="large"
+                  onClick={onClickAdd}
                 >
                   ADD UNIT
                 </Button>
@@ -72,7 +81,7 @@ const AddUnitsView: FunctionComponent<Props> = ({
                     justifyContent="flex-end"
                     direction="row"
                   >
-                    <Typography variant="h5">unitsCost &nbsp;</Typography>
+                    <Typography variant="h5">0&nbsp;</Typography>
                     <Typography variant="h5" sx={{ color: "text.disabled" }}>
                       {"/ "}
                       {warbandTotal.toLocaleString("en-US")}
@@ -84,7 +93,11 @@ const AddUnitsView: FunctionComponent<Props> = ({
           </Grid>
 
           <Grid container maxHeight="524px">
-            <Typography>middle</Typography>
+            {modelArr.map((model: Model) => (
+              <AddUnitUnit model={model[1]} />
+            ))}
+
+            <Button onClick={tempFunc}>button</Button>
           </Grid>
 
           <Grid container alignItems="center" justifyContent="space-between">

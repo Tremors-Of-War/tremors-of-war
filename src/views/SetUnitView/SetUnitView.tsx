@@ -1,4 +1,5 @@
-import React, { FunctionComponent, useMemo } from "react";
+import React, { FunctionComponent, useEffect, useMemo } from "react";
+import { v4 as uuidv4 } from "uuid";
 import {
   Button,
   Typography,
@@ -18,6 +19,7 @@ import SetUnitArmour from "./SetUnitArmour";
 import SetUnitUpgrades from "./SetUnitUpgrades";
 import SetUnitWeaponry from "./SetUnitWeaponry";
 import SetUnitMounts from "./SetUnitMounts";
+import NoUnitNameError from "../../components/NoUnitNameError";
 
 interface Props {
   faction: Faction;
@@ -25,17 +27,18 @@ interface Props {
   warbandTotal: number;
   onClickSave: (model: Model) => void;
 }
-// TODO MODEL ID LOGIC
-const modelId = 0;
 
 const blankModel: Model = {
-  id: 0,
+  id: "",
   unit: null,
   cost: 0,
   name: "",
   armour: undefined,
   shield: undefined,
   otherArmour: undefined,
+  handWeapon: undefined,
+  twoHandedWeapon: undefined,
+  rangedWeapon: undefined,
   helmet: undefined,
   upgrades: [],
   mounts: undefined
@@ -52,6 +55,7 @@ const SetUnitView: FunctionComponent<Props> = ({
   const [unitCost, setUnitCost] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
   const [model, setModel] = React.useState<Model>(blankModel);
+  const [openNameAlert, setOpenNameAlert] = React.useState<boolean>(false);
 
   const handleTabChange = (event: any, newValue: string) => {
     setTabValue(newValue);
@@ -76,8 +80,12 @@ const SetUnitView: FunctionComponent<Props> = ({
   }, [model.unit]);
 
   const handleSave = () => {
-    setModel({ ...model, id: modelId });
-    onClickSave(model);
+    const value = uuidv4();
+    if (!model.name) {
+      setOpenNameAlert(true);
+    } else {
+      onClickSave({ ...model, id: value });
+    }
   };
 
   const calculatePointsRemaining = useMemo(() => {
@@ -89,6 +97,38 @@ const SetUnitView: FunctionComponent<Props> = ({
     }
     return value;
   }, [warbandTotal, unitCost]);
+
+  useEffect(() => {
+    model.cost = 0;
+    if (model.unit) {
+      model.cost += model.unit.points;
+      if (model.helmet) {
+        model.cost += data.armour[model.helmet].Cost;
+      }
+      if (model.armour) {
+        model.cost += data.armour[model.armour].Cost;
+      }
+      if (model.shield) {
+        model.cost += data.armour[model.shield].Cost;
+      }
+      if (model.otherArmour) {
+        model.cost += data.armour[model.otherArmour].Cost;
+      }
+      if (model.mounts) {
+        model.cost += data.mounts[model.mounts].Points;
+      }
+      if (model.handWeapon) {
+        model.cost += data.weapons[model.handWeapon].Cost;
+      }
+      if (model.rangedWeapon) {
+        model.cost += data.weapons[model.rangedWeapon].Cost;
+      }
+      if (model.twoHandedWeapon) {
+        model.cost += data.weapons[model.twoHandedWeapon].Cost;
+      }
+    }
+    setUnitCost(model.cost);
+  }, [model]);
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
 
   return (
@@ -373,7 +413,12 @@ const SetUnitView: FunctionComponent<Props> = ({
               gap="10px"
             >
               <Button variant="outlined">REMOVE UNIT</Button>
-              <Button variant="contained" onClick={handleSave}>
+
+              <Button
+                disabled={model.unit === null}
+                variant="contained"
+                onClick={handleSave}
+              >
                 SAVE
               </Button>
             </Grid>
@@ -391,6 +436,14 @@ const SetUnitView: FunctionComponent<Props> = ({
           You have exceeded you Warband Total.
         </Alert>
       </Snackbar>
+      <NoUnitNameError
+        open={openNameAlert}
+        onSave={(modelName) => {
+          setModel({ ...model, name: modelName });
+          setOpenNameAlert(false);
+        }}
+        onClose={() => setOpenNameAlert(false)}
+      />
     </>
   );
 };
