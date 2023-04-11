@@ -67,7 +67,10 @@ const AppView: FunctionComponent = () => {
                 setEditModel("");
                 setCurrentRoute(ROUTES.SET_UNIT);
               }}
-              onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
+              onClickRestart={() => {
+                setCurrentRoute(ROUTES.START_SCREEN);
+                setState(initialState);
+              }}
               onClickPlay={() => alert("Navigate to play screen")}
               models={state.models}
               onEdit={(modelId: string) => {
@@ -107,12 +110,13 @@ const AppView: FunctionComponent = () => {
           faction={state.faction!}
           warbandTotal={state.warbandTotal}
           existingModel={state.models[editModel]}
+          onDelete={(modelId: string) => {
+            const { [modelId]: remove, ...deleteModel } = state.models;
+            setState({ ...state, models: deleteModel });
+            setCurrentRoute(ROUTES.ADD_UNITS);
+          }}
           onClickBack={() => {
-            if (state.models && Object.keys(state.models).length > 0) {
-              setCurrentRoute(ROUTES.ADD_UNITS);
-            } else {
-              setCurrentRoute(ROUTES.ADD_UNITS);
-            }
+            setCurrentRoute(ROUTES.ADD_UNITS);
           }}
           onClickSave={(model) => {
             setState({

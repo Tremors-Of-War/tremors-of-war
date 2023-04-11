@@ -14,11 +14,12 @@ import ContentContainer from "../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../components/ChooseWarBandTotalDialog";
 import { Faction } from "../../types";
 import AddUnitUnit from "./AddUnitUnit";
+import RestartConfirmationDialog from "../../components/RestartConfirmationDialog";
 
 interface Props {
   faction: Faction;
   warbandTotal: number;
-  onClickBack: () => void;
+  onClickRestart: () => void;
   onClickPlay: () => void;
   onClickAdd: () => void;
   onDelete: (modelId: string) => void;
@@ -31,7 +32,7 @@ const AddUnitsView: FunctionComponent<Props> = ({
   faction,
   warbandTotal,
   setWarbandTotal,
-  onClickBack,
+  onClickRestart,
   onClickAdd,
   onDelete,
   onClickPlay,
@@ -39,6 +40,8 @@ const AddUnitsView: FunctionComponent<Props> = ({
   models
 }) => {
   const [open, setOpen] = React.useState(true);
+  const [openRestartAlert, setOpenRestartAlert] =
+    React.useState<boolean>(false);
 
   const handleClose = (value: number) => {
     setOpen(!open);
@@ -120,8 +123,8 @@ const AddUnitsView: FunctionComponent<Props> = ({
             >
               <List sx={{ width: "100%" }}>
                 <TransitionGroup>
-                  {modelArr.map((model: Model) => (
-                    <Collapse key={model}>
+                  {modelArr.map((model) => (
+                    <Collapse key={model[0]}>
                       <AddUnitUnit
                         model={model[1]}
                         onEdit={onEdit}
@@ -134,8 +137,13 @@ const AddUnitsView: FunctionComponent<Props> = ({
             </Grid>
           </Grid>
           <Grid container alignItems="center" justifyContent="space-between">
-            <Button variant="outlined" onClick={onClickBack}>
-              BACK
+            <Button
+              variant="outlined"
+              onClick={() => {
+                setOpenRestartAlert(true);
+              }}
+            >
+              RESTART
             </Button>
             <Grid
               container
@@ -157,6 +165,11 @@ const AddUnitsView: FunctionComponent<Props> = ({
         open={!open}
         warbandTotal={warbandTotal}
         onClose={handleClose}
+      />
+      <RestartConfirmationDialog
+        open={openRestartAlert}
+        onClickRestart={onClickRestart}
+        onClose={() => setOpenRestartAlert(false)}
       />
     </>
   );

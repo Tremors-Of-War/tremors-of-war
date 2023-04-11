@@ -4,10 +4,10 @@ import React, { FunctionComponent } from "react";
 interface Props {
   handleChange: (event: any, newValue: string) => void;
   value: string;
-  showWeaponry: boolean;
-  showArmour: boolean;
-  showMount: boolean;
-  showUpgrades: boolean;
+  showWeaponry?: boolean;
+  showArmour?: boolean;
+  showMount?: boolean;
+  showUpgrades?: boolean;
 }
 
 const SetUnitTabs: FunctionComponent<Props> = ({
