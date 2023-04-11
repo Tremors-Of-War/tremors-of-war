@@ -25,6 +25,7 @@ const initialState: State = {
 const AppView: FunctionComponent = () => {
   const [currentRoute, setCurrentRoute] = useState(INITIAL_ROUTE);
   const [state, setState] = useState<State>(initialState);
+  const [editModel, setEditModel] = useState<string>("");
 
   switch (currentRoute) {
     case ROUTES.START_SCREEN:
@@ -62,12 +63,23 @@ const AppView: FunctionComponent = () => {
             <AddUnitsView
               faction={state.faction!}
               warbandTotal={state.warbandTotal}
-              onClickAdd={() => setCurrentRoute(ROUTES.SET_UNIT)}
+              onClickAdd={() => {
+                setEditModel("");
+                setCurrentRoute(ROUTES.SET_UNIT);
+              }}
               onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
               onClickPlay={() => alert("Navigate to play screen")}
-              tempFunc={() => setState({ ...state, models: {} })}
               models={state.models}
-              setWarbandTotal={(warbandTotal) =>
+              onEdit={(modelId: string) => {
+                setEditModel(modelId);
+                setCurrentRoute(ROUTES.SET_UNIT);
+              }}
+              onDelete={(modelId: string) => {
+                const { [modelId]: remove, ...deleteModel } = state.models;
+
+                setState({ ...state, models: deleteModel });
+              }}
+              setWarbandTotal={(warbandTotal: number) =>
                 setState({ ...state, warbandTotal })
               }
             />
@@ -77,7 +89,10 @@ const AppView: FunctionComponent = () => {
               faction={state.faction!}
               warbandTotal={state.warbandTotal}
               onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
-              onClickAdd={() => setCurrentRoute(ROUTES.SET_UNIT)}
+              onClickAdd={() => {
+                setEditModel("");
+                setCurrentRoute(ROUTES.SET_UNIT);
+              }}
               setWarbandTotal={(warbandTotal) =>
                 setState({ ...state, warbandTotal })
               }
@@ -85,11 +100,13 @@ const AppView: FunctionComponent = () => {
           )}
         </>
       );
+
     case ROUTES.SET_UNIT:
       return (
         <SetUnitView
           faction={state.faction!}
           warbandTotal={state.warbandTotal}
+          existingModel={state.models[editModel]}
           onClickBack={() => {
             if (state.models && Object.keys(state.models).length > 0) {
               setCurrentRoute(ROUTES.ADD_UNITS);

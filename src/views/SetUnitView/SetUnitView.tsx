@@ -6,6 +6,7 @@ import {
   TextField,
   Tooltip,
   Snackbar,
+  CircularProgress,
   Alert
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
@@ -23,6 +24,7 @@ import NoUnitNameError from "../../components/NoUnitNameError";
 
 interface Props {
   faction: Faction;
+  existingModel?: Model;
   onClickBack: () => void;
   warbandTotal: number;
   onClickSave: (model: Model) => void;
@@ -48,6 +50,7 @@ const SetUnitView: FunctionComponent<Props> = ({
   faction,
   onClickBack,
   warbandTotal,
+  existingModel,
   onClickSave
 }) => {
   const [tabValue, setTabValue] = React.useState("unitTab");
@@ -75,14 +78,13 @@ const SetUnitView: FunctionComponent<Props> = ({
     }
     return false;
   };
-  useMemo(() => {
-    setModel({ ...blankModel, unit: model.unit, name: model.name });
-  }, [model.unit]);
 
   const handleSave = () => {
     const value = uuidv4();
     if (!model.name) {
       setOpenNameAlert(true);
+    } else if (model.id !== "") {
+      onClickSave(model);
     } else {
       onClickSave({ ...model, id: value });
     }
@@ -131,6 +133,18 @@ const SetUnitView: FunctionComponent<Props> = ({
   }, [model]);
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
 
+  useEffect(() => {
+    if (existingModel) {
+      setModel(existingModel);
+      if (existingModel.unit) {
+        setSelectedUnit(existingModel.unit.name);
+      }
+    }
+  }, [existingModel]);
+  const isDoneLoading = () => {
+    const value = existingModel === undefined || model.id !== null;
+    return value;
+  };
   return (
     <>
       <ContentContainer>
@@ -198,7 +212,9 @@ const SetUnitView: FunctionComponent<Props> = ({
                 value={tabValue}
                 handleChange={handleTabChange}
               />
-              {tabValue === "unitTab" && <SetUnitUnitHeader />}
+              {tabValue === "unitTab" && isDoneLoading() && (
+                <SetUnitUnitHeader />
+              )}
               <Grid
                 container
                 maxWidth="6200px"
@@ -216,18 +232,32 @@ const SetUnitView: FunctionComponent<Props> = ({
                     case "unitTab":
                       return (
                         <>
-                          {unitOptions.map((unit) => (
-                            <SetUnitUnit
-                              key={unit.name}
-                              unit={unit}
-                              handleClick={() => {
-                                setSelectedUnit(unit.name);
-                                setUnitCost(unit.points);
-                                setModel({ ...model, unit });
-                              }}
-                              isSelected={selectedUnit === unit.name}
-                            />
-                          ))}
+                          {existingModel !== undefined &&
+                            model.id === null && (
+                              <Grid
+                                container
+                                width="100%"
+                                justifyContent="center"
+                              >
+                                <CircularProgress />
+                              </Grid>
+                            )}
+                          {(existingModel === undefined || isDoneLoading()) && (
+                            <>
+                              {unitOptions.map((unit) => (
+                                <SetUnitUnit
+                                  key={unit.name}
+                                  unit={unit}
+                                  handleClick={() => {
+                                    setSelectedUnit(unit.name);
+                                    setUnitCost(unit.points);
+                                    setModel({ ...model, unit });
+                                  }}
+                                  isSelected={selectedUnit === unit.name}
+                                />
+                              ))}
+                            </>
+                          )}
                         </>
                       );
                     case "weaponTab":
@@ -404,7 +434,7 @@ const SetUnitView: FunctionComponent<Props> = ({
             marginTop="16px"
           >
             <Button variant="outlined" onClick={onClickBack}>
-              BACK
+              CANCEL
             </Button>
             <Grid
               container
