@@ -45,9 +45,13 @@ const NoUnitNameError: FunctionComponent<Props> = ({
         alignItems="center"
         justifyContent="Flex-start"
         variant="filled"
-        sx={{ width: "100%", color: "#F3F4F6", backgroundColor: "#FF8A3C" }}
+        sx={{
+          width: "100%",
+          color: "#F3F4F6",
+          backgroundColor: "#FF8A3C"
+        }}
       >
-        <Typography>Restart List?</Typography>
+        <Typography>Are you sure?</Typography>
       </Grid>
       <DialogContent>
         <DialogContentText>

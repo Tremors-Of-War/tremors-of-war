@@ -51,7 +51,6 @@ const SetUnitView: FunctionComponent<Props> = ({
   onDelete
 }) => {
   const [tabValue, setTabValue] = React.useState("unitTab");
-  const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
   const [unitCost, setUnitCost] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
   const [model, setModel] = React.useState<Model>(blankModel);
@@ -133,15 +132,17 @@ const SetUnitView: FunctionComponent<Props> = ({
   useEffect(() => {
     if (existingModel) {
       setModel(existingModel);
-      if (existingModel.unit) {
-        setSelectedUnit(existingModel.unit.name);
-      }
     }
-  }, [existingModel]);
+  }, []);
 
   const isDoneLoading = () => {
-    const value = existingModel === undefined || model.id !== null;
+    const value =
+      (existingModel === undefined || model.id !== null) && model.unit !== null;
     return value;
+  };
+
+  const onModelChanges = (newModel: Model) => {
+    setModel(newModel);
   };
   return (
     <>
@@ -177,7 +178,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                 justifyContent="flex-end"
               >
                 <Typography variant="h5" color="primary">
-                  {selectedUnit === null ? "SELECT UNIT" : selectedUnit}
+                  {model?.unit?.name ? model.unit.name : "SELECT UNIT"}
                 </Typography>
                 <Tooltip title="Current Unit Cost">
                   <Typography color="secondary" variant="subtitle1">
@@ -218,11 +219,9 @@ const SetUnitView: FunctionComponent<Props> = ({
                 model={model}
                 existingModel={existingModel}
                 isDoneLoading={isDoneLoading}
-                setModel={setModel}
+                onModelChanges={onModelChanges}
                 blankModel={blankModel}
                 unitOptions={unitOptions}
-                selectedUnit={selectedUnit}
-                setSelectedUnit={setSelectedUnit}
                 setUnitCost={setUnitCost}
               />
             </Grid>
