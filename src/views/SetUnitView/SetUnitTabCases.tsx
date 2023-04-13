@@ -82,7 +82,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                 )}
               </>
             );
-          case "weaponTab":
+          case "weaponryTab":
             return (
               <>
                 {model.unit?.weaponry && model.unit.weaponry.length > 0 && (

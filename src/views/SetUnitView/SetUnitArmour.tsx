@@ -54,6 +54,9 @@ const SetUnitArmour: FunctionComponent<Props> = ({
                     handleSelect(value);
                   }}
                 >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
                   {armoury.map((item) => (
                     <MenuItem key={item} value={item}>
                       {item}

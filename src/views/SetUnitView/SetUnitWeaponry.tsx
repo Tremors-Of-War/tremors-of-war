@@ -27,7 +27,6 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
   handleSelect
 }) => {
   const [weaponSelect, setWeaponSelect] = React.useState(currentWeaponry);
-
   return (
     <>
       {weaponry && (
@@ -43,6 +42,7 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
             <Typography variant="h6" color="primary">
               {dropdownTitle}
             </Typography>
+
             <Grid width="300px" paddingBottom="8px">
               <FormControl fullWidth variant="filled" size="small">
                 <InputLabel variant="filled">SELECT {dropdownTitle}</InputLabel>
@@ -54,6 +54,9 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                     handleSelect(value);
                   }}
                 >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
                   {weaponry.map((item) => (
                     <MenuItem key={item} value={item}>
                       {item}

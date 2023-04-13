@@ -16,6 +16,7 @@ import { Faction, Unit, Model } from "../../types";
 import data from "../../data.json";
 import NoUnitNameError from "../../components/NoUnitNameError";
 import SetUnitTabCases from "./SetUnitTabCases";
+import SetUnitFooter from "./SetUnitFooter";
 
 interface Props {
   faction: Faction;
@@ -136,14 +137,14 @@ const SetUnitView: FunctionComponent<Props> = ({
   }, []);
 
   const isDoneLoading = () => {
-    const value =
-      (existingModel === undefined || model.id !== null) && model.unit !== null;
+    const value = existingModel === undefined || model.id !== null;
     return value;
   };
 
   const onModelChanges = (newModel: Model) => {
     setModel(newModel);
   };
+
   return (
     <>
       <ContentContainer>
@@ -200,6 +201,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                 </Tooltip>
               </Grid>
             </Grid>
+
             <Grid>
               <SetUnitTabs
                 showWeaponry={checkWeaponry()}
@@ -227,34 +229,38 @@ const SetUnitView: FunctionComponent<Props> = ({
             </Grid>
           </Grid>
 
-          <Grid
-            container
-            alignItems="center"
-            justifyContent="space-between"
-            marginTop="16px"
-          >
-            <Button variant="outlined" onClick={onClickBack}>
-              CANCEL
-            </Button>
+          <Grid container direction="column" justifyContent="flex-end">
+            {tabValue !== "unitTab" && <SetUnitFooter tabValue={tabValue} />}
+
             <Grid
               container
-              direction="row"
-              justifyContent="flex-end"
-              gap="10px"
+              alignItems="center"
+              justifyContent="space-between"
+              marginTop="16px"
             >
-              {existingModel && (
-                <Button onClick={() => onDelete(model.id)} variant="outlined">
-                  DELETE UNIT
-                </Button>
-              )}
-
-              <Button
-                disabled={model.unit === null}
-                variant="contained"
-                onClick={handleSave}
-              >
-                SAVE
+              <Button variant="outlined" onClick={onClickBack}>
+                CANCEL
               </Button>
+              <Grid
+                container
+                direction="row"
+                justifyContent="flex-end"
+                gap="10px"
+              >
+                {existingModel && (
+                  <Button onClick={() => onDelete(model.id)} variant="outlined">
+                    DELETE UNIT
+                  </Button>
+                )}
+
+                <Button
+                  disabled={model.unit === null}
+                  variant="contained"
+                  onClick={handleSave}
+                >
+                  SAVE
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
@@ -267,7 +273,7 @@ const SetUnitView: FunctionComponent<Props> = ({
         }}
       >
         <Alert severity="error" variant="filled" sx={{ width: "100%" }}>
-          You have exceeded you Warband Total.
+          You have exceeded your Warband Total.
         </Alert>
       </Snackbar>
       <NoUnitNameError
