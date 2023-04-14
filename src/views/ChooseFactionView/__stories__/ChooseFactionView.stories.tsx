@@ -7,7 +7,7 @@ import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
   title: "Layout/View/ChooseFactionView",
-  component: ChooseFactionView
+  component: ChooseFactionView,
 } as ComponentMeta<typeof ChooseFactionView>;
 
 const Template: ComponentStory<typeof ChooseFactionView> = function (
@@ -23,7 +23,7 @@ const Template: ComponentStory<typeof ChooseFactionView> = function (
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       <ChooseFactionView {...args} />
@@ -35,12 +35,12 @@ export const Fantasy = Template.bind({});
 Fantasy.args = {
   ruleSet: "fantasy",
   onClickBack: action("Clicked Back!"),
-  setFaction: action("Faction Selected")
+  setFaction: action("Faction Selected"),
 };
 
 export const DarkAges = Template.bind({});
 DarkAges.args = {
   ruleSet: "dark_ages",
   onClickBack: action("Clicked Back!"),
-  setFaction: action("Faction Selected")
+  setFaction: action("Faction Selected"),
 };

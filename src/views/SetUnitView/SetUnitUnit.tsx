@@ -20,7 +20,6 @@ const SetUnitUnit: FunctionComponent<Props> = ({
   const selectedBackground = theme.palette.primary.main;
   const { m, ws, bs, s, t, w, i, a, cl, int } = unit;
   const stats = [m, ws, bs, s, t, w, i, a, cl, int];
-
   return (
     <Grid
       onClick={handleClick}
@@ -58,8 +57,8 @@ const SetUnitUnit: FunctionComponent<Props> = ({
         justifyContent="space-between"
         width="410px"
       >
-        {stats.map((statValue) => (
-          <Grid component={Typography} width="27px" variant="body1">
+        {stats.map((statValue, index) => (
+          <Grid key={index} component={Typography} width="27px" variant="body1">
             {statValue}
           </Grid>
         ))}
@@ -72,7 +71,7 @@ const SetUnitUnit: FunctionComponent<Props> = ({
         width="143px"
       >
         {unit.abilities.map((ability) => (
-          <Tooltip title={data.abilities[ability].Effects}>
+          <Tooltip key={ability} title={data.abilities[ability].Effects}>
             <Typography variant="caption">&#8226; {ability}</Typography>
           </Tooltip>
         ))}

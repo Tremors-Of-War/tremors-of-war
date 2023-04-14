@@ -15,7 +15,7 @@ interface Props {
 const ChooseFactionView: FunctionComponent<Props> = ({
   ruleSet,
   onClickBack,
-  setFaction
+  setFaction,
 }) => (
   <ContentContainer>
     <Grid>
@@ -30,8 +30,8 @@ const ChooseFactionView: FunctionComponent<Props> = ({
           overflowX: "hidden",
           overflowY: "scroll",
           "::-webkit-scrollbar": {
-            display: "none"
-          }
+            display: "none",
+          },
         }}
       >
         {Factions[ruleSet].map((faction) => (
@@ -39,7 +39,7 @@ const ChooseFactionView: FunctionComponent<Props> = ({
             key={faction.name}
             xs={6}
             sx={(theme) => ({
-              height: theme.spacing(13)
+              height: theme.spacing(13),
             })}
           >
             <ChooseFactionButton

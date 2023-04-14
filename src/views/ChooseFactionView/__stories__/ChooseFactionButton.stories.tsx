@@ -7,7 +7,7 @@ import BackgroundIMG from "../../../assets/factions/fantasy/brettonia.jpg";
 
 export default {
   title: "Layout/Component/ChooseFactionButton",
-  component: ChooseFactionButton
+  component: ChooseFactionButton,
 } as ComponentMeta<typeof ChooseFactionButton>;
 
 const Template: ComponentStory<typeof ChooseFactionButton> = function () {
@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof ChooseFactionButton> = function () {
       alignItems="center"
       sx={(theme) => ({
         width: theme.spacing(48),
-        height: theme.spacing(12)
+        height: theme.spacing(12),
       })}
     >
       <ChooseFactionButton

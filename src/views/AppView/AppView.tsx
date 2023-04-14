@@ -7,26 +7,27 @@ import ChooseRuleSetView from "../ChooseRuleSetView/ChooseRuleSetView";
 import SetUnitView from "../SetUnitView/SetUnitView";
 import StartScreenView from "../StartScreenView/StartScreenView";
 import ROUTES, { INITIAL_ROUTE } from "./routes";
+import PlayScreenView from "../PlayScreenView/PlayScreenView";
 
 interface State {
   ruleSet: RuleSet | null;
   faction: Faction | null;
   warbandTotal: number;
-  models: Model[];
+  models: { [id: string]: Model };
 }
 
 const initialState: State = {
   ruleSet: null,
   faction: null,
   warbandTotal: 0,
-  models: []
+  models: {}
 };
 
 const AppView: FunctionComponent = () => {
   const [currentRoute, setCurrentRoute] = useState(INITIAL_ROUTE);
   const [state, setState] = useState<State>(initialState);
-  console.log(state);
-  // TODO: VALIDATE ROUTES
+  const [editModel, setEditModel] = useState<string>("");
+
   switch (currentRoute) {
     case ROUTES.START_SCREEN:
       return (
@@ -51,46 +52,90 @@ const AppView: FunctionComponent = () => {
           onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_RULESET)}
           setFaction={(faction) => {
             setState({ ...state, faction });
-            setCurrentRoute(ROUTES.ADD_UNITS_ZERO_STATE);
+            setCurrentRoute(ROUTES.ADD_UNITS);
           }}
         />
       );
-    // TODO: THESE VALUES
-    case ROUTES.ADD_UNITS_ZERO_STATE:
-      return (
-        <AddUnitsZeroStateView
-          faction={state.faction!}
-          warbandTotal={state.warbandTotal}
-          onClickBack={() => setCurrentRoute(ROUTES.SET_UNIT)}
-          setWarbandTotal={(warbandTotal) =>
-            setState({ ...state, warbandTotal })
-          }
-        />
-      );
+
     case ROUTES.ADD_UNITS:
       return (
-        <AddUnitsView
-          faction={state.faction!}
-          warbandTotal={state.warbandTotal}
-          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
-          onClickPlay={() => alert("Navigate to play screen")}
-          setWarbandTotal={(warbandTotal) =>
-            setState({ ...state, warbandTotal })
-          }
-        />
+        <>
+          {state.models && Object.keys(state.models).length > 0 && (
+            <AddUnitsView
+              faction={state.faction!}
+              warbandTotal={state.warbandTotal}
+              onClickAdd={() => {
+                setEditModel("");
+                setCurrentRoute(ROUTES.SET_UNIT);
+              }}
+              onClickRestart={() => {
+                setCurrentRoute(ROUTES.START_SCREEN);
+                setState(initialState);
+              }}
+              onClickPlay={() => setCurrentRoute(ROUTES.PLAY_SCREEN)}
+              models={state.models}
+              onEdit={(modelId: string) => {
+                setEditModel(modelId);
+                setCurrentRoute(ROUTES.SET_UNIT);
+              }}
+              onDelete={(modelId: string) => {
+                const { [modelId]: remove, ...deleteModel } = state.models;
+
+                setState({ ...state, models: deleteModel });
+              }}
+              setWarbandTotal={(warbandTotal: number) =>
+                setState({ ...state, warbandTotal })
+              }
+            />
+          )}
+          {state.models && Object.keys(state.models).length === 0 && (
+            <AddUnitsZeroStateView
+              faction={state.faction!}
+              warbandTotal={state.warbandTotal}
+              onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
+              onClickAdd={() => {
+                setEditModel("");
+                setCurrentRoute(ROUTES.SET_UNIT);
+              }}
+              setWarbandTotal={(warbandTotal) =>
+                setState({ ...state, warbandTotal })
+              }
+            />
+          )}
+        </>
       );
+
     case ROUTES.SET_UNIT:
       return (
         <SetUnitView
           faction={state.faction!}
           warbandTotal={state.warbandTotal}
-          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
-          onClickSave={(model) =>
+          existingModel={state.models[editModel]}
+          onDelete={(modelId: string) => {
+            const { [modelId]: remove, ...deleteModel } = state.models;
+            setState({ ...state, models: deleteModel });
+            setCurrentRoute(ROUTES.ADD_UNITS);
+          }}
+          onClickBack={() => {
+            setCurrentRoute(ROUTES.ADD_UNITS);
+          }}
+          onClickSave={(model) => {
             setState({
               ...state,
               models: { ...state.models, [model.id]: model }
-            })
-          }
+            });
+            setCurrentRoute(ROUTES.ADD_UNITS);
+          }}
+        />
+      );
+
+    case ROUTES.PLAY_SCREEN:
+      return (
+        <PlayScreenView
+          onClickBack={() => setCurrentRoute(ROUTES.ADD_UNITS)}
+          onClickRules={() => alert("YOU RULE!")}
+          models={state.models}
+          faction={state.faction}
         />
       );
     default:

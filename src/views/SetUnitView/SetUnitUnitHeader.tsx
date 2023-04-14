@@ -11,7 +11,7 @@ const header = [
   { title: "I", description: "Initiative" },
   { title: "A", description: "Attacks" },
   { title: "CL", description: "Cool" },
-  { title: "INT", description: "Intelligence" }
+  { title: "INT", description: "Intelligence" },
 ];
 
 const SetUnitUnitHeader = () => (
@@ -26,7 +26,7 @@ const SetUnitUnitHeader = () => (
     sx={{
       width: "100%",
       gap: "auto",
-      height: "auto"
+      height: "auto",
     }}
   >
     <Grid
@@ -45,7 +45,7 @@ const SetUnitUnitHeader = () => (
       width="410px"
     >
       {header.map(({ title, description }) => (
-        <Grid container justifyContent="flex-start" width="27px">
+        <Grid container justifyContent="flex-start" width="27px" key={title}>
           <Tooltip title={description}>
             <Typography variant="body1">{title}</Typography>
           </Tooltip>

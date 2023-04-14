@@ -7,7 +7,7 @@ import image from "../../../assets/rulesets/fantasy.jpg";
 
 export default {
   title: "Layout/Component/ChooseRuleSetButton",
-  component: ChooseRuleSetButton
+  component: ChooseRuleSetButton,
 } as ComponentMeta<typeof ChooseRuleSetButton>;
 
 const Template: ComponentStory<typeof ChooseRuleSetButton> = function () {
@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof ChooseRuleSetButton> = function () {
       alignItems="center"
       sx={(theme) => ({
         width: theme.spacing(48),
-        height: theme.spacing(68)
+        height: theme.spacing(68),
       })}
     >
       <ChooseRuleSetButton

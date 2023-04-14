@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from "react";
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Tooltip, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import { Box, Tooltip } from "@material-ui/core";
 import AddIcon from "@mui/icons-material/Add";
 import ContentContainer from "../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../components/ChooseWarBandTotalDialog";
@@ -12,6 +11,7 @@ interface Props {
   faction: Faction;
   warbandTotal: number;
   onClickBack: () => void;
+  onClickAdd: () => void;
   setWarbandTotal: (warbandTotal: number) => void;
 }
 
@@ -19,7 +19,8 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({
   faction,
   warbandTotal,
   setWarbandTotal,
-  onClickBack
+  onClickBack,
+  onClickAdd
 }) => {
   const [open, setOpen] = React.useState(warbandTotal === 0);
 
@@ -53,6 +54,7 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({
                   startIcon={<AddIcon />}
                   variant="contained"
                   size="large"
+                  onClick={onClickAdd}
                 >
                   ADD UNIT
                 </Button>
@@ -76,7 +78,7 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({
             </Grid>
           </Grid>
           <Grid>
-            <AddUnitsZeroStateAction />
+            <AddUnitsZeroStateAction onClickAdd={onClickAdd} />
           </Grid>
           <Grid container alignItems="center" justifyContent="space-between">
             <Button variant="outlined" onClick={onClickBack}>

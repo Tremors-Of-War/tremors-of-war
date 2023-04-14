@@ -21,6 +21,7 @@
     "no-alert": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "react/function-component-definition": "off",

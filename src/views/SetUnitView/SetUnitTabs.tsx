@@ -2,17 +2,29 @@ import { Box, Tab, Tabs } from "@mui/material";
 import React, { FunctionComponent } from "react";
 
 interface Props {
-  handleChange: (event: any, newValue: number) => void;
-  value: number;
+  handleChange: (event: any, newValue: string) => void;
+  value: string;
+  showWeaponry?: boolean;
+  showArmour?: boolean;
+  showMount?: boolean;
+  showUpgrades?: boolean;
 }
 
-const SetUnitTabs: FunctionComponent<Props> = ({ handleChange, value }) => (
+const SetUnitTabs: FunctionComponent<Props> = ({
+  handleChange,
+  value,
+  showWeaponry,
+  showArmour,
+  showMount,
+  showUpgrades
+}) => (
   <Box sx={{ marginBottom: 3, width: "100%" }}>
     <Tabs value={value} onChange={handleChange}>
-      <Tab label="UNIT" />
-      <Tab label="WEAPONS" />
-      <Tab label="ARMOUR" />
-      <Tab label="MOUNT" />
+      <Tab value="unitTab" label="UNIT" />
+      {showWeaponry && <Tab value="weaponryTab" label="WEAPONRY" />}
+      {showArmour && <Tab value="armourTab" label="ARMOUR" />}
+      {showMount && <Tab value="mountTab" label="MOUNT" />}
+      {showUpgrades && <Tab value="upgradesTab" label="Upgrades" />}
     </Tabs>
   </Box>
 );

@@ -7,7 +7,7 @@ import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
   title: "Layout/View/ChooseRuleSetView",
-  component: ChooseRuleSetView
+  component: ChooseRuleSetView,
 } as ComponentMeta<typeof ChooseRuleSetView>;
 
 const Template: ComponentStory<typeof ChooseRuleSetView> = function () {
@@ -21,7 +21,7 @@ const Template: ComponentStory<typeof ChooseRuleSetView> = function () {
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       <ChooseRuleSetView
