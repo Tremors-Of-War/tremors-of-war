@@ -40,7 +40,8 @@ const blankModel: Model = {
   rangedWeapon: undefined,
   helmet: undefined,
   upgrades: [],
-  mounts: undefined
+  mounts: undefined,
+  active: true
 };
 
 const SetUnitView: FunctionComponent<Props> = ({

@@ -50,4 +50,5 @@ export interface Model {
   handWeapon?: Weapons;
   twoHandedWeapon?: Weapons;
   rangedWeapon?: Weapons;
+  active: boolean;
 }

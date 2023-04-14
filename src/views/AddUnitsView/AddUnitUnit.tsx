@@ -12,71 +12,70 @@ interface Props {
 }
 
 const AddUnitUnit: FunctionComponent<Props> = ({ model, onDelete, onEdit }) => (
-    <Grid
-      // onClick={handleClick}
-      container
-      marginBottom="16px"
-      alignItems="center"
-      justifyContent="space-between"
-      flexWrap="nowrap"
-      padding="8px 16px"
-      direction="row"
-      sx={{
-        width: "100%",
-        gap: "auto",
-        minHeight: theme.spacing(9),
-        background:
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
+  <Grid
+    container
+    marginBottom="16px"
+    alignItems="center"
+    justifyContent="space-between"
+    flexWrap="nowrap"
+    padding="8px 16px"
+    direction="row"
+    sx={{
+      width: "100%",
+      gap: "auto",
+      minHeight: theme.spacing(9),
+      background:
+        "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
 
-        borderRadius: "4px"
-      }}
+      borderRadius: "4px"
+    }}
+  >
+    <Grid
+      container
+      direction="row"
+      justifyContent="space-between"
+      alignItems="center"
     >
+      <Grid container direction="column" width="250px">
+        {model.name && (
+          <Typography color="primary" variant="body1">
+            {model.name}
+          </Typography>
+        )}
+        {model?.unit?.name && (
+          <Typography color="text.disabled" variant="body1">
+            {model.unit.name}
+          </Typography>
+        )}
+      </Grid>
+
       <Grid
         container
         direction="row"
-        justifyContent="space-between"
-        alignItems="center"
+        width="204px"
+        justifyContent="flex-end"
+        gap="8px"
       >
-        <Grid container direction="column" width="250px">
-          {model.name && (
-            <Typography color="primary" variant="body1">
-              {model.name}
-            </Typography>
-          )}
-          {model?.unit?.name && (
-            <Typography color="text.disabled" variant="body1">
-              {model.unit.name}
-            </Typography>
-          )}
-        </Grid>
-
-        <Grid
-          container
-          direction="row"
-          width="204px"
-          justifyContent="flex-end"
-          gap="8px"
-        >
-          {model.cost && (
-            <Grid
-              container
-              alignItems="center"
-              justifyContent="flex-end"
-              width="100px"
-            >
-              <Grid component={Typography} variant="body1">
-                {model.cost} Points
-              </Grid>
+        {model.cost && (
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="flex-end"
+            width="100px"
+          >
+            <Grid component={Typography} variant="body1">
+              {model.cost} Points
             </Grid>
-          )}
-          <IconButton onClick={() => onEdit(model.id)}>
-            <EditIcon />
-          </IconButton>
-          <IconButton onClick={() => onDelete(model.id)}>
-            <DeleteIcon color="secondary" />
-          </IconButton>
-        </Grid>
+          </Grid>
+        )}
+        <IconButton onClick={() => onEdit(model.id)}>
+          <EditIcon />
+        </IconButton>
+        <IconButton onClick={() => onDelete(model.id)}>
+          <DeleteIcon color="secondary" />
+        </IconButton>
       </Grid>
     </Grid>
-  );
+  </Grid>
+);
 export default AddUnitUnit;

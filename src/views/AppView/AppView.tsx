@@ -7,6 +7,7 @@ import ChooseRuleSetView from "../ChooseRuleSetView/ChooseRuleSetView";
 import SetUnitView from "../SetUnitView/SetUnitView";
 import StartScreenView from "../StartScreenView/StartScreenView";
 import ROUTES, { INITIAL_ROUTE } from "./routes";
+import PlayScreenView from "../PlayScreenView/PlayScreenView";
 
 interface State {
   ruleSet: RuleSet | null;
@@ -71,7 +72,7 @@ const AppView: FunctionComponent = () => {
                 setCurrentRoute(ROUTES.START_SCREEN);
                 setState(initialState);
               }}
-              onClickPlay={() => alert("Navigate to play screen")}
+              onClickPlay={() => setCurrentRoute(ROUTES.PLAY_SCREEN)}
               models={state.models}
               onEdit={(modelId: string) => {
                 setEditModel(modelId);
@@ -125,6 +126,16 @@ const AppView: FunctionComponent = () => {
             });
             setCurrentRoute(ROUTES.ADD_UNITS);
           }}
+        />
+      );
+
+    case ROUTES.PLAY_SCREEN:
+      return (
+        <PlayScreenView
+          onClickBack={() => setCurrentRoute(ROUTES.ADD_UNITS)}
+          onClickRules={() => alert("YOU RULE!")}
+          models={state.models}
+          faction={state.faction}
         />
       );
     default:
