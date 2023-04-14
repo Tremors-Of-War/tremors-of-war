@@ -1,26 +1,34 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../types";
+import { Mounts } from "../../types";
 import data from "../../data.json";
 
 interface Props {
-  weapon: Weapons;
+  mounts: Mounts;
 }
 const header = [
-  { title: "RS", description: "Range Short" },
-  { title: "RL", description: "Range Long" },
-  { title: "AS", description: "Accuracy Short" },
-  { title: "AL", description: "Accuracy Long" },
-  { title: "S", description: "S" },
-  { title: "AP", description: "AP" },
-  { title: "D", description: "D" }
+  { title: "M", description: "Movement" },
+  { title: "WS", description: "Weapon Skill" },
+  { title: "BS", description: "Ballistic Skill" },
+  { title: "S", description: "Strength" },
+  { title: "T", description: "Toughness" },
+  { title: "W", description: "Wounds" },
+  { title: "I", description: "Initiative" },
+  { title: "A", description: "Attacks" },
+  { title: "CL", description: "Cool" },
+  { title: "INT", description: "Intelligence" }
 ];
-
-const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
-  const { RS, RL, AS, AL, S, AP, D } = data.weapons[weapon];
-  const stats = [RS, RL, AS, AL, S, AP, D];
+const PlayScreenMountStats: FunctionComponent<Props> = ({ mounts }) => {
+  const { M, WS, BS, S, T, W, I, A, Cl, Int } = data.mounts[mounts];
+  const stats = [M, WS, BS, S, T, W, I, A, Cl, Int];
   return (
-    <Grid container direction="column">
+    <Grid
+      container
+      justifyContent="flex-start"
+      width="472px"
+      paddingRight="32px"
+    >
+      <Grid container direction="column">
         <Grid container direction="row" justifyContent="space-between">
           {header.map(({ title, description }) => (
             <Grid container justifyContent="center" width="27px" key={title}>
@@ -45,6 +53,7 @@ const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
           ))}
         </Grid>
       </Grid>
+    </Grid>
   );
 };
-export default SetUnitWeaponryStats;
+export default PlayScreenMountStats;

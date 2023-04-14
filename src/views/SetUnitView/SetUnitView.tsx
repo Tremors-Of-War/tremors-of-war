@@ -239,7 +239,13 @@ const SetUnitView: FunctionComponent<Props> = ({
               justifyContent="space-between"
               marginTop="16px"
             >
-              <Button variant="outlined" onClick={onClickBack}>
+              <Button
+                variant="outlined"
+                onClick={() => {
+                  setModel(blankModel);
+                  onClickBack();
+                }}
+              >
                 CANCEL
               </Button>
               <Grid

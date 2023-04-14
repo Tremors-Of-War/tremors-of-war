@@ -8,7 +8,7 @@ interface Props {
   model: Model;
 }
 
-const PlayScreenDetailsUnit: FunctionComponent<Props> = ({ model }) => (
+const PlayScreenUnitDetailsUnit: FunctionComponent<Props> = ({ model }) => (
   <Grid container direction="column">
     <Typography color="primary">UNIT</Typography>
     <Grid
@@ -37,4 +37,4 @@ const PlayScreenDetailsUnit: FunctionComponent<Props> = ({ model }) => (
     </Grid>
   </Grid>
 );
-export default PlayScreenDetailsUnit;
+export default PlayScreenUnitDetailsUnit;

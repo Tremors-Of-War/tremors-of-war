@@ -1,16 +1,16 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../app/theme";
-import { Model } from "../../types";
-import PlayScreenUnitStats from "./PlayScreenUnitStats";
+import { Mounts } from "../../types";
+import PlayScreenMountStats from "./PlayScreenMountStats";
 
 interface Props {
-  model: Model;
+  mounts: Mounts;
 }
 
-const PlayScreenDetailsArmour: FunctionComponent<Props> = ({ model }) => (
+const PlayScreenUnitDetailsMount: FunctionComponent<Props> = ({ mounts }) => (
   <Grid container direction="column">
-    <Typography color="primary">UNIT</Typography>
+    <Typography color="primary">MOUNT</Typography>
     <Grid
       container
       marginBottom="8px"
@@ -27,14 +27,12 @@ const PlayScreenDetailsArmour: FunctionComponent<Props> = ({ model }) => (
         borderRadius: "4px"
       }}
     >
-      <Grid container direction="column" maxWidth="250px">
-        {model.unit?.name && (
-          <Typography variant="body1">{model.unit.name}</Typography>
-        )}
+      <Grid container direction="column" maxWidth="196px">
+        <Typography variant="body1">{mounts}</Typography>
       </Grid>
 
-      {model?.unit && <PlayScreenUnitStats unit={model.unit} />}
+      <PlayScreenMountStats mounts={mounts} />
     </Grid>
   </Grid>
 );
-export default PlayScreenDetailsArmour;
+export default PlayScreenUnitDetailsMount;

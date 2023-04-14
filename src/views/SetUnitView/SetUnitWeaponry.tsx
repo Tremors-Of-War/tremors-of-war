@@ -90,7 +90,9 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <SetUnitWeaponryStats weapon={weaponSelect} />
+                  <Grid container justifyContent="flex-start" width="465px">
+                    <SetUnitWeaponryStats weapon={weaponSelect} />
+                  </Grid>
                   <Grid
                     container
                     direction="column"
