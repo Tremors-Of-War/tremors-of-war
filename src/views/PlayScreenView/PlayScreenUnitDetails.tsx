@@ -42,7 +42,7 @@ const PlayScreenUnitDetails: FunctionComponent<Props> = ({ model }) => (
       />
     )}
     {model?.mounts && <PlayScreenUnitDetailsMount mounts={model.mounts} />}
-    {model?.upgrades && (
+    {model?.upgrades && model.upgrades.length > 0 && (
       <PlayScreenUnitDetailsUpgrades upgrades={model.upgrades} />
     )}
   </Grid>
