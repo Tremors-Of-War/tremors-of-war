@@ -222,8 +222,10 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                     currentUpgrades={model.upgrades}
                     handleClick={(selected) => {
                       if (selected) {
-                        model.upgrades.push(upgrade);
-                        onModelChanges(model);
+                        onModelChanges({
+                          ...model,
+                          upgrades: [...model.upgrades, upgrade]
+                        });
                       } else {
                         model.upgrades = model.upgrades.filter(
                           (remove: Abilities) => remove !== upgrade
