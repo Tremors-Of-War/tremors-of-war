@@ -19,7 +19,7 @@ interface State {
 const initialState: State = {
   ruleSet: null,
   faction: null,
-  warbandTotal: 0,
+  warbandTotal: 1000,
   models: {}
 };
 
