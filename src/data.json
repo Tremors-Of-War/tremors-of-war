@@ -733,7 +733,7 @@
       "Bowman": {
         "a": 1,
         "abilities": [
-          "Peasants Duty"
+          "Peasant's Duty"
         ],
         "armour": [
           "Light armour"
@@ -6628,7 +6628,7 @@
           "Bowman": {
             "a": 1,
             "abilities": [
-              "Peasants Duty"
+              "Peasant's Duty"
             ],
             "armour": [
               "Light armour"
@@ -10058,7 +10058,7 @@
     "Bowman": {
       "a": 1,
       "abilities": [
-        "Peasants Duty"
+        "Peasant's Duty"
       ],
       "armour": [
         "Light armour"
