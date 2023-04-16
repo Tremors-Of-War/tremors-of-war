@@ -62,6 +62,7 @@ const AddUnitsView: FunctionComponent<Props> = ({
           <Grid
             container
             marginTop="16px"
+            flexGrow={1}
             justifyContent="flex-start"
             maxWidth="6200px"
             maxHeight="496px"
