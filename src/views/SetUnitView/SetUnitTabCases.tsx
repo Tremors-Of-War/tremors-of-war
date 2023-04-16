@@ -212,7 +212,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
             return (
               // eslint-disable-next-line
               <>
-                {model.unit?.upgrades.map((upgrade) => (
+                {model.unit?.upgrades.map((upgrade: Abilities) => (
                   <SetUnitUpgrades
                     key={upgrade}
                     upgrade={upgrade}
@@ -224,10 +224,10 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                           upgrades: [...model.upgrades, upgrade],
                         });
                       } else {
-                        model.upgrades = model.upgrades.filter(
+                        const newUpgrades = model.upgrades.filter(
                           (remove: Abilities) => remove !== upgrade
                         );
-                        onModelChanges(model);
+                        onModelChanges({ ...model, upgrades: newUpgrades });
                       }
                     }}
                   />
