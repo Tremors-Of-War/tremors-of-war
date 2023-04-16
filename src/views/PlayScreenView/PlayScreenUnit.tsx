@@ -14,6 +14,8 @@ import theme from "../../app/theme";
 import { Model } from "../../types";
 import PlayScreenUnitDetails from "./PlayScreenUnitDetails";
 import skullLogo from "../../assets/images/skull_logo.png";
+import KillAlertDialog from "./KillAlertDialog";
+import ReviveAlertDialog from "./ReviveAlertDialog";
 
 interface Props {
   model: Model;
@@ -27,75 +29,92 @@ const PlayScreenUnit: FunctionComponent<Props> = ({
   model,
   onActiveChange
 }) => {
+  const [openKillAlert, setOpenKillAlert] = React.useState<boolean>(false);
+  const [openReviveAlert, setOpenReviveAlert] = React.useState<boolean>(false);
   const stopPropagation = (e: any) => e.stopPropagation();
+
   return (
-    <Grid
-      component={Accordion}
-      container
-      marginTop="8px"
-      marginBottom="8px"
-      alignItems="center"
-      justifyContent="space-between"
-      flexWrap="nowrap"
-      direction="column"
-      sx={{
-        gap: "auto",
-        minHeight: theme.spacing(9),
-        background: model.active ? defaultBackground : inactiveBackground,
-        borderRadius: "4px",
-        ".MuiCollapse-root": { width: "100%" }
-      }}
-    >
+    <>
       <Grid
-        component={AccordionSummary}
-        expandIcon={<ExpandMoreIcon />}
+        component={Accordion}
         container
-        direction="row"
-        justifyContent="space-between"
+        marginTop="8px"
+        marginBottom="8px"
         alignItems="center"
+        justifyContent="space-between"
+        flexWrap="nowrap"
+        direction="column"
+        sx={{
+          gap: "auto",
+          minHeight: theme.spacing(9),
+          background: model.active ? defaultBackground : inactiveBackground,
+          borderRadius: "4px",
+          ".MuiCollapse-root": { width: "100%" }
+        }}
       >
         <Grid
+          component={AccordionSummary}
+          expandIcon={<ExpandMoreIcon />}
           container
-          alignItems="center"
+          direction="row"
           justifyContent="space-between"
-          marginRight="8px"
+          alignItems="center"
         >
-          <Grid container direction="column" width="250px">
-            {model.name && (
-              <Typography
-                color={model.active ? "primary" : "text.disabled"}
-                variant="body1"
-              >
-                {model.name}
-              </Typography>
-            )}
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="space-between"
+            marginRight="8px"
+          >
+            <Grid container direction="column" width="250px">
+              {model.name && (
+                <Typography
+                  color={model.active ? "primary" : "text.disabled"}
+                  variant="body1"
+                >
+                  {model.name}
+                </Typography>
+              )}
 
-            {model?.unit?.name && (
-              <Typography color="text.disabled" variant="body1">
-                {model.unit.name}
-              </Typography>
-            )}
+              {model?.unit?.name && (
+                <Typography color="text.disabled" variant="body1">
+                  {model.unit.name}
+                </Typography>
+              )}
+            </Grid>
+            <Box onClick={stopPropagation}>
+              <IconButton
+                sx={{ display: model.active ? "" : "none" }}
+                onClick={() => setOpenKillAlert(true)}
+              >
+                <img src={skullLogo} alt="skull_logo" />
+              </IconButton>
+              <IconButton
+                sx={{ display: model.active ? "none" : "" }}
+                onClick={() => setOpenReviveAlert(true)}
+              >
+                <FavoriteIcon />
+              </IconButton>
+            </Box>
           </Grid>
-          <Box onClick={stopPropagation}>
-            <IconButton
-              sx={{ display: model.active ? "" : "none" }}
-              onClick={() => onActiveChange(model)}
-            >
-              <img src={skullLogo} alt="skull_logo" />
-            </IconButton>
-            <IconButton
-              sx={{ display: model.active ? "none" : "" }}
-              onClick={() => onActiveChange(model)}
-            >
-              <FavoriteIcon />
-            </IconButton>
-          </Box>
+        </Grid>
+        <Grid component={AccordionDetails} marginBottom="16px">
+          <PlayScreenUnitDetails model={model} />
         </Grid>
       </Grid>
-      <Grid component={AccordionDetails} marginBottom="16px">
-        <PlayScreenUnitDetails model={model} />
-      </Grid>
-    </Grid>
+      <KillAlertDialog
+        open={openKillAlert}
+        model={model}
+        onActiveChange={onActiveChange}
+        onClose={() => setOpenKillAlert(false)}
+      />
+      <ReviveAlertDialog
+        open={openReviveAlert}
+        model={model}
+        onActiveChange={onActiveChange}
+        onClose={() => setOpenReviveAlert(false)}
+      />
+    </>
   );
 };
 export default PlayScreenUnit;
