@@ -22,11 +22,12 @@ const PlayScreenUnitDetailsUpgrades: FunctionComponent<Props> = ({
         justifyContent="space-between"
         flexWrap="nowrap"
         direction="row"
+        key={upgrade}
         sx={{
           gap: "auto",
           minHeight: theme.spacing(7),
           background:
-            "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
+            "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
           borderRadius: "4px"
         }}
       >

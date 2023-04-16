@@ -8,7 +8,7 @@ import {
   DialogTitle,
   Grid,
   IconButton,
-  TextField,
+  TextField
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import CloseIcon from "@mui/icons-material/Close";
@@ -24,7 +24,7 @@ export interface Props {
 const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({
   onClose,
   warbandTotal,
-  open,
+  open
 }) => {
   const [value, setValue] = React.useState<number>(warbandTotal);
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
@@ -85,7 +85,6 @@ const ChooseWarBandTotalDialog: FunctionComponent<Props> = ({
               id="value"
               value={value}
               label="CHOOSE VALUE"
-              defaultValue={warbandTotal}
               type="number"
               color="secondary"
               onChange={handleChange}
