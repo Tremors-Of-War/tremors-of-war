@@ -14,7 +14,7 @@ import { Faction, Model } from "../../types";
 import PlayScreenUnit from "./PlayScreenUnit";
 
 interface Props {
-  models: models;
+  models: Model[];
   onClickBack: () => void;
   onClickRules: () => void;
   faction: Faction | null;
