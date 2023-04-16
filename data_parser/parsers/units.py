@@ -40,6 +40,7 @@ def fix_obscure_abilities_bug(abilities):
     # I am sorry
     return [s.replace("Peasants Duty", "Peasant's Duty") for s in abilities]
 
+
 def parse_units(db: Database, ruleset):
     sheet = _get_units_sheet(db, ruleset)
     relations = parse_relations(db, ruleset)
@@ -58,7 +59,7 @@ def parse_units(db: Database, ruleset):
         unit["id"] = unit_id
 
         unit = convert_name_to_title_case(unit)
-        unit['abilities'] = fix_obscure_abilities_bug(unit['abilities'])
+        unit["abilities"] = fix_obscure_abilities_bug(unit["abilities"])
 
         units[unit_id] = unit
 
