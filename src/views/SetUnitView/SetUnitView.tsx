@@ -18,6 +18,7 @@ import NoUnitNameError from "../../components/NoUnitNameError";
 import SetUnitTabCases from "./SetUnitTabCases";
 import SetUnitFooter from "./SetUnitFooter";
 import { calculateModelCost } from "../../utils/costs";
+import { TabOption } from "./tabs/types";
 
 interface Props {
   faction: Faction;
@@ -53,16 +54,12 @@ const SetUnitView: FunctionComponent<Props> = ({
   onClickSave,
   onDelete,
 }) => {
-  const [tabValue, setTabValue] = React.useState("unitTab");
+  const [tabValue, setTabValue] = React.useState<TabOption>("unitTab");
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
   const [model, setModel] = React.useState<Model>(blankModel);
   const [openNameAlert, setOpenNameAlert] = React.useState<boolean>(false);
 
   const modelCost = calculateModelCost(model);
-
-  const handleTabChange = (event: any, newValue: string) => {
-    setTabValue(newValue);
-  };
 
   const handleNameChange = (event: any) => {
     const parsedInputValue = event.target.value;
@@ -183,7 +180,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                   model.unit?.upgrades && model.unit.upgrades.length > 0
                 }
                 value={tabValue}
-                handleChange={handleTabChange}
+                handleChange={setTabValue}
               />
               {tabValue === "unitTab" && isDoneLoading() && (
                 <SetUnitUnitHeader />
@@ -201,7 +198,9 @@ const SetUnitView: FunctionComponent<Props> = ({
           </Grid>
 
           <Grid container direction="column" justifyContent="flex-end">
-            {tabValue !== "unitTab" && <SetUnitFooter tabValue={tabValue} />}
+            {tabValue !== "unitTab" && (
+              <SetUnitFooter model={model} tabValue={tabValue} />
+            )}
 
             <Grid
               container

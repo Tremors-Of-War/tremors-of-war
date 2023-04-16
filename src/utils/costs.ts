@@ -5,7 +5,7 @@ import { Model } from "../types";
 
 const sumReducer = (acc: number, curr: number) => acc + curr;
 
-const calculateUpgradeCosts = (model: Model): number =>
+export const calculateUpgradeCosts = (model: Model): number =>
   model.upgrades
     .map((upgradeId) => data.abilities[upgradeId].Cost)
     .reduce(sumReducer, 0);
