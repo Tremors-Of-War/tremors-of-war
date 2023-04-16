@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 def join_pascal_snake_case(*args):
     return "_".join(args)
 
@@ -45,7 +48,9 @@ def transform_multi_columns_to_list(obj, column_base, num_columns, full_name):
 
 
 def pascal_snake_case_to_camel_case(s: str) -> str:
-    ls = s.split("_")  # [ Empire, State, Troop ]
+    split_str = '_' if '_' in s else ' '
+    ls = s.split(split_str)
+    ls = [word.capitalize() for word in ls]
     return ls[0].lower() + "".join(ls[1:])
 
 

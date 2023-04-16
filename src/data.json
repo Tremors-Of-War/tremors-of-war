@@ -719,8 +719,8 @@
       "Cost": 60,
       "Traits": [
         "Gas",
-        "Grenade",
-        "Blast (3)"
+        "Blast (3)",
+        "Grenade"
       ]
     },
     "Repeater Crossbow": {
@@ -881,10 +881,10 @@
       "D": 1,
       "Cost": 25,
       "Traits": [
-        "Parry",
+        "Rending",
         "Melee",
         "Unwieldly",
-        "Rending"
+        "Parry"
       ]
     },
     "Dane Axe": {
@@ -900,10 +900,10 @@
       "D": 2,
       "Cost": 45,
       "Traits": [
-        "Hooked Head",
         "Melee",
         "Versatile",
-        "Unwieldly"
+        "Unwieldly",
+        "Hooked Head"
       ]
     },
     "Troll Club": {
@@ -936,9 +936,9 @@
       "D": 2,
       "Cost": 35,
       "Traits": [
+        "Rending",
         "Melee",
         "Versatile",
-        "Rending",
         "Unwieldly"
       ]
     },
@@ -990,9 +990,9 @@
       "D": 1,
       "Cost": 25,
       "Traits": [
+        "Strike First",
         "Melee",
         "Versatile",
-        "Strike First",
         "Unwieldly"
       ]
     },
@@ -1009,8 +1009,8 @@
       "D": 1,
       "Cost": 20,
       "Traits": [
-        "Hooked Head",
-        "Melee"
+        "Melee",
+        "Hooked Head"
       ]
     },
     "Katana": {
@@ -1026,8 +1026,8 @@
       "D": 1,
       "Cost": 15,
       "Traits": [
-        "Parry",
-        "Melee"
+        "Melee",
+        "Parry"
       ]
     },
     "Katana (Two handed)": {
@@ -1079,8 +1079,8 @@
       "D": 1,
       "Cost": 25,
       "Traits": [
-        "Melee",
-        "Pulverise"
+        "Pulverise",
+        "Melee"
       ]
     },
     "Monstrous Claws": {
@@ -1112,8 +1112,8 @@
       "D": 2,
       "Cost": 30,
       "Traits": [
-        "Melee",
-        "Rending"
+        "Rending",
+        "Melee"
       ]
     },
     "Poleaxe": {
@@ -1129,10 +1129,10 @@
       "D": 2,
       "Cost": 40,
       "Traits": [
+        "Pulverise",
         "Melee",
         "Versatile",
-        "Unwieldly",
-        "Pulverise"
+        "Unwieldly"
       ]
     },
     "Quarterstaff": {
@@ -1148,9 +1148,9 @@
       "D": 1,
       "Cost": 25,
       "Traits": [
-        "Parry",
         "Melee",
-        "Versatile"
+        "Versatile",
+        "Parry"
       ]
     },
     "Spear (Two Handed)": {
@@ -1166,10 +1166,10 @@
       "D": 1,
       "Cost": 30,
       "Traits": [
+        "Unwieldly",
         "Melee",
         "Versatile",
-        "Strike First",
-        "Unwieldly"
+        "Strike First"
       ]
     },
     "Spear (Used with Shield)": {
@@ -1203,8 +1203,8 @@
       "D": 1,
       "Cost": 20,
       "Traits": [
-        "Parry",
-        "Melee"
+        "Melee",
+        "Parry"
       ]
     },
     "Tail Weapon": {
@@ -1236,9 +1236,9 @@
       "D": 2,
       "Cost": 0,
       "Traits": [
+        "Sever",
         "Melee",
         "Versatile",
-        "Sever",
         "Unwieldly"
       ]
     },
@@ -1273,10 +1273,10 @@
       "D": 2,
       "Cost": 45,
       "Traits": [
+        "Pulverise",
         "Melee",
         "Versatile",
-        "Unwieldly",
-        "Pulverise"
+        "Unwieldly"
       ]
     }
   },
@@ -1471,7 +1471,7 @@
               "Shield",
               "Buckler"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -1510,7 +1510,7 @@
               "Shield",
               "Buckler"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Scout"
             ],
@@ -1553,7 +1553,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -1605,7 +1605,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Warhorse"
@@ -1645,7 +1645,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Scout"
             ],
@@ -1684,7 +1684,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -1728,7 +1728,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -1769,7 +1769,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Warhorse",
@@ -1809,7 +1809,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Warhorse"
@@ -1848,7 +1848,7 @@
               "Light armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           }
@@ -1884,7 +1884,7 @@
               "Heavy Armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -1917,7 +1917,7 @@
               "Medium Armour"
             ],
             "shield": [],
-            "other armour": [
+            "otherArmour": [
               "White Lion Cloak"
             ],
             "upgrades": [],
@@ -1953,7 +1953,7 @@
               "Heavy Armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -1987,7 +1987,7 @@
               "Light armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2030,7 +2030,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2069,7 +2069,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Elven_Warhorse"
@@ -2108,7 +2108,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Elven_Warhorse"
@@ -2146,7 +2146,7 @@
               "Medium Armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Scout"
             ],
@@ -2189,7 +2189,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           }
@@ -2230,7 +2230,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2272,7 +2272,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2309,7 +2309,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2346,7 +2346,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2389,7 +2389,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2426,7 +2426,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2456,7 +2456,7 @@
             "rangedWeaponry": [],
             "armour": [],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2494,7 +2494,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2535,7 +2535,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           }
@@ -2574,7 +2574,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2609,7 +2609,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2652,7 +2652,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "The Knight's Vow",
               "The Questing Vow",
@@ -2695,7 +2695,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "The Knight's Vow",
               "The Questing Vow",
@@ -2741,7 +2741,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "The Knight's Vow",
               "The Questing Vow",
@@ -2783,7 +2783,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2823,7 +2823,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2863,7 +2863,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Poison Attacks"
             ],
@@ -2906,7 +2906,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2952,7 +2952,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -2993,7 +2993,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Rat_Ogre_Bonebreaker"
@@ -3023,7 +3023,7 @@
               "Armour Transplants"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Extra Extremities",
               "Quadrupedal",
@@ -3072,7 +3072,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -3105,7 +3105,7 @@
             "rangedWeaponry": [],
             "armour": [],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -3144,7 +3144,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [
+            "otherArmour": [
               "Gromril"
             ],
             "upgrades": [],
@@ -3178,7 +3178,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [
+            "otherArmour": [
               "Gromril"
             ],
             "upgrades": [],
@@ -3225,7 +3225,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [
+            "otherArmour": [
               "Gromril"
             ],
             "upgrades": [],
@@ -3274,7 +3274,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Mark of Tzeentch",
               "Markof Nurgle",
@@ -3318,7 +3318,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Mark of Tzeentch",
               "Markof Nurgle",
@@ -3368,7 +3368,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Mark of Tzeentch",
               "Markof Nurgle",
@@ -3411,7 +3411,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Mark of Tzeentch",
               "Markof Nurgle",
@@ -3462,7 +3462,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Mark of Tzeentch",
               "Markof Nurgle",
@@ -3510,7 +3510,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -3553,7 +3553,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [
+            "otherArmour": [
               "Murderous Prowess",
               "Dodge (Close Combat)"
             ],
@@ -3591,7 +3591,7 @@
               "Light armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -3629,7 +3629,7 @@
               "Medium Armour"
             ],
             "shield": [],
-            "other armour": [
+            "otherArmour": [
               "Sea Dragon Cloak"
             ],
             "upgrades": [],
@@ -3664,7 +3664,7 @@
               "Heavy Armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -3705,7 +3705,7 @@
               "Medium Armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [
               "Scout"
             ],
@@ -3751,7 +3751,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Cold_One",
@@ -3801,7 +3801,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           }
@@ -3852,7 +3852,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -3895,7 +3895,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Warhorse"
@@ -3939,7 +3939,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Warhorse"
@@ -3985,7 +3985,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": [
               "Warhorse"
@@ -4026,7 +4026,7 @@
             "shield": [
               "Shield"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -4055,7 +4055,7 @@
               "Medium Armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -4084,7 +4084,7 @@
               "Medium Armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -4108,7 +4108,7 @@
             "rangedWeaponry": [],
             "armour": [],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           }
@@ -4151,7 +4151,7 @@
               "Heavy Armour"
             ],
             "shield": [],
-            "other armour": [
+            "otherArmour": [
               "Horo Cloak"
             ],
             "upgrades": [],
@@ -4192,7 +4192,7 @@
               "Heavy Armour"
             ],
             "shield": [],
-            "other armour": [
+            "otherArmour": [
               "Horo Cloak"
             ],
             "upgrades": [],
@@ -4239,7 +4239,7 @@
             "shield": [
               "Mantlet"
             ],
-            "other armour": [
+            "otherArmour": [
               "Horo Cloak"
             ],
             "upgrades": [
@@ -4282,7 +4282,7 @@
               "Heavy Armour"
             ],
             "shield": [],
-            "other armour": [
+            "otherArmour": [
               "Horo Cloak"
             ],
             "upgrades": [
@@ -4326,7 +4326,7 @@
             "shield": [
               "Mantlet"
             ],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           },
@@ -4356,7 +4356,7 @@
               "Light armour"
             ],
             "shield": [],
-            "other armour": [],
+            "otherArmour": [],
             "upgrades": [],
             "mounts": []
           }
@@ -4393,7 +4393,7 @@
           "Earl": {
             "name": "Earl",
             "faction": "Saxons",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 4,
@@ -4448,7 +4448,7 @@
           "Thegn": {
             "name": "Thegn",
             "faction": "Saxons",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 4,
@@ -4502,7 +4502,7 @@
           "Huscarl": {
             "name": "Huscarl",
             "faction": "Saxons",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 5,
@@ -4553,7 +4553,7 @@
           "Fyrd": {
             "name": "Fyrd",
             "faction": "Saxons",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 7,
@@ -4597,7 +4597,7 @@
           "Mounted_Duke": {
             "name": "Mounted_Duke",
             "faction": "Normans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 3,
@@ -4645,7 +4645,7 @@
           "Norman_Duke": {
             "name": "Norman_Duke",
             "faction": "Normans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 3,
@@ -4692,7 +4692,7 @@
           "Mounted_Norman_Noble": {
             "name": "Mounted_Norman_Noble",
             "faction": "Normans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 4,
@@ -4740,7 +4740,7 @@
           "Militie": {
             "name": "Militie",
             "faction": "Normans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 6,
@@ -4782,7 +4782,7 @@
           "Norman_Skirmisher": {
             "name": "Norman_Skirmisher",
             "faction": "Normans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 7,
@@ -4823,7 +4823,7 @@
           "Mounted_Strategos": {
             "name": "Mounted_Strategos",
             "faction": "Romans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 4,
@@ -4875,7 +4875,7 @@
           "Strategos": {
             "name": "Strategos",
             "faction": "Romans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 4,
@@ -4924,7 +4924,7 @@
           "Varangian_Guard": {
             "name": "Varangian_Guard",
             "faction": "Romans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 5,
@@ -4972,7 +4972,7 @@
           "Thematic_Infantry": {
             "name": "Thematic_Infantry",
             "faction": "Romans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 6,
@@ -5012,7 +5012,7 @@
           "Theamtic_Skirmisher": {
             "name": "Theamtic_Skirmisher",
             "faction": "Romans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 6,
@@ -5051,7 +5051,7 @@
           "Tagmatic_Infantry": {
             "name": "Tagmatic_Infantry",
             "faction": "Romans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 5,
@@ -5098,7 +5098,7 @@
           "Tagmatic_Skirmisher": {
             "name": "Tagmatic_Skirmisher",
             "faction": "Romans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 6,
@@ -5142,7 +5142,7 @@
           "Tagmatic_Cavalry": {
             "name": "Tagmatic_Cavalry",
             "faction": "Romans",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 5,
@@ -5195,7 +5195,7 @@
           "Jarl": {
             "name": "Jarl",
             "faction": "Vikings",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 6,
             "ws": 3,
@@ -5251,7 +5251,7 @@
           "Hersir": {
             "name": "Hersir",
             "faction": "Vikings",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 6,
             "ws": 4,
@@ -5305,7 +5305,7 @@
           "Hirdmen": {
             "name": "Hirdmen",
             "faction": "Vikings",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 6,
             "ws": 4,
@@ -5357,7 +5357,7 @@
           "Shield_Maiden": {
             "name": "Shield_Maiden",
             "faction": "Vikings",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 6,
             "ws": 4,
@@ -5408,7 +5408,7 @@
           "Berserker": {
             "name": "Berserker",
             "faction": "Vikings",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 6,
             "ws": 6,
@@ -5451,7 +5451,7 @@
           "Bondi": {
             "name": "Bondi",
             "faction": "Vikings",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 6,
@@ -5493,7 +5493,7 @@
           "Celtic_Chief": {
             "name": "Celtic_Chief",
             "faction": "Celts",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 7,
             "ws": 4,
@@ -5544,7 +5544,7 @@
           "Kern": {
             "name": "Kern",
             "faction": "Celts",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 7,
             "ws": 6,
@@ -5589,7 +5589,7 @@
           "Lucht_Tighe": {
             "name": "Lucht_Tighe",
             "faction": "Celts",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 7,
             "ws": 5,
@@ -5639,7 +5639,7 @@
           "Arab_General": {
             "name": "Arab_General",
             "faction": "Arabs",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 4,
@@ -5687,7 +5687,7 @@
           "Abna_al_dawla_infantry": {
             "name": "Abna_al_dawla_infantry",
             "faction": "Arabs",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 5,
@@ -5730,7 +5730,7 @@
           "Abna_al_dawla_skirmisher": {
             "name": "Abna_al_dawla_skirmisher",
             "faction": "Arabs",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 5,
@@ -5767,7 +5767,7 @@
           "Khurasaniyya_heavy_cavalry": {
             "name": "Khurasaniyya_heavy_cavalry",
             "faction": "Arabs",
-            "ab points": "",
+            "abPoints": "",
             "": "",
             "m": 5,
             "ws": 4,
@@ -5858,7 +5858,7 @@
           "Shield",
           "Buckler"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -5897,7 +5897,7 @@
           "Shield",
           "Buckler"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Scout"
         ],
@@ -5940,7 +5940,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -5992,7 +5992,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Warhorse"
@@ -6032,7 +6032,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Scout"
         ],
@@ -6071,7 +6071,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6115,7 +6115,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6156,7 +6156,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Warhorse",
@@ -6196,7 +6196,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Warhorse"
@@ -6235,7 +6235,7 @@
           "Light armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       }
@@ -6271,7 +6271,7 @@
           "Heavy Armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6304,7 +6304,7 @@
           "Medium Armour"
         ],
         "shield": [],
-        "other armour": [
+        "otherArmour": [
           "White Lion Cloak"
         ],
         "upgrades": [],
@@ -6340,7 +6340,7 @@
           "Heavy Armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6374,7 +6374,7 @@
           "Light armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6417,7 +6417,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6456,7 +6456,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Elven_Warhorse"
@@ -6495,7 +6495,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Elven_Warhorse"
@@ -6533,7 +6533,7 @@
           "Medium Armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Scout"
         ],
@@ -6576,7 +6576,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       }
@@ -6617,7 +6617,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6659,7 +6659,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6696,7 +6696,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6733,7 +6733,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6776,7 +6776,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6813,7 +6813,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6843,7 +6843,7 @@
         "rangedWeaponry": [],
         "armour": [],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6881,7 +6881,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6922,7 +6922,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       }
@@ -6961,7 +6961,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -6996,7 +6996,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -7039,7 +7039,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "The Knight's Vow",
           "The Questing Vow",
@@ -7082,7 +7082,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "The Knight's Vow",
           "The Questing Vow",
@@ -7128,7 +7128,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "The Knight's Vow",
           "The Questing Vow",
@@ -7170,7 +7170,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -7210,7 +7210,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -7250,7 +7250,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Poison Attacks"
         ],
@@ -7293,7 +7293,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -7339,7 +7339,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -7380,7 +7380,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Rat_Ogre_Bonebreaker"
@@ -7410,7 +7410,7 @@
           "Armour Transplants"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Extra Extremities",
           "Quadrupedal",
@@ -7459,7 +7459,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -7492,7 +7492,7 @@
         "rangedWeaponry": [],
         "armour": [],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -7531,7 +7531,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [
+        "otherArmour": [
           "Gromril"
         ],
         "upgrades": [],
@@ -7565,7 +7565,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [
+        "otherArmour": [
           "Gromril"
         ],
         "upgrades": [],
@@ -7612,7 +7612,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [
+        "otherArmour": [
           "Gromril"
         ],
         "upgrades": [],
@@ -7661,7 +7661,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Mark of Tzeentch",
           "Markof Nurgle",
@@ -7705,7 +7705,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Mark of Tzeentch",
           "Markof Nurgle",
@@ -7755,7 +7755,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Mark of Tzeentch",
           "Markof Nurgle",
@@ -7798,7 +7798,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Mark of Tzeentch",
           "Markof Nurgle",
@@ -7849,7 +7849,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Mark of Tzeentch",
           "Markof Nurgle",
@@ -7897,7 +7897,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -7940,7 +7940,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [
+        "otherArmour": [
           "Murderous Prowess",
           "Dodge (Close Combat)"
         ],
@@ -7978,7 +7978,7 @@
           "Light armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -8016,7 +8016,7 @@
           "Medium Armour"
         ],
         "shield": [],
-        "other armour": [
+        "otherArmour": [
           "Sea Dragon Cloak"
         ],
         "upgrades": [],
@@ -8051,7 +8051,7 @@
           "Heavy Armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -8092,7 +8092,7 @@
           "Medium Armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [
           "Scout"
         ],
@@ -8138,7 +8138,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Cold_One",
@@ -8188,7 +8188,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       }
@@ -8239,7 +8239,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -8282,7 +8282,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Warhorse"
@@ -8326,7 +8326,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Warhorse"
@@ -8372,7 +8372,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": [
           "Warhorse"
@@ -8413,7 +8413,7 @@
         "shield": [
           "Shield"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -8442,7 +8442,7 @@
           "Medium Armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -8471,7 +8471,7 @@
           "Medium Armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -8495,7 +8495,7 @@
         "rangedWeaponry": [],
         "armour": [],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       }
@@ -8538,7 +8538,7 @@
           "Heavy Armour"
         ],
         "shield": [],
-        "other armour": [
+        "otherArmour": [
           "Horo Cloak"
         ],
         "upgrades": [],
@@ -8579,7 +8579,7 @@
           "Heavy Armour"
         ],
         "shield": [],
-        "other armour": [
+        "otherArmour": [
           "Horo Cloak"
         ],
         "upgrades": [],
@@ -8626,7 +8626,7 @@
         "shield": [
           "Mantlet"
         ],
-        "other armour": [
+        "otherArmour": [
           "Horo Cloak"
         ],
         "upgrades": [
@@ -8669,7 +8669,7 @@
           "Heavy Armour"
         ],
         "shield": [],
-        "other armour": [
+        "otherArmour": [
           "Horo Cloak"
         ],
         "upgrades": [
@@ -8713,7 +8713,7 @@
         "shield": [
           "Mantlet"
         ],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       },
@@ -8743,7 +8743,7 @@
           "Light armour"
         ],
         "shield": [],
-        "other armour": [],
+        "otherArmour": [],
         "upgrades": [],
         "mounts": []
       }
@@ -8752,7 +8752,7 @@
       "Earl": {
         "name": "Earl",
         "faction": "Saxons",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 4,
@@ -8807,7 +8807,7 @@
       "Thegn": {
         "name": "Thegn",
         "faction": "Saxons",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 4,
@@ -8861,7 +8861,7 @@
       "Huscarl": {
         "name": "Huscarl",
         "faction": "Saxons",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 5,
@@ -8912,7 +8912,7 @@
       "Fyrd": {
         "name": "Fyrd",
         "faction": "Saxons",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 7,
@@ -8956,7 +8956,7 @@
       "Mounted_Duke": {
         "name": "Mounted_Duke",
         "faction": "Normans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 3,
@@ -9004,7 +9004,7 @@
       "Norman_Duke": {
         "name": "Norman_Duke",
         "faction": "Normans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 3,
@@ -9051,7 +9051,7 @@
       "Mounted_Norman_Noble": {
         "name": "Mounted_Norman_Noble",
         "faction": "Normans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 4,
@@ -9099,7 +9099,7 @@
       "Militie": {
         "name": "Militie",
         "faction": "Normans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 6,
@@ -9141,7 +9141,7 @@
       "Norman_Skirmisher": {
         "name": "Norman_Skirmisher",
         "faction": "Normans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 7,
@@ -9182,7 +9182,7 @@
       "Mounted_Strategos": {
         "name": "Mounted_Strategos",
         "faction": "Romans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 4,
@@ -9234,7 +9234,7 @@
       "Strategos": {
         "name": "Strategos",
         "faction": "Romans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 4,
@@ -9283,7 +9283,7 @@
       "Varangian_Guard": {
         "name": "Varangian_Guard",
         "faction": "Romans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 5,
@@ -9331,7 +9331,7 @@
       "Thematic_Infantry": {
         "name": "Thematic_Infantry",
         "faction": "Romans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 6,
@@ -9371,7 +9371,7 @@
       "Theamtic_Skirmisher": {
         "name": "Theamtic_Skirmisher",
         "faction": "Romans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 6,
@@ -9410,7 +9410,7 @@
       "Tagmatic_Infantry": {
         "name": "Tagmatic_Infantry",
         "faction": "Romans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 5,
@@ -9457,7 +9457,7 @@
       "Tagmatic_Skirmisher": {
         "name": "Tagmatic_Skirmisher",
         "faction": "Romans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 6,
@@ -9501,7 +9501,7 @@
       "Tagmatic_Cavalry": {
         "name": "Tagmatic_Cavalry",
         "faction": "Romans",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 5,
@@ -9554,7 +9554,7 @@
       "Jarl": {
         "name": "Jarl",
         "faction": "Vikings",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 6,
         "ws": 3,
@@ -9610,7 +9610,7 @@
       "Hersir": {
         "name": "Hersir",
         "faction": "Vikings",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 6,
         "ws": 4,
@@ -9664,7 +9664,7 @@
       "Hirdmen": {
         "name": "Hirdmen",
         "faction": "Vikings",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 6,
         "ws": 4,
@@ -9716,7 +9716,7 @@
       "Shield_Maiden": {
         "name": "Shield_Maiden",
         "faction": "Vikings",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 6,
         "ws": 4,
@@ -9767,7 +9767,7 @@
       "Berserker": {
         "name": "Berserker",
         "faction": "Vikings",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 6,
         "ws": 6,
@@ -9810,7 +9810,7 @@
       "Bondi": {
         "name": "Bondi",
         "faction": "Vikings",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 6,
@@ -9852,7 +9852,7 @@
       "Celtic_Chief": {
         "name": "Celtic_Chief",
         "faction": "Celts",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 7,
         "ws": 4,
@@ -9903,7 +9903,7 @@
       "Kern": {
         "name": "Kern",
         "faction": "Celts",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 7,
         "ws": 6,
@@ -9948,7 +9948,7 @@
       "Lucht_Tighe": {
         "name": "Lucht_Tighe",
         "faction": "Celts",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 7,
         "ws": 5,
@@ -9998,7 +9998,7 @@
       "Arab_General": {
         "name": "Arab_General",
         "faction": "Arabs",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 4,
@@ -10046,7 +10046,7 @@
       "Abna_al_dawla_infantry": {
         "name": "Abna_al_dawla_infantry",
         "faction": "Arabs",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 5,
@@ -10089,7 +10089,7 @@
       "Abna_al_dawla_skirmisher": {
         "name": "Abna_al_dawla_skirmisher",
         "faction": "Arabs",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 5,
@@ -10126,7 +10126,7 @@
       "Khurasaniyya_heavy_cavalry": {
         "name": "Khurasaniyya_heavy_cavalry",
         "faction": "Arabs",
-        "ab points": "",
+        "abPoints": "",
         "": "",
         "m": 5,
         "ws": 4,
@@ -10214,7 +10214,7 @@
         "Shield",
         "Buckler"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10253,7 +10253,7 @@
         "Shield",
         "Buckler"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Scout"
       ],
@@ -10296,7 +10296,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10348,7 +10348,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Warhorse"
@@ -10388,7 +10388,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Scout"
       ],
@@ -10427,7 +10427,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10471,7 +10471,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10512,7 +10512,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Warhorse",
@@ -10552,7 +10552,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Warhorse"
@@ -10591,7 +10591,7 @@
         "Light armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10625,7 +10625,7 @@
         "Heavy Armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10658,7 +10658,7 @@
         "Medium Armour"
       ],
       "shield": [],
-      "other armour": [
+      "otherArmour": [
         "White Lion Cloak"
       ],
       "upgrades": [],
@@ -10694,7 +10694,7 @@
         "Heavy Armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10728,7 +10728,7 @@
         "Light armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10771,7 +10771,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10810,7 +10810,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Elven_Warhorse"
@@ -10849,7 +10849,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Elven_Warhorse"
@@ -10887,7 +10887,7 @@
         "Medium Armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Scout"
       ],
@@ -10930,7 +10930,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -10969,7 +10969,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11011,7 +11011,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11048,7 +11048,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11085,7 +11085,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11128,7 +11128,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11165,7 +11165,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11195,7 +11195,7 @@
       "rangedWeaponry": [],
       "armour": [],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11233,7 +11233,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11274,7 +11274,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11311,7 +11311,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11346,7 +11346,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11389,7 +11389,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "The Knight's Vow",
         "The Questing Vow",
@@ -11432,7 +11432,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "The Knight's Vow",
         "The Questing Vow",
@@ -11478,7 +11478,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "The Knight's Vow",
         "The Questing Vow",
@@ -11518,7 +11518,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11558,7 +11558,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11598,7 +11598,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Poison Attacks"
       ],
@@ -11641,7 +11641,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11687,7 +11687,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11728,7 +11728,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Rat_Ogre_Bonebreaker"
@@ -11758,7 +11758,7 @@
         "Armour Transplants"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Extra Extremities",
         "Quadrupedal",
@@ -11805,7 +11805,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11838,7 +11838,7 @@
       "rangedWeaponry": [],
       "armour": [],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -11877,7 +11877,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [
+      "otherArmour": [
         "Gromril"
       ],
       "upgrades": [],
@@ -11911,7 +11911,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [
+      "otherArmour": [
         "Gromril"
       ],
       "upgrades": [],
@@ -11958,7 +11958,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [
+      "otherArmour": [
         "Gromril"
       ],
       "upgrades": [],
@@ -12005,7 +12005,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Mark of Tzeentch",
         "Markof Nurgle",
@@ -12049,7 +12049,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Mark of Tzeentch",
         "Markof Nurgle",
@@ -12099,7 +12099,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Mark of Tzeentch",
         "Markof Nurgle",
@@ -12142,7 +12142,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Mark of Tzeentch",
         "Markof Nurgle",
@@ -12193,7 +12193,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Mark of Tzeentch",
         "Markof Nurgle",
@@ -12239,7 +12239,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12282,7 +12282,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [
+      "otherArmour": [
         "Murderous Prowess",
         "Dodge (Close Combat)"
       ],
@@ -12320,7 +12320,7 @@
         "Light armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12358,7 +12358,7 @@
         "Medium Armour"
       ],
       "shield": [],
-      "other armour": [
+      "otherArmour": [
         "Sea Dragon Cloak"
       ],
       "upgrades": [],
@@ -12393,7 +12393,7 @@
         "Heavy Armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12434,7 +12434,7 @@
         "Medium Armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [
         "Scout"
       ],
@@ -12480,7 +12480,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Cold_One",
@@ -12530,7 +12530,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12579,7 +12579,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12622,7 +12622,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Warhorse"
@@ -12666,7 +12666,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Warhorse"
@@ -12712,7 +12712,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": [
         "Warhorse"
@@ -12753,7 +12753,7 @@
       "shield": [
         "Shield"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12782,7 +12782,7 @@
         "Medium Armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12811,7 +12811,7 @@
         "Medium Armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12835,7 +12835,7 @@
       "rangedWeaponry": [],
       "armour": [],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -12876,7 +12876,7 @@
         "Heavy Armour"
       ],
       "shield": [],
-      "other armour": [
+      "otherArmour": [
         "Horo Cloak"
       ],
       "upgrades": [],
@@ -12917,7 +12917,7 @@
         "Heavy Armour"
       ],
       "shield": [],
-      "other armour": [
+      "otherArmour": [
         "Horo Cloak"
       ],
       "upgrades": [],
@@ -12964,7 +12964,7 @@
       "shield": [
         "Mantlet"
       ],
-      "other armour": [
+      "otherArmour": [
         "Horo Cloak"
       ],
       "upgrades": [
@@ -13007,7 +13007,7 @@
         "Heavy Armour"
       ],
       "shield": [],
-      "other armour": [
+      "otherArmour": [
         "Horo Cloak"
       ],
       "upgrades": [
@@ -13051,7 +13051,7 @@
       "shield": [
         "Mantlet"
       ],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
@@ -13081,14 +13081,14 @@
         "Light armour"
       ],
       "shield": [],
-      "other armour": [],
+      "otherArmour": [],
       "upgrades": [],
       "mounts": []
     },
     "Earl": {
       "name": "Earl",
       "faction": "Saxons",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 4,
@@ -13143,7 +13143,7 @@
     "Thegn": {
       "name": "Thegn",
       "faction": "Saxons",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 4,
@@ -13197,7 +13197,7 @@
     "Huscarl": {
       "name": "Huscarl",
       "faction": "Saxons",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 5,
@@ -13248,7 +13248,7 @@
     "Fyrd": {
       "name": "Fyrd",
       "faction": "Saxons",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 7,
@@ -13290,7 +13290,7 @@
     "Mounted_Duke": {
       "name": "Mounted_Duke",
       "faction": "Normans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 3,
@@ -13338,7 +13338,7 @@
     "Norman_Duke": {
       "name": "Norman_Duke",
       "faction": "Normans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 3,
@@ -13385,7 +13385,7 @@
     "Mounted_Norman_Noble": {
       "name": "Mounted_Norman_Noble",
       "faction": "Normans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 4,
@@ -13433,7 +13433,7 @@
     "Militie": {
       "name": "Militie",
       "faction": "Normans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 6,
@@ -13475,7 +13475,7 @@
     "Norman_Skirmisher": {
       "name": "Norman_Skirmisher",
       "faction": "Normans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 7,
@@ -13514,7 +13514,7 @@
     "Mounted_Strategos": {
       "name": "Mounted_Strategos",
       "faction": "Romans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 4,
@@ -13566,7 +13566,7 @@
     "Strategos": {
       "name": "Strategos",
       "faction": "Romans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 4,
@@ -13615,7 +13615,7 @@
     "Varangian_Guard": {
       "name": "Varangian_Guard",
       "faction": "Romans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 5,
@@ -13663,7 +13663,7 @@
     "Thematic_Infantry": {
       "name": "Thematic_Infantry",
       "faction": "Romans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 6,
@@ -13703,7 +13703,7 @@
     "Theamtic_Skirmisher": {
       "name": "Theamtic_Skirmisher",
       "faction": "Romans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 6,
@@ -13742,7 +13742,7 @@
     "Tagmatic_Infantry": {
       "name": "Tagmatic_Infantry",
       "faction": "Romans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 5,
@@ -13789,7 +13789,7 @@
     "Tagmatic_Skirmisher": {
       "name": "Tagmatic_Skirmisher",
       "faction": "Romans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 6,
@@ -13833,7 +13833,7 @@
     "Tagmatic_Cavalry": {
       "name": "Tagmatic_Cavalry",
       "faction": "Romans",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 5,
@@ -13884,7 +13884,7 @@
     "Jarl": {
       "name": "Jarl",
       "faction": "Vikings",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 6,
       "ws": 3,
@@ -13940,7 +13940,7 @@
     "Hersir": {
       "name": "Hersir",
       "faction": "Vikings",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 6,
       "ws": 4,
@@ -13994,7 +13994,7 @@
     "Hirdmen": {
       "name": "Hirdmen",
       "faction": "Vikings",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 6,
       "ws": 4,
@@ -14046,7 +14046,7 @@
     "Shield_Maiden": {
       "name": "Shield_Maiden",
       "faction": "Vikings",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 6,
       "ws": 4,
@@ -14097,7 +14097,7 @@
     "Berserker": {
       "name": "Berserker",
       "faction": "Vikings",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 6,
       "ws": 6,
@@ -14140,7 +14140,7 @@
     "Bondi": {
       "name": "Bondi",
       "faction": "Vikings",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 6,
@@ -14180,7 +14180,7 @@
     "Celtic_Chief": {
       "name": "Celtic_Chief",
       "faction": "Celts",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 7,
       "ws": 4,
@@ -14231,7 +14231,7 @@
     "Kern": {
       "name": "Kern",
       "faction": "Celts",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 7,
       "ws": 6,
@@ -14276,7 +14276,7 @@
     "Lucht_Tighe": {
       "name": "Lucht_Tighe",
       "faction": "Celts",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 7,
       "ws": 5,
@@ -14324,7 +14324,7 @@
     "Arab_General": {
       "name": "Arab_General",
       "faction": "Arabs",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 4,
@@ -14372,7 +14372,7 @@
     "Abna_al_dawla_infantry": {
       "name": "Abna_al_dawla_infantry",
       "faction": "Arabs",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 5,
@@ -14415,7 +14415,7 @@
     "Abna_al_dawla_skirmisher": {
       "name": "Abna_al_dawla_skirmisher",
       "faction": "Arabs",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 5,
@@ -14452,7 +14452,7 @@
     "Khurasaniyya_heavy_cavalry": {
       "name": "Khurasaniyya_heavy_cavalry",
       "faction": "Arabs",
-      "ab points": "",
+      "abPoints": "",
       "": "",
       "m": 5,
       "ws": 4,

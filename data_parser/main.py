@@ -1,3 +1,4 @@
+#!/bin/env python
 import json
 
 from constants import OUTPUT_FILE
