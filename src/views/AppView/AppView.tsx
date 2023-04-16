@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import { Faction, RuleSet, Model } from "../../types";
 import AddUnitsView from "../AddUnitsView/AddUnitsView";
 import AddUnitsZeroStateView from "../AddUnitsZeroStateView/AddUnitsZeroStateView";
@@ -6,7 +6,7 @@ import ChooseFactionView from "../ChooseFactionView/ChooseFactionView";
 import ChooseRuleSetView from "../ChooseRuleSetView/ChooseRuleSetView";
 import SetUnitView from "../SetUnitView/SetUnitView";
 import StartScreenView from "../StartScreenView/StartScreenView";
-import ROUTES, { INITIAL_ROUTE } from "./routes";
+import ROUTES from "./routes";
 import PlayScreenView from "../PlayScreenView/PlayScreenView";
 
 interface State {
@@ -14,34 +14,56 @@ interface State {
   faction: Faction | null;
   warbandTotal: number;
   models: Record<string, Model>;
+  currentRoute: string;
 }
 
 const initialState: State = {
   ruleSet: null,
   faction: null,
+  currentRoute: ROUTES.START_SCREEN,
   warbandTotal: 1000,
   models: {}
 };
 
 const AppView: FunctionComponent = () => {
-  const [currentRoute, setCurrentRoute] = useState(INITIAL_ROUTE);
   const [state, setState] = useState<State>(initialState);
   const [editModel, setEditModel] = useState<string>("");
 
-  switch (currentRoute) {
+  useEffect(() => {
+    if (state === initialState) return;
+    localStorage.setItem("dataKey", JSON.stringify(state));
+  }, [state]);
+
+  useEffect(() => {
+    const savedState = localStorage.getItem("dataKey");
+    if (savedState) {
+      const value = JSON.parse(savedState);
+
+      setState(value);
+    }
+  }, []);
+
+  switch (state.currentRoute) {
     case ROUTES.START_SCREEN:
       return (
         <StartScreenView
-          onClickNewList={() => setCurrentRoute(ROUTES.CHOOSE_RULESET)}
+          onClickNewList={() =>
+            setState({ ...state, currentRoute: ROUTES.CHOOSE_RULESET })
+          }
         />
       );
     case ROUTES.CHOOSE_RULESET:
       return (
         <ChooseRuleSetView
-          onClickBack={() => setCurrentRoute(ROUTES.START_SCREEN)}
+          onClickBack={() =>
+            setState({ ...state, currentRoute: ROUTES.START_SCREEN })
+          }
           setRuleSet={(ruleSet) => {
-            setState({ ...state, ruleSet });
-            setCurrentRoute(ROUTES.CHOOSE_FACTION);
+            setState({
+              ...state,
+              ruleSet,
+              currentRoute: ROUTES.CHOOSE_FACTION
+            });
           }}
         />
       );
@@ -49,10 +71,15 @@ const AppView: FunctionComponent = () => {
       return (
         <ChooseFactionView
           ruleSet={state.ruleSet!}
-          onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_RULESET)}
+          onClickBack={() =>
+            setState({ ...state, currentRoute: ROUTES.CHOOSE_RULESET })
+          }
           setFaction={(faction) => {
-            setState({ ...state, faction });
-            setCurrentRoute(ROUTES.ADD_UNITS);
+            setState({
+              ...state,
+              faction,
+              currentRoute: ROUTES.ADD_UNITS
+            });
           }}
         />
       );
@@ -66,17 +93,21 @@ const AppView: FunctionComponent = () => {
               warbandTotal={state.warbandTotal}
               onClickAdd={() => {
                 setEditModel("");
-                setCurrentRoute(ROUTES.SET_UNIT);
+                setState({ ...state, currentRoute: ROUTES.SET_UNIT });
               }}
               onClickRestart={() => {
-                setCurrentRoute(ROUTES.START_SCREEN);
-                setState(initialState);
+                setState({
+                  ...initialState,
+                  currentRoute: ROUTES.START_SCREEN
+                });
               }}
-              onClickPlay={() => setCurrentRoute(ROUTES.PLAY_SCREEN)}
+              onClickPlay={() =>
+                setState({ ...state, currentRoute: ROUTES.PLAY_SCREEN })
+              }
               models={state.models}
               onEdit={(modelId: string) => {
                 setEditModel(modelId);
-                setCurrentRoute(ROUTES.SET_UNIT);
+                setState({ ...state, currentRoute: ROUTES.SET_UNIT });
               }}
               onDelete={(modelId: string) => {
                 const { [modelId]: remove, ...deleteModel } = state.models;
@@ -93,10 +124,12 @@ const AppView: FunctionComponent = () => {
               faction={state.faction!}
               models={state.models}
               warbandTotal={state.warbandTotal}
-              onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
+              onClickBack={() =>
+                setState({ ...state, currentRoute: ROUTES.CHOOSE_FACTION })
+              }
               onClickAdd={() => {
                 setEditModel("");
-                setCurrentRoute(ROUTES.SET_UNIT);
+                setState({ ...state, currentRoute: ROUTES.SET_UNIT });
               }}
               setWarbandTotal={(warbandTotal) =>
                 setState({ ...state, warbandTotal })
@@ -114,18 +147,21 @@ const AppView: FunctionComponent = () => {
           existingModel={state.models[editModel]}
           onDelete={(modelId: string) => {
             const { [modelId]: remove, ...deleteModel } = state.models;
-            setState({ ...state, models: deleteModel });
-            setCurrentRoute(ROUTES.ADD_UNITS);
+            setState({
+              ...state,
+              models: deleteModel,
+              currentRoute: ROUTES.ADD_UNITS
+            });
           }}
           onClickBack={() => {
-            setCurrentRoute(ROUTES.ADD_UNITS);
+            setState({ ...state, currentRoute: ROUTES.ADD_UNITS });
           }}
           onClickSave={(model) => {
             setState({
               ...state,
+              currentRoute: ROUTES.ADD_UNITS,
               models: { ...state.models, [model.id]: model }
             });
-            setCurrentRoute(ROUTES.ADD_UNITS);
           }}
         />
       );
@@ -133,7 +169,9 @@ const AppView: FunctionComponent = () => {
     case ROUTES.PLAY_SCREEN:
       return (
         <PlayScreenView
-          onClickBack={() => setCurrentRoute(ROUTES.ADD_UNITS)}
+          onClickBack={() =>
+            setState({ ...state, currentRoute: ROUTES.ADD_UNITS })
+          }
           onClickRules={() => alert("YOU RULE!")}
           models={state.models}
           faction={state.faction}
