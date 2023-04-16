@@ -13,7 +13,7 @@ interface State {
   ruleSet: RuleSet | null;
   faction: Faction | null;
   warbandTotal: number;
-  models: { [id: string]: Model };
+  models: Record<string, Model>;
 }
 
 const initialState: State = {
@@ -91,6 +91,7 @@ const AppView: FunctionComponent = () => {
           {state.models && Object.keys(state.models).length === 0 && (
             <AddUnitsZeroStateView
               faction={state.faction!}
+              models={state.models}
               warbandTotal={state.warbandTotal}
               onClickBack={() => setCurrentRoute(ROUTES.CHOOSE_FACTION)}
               onClickAdd={() => {

@@ -40,3 +40,6 @@ export const calculateModelCost = (model: Model): number => {
   ];
   return costs.reduce(sumReducer, 0);
 };
+
+export const calculateModelsCosts = (models: Model[]): number =>
+  models.map((model) => calculateModelCost(model)).reduce(sumReducer, 0);
