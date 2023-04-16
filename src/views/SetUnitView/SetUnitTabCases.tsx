@@ -11,7 +11,6 @@ interface Props {
   tabValue: string;
   model: Model;
   existingModel?: Model;
-  setUnitCost: (number: number) => void;
   isDoneLoading: () => boolean;
   onModelChanges: (model: Model) => void;
   blankModel: Model;
@@ -26,7 +25,6 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
   unitOptions,
   isDoneLoading,
   onModelChanges,
-  setUnitCost
 }) => {
   const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
 
@@ -45,8 +43,8 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
         overflowX: "hidden",
         overflowY: "scroll",
         "::-webkit-scrollbar": {
-          display: "none"
-        }
+          display: "none",
+        },
       }}
     >
       {(() => {
@@ -67,12 +65,11 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                         unit={unit}
                         handleClick={() => {
                           setSelectedUnit(unit.name);
-                          setUnitCost(unit.points);
                           onModelChanges({
                             ...blankModel,
                             unit,
                             name: model.name,
-                            id: model.id
+                            id: model.id,
                           });
                         }}
                         isSelected={selectedUnit === unit.name}
@@ -203,7 +200,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                       } else {
                         onModelChanges({
                           ...model,
-                          mounts: blankModel.mounts
+                          mounts: blankModel.mounts,
                         });
                       }
                     }}
@@ -224,7 +221,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                       if (selected) {
                         onModelChanges({
                           ...model,
-                          upgrades: [...model.upgrades, upgrade]
+                          upgrades: [...model.upgrades, upgrade],
                         });
                       } else {
                         model.upgrades = model.upgrades.filter(

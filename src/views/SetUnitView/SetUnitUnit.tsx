@@ -13,7 +13,7 @@ interface Props {
 const SetUnitUnit: FunctionComponent<Props> = ({
   unit,
   handleClick,
-  isSelected
+  isSelected,
 }) => {
   const defaultBackground =
     "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212";
@@ -35,7 +35,7 @@ const SetUnitUnit: FunctionComponent<Props> = ({
         gap: "auto",
         minHeight: theme.spacing(9),
         background: isSelected ? selectedBackground : defaultBackground,
-        borderRadius: "4px"
+        borderRadius: "4px",
       }}
     >
       <Grid
@@ -47,7 +47,7 @@ const SetUnitUnit: FunctionComponent<Props> = ({
       >
         <Typography variant="body1">{unit.name}</Typography>
         <Typography variant="body1" sx={{ color: "text.disabled" }}>
-          {unit.points} Points
+          {unit.cost} Points
         </Typography>
       </Grid>
 
