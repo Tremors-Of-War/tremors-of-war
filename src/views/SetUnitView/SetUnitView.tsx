@@ -78,9 +78,10 @@ const SetUnitView: FunctionComponent<Props> = ({
 
   const handleSave = () => {
     const value = uuidv4();
+    model.cost = modelCost;
     if (!model.name) {
       setOpenNameAlert(true);
-    } else if (model.id !== "") {
+    } else if (model.id) {
       onClickSave(model);
     } else {
       onClickSave({ ...model, id: value });
