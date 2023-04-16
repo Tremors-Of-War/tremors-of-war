@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
-import { Box, Button, Tooltip, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import AddIcon from "@mui/icons-material/Add";
 import ContentContainer from "../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../components/ChooseWarBandTotalDialog";
 import AddUnitsZeroStateAction from "./AddUnitsZeroStateAction";
-import { Faction } from "../../types";
+import { Faction, Model } from "../../types";
+import AddUnitViewHeader from "../../components/AddUnitViewHeader";
+import AddUnitsViewFooter from "../../components/AddUnitsViewFooter";
 
 interface Props {
   faction: Faction;
@@ -13,6 +13,7 @@ interface Props {
   onClickBack: () => void;
   onClickAdd: () => void;
   setWarbandTotal: (warbandTotal: number) => void;
+  models: Record<string, Model>;
 }
 
 const AddUnitsZeroStateView: FunctionComponent<Props> = ({
@@ -20,7 +21,8 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({
   warbandTotal,
   setWarbandTotal,
   onClickBack,
-  onClickAdd
+  onClickAdd,
+  models,
 }) => {
   const [open, setOpen] = React.useState(warbandTotal === 0);
 
@@ -38,56 +40,19 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({
           justifyContent="space-between"
           height="100%"
         >
-          <Grid container justifyContent="space-between" gap="8px">
-            <Box>
-              <Typography variant="h3">{faction}</Typography>
-            </Box>
-            <Grid
-              container
-              gap="8px"
-              direction="column"
-              alignItems="flex-end"
-              justifyContent="flex-end"
-            >
-              <Box>
-                <Button
-                  startIcon={<AddIcon />}
-                  variant="contained"
-                  size="large"
-                  onClick={onClickAdd}
-                >
-                  ADD UNIT
-                </Button>
-              </Box>
-              <Box>
-                <Tooltip title="Warband Total">
-                  <Grid
-                    container
-                    width="100%"
-                    justifyContent="flex-end"
-                    direction="row"
-                  >
-                    <Typography variant="h5">0&nbsp;</Typography>
-                    <Typography variant="h5" sx={{ color: "text.disabled" }}>
-                      {"/ "}
-                      {warbandTotal.toLocaleString("en-US")}
-                    </Typography>
-                  </Grid>
-                </Tooltip>
-              </Box>
-            </Grid>
-          </Grid>
+          <AddUnitViewHeader
+            faction={faction}
+            onClickAdd={onClickAdd}
+            warbandTotal={warbandTotal}
+            models={Object.values(models)}
+          />
           <Grid>
             <AddUnitsZeroStateAction onClickAdd={onClickAdd} />
           </Grid>
-          <Grid container alignItems="center" justifyContent="space-between">
-            <Button variant="outlined" onClick={onClickBack}>
-              BACK
-            </Button>
-            <Button onClick={() => setOpen(!open)} variant="outlined">
-              EDIT WARBAND TOTAL
-            </Button>
-          </Grid>
+          <AddUnitsViewFooter
+            onClickBack={onClickBack}
+            onClickEditWarbandTotal={() => setOpen(!open)}
+          />
         </Grid>
       </ContentContainer>
       <ChooseWarBandTotalDialog
