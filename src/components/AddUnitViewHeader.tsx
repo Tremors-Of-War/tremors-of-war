@@ -20,6 +20,7 @@ const AddUnitViewHeader: FunctionComponent<Props> = ({
 }) => {
   const modelCosts = calculateModelsCosts(models);
   const pointsRemaining = warbandTotal - modelCosts;
+
   return (
     <Grid container direction="column" justifyContent="flex-start">
       <Grid container justifyContent="space-between" gap="8px">
@@ -49,19 +50,34 @@ const AddUnitViewHeader: FunctionComponent<Props> = ({
             alignItems="flex-end"
             justifyContent="flex-end"
           >
-            <Tooltip title="Current Unit Cost">
-              <Typography color="secondary" variant="subtitle1">
-                Total Cost: {modelCosts}/{warbandTotal}
-              </Typography>
-            </Tooltip>
+            <Grid container direction="row" alignItems="flex-end">
+              <Grid
+                component={Typography}
+                color="secondary"
+                variant="subtitle1"
+              >
+                Total Cost: {modelCosts.toLocaleString("en-US")}
+              </Grid>
+              <Grid
+                component={Typography}
+                color="text.disabled"
+                variant="subtitle1"
+              >
+                &nbsp;/{warbandTotal.toLocaleString("en-US")}
+              </Grid>
+            </Grid>
+
             <Tooltip title="Remaining Warband Points">
               <Typography
-                sx={{
-                  color: "text.disabled"
-                }}
+                sx={(theme) => ({
+                  color:
+                    pointsRemaining < 0
+                      ? theme.palette.error.main
+                      : "text.disabled"
+                })}
                 variant="subtitle2"
               >
-                {pointsRemaining} Points Remaining
+                {pointsRemaining.toLocaleString("en-US")} Points Remaining
               </Typography>
             </Tooltip>
           </Grid>

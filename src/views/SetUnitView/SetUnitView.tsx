@@ -1,13 +1,6 @@
-import React, { FunctionComponent, useEffect, useMemo } from "react";
+import React, { FunctionComponent, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import {
-  Button,
-  Typography,
-  TextField,
-  Tooltip,
-  Snackbar,
-  Alert,
-} from "@mui/material";
+import { Button, Typography, TextField, Tooltip } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./SetUnitTabs";
@@ -19,6 +12,7 @@ import SetUnitTabCases from "./SetUnitTabCases";
 import SetUnitFooter from "./SetUnitFooter";
 import { calculateModelCost } from "../../utils/costs";
 import { TabOption } from "./tabs/types";
+import ExceededWarbandTotalAlert from "../../components/ExceededWarbandTotalAlert";
 
 interface Props {
   faction: Faction;
@@ -43,7 +37,7 @@ const blankModel: Model = {
   helmet: undefined,
   upgrades: [],
   mounts: undefined,
-  active: true,
+  active: true
 };
 
 const SetUnitView: FunctionComponent<Props> = ({
@@ -52,13 +46,12 @@ const SetUnitView: FunctionComponent<Props> = ({
   warbandTotal,
   existingModel,
   onClickSave,
-  onDelete,
+  onDelete
 }) => {
   const [tabValue, setTabValue] = React.useState<TabOption>("unitTab");
-  const [openAlert, setOpenAlert] = React.useState<boolean>(false);
+
   const [model, setModel] = React.useState<Model>(blankModel);
   const [openNameAlert, setOpenNameAlert] = React.useState<boolean>(false);
-
   const modelCost = calculateModelCost(model);
 
   const handleNameChange = (event: any) => {
@@ -87,16 +80,8 @@ const SetUnitView: FunctionComponent<Props> = ({
       onClickSave({ ...model, id: value });
     }
   };
-
-  const calculatePointsRemaining = useMemo(() => {
-    const value = warbandTotal - modelCost;
-    if (value < 0) {
-      setOpenAlert(true);
-    } else {
-      setOpenAlert(false);
-    }
-    return value;
-  }, [warbandTotal, modelCost]);
+  const pointsRemaining = warbandTotal - modelCost;
+  const exceededWarbandTotal = pointsRemaining < 0;
 
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
 
@@ -152,20 +137,20 @@ const SetUnitView: FunctionComponent<Props> = ({
                 </Typography>
                 <Tooltip title="Current Unit Cost">
                   <Typography color="secondary" variant="subtitle1">
-                    {modelCost} POINTS
+                    {modelCost.toLocaleString("en-US")} POINTS
                   </Typography>
                 </Tooltip>
                 <Tooltip title="Remaining Warband Points">
                   <Typography
                     sx={(theme) => ({
                       color:
-                        calculatePointsRemaining < 0
+                        pointsRemaining < 0
                           ? theme.palette.error.main
-                          : "text.disabled",
+                          : "text.disabled"
                     })}
                     variant="subtitle2"
                   >
-                    {calculatePointsRemaining} Points Remaining
+                    {pointsRemaining.toLocaleString("en-US")} Points Remaining
                   </Typography>
                 </Tooltip>
               </Grid>
@@ -241,17 +226,7 @@ const SetUnitView: FunctionComponent<Props> = ({
           </Grid>
         </Grid>
       </ContentContainer>
-      <Snackbar
-        open={openAlert}
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
-      >
-        <Alert severity="error" variant="filled" sx={{ width: "100%" }}>
-          You have exceeded your Warband Total.
-        </Alert>
-      </Snackbar>
+      <ExceededWarbandTotalAlert open={exceededWarbandTotal} />
       <NoUnitNameError
         open={openNameAlert}
         onSave={(modelName) => {
