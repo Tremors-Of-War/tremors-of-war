@@ -10,7 +10,9 @@ from utils import (
     transform_multi_columns_to_list,
     get_table_from_sheet,
     set_camel_case_keys,
+    convert_name_to_title_case,
 )
+
 
 logger = logging.getLogger(__name__)
 
@@ -34,6 +36,11 @@ def _add_relations_to_unit(unit, relations):
     return {**unit, **relations[unit_name]}
 
 
+def fix_obscure_abilities_bug(abilities):
+    # I am sorry
+    return [s.replace("Peasants Duty", "Peasant's Duty") for s in abilities]
+
+
 def parse_units(db: Database, ruleset):
     sheet = _get_units_sheet(db, ruleset)
     relations = parse_relations(db, ruleset)
@@ -48,7 +55,12 @@ def parse_units(db: Database, ruleset):
         unit = _add_relations_to_unit(unit, relations)
         unit = set_camel_case_keys(unit)
 
-        name = unit["name"]
-        units[name] = unit
+        unit_id = unit["name"]
+        unit["id"] = unit_id
+
+        unit = convert_name_to_title_case(unit)
+        unit["abilities"] = fix_obscure_abilities_bug(unit["abilities"])
+
+        units[unit_id] = unit
 
     return units

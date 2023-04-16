@@ -1,3 +1,6 @@
+from copy import deepcopy
+
+
 def join_pascal_snake_case(*args):
     return "_".join(args)
 
@@ -45,9 +48,34 @@ def transform_multi_columns_to_list(obj, column_base, num_columns, full_name):
 
 
 def pascal_snake_case_to_camel_case(s: str) -> str:
-    ls = s.split("_")  # [ Empire, State, Troop ]
+    split_char = "_" if "_" in s else " "
+    ls = s.split(split_char)
+    ls = [word.capitalize() for word in ls]
     return ls[0].lower() + "".join(ls[1:])
 
 
 def set_camel_case_keys(obj):
     return {pascal_snake_case_to_camel_case(k): v for k, v in obj.items()}
+
+
+def convert_pascal_camel_case_to_title_case(s: str):
+    ls = s.split("_")
+    ls = [word.capitalize() for word in ls]
+    return " ".join(ls)
+
+
+def convert_name_to_title_case(obj):
+    if "name" not in obj:
+        return obj
+
+    obj["name"] = convert_pascal_camel_case_to_title_case(obj["name"])
+    return obj
+
+
+def sort_arrays_in_nested_dict(d):
+    for key, value in d.items():
+        if isinstance(value, list):
+            d[key] = sorted(value)
+        elif isinstance(value, dict):
+            d[key] = sort_arrays_in_nested_dict(value)
+    return d

@@ -1,9 +1,10 @@
 import { Box, Tab, Tabs } from "@mui/material";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, SyntheticEvent } from "react";
+import { TabOption } from "./tabs/types";
 
 interface Props {
-  handleChange: (event: any, newValue: string) => void;
-  value: string;
+  handleChange: (tabValue: TabOption) => void;
+  value: TabOption;
   showWeaponry?: boolean;
   showArmour?: boolean;
   showMount?: boolean;
@@ -16,17 +17,21 @@ const SetUnitTabs: FunctionComponent<Props> = ({
   showWeaponry,
   showArmour,
   showMount,
-  showUpgrades
-}) => (
-  <Box sx={{ marginBottom: 3, width: "100%" }}>
-    <Tabs value={value} onChange={handleChange}>
-      <Tab value="unitTab" label="UNIT" />
-      {showWeaponry && <Tab value="weaponryTab" label="WEAPONRY" />}
-      {showArmour && <Tab value="armourTab" label="ARMOUR" />}
-      {showMount && <Tab value="mountTab" label="MOUNT" />}
-      {showUpgrades && <Tab value="upgradesTab" label="Upgrades" />}
-    </Tabs>
-  </Box>
-);
+  showUpgrades,
+}) => {
+  const onChange = (_: SyntheticEvent, newValue: TabOption) =>
+    handleChange(newValue);
+  return (
+    <Box sx={{ marginBottom: 3, width: "100%" }}>
+      <Tabs value={value} onChange={onChange}>
+        <Tab value="unitTab" label="UNIT" />
+        {showWeaponry && <Tab value="weaponryTab" label="WEAPONRY" />}
+        {showArmour && <Tab value="armourTab" label="ARMOUR" />}
+        {showMount && <Tab value="mountTab" label="MOUNT" />}
+        {showUpgrades && <Tab value="upgradesTab" label="Upgrades" />}
+      </Tabs>
+    </Box>
+  );
+};
 
 export default SetUnitTabs;

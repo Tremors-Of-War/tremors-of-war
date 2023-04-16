@@ -6,7 +6,7 @@ import {
   TextField,
   Tooltip,
   Snackbar,
-  Alert
+  Alert,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
@@ -17,6 +17,8 @@ import data from "../../data.json";
 import NoUnitNameError from "../../components/NoUnitNameError";
 import SetUnitTabCases from "./SetUnitTabCases";
 import SetUnitFooter from "./SetUnitFooter";
+import { calculateModelCost } from "../../utils/costs";
+import { TabOption } from "./tabs/types";
 
 interface Props {
   faction: Faction;
@@ -41,7 +43,7 @@ const blankModel: Model = {
   helmet: undefined,
   upgrades: [],
   mounts: undefined,
-  active: true
+  active: true,
 };
 
 const SetUnitView: FunctionComponent<Props> = ({
@@ -50,17 +52,14 @@ const SetUnitView: FunctionComponent<Props> = ({
   warbandTotal,
   existingModel,
   onClickSave,
-  onDelete
+  onDelete,
 }) => {
-  const [tabValue, setTabValue] = React.useState("unitTab");
-  const [unitCost, setUnitCost] = React.useState(0);
+  const [tabValue, setTabValue] = React.useState<TabOption>("unitTab");
   const [openAlert, setOpenAlert] = React.useState<boolean>(false);
   const [model, setModel] = React.useState<Model>(blankModel);
   const [openNameAlert, setOpenNameAlert] = React.useState<boolean>(false);
 
-  const handleTabChange = (event: any, newValue: string) => {
-    setTabValue(newValue);
-  };
+  const modelCost = calculateModelCost(model);
 
   const handleNameChange = (event: any) => {
     const parsedInputValue = event.target.value;
@@ -79,9 +78,10 @@ const SetUnitView: FunctionComponent<Props> = ({
 
   const handleSave = () => {
     const value = uuidv4();
+    model.cost = modelCost;
     if (!model.name) {
       setOpenNameAlert(true);
-    } else if (model.id !== "") {
+    } else if (model.id) {
       onClickSave(model);
     } else {
       onClickSave({ ...model, id: value });
@@ -89,46 +89,15 @@ const SetUnitView: FunctionComponent<Props> = ({
   };
 
   const calculatePointsRemaining = useMemo(() => {
-    const value = warbandTotal - unitCost;
+    const value = warbandTotal - modelCost;
     if (value < 0) {
       setOpenAlert(true);
     } else {
       setOpenAlert(false);
     }
     return value;
-  }, [warbandTotal, unitCost]);
+  }, [warbandTotal, modelCost]);
 
-  useEffect(() => {
-    model.cost = 0;
-    if (model.unit) {
-      model.cost += model.unit.points;
-      if (model.helmet) {
-        model.cost += data.armour[model.helmet].Cost;
-      }
-      if (model.armour) {
-        model.cost += data.armour[model.armour].Cost;
-      }
-      if (model.shield) {
-        model.cost += data.armour[model.shield].Cost;
-      }
-      if (model.otherArmour) {
-        model.cost += data.armour[model.otherArmour].Cost;
-      }
-      if (model.mounts) {
-        model.cost += data.mounts[model.mounts].Points;
-      }
-      if (model.handWeapon) {
-        model.cost += data.weapons[model.handWeapon].Cost;
-      }
-      if (model.rangedWeapon) {
-        model.cost += data.weapons[model.rangedWeapon].Cost;
-      }
-      if (model.twoHandedWeapon) {
-        model.cost += data.weapons[model.twoHandedWeapon].Cost;
-      }
-    }
-    setUnitCost(model.cost);
-  }, [model]);
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
 
   useEffect(() => {
@@ -183,7 +152,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                 </Typography>
                 <Tooltip title="Current Unit Cost">
                   <Typography color="secondary" variant="subtitle1">
-                    {unitCost} POINTS
+                    {modelCost} POINTS
                   </Typography>
                 </Tooltip>
                 <Tooltip title="Remaining Warband Points">
@@ -192,7 +161,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                       color:
                         calculatePointsRemaining < 0
                           ? theme.palette.error.main
-                          : "text.disabled"
+                          : "text.disabled",
                     })}
                     variant="subtitle2"
                   >
@@ -211,7 +180,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                   model.unit?.upgrades && model.unit.upgrades.length > 0
                 }
                 value={tabValue}
-                handleChange={handleTabChange}
+                handleChange={setTabValue}
               />
               {tabValue === "unitTab" && isDoneLoading() && (
                 <SetUnitUnitHeader />
@@ -224,13 +193,14 @@ const SetUnitView: FunctionComponent<Props> = ({
                 onModelChanges={onModelChanges}
                 blankModel={blankModel}
                 unitOptions={unitOptions}
-                setUnitCost={setUnitCost}
               />
             </Grid>
           </Grid>
 
           <Grid container direction="column" justifyContent="flex-end">
-            {tabValue !== "unitTab" && <SetUnitFooter tabValue={tabValue} />}
+            {tabValue !== "unitTab" && (
+              <SetUnitFooter model={model} tabValue={tabValue} />
+            )}
 
             <Grid
               container
@@ -275,7 +245,7 @@ const SetUnitView: FunctionComponent<Props> = ({
         open={openAlert}
         anchorOrigin={{
           vertical: "top",
-          horizontal: "right"
+          horizontal: "right",
         }}
       >
         <Alert severity="error" variant="filled" sx={{ width: "100%" }}>

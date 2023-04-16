@@ -23,7 +23,7 @@ export interface Unit {
   a: number;
   cl: number;
   int: number;
-  points: number;
+  cost: number;
   abilities: Abilities[];
   weaponry: Weapons[];
   twoHandWeaponry: Weapons[];
@@ -45,7 +45,7 @@ export interface Model {
   shield?: Armour;
   otherArmour?: Armour;
   helmet?: Armour;
-  upgrades: [];
+  upgrades: Abilities[];
   mounts?: Mounts;
   handWeapon?: Weapons;
   twoHandedWeapon?: Weapons;
