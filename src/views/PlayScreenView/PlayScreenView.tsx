@@ -6,10 +6,9 @@ import {
   Grid,
   List,
   Typography,
-  LinearProgress
+  LinearProgress,
 } from "@mui/material";
 import { TransitionGroup } from "react-transition-group";
-import {} from "@material-ui/core";
 import ContentContainer from "../../components/ContentContainer";
 import { Faction } from "../../types";
 import PlayScreenUnit from "./PlayScreenUnit";
@@ -24,7 +23,7 @@ const PlayScreenView: FunctionComponent<Props> = ({
   models,
   faction,
   onClickRules,
-  onClickBack
+  onClickBack,
 }) => {
   const modelArr = Object.entries(models);
 
@@ -64,8 +63,8 @@ const PlayScreenView: FunctionComponent<Props> = ({
             overflowX: "hidden",
             overflowY: "scroll",
             "::-webkit-scrollbar": {
-              display: "none"
-            }
+              display: "none",
+            },
           }}
         >
           <List sx={{ width: "100%" }}>
