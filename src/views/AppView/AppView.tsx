@@ -136,6 +136,15 @@ const AppView: FunctionComponent = () => {
           onClickRules={() => alert("YOU RULE!")}
           models={state.models}
           faction={state.faction}
+          onActiveChange={(model) =>
+            setState({
+              ...state,
+              models: {
+                ...state.models,
+                [model.id]: { ...model, active: !model.active }
+              }
+            })
+          }
         />
       );
     default:

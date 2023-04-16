@@ -169,7 +169,6 @@ const SetUnitView: FunctionComponent<Props> = ({
                 label="NAME"
                 variant="filled"
                 color="secondary"
-                defaultValue={model.name}
                 onChange={handleNameChange}
               />
 
