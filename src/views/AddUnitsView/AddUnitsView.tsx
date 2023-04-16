@@ -35,17 +35,17 @@ const AddUnitsView: FunctionComponent<Props> = ({
   onEdit,
   models
 }) => {
-  const [open, setOpen] = React.useState(true);
+  const [openWarbandDialog, setOpenWarbandDialog] = React.useState(true);
   const [openRestartAlert, setOpenRestartAlert] =
     React.useState<boolean>(false);
 
   const handleClose = (value: number) => {
-    setOpen(!open);
+    setOpenWarbandDialog(!openWarbandDialog);
     setWarbandTotal(value);
   };
   const modelCosts = calculateModelsCosts(Object.values(models));
-
   const exceededWarbandTotal = warbandTotal - modelCosts < 0;
+
   return (
     <>
       <ContentContainer>
@@ -94,13 +94,15 @@ const AddUnitsView: FunctionComponent<Props> = ({
           </Grid>
           <AddUnitsViewFooter
             onClickRestart={() => setOpenRestartAlert(true)}
-            onClickEditWarbandTotal={() => setOpen(!open)}
+            onClickEditWarbandTotal={() =>
+              setOpenWarbandDialog(!openWarbandDialog)
+            }
             onClickPlay={onClickPlay}
           />
         </Grid>
       </ContentContainer>
       <ChooseWarBandTotalDialog
-        open={!open}
+        open={!openWarbandDialog}
         warbandTotal={warbandTotal}
         onClose={handleClose}
       />
