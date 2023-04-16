@@ -10,7 +10,9 @@ from utils import (
     transform_multi_columns_to_list,
     get_table_from_sheet,
     set_camel_case_keys,
+    convert_name_to_title_case,
 )
+
 
 logger = logging.getLogger(__name__)
 
@@ -48,7 +50,11 @@ def parse_units(db: Database, ruleset):
         unit = _add_relations_to_unit(unit, relations)
         unit = set_camel_case_keys(unit)
 
-        name = unit["name"]
-        units[name] = unit
+        unit_id = unit["name"]
+        unit["id"] = unit_id
+
+        unit = convert_name_to_title_case(unit)
+
+        units[unit_id] = unit
 
     return units
