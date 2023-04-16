@@ -33,12 +33,14 @@ const ReviveAlertDialog: FunctionComponent<Props> = ({
       alignItems="center"
       justifyContent="Flex-start"
       variant="filled"
-      sx={{ width: "100%" }}
+      sx={{ width: "100%", color: "#F3F4F6", backgroundColor: "#FF8A3C" }}
     >
-      <Typography>revive</Typography>
+      <Typography>Revive {model.name}?</Typography>
     </Grid>
     <DialogContent>
-      <DialogContentText>revive</DialogContentText>
+      <DialogContentText>
+        Retrive {model.name}&apos;s soul from the depths of the Underword?
+      </DialogContentText>
     </DialogContent>
     <DialogActions>
       <Button onClick={onClose}>Cancel</Button>

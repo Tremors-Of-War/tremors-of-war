@@ -40,7 +40,9 @@ const PlayScreenView: FunctionComponent<Props> = ({
           <Grid container direction="column" justifyContent="flex-end">
             <Grid container justifyContent="space-between">
               <Box paddingBottom="8px">
-                <Typography variant="h3">{faction}</Typography>
+                <Typography variant="h3">
+                  {faction?.replace(/_/g, " ")}
+                </Typography>
               </Box>
               <Grid
                 container

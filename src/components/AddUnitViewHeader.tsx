@@ -16,7 +16,7 @@ const AddUnitViewHeader: FunctionComponent<Props> = ({
   onClickAdd,
   faction,
   warbandTotal,
-  models,
+  models
 }) => {
   const modelCosts = calculateModelsCosts(models);
   const pointsRemaining = warbandTotal - modelCosts;
@@ -24,7 +24,7 @@ const AddUnitViewHeader: FunctionComponent<Props> = ({
     <Grid container direction="column" justifyContent="flex-start">
       <Grid container justifyContent="space-between" gap="8px">
         <Box>
-          <Typography variant="h3">{faction}</Typography>
+          <Typography variant="h3">{faction.replace(/_/g, " ")}</Typography>
         </Box>
         <Grid
           container
@@ -57,7 +57,7 @@ const AddUnitViewHeader: FunctionComponent<Props> = ({
             <Tooltip title="Remaining Warband Points">
               <Typography
                 sx={{
-                  color: "text.disabled",
+                  color: "text.disabled"
                 }}
                 variant="subtitle2"
               >

@@ -35,10 +35,16 @@ const KillAlertDialog: FunctionComponent<Props> = ({
       variant="filled"
       sx={{ width: "100%", color: "#F3F4F6", backgroundColor: "#FF8A3C" }}
     >
-      <Typography>KILL</Typography>
+      <Typography>Kill {model.name}?</Typography>
     </Grid>
     <DialogContent>
-      <DialogContentText>kill.</DialogContentText>
+      <DialogContentText>
+        The time has come for {model.name}&apos;s untimely demise.
+      </DialogContentText>
+      <DialogContentText>
+        Set&nbsp;
+        {model.name}&apos;s alive status as &quot;not&quot;?
+      </DialogContentText>
     </DialogContent>
     <DialogActions>
       <Button onClick={onClose}>Cancel</Button>
