@@ -9,6 +9,8 @@ import AddUnitUnit from "./AddUnitUnit";
 import RestartConfirmationDialog from "../../components/RestartConfirmationDialog";
 import AddUnitViewHeader from "../../components/AddUnitViewHeader";
 import AddUnitsViewFooter from "../../components/AddUnitsViewFooter";
+import ExceededWarbandTotalAlert from "../../components/ExceededWarbandTotalAlert";
+import { calculateModelsCosts } from "../../utils/costs";
 
 interface Props {
   faction: Faction;
@@ -31,7 +33,7 @@ const AddUnitsView: FunctionComponent<Props> = ({
   onDelete,
   onClickPlay,
   onEdit,
-  models,
+  models
 }) => {
   const [open, setOpen] = React.useState(true);
   const [openRestartAlert, setOpenRestartAlert] =
@@ -41,7 +43,9 @@ const AddUnitsView: FunctionComponent<Props> = ({
     setOpen(!open);
     setWarbandTotal(value);
   };
+  const modelCosts = calculateModelsCosts(Object.values(models));
 
+  const exceededWarbandTotal = warbandTotal - modelCosts < 0;
   return (
     <>
       <ContentContainer>
@@ -70,8 +74,8 @@ const AddUnitsView: FunctionComponent<Props> = ({
               overflowX: "hidden",
               overflowY: "scroll",
               "::-webkit-scrollbar": {
-                display: "none",
-              },
+                display: "none"
+              }
             }}
           >
             <List sx={{ width: "100%" }}>
@@ -89,9 +93,9 @@ const AddUnitsView: FunctionComponent<Props> = ({
             </List>
           </Grid>
           <AddUnitsViewFooter
-              onClickRestart={() => setOpenRestartAlert(true)}
-              onClickEditWarbandTotal={() => setOpen(!open)}
-              onClickPlay={onClickPlay}
+            onClickRestart={() => setOpenRestartAlert(true)}
+            onClickEditWarbandTotal={() => setOpen(!open)}
+            onClickPlay={onClickPlay}
           />
         </Grid>
       </ContentContainer>
@@ -105,6 +109,7 @@ const AddUnitsView: FunctionComponent<Props> = ({
         onClickRestart={onClickRestart}
         onClose={() => setOpenRestartAlert(false)}
       />
+      <ExceededWarbandTotalAlert open={exceededWarbandTotal} />
     </>
   );
 };
