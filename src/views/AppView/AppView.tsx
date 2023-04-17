@@ -173,7 +173,7 @@ const AppView: FunctionComponent = () => {
             setState({ ...state, currentRoute: ROUTES.ADD_UNITS })
           }
           onClickRules={() => alert("YOU RULE!")}
-          models={state.models}
+          models={Object.values(state.models)}
           faction={state.faction}
           onActiveChange={(model) =>
             setState({
@@ -188,7 +188,7 @@ const AppView: FunctionComponent = () => {
       );
     default:
       // eslint-disable-next-line no-console
-      console.error(`Unknown route: ${currentRoute}`);
+      console.error(`Unknown route: ${state.currentRoute}`);
       return <p>Unknown route</p>;
   }
 };
