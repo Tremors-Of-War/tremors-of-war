@@ -28,7 +28,7 @@
 
 ---
 
-### If you're a battle game enthusiast, you know that creating the perfect army is key to achieving victory on the battlefield. Tremors of War is the ultimate tool to help you customize your models and build your army with ease.
+If you're a battle game enthusiast, you know that creating the perfect army is key to achieving victory on the battlefield. Tremors of War is the ultimate tool to help you customize your models and build your army with ease.
 
 ---
 <img src="docs\start_screen_image.PNG" />
