@@ -6,7 +6,7 @@ import {
   calculateArmourCosts,
   calculateMountCosts,
   calculateUpgradeCosts,
-  calculateWeaponryCosts,
+  calculateWeaponryCosts
 } from "../../utils/costs";
 
 interface Props {
@@ -44,39 +44,41 @@ const SetUnitFooter: FunctionComponent<Props> = ({ model, tabValue }) => {
       justifyContent={!showArmourSave ? "flex-end" : "space-between"}
     >
       {showArmourSave && (
-        <Grid
-          container
-          maxWidth="300px"
-          direction="row"
-          alignItems="center"
-          justifyContent="flex-start"
-          gap="16px"
-        >
-          <Grid color="text.disabled" component={Typography}>
-            ARMOUR SAVE:
-          </Grid>
+        <Tooltip title="Armour Save calculations in development!">
           <Grid
             container
-            width="auto"
-            justifyContent="flex-end"
-            alignItems="center"
+            maxWidth="300px"
             direction="row"
+            alignItems="center"
+            justifyContent="flex-start"
+            gap="16px"
           >
-            <Grid width="40px" alignItems="center" justifyContent="center">
-              <Grid component={Tooltip} title="Ranged">
-                <Typography color="text.disabled">R</Typography>
-              </Grid>
-              <Grid component={Typography}>10+</Grid>
+            <Grid color="text.disabled" component={Typography}>
+              ARMOUR SAVE:
             </Grid>
-
-            <Grid width="40px" justifyContent="center" alignItems="center">
-              <Grid component={Tooltip} title="Close Combat">
-                <Typography color="text.disabled">CC</Typography>
+            <Grid
+              container
+              width="auto"
+              justifyContent="flex-end"
+              alignItems="center"
+              direction="row"
+            >
+              <Grid width="40px" alignItems="center" justifyContent="center">
+                <Grid component={Tooltip} title="Ranged">
+                  <Typography color="text.disabled">R</Typography>
+                </Grid>
+                <Grid component={Typography}>10+</Grid>
               </Grid>
-              <Grid component={Typography}>10+</Grid>
+
+              <Grid width="40px" justifyContent="center" alignItems="center">
+                <Grid component={Tooltip} title="Close Combat">
+                  <Typography color="text.disabled">CC</Typography>
+                </Grid>
+                <Grid component={Typography}>10+</Grid>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
+        </Tooltip>
       )}
       <Grid container justifyContent="flex-end" maxWidth="300px">
         <Grid component={Typography} color="text.disabled">

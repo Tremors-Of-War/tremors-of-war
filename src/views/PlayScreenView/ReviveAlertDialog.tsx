@@ -33,7 +33,7 @@ const ReviveAlertDialog: FunctionComponent<Props> = ({
       alignItems="center"
       justifyContent="Flex-start"
       variant="filled"
-      sx={{ width: "100%", color: "#F3F4F6", backgroundColor: "#FF8A3C" }}
+      sx={{ width: "100%", color: "#40392d", backgroundColor: "#FF8A3C" }}
     >
       <Typography>Revive {model.name}?</Typography>
     </Grid>

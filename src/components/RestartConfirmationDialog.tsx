@@ -47,7 +47,7 @@ const NoUnitNameError: FunctionComponent<Props> = ({
         variant="filled"
         sx={{
           width: "100%",
-          color: "#F3F4F6",
+          color: "#40392d",
           backgroundColor: "#FF8A3C"
         }}
       >

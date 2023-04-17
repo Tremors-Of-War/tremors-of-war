@@ -172,7 +172,9 @@ const AppView: FunctionComponent = () => {
           onClickBack={() =>
             setState({ ...state, currentRoute: ROUTES.ADD_UNITS })
           }
-          onClickRules={() => alert("YOU RULE!")}
+          onClickRules={() =>
+            alert("YOU RULE! (rules display is in development :) )")
+          }
           models={Object.values(state.models)}
           faction={state.faction}
           onActiveChange={(model) =>
