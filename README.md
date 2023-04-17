@@ -5,7 +5,8 @@
  / / / _, _/ /___/ /  / / /_/ / _, _/___/ /  / /_/ / __/      | |/ |/ / ___ |/ _, _/
 /_/ /_/ |_/_____/_/  /_/\____/_/ |_|/____/   \____/_/         |__/|__/_/  |_/_/ |_|
 ```
-![alt text](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white )
+
+![alt text](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
 <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
@@ -31,7 +32,9 @@
 If you're a battle game enthusiast, you know that creating the perfect army is key to achieving victory on the battlefield. Tremors of War is the ultimate tool to help you customize your models and build your army with ease.
 
 ---
+
 <img src="docs\start_screen_image.PNG" />
+
 
 🌎 [Tremors of War](https://tremorsofwar.com/) &nbsp; | &nbsp;
 🎨 [Figma](https://www.figma.com/file/HkyeNNaQfRiU74VjAM8IOB/Warhammer-List-Builder?node-id=10401%3A129274&t=cV9yLwXfCMko7IyZ-1)
@@ -53,10 +56,13 @@ If you're a battle game enthusiast, you know that creating the perfect army is k
 
 
 1. Install node requirements
+
 ```
 npm install
 ```
-2. Run 
+
+2. Run
+
 ```
 npm run dev
 ```
