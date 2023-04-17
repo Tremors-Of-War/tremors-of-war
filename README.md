@@ -16,9 +16,9 @@
 
 ---
 
-### 🏰Choose your Ruleset
+### 🏰 Choose your Ruleset
 
-### 🐉Select your army Faction
+### 🐉 Select your army Faction
 
 ### 🏹 Build your models
 
@@ -33,7 +33,7 @@ If you're a battle game enthusiast, you know that creating the perfect army is k
 ---
 <img src="docs\start_screen_image.PNG" />
 
-🌎 [Tremors of War](https://www.tremorsofwar.com) &nbsp; | &nbsp;
+🌎 [Tremors of War](https://tremorsofwar.com/) &nbsp; | &nbsp;
 🎨 [Figma](https://www.figma.com/file/HkyeNNaQfRiU74VjAM8IOB/Warhammer-List-Builder?node-id=10401%3A129274&t=cV9yLwXfCMko7IyZ-1)
 
 # Setting Up
