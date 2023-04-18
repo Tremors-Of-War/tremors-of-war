@@ -11,7 +11,7 @@ import {
 import { TransitionGroup } from "react-transition-group";
 import ContentContainer from "../../components/ContentContainer";
 import { Faction, Model } from "../../types";
-import PlayScreenUnit from "./PlayScreenUnit";
+import PlayScreenModel from "./PlayScreenModel/PlayScreenModel";
 
 interface Props {
   models: Model[];
@@ -88,7 +88,7 @@ const PlayScreenView: FunctionComponent<Props> = ({
                 .sort((item) => (item[1].active === false ? 1 : -1))
                 .map((model) => (
                   <Collapse key={model[0]}>
-                    <PlayScreenUnit
+                    <PlayScreenModel
                       model={model[1]}
                       onActiveChange={onActiveChange}
                     />
