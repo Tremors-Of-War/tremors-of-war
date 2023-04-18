@@ -10,7 +10,7 @@ import data from "../../data.json";
 import NoUnitNameError from "./components/NoUnitNameError";
 import SetUnitTabCases from "./tabs/SetUnitTabCases";
 import SetUnitFooter from "./components/SetUnitFooter";
-import { calculateModelCost } from "../../utils/costs";
+import { calculateModelCost, calculateModelsCosts } from "../../utils/costs";
 import { TabOption } from "./tabs/types";
 import ExceededWarbandTotalAlert from "../../components/ExceededWarbandTotalAlert";
 
@@ -19,6 +19,7 @@ interface Props {
   existingModel?: Model;
   onClickBack: () => void;
   warbandTotal: number;
+  models: Model[];
   onClickSave: (model: Model) => void;
   onDelete: (modelId: string) => void;
 }
@@ -44,6 +45,7 @@ const SetUnitView: FunctionComponent<Props> = ({
   faction,
   onClickBack,
   warbandTotal,
+  models,
   existingModel,
   onClickSave,
   onDelete
@@ -53,6 +55,13 @@ const SetUnitView: FunctionComponent<Props> = ({
   const [model, setModel] = React.useState<Model>(blankModel);
   const [openNameAlert, setOpenNameAlert] = React.useState<boolean>(false);
   const modelCost = calculateModelCost(model);
+  const modelCosts = calculateModelsCosts(models);
+  const pointsRemaining = () => {
+    if (existingModel) {
+      return warbandTotal - modelCosts + existingModel.cost - modelCost;
+    }
+    return warbandTotal - modelCosts - modelCost;
+  };
 
   const handleNameChange = (event: any) => {
     const parsedInputValue = event.target.value;
@@ -80,8 +89,8 @@ const SetUnitView: FunctionComponent<Props> = ({
       onClickSave({ ...model, id: value });
     }
   };
-  const pointsRemaining = warbandTotal - modelCost;
-  const exceededWarbandTotal = pointsRemaining < 0;
+
+  const exceededWarbandTotal = pointsRemaining() < 0;
 
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
 
@@ -89,7 +98,7 @@ const SetUnitView: FunctionComponent<Props> = ({
     if (existingModel) {
       setModel(existingModel);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const isDoneLoading = () => {
@@ -145,13 +154,13 @@ const SetUnitView: FunctionComponent<Props> = ({
                   <Typography
                     sx={(theme) => ({
                       color:
-                        pointsRemaining < 0
+                        pointsRemaining() < 0
                           ? theme.palette.error.main
                           : "text.disabled"
                     })}
                     variant="subtitle2"
                   >
-                    {pointsRemaining.toLocaleString("en-US")} Points Remaining
+                    {pointsRemaining().toLocaleString("en-US")} Points Remaining
                   </Typography>
                 </Tooltip>
               </Grid>

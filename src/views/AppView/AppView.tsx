@@ -143,6 +143,7 @@ const AppView: FunctionComponent = () => {
       return (
         <SetUnitView
           faction={state.faction!}
+          models={Object.values(state.models)}
           warbandTotal={state.warbandTotal}
           existingModel={state.models[editModel]}
           onDelete={(modelId: string) => {

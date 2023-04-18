@@ -41,7 +41,7 @@ const PlayScreenUnit: FunctionComponent<Props> = ({ model }) => (
             container
             direction="column"
             justifyContent="flexs-start"
-            width="143px"
+            width="156px"
             margin="8px 0px"
           >
             {model.unit.abilities.map((ability) => (
