@@ -2,16 +2,16 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import { action } from "@storybook/addon-actions";
-import SetUnitTabs from "../tabs/SetUnitTabs";
+import AddUnitsZeroStateAction from "../AddUnitsZeroState/AddUnitsZeroStateAction";
 import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 import ContentContainer from "../../../components/ContentContainer";
 
 export default {
-  title: "Layout/Component/SetUnitTabs",
-  component: SetUnitTabs
-} as ComponentMeta<typeof SetUnitTabs>;
+  title: "Layout/Component/AddUnitsZeroStateAction",
+  component: AddUnitsZeroStateAction
+} as ComponentMeta<typeof AddUnitsZeroStateAction>;
 
-const Template: ComponentStory<typeof SetUnitTabs> = function () {
+const Template: ComponentStory<typeof AddUnitsZeroStateAction> = function () {
   return (
     <Grid
       container
@@ -26,10 +26,7 @@ const Template: ComponentStory<typeof SetUnitTabs> = function () {
       }}
     >
       <ContentContainer>
-        <SetUnitTabs
-          value="unitTab"
-          handleChange={() => action("Tab change")}
-        />
+        <AddUnitsZeroStateAction onClickAdd={() => action("add unit")} />
       </ContentContainer>
     </Grid>
   );
