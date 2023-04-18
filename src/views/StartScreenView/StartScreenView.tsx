@@ -15,6 +15,7 @@ const StartScreenView: FunctionComponent<Props> = ({ onClickNewList }) => (
       <Grid
         container
         justifyContent="center"
+        className="startscreen"
         alignItems="center"
         sx={{
           height: "100%",
@@ -34,7 +35,12 @@ const StartScreenView: FunctionComponent<Props> = ({ onClickNewList }) => (
         bottom="40px"
         right="40px"
       >
-        <Button variant="outlined" onClick={()=> alert("Import/Export functionality in development!")}>IMPORT LIST</Button>
+        <Button
+          variant="outlined"
+          onClick={() => alert("Import/Export functionality in development!")}
+        >
+          IMPORT LIST
+        </Button>
         <Button variant="contained" onClick={onClickNewList}>
           NEW LIST
         </Button>

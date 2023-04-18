@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "es6", "dom"],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -14,8 +14,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["cypress"],
+    "baseUrl": ".",
+    "outDir": "./dist"
   },
-  "include": ["src"],
+  "include": ["src", "./cypress/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
