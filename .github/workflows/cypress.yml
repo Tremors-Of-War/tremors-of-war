@@ -9,13 +9,26 @@ on:
       - main
 
 jobs:
-  cypress:
+  test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
       - name: Install dependencies
         run: npm install
-      - name: Launch dev
+
+      - name: Start Vite server
         run: npm run dev
+        wait-on: "http://localhost:5173"
+
       - name: Run Cypress tests
-        run: npx cypress run --browser chrome --headless
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          run: npx cypress run --browser chrome --headless
