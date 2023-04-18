@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
 import { Faction, RuleSet, Model } from "../../types";
-import AddUnitsView from "../AddUnitsView/AddUnitsView";
-import AddUnitsZeroStateView from "../AddUnitsZeroStateView/AddUnitsZeroStateView";
+import AddUnitsView from "../AddUnitsView/AddUnitsView/AddUnitsView";
+import AddUnitsZeroStateView from "../AddUnitsView/AddUnitsZeroState/AddUnitsZeroStateView";
 import ChooseFactionView from "../ChooseFactionView/ChooseFactionView";
 import ChooseRuleSetView from "../ChooseRuleSetView/ChooseRuleSetView";
 import SetUnitView from "../SetUnitView/SetUnitView";
