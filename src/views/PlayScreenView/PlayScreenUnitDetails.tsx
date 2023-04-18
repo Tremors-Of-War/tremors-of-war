@@ -26,14 +26,7 @@ const hasWeaponry = (model: Model) => {
 const PlayScreenUnitDetails: FunctionComponent<Props> = ({ model }) => (
   <Grid container direction="column" gap="16px">
     <PlayScreenUnitDetailsUnit model={model} />
-    {hasArmour(model) && (
-      <PlayScreenUnitDetailsArmour
-        armour={model.armour}
-        shield={model.shield}
-        otherArmour={model.otherArmour}
-        helmet={model.helmet}
-      />
-    )}
+    {hasArmour(model) && <PlayScreenUnitDetailsArmour model={model} />}
     {hasWeaponry(model) && (
       <PlayScreenUnitDetailsWeaponry
         handWeapon={model.handWeapon}
