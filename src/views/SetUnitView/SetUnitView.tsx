@@ -89,6 +89,7 @@ const SetUnitView: FunctionComponent<Props> = ({
     if (existingModel) {
       setModel(existingModel);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const isDoneLoading = () => {
