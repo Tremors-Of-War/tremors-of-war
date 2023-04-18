@@ -16,6 +16,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Launch dev
-        run: npm run dev & wait-on http://localhost:5173
+        run: npm run dev
       - name: Run Cypress tests
         run: npx cypress run --browser chrome --headless
