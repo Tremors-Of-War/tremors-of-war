@@ -12,22 +12,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+        steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Start Vite server
-        run: npm run dev
-
-      - name: Run Cypress tests
+      - name: Run Cypress tests 🧪
         uses: cypress-io/github-action@v2
         with:
-          wait-on: "http://localhost:5173"
-          run: npx cypress run --browser chrome --headless
+          start: npm start
+          wait-on: 'http://localhost:5173'
+          group: All specs
