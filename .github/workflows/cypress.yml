@@ -16,4 +16,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run Cypress tests
-        run: npx cypress run --browser chrome --headless --config video=false --config screenshot=false
+        run: npx cypress run --browser chrome --headless
