@@ -6,7 +6,7 @@ import ChooseWarBandTotalDialog from "../ChooseWarBandTotalDialog";
 
 export default {
   title: "Layout/Component/ChooseWarBandTotalDialog",
-  component: ChooseWarBandTotalDialog,
+  component: ChooseWarBandTotalDialog
 } as ComponentMeta<typeof ChooseWarBandTotalDialog>;
 
 const Template: ComponentStory<typeof ChooseWarBandTotalDialog> = function () {
@@ -19,14 +19,18 @@ const Template: ComponentStory<typeof ChooseWarBandTotalDialog> = function () {
         alignItems="center"
         sx={(theme) => ({
           height: "100vh",
-          backgroundColor: theme.palette.secondary.dark,
+          backgroundColor: theme.palette.secondary.dark
         })}
       >
         <Button onClick={() => setOpen(!open)} variant="contained">
           open dialog
         </Button>
       </Grid>
-      <ChooseWarBandTotalDialog open={open} onClose={() => setOpen(!open)} />
+      <ChooseWarBandTotalDialog
+        warbandTotal={1000}
+        open={open}
+        onClose={() => setOpen(!open)}
+      />
     </>
   );
 };
