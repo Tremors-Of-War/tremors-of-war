@@ -1,28 +1,26 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Armour } from "../../types";
+import { Model } from "../../types";
 import PlayScreenArmourStats from "./PlayScreenArmourStats";
+import ArmourSave from "../../components/ArmourSave";
 
 interface Props {
-  armour?: Armour;
-  shield?: Armour;
-  helmet?: Armour;
-  otherArmour?: Armour;
+  model: Model;
 }
 
-const PlayScreenUnitDetailsArmour: FunctionComponent<Props> = ({
-  armour,
-  shield,
-  helmet,
-  otherArmour
-}) => (
+const PlayScreenUnitDetailsArmour: FunctionComponent<Props> = ({ model }) => (
   <Grid container direction="column">
     <Typography color="primary">ARMOUR</Typography>
     <Grid container direction="column">
-      {armour && <PlayScreenArmourStats armour={armour} />}
-      {shield && <PlayScreenArmourStats armour={shield} />}
-      {helmet && <PlayScreenArmourStats armour={helmet} />}
-      {otherArmour && <PlayScreenArmourStats armour={otherArmour} />}
+      {model.armour && <PlayScreenArmourStats armour={model.armour} />}
+      {model.shield && <PlayScreenArmourStats armour={model.shield} />}
+      {model.helmet && <PlayScreenArmourStats armour={model.helmet} />}
+      {model.otherArmour && (
+        <PlayScreenArmourStats armour={model.otherArmour} />
+      )}
+      <Grid container justifyContent="flex-end">
+        <ArmourSave model={model} />
+      </Grid>
     </Grid>
   </Grid>
 );

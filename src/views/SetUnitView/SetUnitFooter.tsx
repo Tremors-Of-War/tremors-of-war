@@ -1,4 +1,4 @@
-import { Grid, Tooltip, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import { Model } from "../../types";
 import { TabOption } from "./tabs/types";
@@ -8,6 +8,8 @@ import {
   calculateUpgradeCosts,
   calculateWeaponryCosts
 } from "../../utils/costs";
+
+import ArmourSave from "../../components/ArmourSave";
 
 interface Props {
   model: Model;
@@ -43,43 +45,7 @@ const SetUnitFooter: FunctionComponent<Props> = ({ model, tabValue }) => {
       minHeight="48px"
       justifyContent={!showArmourSave ? "flex-end" : "space-between"}
     >
-      {showArmourSave && (
-        <Tooltip title="Armour Save calculations in development!">
-          <Grid
-            container
-            maxWidth="300px"
-            direction="row"
-            alignItems="center"
-            justifyContent="flex-start"
-            gap="16px"
-          >
-            <Grid color="text.disabled" component={Typography}>
-              ARMOUR SAVE:
-            </Grid>
-            <Grid
-              container
-              width="auto"
-              justifyContent="flex-end"
-              alignItems="center"
-              direction="row"
-            >
-              <Grid width="40px" alignItems="center" justifyContent="center">
-                <Grid component={Tooltip} title="Ranged">
-                  <Typography color="text.disabled">R</Typography>
-                </Grid>
-                <Grid component={Typography}>10+</Grid>
-              </Grid>
-
-              <Grid width="40px" justifyContent="center" alignItems="center">
-                <Grid component={Tooltip} title="Close Combat">
-                  <Typography color="text.disabled">CC</Typography>
-                </Grid>
-                <Grid component={Typography}>10+</Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Tooltip>
-      )}
+      {showArmourSave && <ArmourSave model={model} />}
       <Grid container justifyContent="flex-end" maxWidth="300px">
         <Grid component={Typography} color="text.disabled">
           {tabValue.slice(0, -3).toUpperCase()} COST:&nbsp;
