@@ -1,4 +1,4 @@
-describe("template spec", () => {
+describe("initial test", () => {
   it("passes", () => {
     cy.visit("/");
     cy.get("div.startscreen").should("be.visible");
