@@ -7,7 +7,7 @@ import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
   title: "Layout/View/AddUnitsView",
-  component: AddUnitsView,
+  component: AddUnitsView
 } as ComponentMeta<typeof AddUnitsView>;
 
 const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
@@ -23,7 +23,7 @@ const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundSize: "cover"
       }}
     >
       <AddUnitsView
@@ -38,6 +38,5 @@ const Template: ComponentStory<typeof AddUnitsView> = function (args: any) {
 export const Default = Template.bind({});
 Default.args = {
   faction: "Brettonia",
-  onClickBack: action("Clicked Back"),
-  onClickPlay: action("Clicked Play"),
+  onClickPlay: action("Clicked Play")
 };
