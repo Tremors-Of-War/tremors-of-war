@@ -32,6 +32,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
     if (existingModel && existingModel.unit) {
       setSelectedUnit(existingModel.unit.name);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
