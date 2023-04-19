@@ -110,7 +110,7 @@ const AppView: FunctionComponent = () => {
                 setState({ ...state, currentRoute: ROUTES.SET_UNIT });
               }}
               onDelete={(modelId: string) => {
-                const { [modelId]: remove, ...deleteModel } = state.models;
+                const { [modelId]: _remove, ...deleteModel } = state.models;
 
                 setState({ ...state, models: deleteModel });
               }}
@@ -147,7 +147,7 @@ const AppView: FunctionComponent = () => {
           warbandTotal={state.warbandTotal}
           existingModel={state.models[editModel]}
           onDelete={(modelId: string) => {
-            const { [modelId]: remove, ...deleteModel } = state.models;
+            const { [modelId]: _remove, ...deleteModel } = state.models;
             setState({
               ...state,
               models: deleteModel,
