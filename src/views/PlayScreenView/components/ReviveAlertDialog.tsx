@@ -9,7 +9,7 @@ import {
   Typography
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Model } from "../../types";
+import { Model } from "../../../types";
 
 export interface Props {
   open: boolean;
