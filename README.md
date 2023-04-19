@@ -89,5 +89,5 @@ poetry install
 ```
 # On the main branch
 npm version patch
-git push -u origin --tags
+git push -u origin main --tags
 ```
