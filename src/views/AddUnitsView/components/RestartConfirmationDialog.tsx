@@ -7,7 +7,7 @@ import {
   DialogContentText,
   Grid,
   TextField,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 
@@ -20,7 +20,7 @@ export interface Props {
 const NoUnitNameError: FunctionComponent<Props> = ({
   onClickRestart,
   onClose,
-  open
+  open,
 }) => {
   const [typeRestart, setTypeRestart] = React.useState("");
 
@@ -48,7 +48,7 @@ const NoUnitNameError: FunctionComponent<Props> = ({
         sx={{
           width: "100%",
           color: "#40392d",
-          backgroundColor: "#FF8A3C"
+          backgroundColor: "#FF8A3C",
         }}
       >
         <Typography>Are you sure?</Typography>

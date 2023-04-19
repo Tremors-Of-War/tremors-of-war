@@ -33,7 +33,7 @@ const AddUnitsView: FunctionComponent<Props> = ({
   onDelete,
   onClickPlay,
   onEdit,
-  models
+  models,
 }) => {
   const [openWarbandDialog, setOpenWarbandDialog] = React.useState(true);
   const [openRestartAlert, setOpenRestartAlert] =
@@ -74,8 +74,8 @@ const AddUnitsView: FunctionComponent<Props> = ({
               overflowX: "hidden",
               overflowY: "scroll",
               "::-webkit-scrollbar": {
-                display: "none"
-              }
+                display: "none",
+              },
             }}
           >
             <List sx={{ width: "100%" }}>

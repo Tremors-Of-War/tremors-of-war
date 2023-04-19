@@ -5,7 +5,7 @@ import {
   MenuItem,
   Select,
   SelectChangeEvent,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
@@ -24,7 +24,7 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
   dropdownTitle,
   weaponry,
   currentWeaponry,
-  handleSelect
+  handleSelect,
 }) => {
   const [weaponSelect, setWeaponSelect] = React.useState(currentWeaponry);
   return (
@@ -79,7 +79,7 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
               minHeight: theme.spacing(9),
               background:
                 "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
-              borderRadius: "4px"
+              borderRadius: "4px",
             }}
           >
             {weaponSelect && (

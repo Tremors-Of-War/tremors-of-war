@@ -24,7 +24,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
   blankModel,
   unitOptions,
   isDoneLoading,
-  onModelChanges
+  onModelChanges,
 }) => {
   const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
 
@@ -32,7 +32,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
     if (existingModel && existingModel.unit) {
       setSelectedUnit(existingModel.unit.name);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -44,8 +44,8 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
         overflowX: "hidden",
         overflowY: "scroll",
         "::-webkit-scrollbar": {
-          display: "none"
-        }
+          display: "none",
+        },
       }}
     >
       {(() => {
@@ -70,7 +70,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                             ...blankModel,
                             unit,
                             name: model.name,
-                            id: model.id
+                            id: model.id,
                           });
                         }}
                         isSelected={selectedUnit === unit.name}
@@ -201,7 +201,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                       } else {
                         onModelChanges({
                           ...model,
-                          mounts: blankModel.mounts
+                          mounts: blankModel.mounts,
                         });
                       }
                     }}
@@ -222,7 +222,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                       if (selected) {
                         onModelChanges({
                           ...model,
-                          upgrades: [...model.upgrades, upgrade]
+                          upgrades: [...model.upgrades, upgrade],
                         });
                       } else {
                         const newUpgrades = model.upgrades.filter(

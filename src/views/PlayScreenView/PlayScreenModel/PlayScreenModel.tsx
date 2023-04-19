@@ -5,7 +5,7 @@ import {
   Grid,
   Typography,
   IconButton,
-  Box
+  Box,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -27,7 +27,7 @@ const inactiveBackground = "rgba(255, 255, 255, 0.09)";
 
 const PlayScreenModel: FunctionComponent<Props> = ({
   model,
-  onActiveChange
+  onActiveChange,
 }) => {
   const [openKillAlert, setOpenKillAlert] = React.useState<boolean>(false);
   const [openReviveAlert, setOpenReviveAlert] = React.useState<boolean>(false);
@@ -49,7 +49,7 @@ const PlayScreenModel: FunctionComponent<Props> = ({
           minHeight: theme.spacing(9),
           background: model.active ? defaultBackground : inactiveBackground,
           borderRadius: "4px",
-          ".MuiCollapse-root": { width: "100%" }
+          ".MuiCollapse-root": { width: "100%" },
         }}
       >
         <Grid

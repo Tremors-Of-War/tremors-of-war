@@ -8,7 +8,7 @@ import ContentContainer from "../../../components/ContentContainer";
 
 export default {
   title: "Layout/Component/AddUnitsZeroStateAction",
-  component: AddUnitsZeroStateAction
+  component: AddUnitsZeroStateAction,
 } as ComponentMeta<typeof AddUnitsZeroStateAction>;
 
 const Template: ComponentStory<typeof AddUnitsZeroStateAction> = function () {
@@ -22,7 +22,7 @@ const Template: ComponentStory<typeof AddUnitsZeroStateAction> = function () {
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       <ContentContainer>
