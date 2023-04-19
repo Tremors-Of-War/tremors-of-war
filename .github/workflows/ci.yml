@@ -8,29 +8,29 @@ on:
 
 
 jobs:
-  # qa:
-  #   runs-on: ubuntu-latest
-  #   if: github.event_name == 'pull_request'
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v2
-  #
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v2
-  #       with:
-  #         node-version: 16
-  #
-  #     - name: Install dependencies
-  #       run: npm ci
+  qa:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+  
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+  
+      - name: Install dependencies
+        run: npm ci
 
-      # - name: Type check
-      #   run: npx tsc --noEmit
-      #
-      # - name: ESLint check
-      #   run: npx eslint 'src/**/*.{ts,tsx}'
-      #
-      # - name: Prettier check
-      #   run: npx prettier --check 'src/**/*.{ts,tsx}'
+      - name: Type check
+        run: npx tsc --noEmit
+      
+      - name: ESLint check
+        run: npx eslint 'src/**/*.{ts,tsx}'
+      
+      - name: Prettier check
+        run: npx prettier --check 'src/**/*.{ts,tsx}'
 
   build-and-deploy:
     runs-on: ubuntu-latest

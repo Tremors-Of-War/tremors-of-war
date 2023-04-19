@@ -7,25 +7,25 @@ export interface Props {
 }
 
 const AddUnitsZeroStateAction: FunctionComponent<Props> = ({ onClickAdd }) => (
-    <Grid
-      container
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
-      gap="10px"
-      paddingBottom="112px"
-      sx={{ height: "100%", width: "100%" }}
+  <Grid
+    container
+    direction="column"
+    justifyContent="center"
+    alignItems="center"
+    gap="10px"
+    paddingBottom="112px"
+    sx={{ height: "100%", width: "100%" }}
+  >
+    <Typography>You do not have any units.</Typography>
+    <Button
+      size="large"
+      startIcon={<AddIcon />}
+      onClick={onClickAdd}
+      variant="contained"
     >
-      <Typography>You do not have any units.</Typography>
-      <Button
-        size="large"
-        startIcon={<AddIcon />}
-        onClick={onClickAdd}
-        variant="contained"
-      >
-        Add Unit
-      </Button>
-    </Grid>
-  );
+      Add Unit
+    </Button>
+  </Grid>
+);
 
 export default AddUnitsZeroStateAction;

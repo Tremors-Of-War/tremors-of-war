@@ -15,7 +15,7 @@ const header = [
   { title: "I", description: "Initiative" },
   { title: "A", description: "Attacks" },
   { title: "CL", description: "Cool" },
-  { title: "INT", description: "Intelligence" }
+  { title: "INT", description: "Intelligence" },
 ];
 const PlayScreenUnitStats: FunctionComponent<Props> = ({ unit }) => {
   const { m, ws, bs, s, t, w, i, a, cl, int } = unit;

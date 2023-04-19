@@ -7,7 +7,7 @@ import BackgroundIMG from "../../../assets/backgrounds/default.jpg";
 
 export default {
   title: "Layout/View/AddUnitsZeroStateView",
-  component: AddUnitsZeroStateView
+  component: AddUnitsZeroStateView,
 } as ComponentMeta<typeof AddUnitsZeroStateView>;
 
 const Template: ComponentStory<typeof AddUnitsZeroStateView> = function (
@@ -24,7 +24,7 @@ const Template: ComponentStory<typeof AddUnitsZeroStateView> = function (
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       <AddUnitsZeroStateView
@@ -39,5 +39,5 @@ const Template: ComponentStory<typeof AddUnitsZeroStateView> = function (
 export const Default = Template.bind({});
 Default.args = {
   faction: "Brettonia",
-  onClickBack: action("Clicked Back")
+  onClickBack: action("Clicked Back"),
 };

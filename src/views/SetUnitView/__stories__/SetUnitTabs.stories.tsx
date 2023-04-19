@@ -8,7 +8,7 @@ import ContentContainer from "../../../components/ContentContainer";
 
 export default {
   title: "Layout/Component/SetUnitTabs",
-  component: SetUnitTabs
+  component: SetUnitTabs,
 } as ComponentMeta<typeof SetUnitTabs>;
 
 const Template: ComponentStory<typeof SetUnitTabs> = function () {
@@ -22,7 +22,7 @@ const Template: ComponentStory<typeof SetUnitTabs> = function () {
         width: "100vw",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       <ContentContainer>

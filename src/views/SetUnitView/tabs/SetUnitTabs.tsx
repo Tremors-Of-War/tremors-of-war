@@ -17,7 +17,7 @@ const SetUnitTabs: FunctionComponent<Props> = ({
   showWeaponry,
   showArmour,
   showMount,
-  showUpgrades
+  showUpgrades,
 }) => {
   const onChange = (_: SyntheticEvent, newValue: TabOption) =>
     handleChange(newValue);

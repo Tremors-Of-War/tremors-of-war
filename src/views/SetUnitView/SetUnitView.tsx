@@ -38,7 +38,7 @@ const blankModel: Model = {
   helmet: undefined,
   upgrades: [],
   mounts: undefined,
-  active: true
+  active: true,
 };
 
 const SetUnitView: FunctionComponent<Props> = ({
@@ -48,7 +48,7 @@ const SetUnitView: FunctionComponent<Props> = ({
   models,
   existingModel,
   onClickSave,
-  onDelete
+  onDelete,
 }) => {
   const [tabValue, setTabValue] = React.useState<TabOption>("unitTab");
 
@@ -156,7 +156,7 @@ const SetUnitView: FunctionComponent<Props> = ({
                       color:
                         pointsRemaining() < 0
                           ? theme.palette.error.main
-                          : "text.disabled"
+                          : "text.disabled",
                     })}
                     variant="subtitle2"
                   >

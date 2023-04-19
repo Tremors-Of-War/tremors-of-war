@@ -13,7 +13,7 @@ const header = [
   { title: "AL", description: "Accuracy Long" },
   { title: "S", description: "S" },
   { title: "AP", description: "AP" },
-  { title: "D", description: "D" }
+  { title: "D", description: "D" },
 ];
 
 const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {

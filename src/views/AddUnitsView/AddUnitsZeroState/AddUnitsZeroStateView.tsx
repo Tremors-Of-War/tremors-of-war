@@ -22,7 +22,7 @@ const AddUnitsZeroStateView: FunctionComponent<Props> = ({
   setWarbandTotal,
   onClickBack,
   onClickAdd,
-  models
+  models,
 }) => {
   const [open, setOpen] = React.useState(warbandTotal === 0);
 

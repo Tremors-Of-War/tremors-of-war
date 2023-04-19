@@ -16,7 +16,7 @@ const AddUnitsViewHeader: FunctionComponent<Props> = ({
   onClickAdd,
   faction,
   warbandTotal,
-  models
+  models,
 }) => {
   const modelCosts = calculateModelsCosts(models);
   const pointsRemaining = warbandTotal - modelCosts;
@@ -73,7 +73,7 @@ const AddUnitsViewHeader: FunctionComponent<Props> = ({
                   color:
                     pointsRemaining < 0
                       ? theme.palette.error.main
-                      : "text.disabled"
+                      : "text.disabled",
                 })}
                 variant="subtitle2"
               >

@@ -9,12 +9,17 @@ interface Props {
 }
 
 const AddUnitsViewFooter: FunctionComponent<Props> = ({
-    onClickBack,
+  onClickBack,
   onClickRestart,
   onClickEditWarbandTotal,
   onClickPlay,
 }) => (
-  <Grid container alignItems="center" justifyContent="space-between" wrap='nowrap'>
+  <Grid
+    container
+    alignItems="center"
+    justifyContent="space-between"
+    wrap="nowrap"
+  >
     {onClickBack && (
       <Button variant="outlined" onClick={onClickBack}>
         BACK
