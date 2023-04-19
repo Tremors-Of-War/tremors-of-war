@@ -56,12 +56,9 @@ const SetUnitView: FunctionComponent<Props> = ({
   const [openNameAlert, setOpenNameAlert] = React.useState<boolean>(false);
   const modelCost = calculateModelCost(model);
   const modelCosts = calculateModelsCosts(models);
-  const pointsRemaining = () => {
-    if (existingModel) {
-      return warbandTotal - modelCosts + existingModel.cost - modelCost;
-    }
-    return warbandTotal - modelCosts - modelCost;
-  };
+  const pointsRemaining = existingModel
+    ? warbandTotal - modelCosts + existingModel.cost - modelCost
+    : warbandTotal - modelCosts - modelCost;
 
   const handleNameChange = (event: any) => {
     const parsedInputValue = event.target.value;
@@ -90,7 +87,7 @@ const SetUnitView: FunctionComponent<Props> = ({
     }
   };
 
-  const exceededWarbandTotal = pointsRemaining() < 0;
+  const exceededWarbandTotal = pointsRemaining < 0;
 
   const unitOptions: Unit[] = Object.values(data.factions[faction]);
 
@@ -154,13 +151,13 @@ const SetUnitView: FunctionComponent<Props> = ({
                   <Typography
                     sx={(theme) => ({
                       color:
-                        pointsRemaining() < 0
+                        pointsRemaining < 0
                           ? theme.palette.error.main
                           : "text.disabled",
                     })}
                     variant="subtitle2"
                   >
-                    {pointsRemaining().toLocaleString("en-US")} Points Remaining
+                    {pointsRemaining.toLocaleString("en-US")} Points Remaining
                   </Typography>
                 </Tooltip>
               </Grid>
