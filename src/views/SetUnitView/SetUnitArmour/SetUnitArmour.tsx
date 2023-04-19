@@ -6,7 +6,7 @@ import {
   Select,
   SelectChangeEvent,
   Typography,
-  Tooltip
+  Tooltip,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
@@ -24,7 +24,7 @@ const SetUnitArmour: FunctionComponent<Props> = ({
   dropdownTitle,
   armoury,
   currentArmoury,
-  handleSelect
+  handleSelect,
 }) => {
   const [armourSelect, setArmourSelect] = React.useState(currentArmoury);
 
@@ -79,7 +79,7 @@ const SetUnitArmour: FunctionComponent<Props> = ({
               minHeight: theme.spacing(9),
               background:
                 "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
-              borderRadius: "4px"
+              borderRadius: "4px",
             }}
           >
             {armourSelect && (

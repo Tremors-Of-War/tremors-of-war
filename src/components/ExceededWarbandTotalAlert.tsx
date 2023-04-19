@@ -10,7 +10,7 @@ const ExceededWarbandTotalAlert: FunctionComponent<Props> = ({ open }) => (
     open={open}
     anchorOrigin={{
       vertical: "top",
-      horizontal: "right"
+      horizontal: "right",
     }}
   >
     <Alert severity="error" variant="filled" sx={{ width: "100%" }}>

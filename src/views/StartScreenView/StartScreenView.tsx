@@ -22,7 +22,7 @@ const StartScreenView: FunctionComponent<Props> = ({ onClickNewList }) => (
           background: `url(${StartLogo})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "684px 164px"
+          backgroundSize: "684px 164px",
         }}
       />
       <Grid
@@ -34,7 +34,12 @@ const StartScreenView: FunctionComponent<Props> = ({ onClickNewList }) => (
         bottom="40px"
         right="40px"
       >
-        <Button variant="outlined" onClick={()=> alert("Import/Export functionality in development!")}>IMPORT LIST</Button>
+        <Button
+          variant="outlined"
+          onClick={() => alert("Import/Export functionality in development!")}
+        >
+          IMPORT LIST
+        </Button>
         <Button variant="contained" onClick={onClickNewList}>
           NEW LIST
         </Button>

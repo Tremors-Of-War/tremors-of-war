@@ -23,7 +23,7 @@ const PlayScreenArmourStats: FunctionComponent<Props> = ({ armour }) => {
         minHeight: "56px",
         background:
           "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
-        borderRadius: "4px"
+        borderRadius: "4px",
       }}
     >
       <Grid

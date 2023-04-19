@@ -6,7 +6,7 @@ const DevelopmentAlert: FunctionComponent = () => (
     open
     anchorOrigin={{
       vertical: "top",
-      horizontal: "left"
+      horizontal: "left",
     }}
   >
     <Alert
@@ -14,7 +14,7 @@ const DevelopmentAlert: FunctionComponent = () => (
       variant="filled"
       sx={{
         color: "#40392d",
-        backgroundColor: "#FF8A3C"
+        backgroundColor: "#FF8A3C",
       }}
     >
       Tremors of War is currently in development.

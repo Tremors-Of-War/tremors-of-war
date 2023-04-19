@@ -6,7 +6,7 @@ import {
   calculateArmourCosts,
   calculateMountCosts,
   calculateUpgradeCosts,
-  calculateWeaponryCosts
+  calculateWeaponryCosts,
 } from "../../../utils/costs";
 
 import ArmourSave from "../../../components/ArmourSave";

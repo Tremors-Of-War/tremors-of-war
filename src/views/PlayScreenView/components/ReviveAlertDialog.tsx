@@ -6,7 +6,7 @@ import {
   DialogContent,
   DialogContentText,
   Grid,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import { Model } from "../../../types";
@@ -22,7 +22,7 @@ const ReviveAlertDialog: FunctionComponent<Props> = ({
   onClose,
   open,
   onActiveChange,
-  model
+  model,
 }) => (
   <Dialog onClose={onClose} open={open}>
     <Grid

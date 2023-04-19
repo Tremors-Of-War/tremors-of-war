@@ -7,7 +7,7 @@ import {
   DialogContentText,
   Grid,
   TextField,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 
@@ -20,7 +20,7 @@ export interface Props {
 const NoUnitNameError: FunctionComponent<Props> = ({
   onClose,
   open,
-  onSave
+  onSave,
 }) => {
   const [name, setName] = React.useState("");
 

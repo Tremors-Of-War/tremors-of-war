@@ -14,7 +14,7 @@ interface Props {
 const SetUnitMounts: FunctionComponent<Props> = ({
   handleSelect,
   mounts,
-  currentMounts
+  currentMounts,
 }) => {
   const handleClick = (event: any) => {
     const value = event.target.value as Mounts;
@@ -36,7 +36,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
         minHeight: theme.spacing(9),
         borderRadius: "4px",
         background:
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212"
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
       }}
     >
       <Grid container direction="row">
