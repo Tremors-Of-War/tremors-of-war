@@ -22,7 +22,7 @@ const initialState: State = {
   faction: null,
   currentRoute: ROUTES.START_SCREEN,
   warbandTotal: 1000,
-  models: {}
+  models: {},
 };
 
 const AppView: FunctionComponent = () => {
@@ -62,7 +62,7 @@ const AppView: FunctionComponent = () => {
             setState({
               ...state,
               ruleSet,
-              currentRoute: ROUTES.CHOOSE_FACTION
+              currentRoute: ROUTES.CHOOSE_FACTION,
             });
           }}
         />
@@ -78,7 +78,7 @@ const AppView: FunctionComponent = () => {
             setState({
               ...state,
               faction,
-              currentRoute: ROUTES.ADD_UNITS
+              currentRoute: ROUTES.ADD_UNITS,
             });
           }}
         />
@@ -98,7 +98,7 @@ const AppView: FunctionComponent = () => {
               onClickRestart={() => {
                 setState({
                   ...initialState,
-                  currentRoute: ROUTES.START_SCREEN
+                  currentRoute: ROUTES.START_SCREEN,
                 });
               }}
               onClickPlay={() =>
@@ -110,7 +110,7 @@ const AppView: FunctionComponent = () => {
                 setState({ ...state, currentRoute: ROUTES.SET_UNIT });
               }}
               onDelete={(modelId: string) => {
-                const { [modelId]: remove, ...deleteModel } = state.models;
+                const { [modelId]: _remove, ...deleteModel } = state.models;
 
                 setState({ ...state, models: deleteModel });
               }}
@@ -143,14 +143,15 @@ const AppView: FunctionComponent = () => {
       return (
         <SetUnitView
           faction={state.faction!}
+          models={Object.values(state.models)}
           warbandTotal={state.warbandTotal}
           existingModel={state.models[editModel]}
           onDelete={(modelId: string) => {
-            const { [modelId]: remove, ...deleteModel } = state.models;
+            const { [modelId]: _remove, ...deleteModel } = state.models;
             setState({
               ...state,
               models: deleteModel,
-              currentRoute: ROUTES.ADD_UNITS
+              currentRoute: ROUTES.ADD_UNITS,
             });
           }}
           onClickBack={() => {
@@ -160,7 +161,7 @@ const AppView: FunctionComponent = () => {
             setState({
               ...state,
               currentRoute: ROUTES.ADD_UNITS,
-              models: { ...state.models, [model.id]: model }
+              models: { ...state.models, [model.id]: model },
             });
           }}
         />
@@ -182,8 +183,8 @@ const AppView: FunctionComponent = () => {
               ...state,
               models: {
                 ...state.models,
-                [model.id]: { ...model, active: !model.active }
-              }
+                [model.id]: { ...model, active: !model.active },
+              },
             })
           }
         />

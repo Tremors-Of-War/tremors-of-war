@@ -23,7 +23,7 @@ const StartScreenView: FunctionComponent<Props> = ({ onClickNewList }) => (
           background: `url(${StartLogo})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "684px 164px"
+          backgroundSize: "684px 164px",
         }}
       />
       <Grid

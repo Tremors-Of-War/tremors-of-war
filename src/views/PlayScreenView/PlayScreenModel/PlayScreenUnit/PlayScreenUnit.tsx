@@ -25,7 +25,7 @@ const PlayScreenUnit: FunctionComponent<Props> = ({ model }) => (
         minHeight: theme.spacing(7),
         background:
           "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
-        borderRadius: "4px"
+        borderRadius: "4px",
       }}
     >
       <Grid container direction="column" maxWidth="150px">
@@ -41,7 +41,7 @@ const PlayScreenUnit: FunctionComponent<Props> = ({ model }) => (
             container
             direction="column"
             justifyContent="flexs-start"
-            width="143px"
+            width="156px"
             margin="8px 0px"
           >
             {model.unit.abilities.map((ability) => (

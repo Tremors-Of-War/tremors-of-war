@@ -13,7 +13,7 @@ interface Props {
 const SetUnitUpgrades: FunctionComponent<Props> = ({
   handleClick,
   upgrade,
-  currentUpgrades
+  currentUpgrades,
 }) => {
   const checkboxSelected = currentUpgrades.includes(upgrade);
   const handleCheckboxClick = () => handleClick(!checkboxSelected);
@@ -33,7 +33,7 @@ const SetUnitUpgrades: FunctionComponent<Props> = ({
         minHeight: theme.spacing(9),
         borderRadius: "4px",
         background:
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212"
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
       }}
     >
       <Grid

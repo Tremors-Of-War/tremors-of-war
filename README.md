@@ -35,34 +35,59 @@ If you're a battle game enthusiast, you know that creating the perfect army is k
 
 <img src="docs\start_screen_image.PNG" />
 
-
 🌎 [Tremors of War](https://tremorsofwar.com/) &nbsp; | &nbsp;
 🎨 [Figma](https://www.figma.com/file/HkyeNNaQfRiU74VjAM8IOB/Warhammer-List-Builder?node-id=10401%3A129274&t=cV9yLwXfCMko7IyZ-1)
 
-# Setting Up
+# Development
 
-## Pre-requisites for Front-end development
+## Node
+
+Pre-requisites:
 
 - node v16
 - npm
 
-## Pre-requisites for Back-end development
+Setup:
+
+```bash
+# Install deps
+npm install
+
+# Run locally
+npm run dev
+```
+
+## Python
+
+We use python to parse the `Database.xlsx` file and generate the `./src/data.json` file.
+
+Pre-requisites:
 
 - Python v3.11
 - Poetry
 - pyenv
 
-## Installation
+Setup:
 
+```bash
+cd ./data_parser/
 
-1. Install node requirements
+# Create Virtualenv
+pyenv virtualenv 3.11 tremors-of-war
+pyenv local tremors-of-war
+
+# Install deps
+pip install --upgrade pip
+poetry install
+
+# Build data.json from Database.xlsx
+./main.py
+```
+
+## Publishing a release
 
 ```
-npm install
-```
-
-2. Run
-
-```
-npm run dev
+# On the main branch
+npm version patch
+git push -u origin main --tags
 ```

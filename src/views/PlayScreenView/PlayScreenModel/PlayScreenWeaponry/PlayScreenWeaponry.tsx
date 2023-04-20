@@ -12,7 +12,7 @@ interface Props {
 const PlayScreenWeaponry: FunctionComponent<Props> = ({
   twoHandedWeapon,
   rangedWeapon,
-  handWeapon
+  handWeapon,
 }) => (
   <Grid container direction="column">
     <Typography color="primary">WEAPONRY</Typography>

@@ -3,7 +3,7 @@ import React, { FunctionComponent } from "react";
 import { Model } from "../types";
 import {
   calculateArmourEffectOnCC,
-  calculateArmourEffectOnR
+  calculateArmourEffectOnR,
 } from "../utils/armourSaveCalculations";
 
 export interface Props {

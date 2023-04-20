@@ -25,7 +25,7 @@ const PlayScreenWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
         minHeight: "56px",
         background:
           "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
-        borderRadius: "4px"
+        borderRadius: "4px",
       }}
     >
       <Grid container justifyContent="flex-start" width="152px">
