@@ -18,6 +18,6 @@ jobs:
       - name: Run Cypress tests 🧪
         uses: cypress-io/github-action@v2
         with:
-          start: npm run dev
+          start: npm start
           wait-on: "http://localhost:5173/"
           group: All specs
