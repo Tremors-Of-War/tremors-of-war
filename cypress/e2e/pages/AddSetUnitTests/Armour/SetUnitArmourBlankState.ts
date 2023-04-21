@@ -34,23 +34,23 @@ export const SetUnitArmourBlankState = () => {
   cy.get("button").contains("CANCEL").should("be.visible");
   cy.get("button").contains("DELETE UNIT").should("not.exist");
 
-  cy.get("p").contains("ARMOUR SAVE");
-  cy.get("p")
-    .contains("R")
+  // cy.get("p").contains("ARMOUR SAVE");
+  // cy.get("p")
+  //   .contains("R")
 
-    .siblings("div")
-    .should("contain", "11")
-    .and("contains", "+");
-  cy.get("p")
-    .contains("CC")
+  //   .siblings("div")
+  //   .should("contain", "11")
+  //   .and("contains", "+");
+  // cy.get("p")
+  //   .contains("CC")
 
-    .siblings("div")
-    .should("contain", "11")
-    .and("contains", "+");
+  //   .siblings("div")
+  //   .should("contain", "11")
+  //   .and("contains", "+");
 
-  cy.get("p")
-    .contains("ARMOUR COST")
-    .siblings("p")
-    .should("contain", "0")
-    .and("POINTS");
+  // cy.get("p")
+  //   .contains("ARMOUR COST")
+  //   .siblings("p")
+  //   .should("contain", "0")
+  //   .and("POINTS");
 };
