@@ -37,6 +37,7 @@
     "@vitejs/plugin-react": "^3.0.0",
     "babel-loader": "^8.3.0",
     "color2k": "^2.0.1",
+    "cypress": "^12.10.0",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.25.3",

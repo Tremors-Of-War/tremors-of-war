@@ -15,6 +15,7 @@ const StartScreenView: FunctionComponent<Props> = ({ onClickNewList }) => (
       <Grid
         container
         justifyContent="center"
+        className="startscreen"
         alignItems="center"
         sx={{
           height: "100%",
