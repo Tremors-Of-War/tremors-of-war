@@ -9,15 +9,15 @@ on:
       - main
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@v2
-
-      - name: Run Cypress tests 🧪
-        uses: cypress-io/github-action@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
         with:
+          build: npm run build
           start: npm start
-          wait-on: "http://localhost:5173/"
-          group: All specs
