@@ -1,0 +1,98 @@
+{
+  "actions": {
+    "Charge Action": {
+      "name": "Charge Action",
+      "rule": [
+        "A Charge Action is a Basic action that is performed by moving within the engagement range of one of the active Fighters weapons to an enemy Fighter. "
+      ]
+    }
+  },
+  "combat": {
+    "Consolidation After Combat": {
+      "name": "Consolidation After Combat",
+      "rule": [
+        "Fighters cannot use a consolidation move to engage a new enemy Fighter"
+      ]
+    },
+    "Engagement with Versatile Weapons": {
+      "name": "Engagement with Versatile Weapons",
+      "rule": [
+        "If a Fighter is engaged with an enemy Fighter with a versatile weapon but is not within range to make attacks against that enemy Fighter then the active Fighter may move into range to make attacks against that enemy Fighter. This action is not considered a Charge "
+      ]
+    },
+    "Fighting a Mounted Model": {
+      "name": "Fighting a Mounted Model",
+      "rule": [
+        "After rolling to hit a mounted model, the hots are randomized between Rider and Mount. For each hit roll a D10. A result of 1-5 strikes the mount while a roll of 6-10 strikes the rider.",
+        "If a mount is slain in close combat the rider must take an initiative test. If failed the rider receives a -1 modifier to hit in the subsequent round of close combat and any enemies striking the rider receive a +1 mofiifer to hit the rider. If the initiative test is passed the rider continues the combat on foot with no penalties"
+      ]
+    },
+    "Spear Support": {
+      "name": "Spear Support",
+      "rule": [
+        "If a Fighter armed with a spear is in base to base contact with a friendly Fighter who is in base to base contact with an enemy Fighter then the Fighter armed with the spear may make a single supporting attack as part of that Close combat. This attack occurs after the base to base Fighters have made their attacks and does not cost an action from the Fighter armed with the spear. No accuracy modifiers for Range are considered when making this attack. This fighter does not cause interference"
+      ]
+    }
+  },
+  "mounts": {
+    "Armour Saves": {
+      "name": "Armour Saves",
+      "rule": [
+        "Armour Saves made by mounts are made at the overall Armour Save of the model. Mounts do not benefit from Deflection Saves"
+      ]
+    },
+    "Charges": {
+      "name": "Charges",
+      "rule": ["Mounts do not gain any charge bonuses"]
+    },
+    "Dismounting": {
+      "name": "Dismounting",
+      "rule": ["A Mounted Fighter may make a basic action to dismount"]
+    },
+    "Riderless Mounts": {
+      "name": "Riderless Mounts",
+      "rule": [
+        "A riderless mount is activated in the same manner as other fighters but can only use the \"Wander\" Action",
+        "Riderless mounts make armour saves based solely on the armour they themselves are equipped with (Barding, Scaley skin, etc)",
+        "Wander (Double) - This fighter moves D4 in a direction determied by the scatter dice during its activation"
+      ]
+    },
+    "Terrain": {
+      "name": "Terrain",
+      "rule": [
+        "Mounted Fighters cannot climb ladders, Mounted Fighters may not jump any obstacle taller than 1\""
+      ]
+    }
+  },
+  "saves": {
+    "Deflection Saves": {
+      "name": "Deflection Saves",
+      "rule": [
+        "Deflection saves are made against both Close Combat and Ranged attacks"
+      ]
+    }
+  },
+  "shooting": {
+    "Shooting at a mounted model": {
+      "name": "Shooting at a mounted model",
+      "rule": [
+        "After rolling to hit a mounted model, the hots are randomized between Rider and Mount. For each hit roll a D10. A result of 1-5 strikes the mount while a roll of 6-10 strikes the rider.",
+        "If a mount is slain by a shooting attack the rider must take an initiative test. If this test is failed, the rider takes a strength 3 hit and becomes pinned. If the test is passed the rider is placed on the field on foot with no consequences"
+      ]
+    }
+  },
+  "terrain": {
+    "Defended Ladders": {
+      "name": "Defended Ladders",
+      "rule": [
+        "A Fighter at the bottom of a ladder who is attacking an enemy Fighter who is in bases to base contact with the top of the ladder suffers the following penalties: The Fighter resolves attacks at -1 to hit, the Fighter can only makes attacks utilizing a single wepaon without the Unwieldly characteristic, the Fighter does not gain any bonuses for charging"
+      ]
+    },
+    "Defended Obstacles": {
+      "name": "Defended Obstacles",
+      "rule": [
+        "A Fighter who makes close combat attacks against an enemy Fighter across and obstacle, and the defending Fighter is in base to base contact with the obstacle, the attacking Fighter resolves its attacks at -1 to hit"
+      ]
+    }
+  }
+}
