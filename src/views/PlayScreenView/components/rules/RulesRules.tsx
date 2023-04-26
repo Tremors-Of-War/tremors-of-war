@@ -4,7 +4,7 @@ import {
   AccordionDetails,
   Typography,
   AccordionSummary,
-  Accordion
+  Accordion,
 } from "@mui/material";
 
 interface Props {
@@ -17,7 +17,7 @@ const RulesRules: FunctionComponent<Props> = ({ name, rules }) => (
     <Accordion
       sx={{
         background:
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212"
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
       }}
     >
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>

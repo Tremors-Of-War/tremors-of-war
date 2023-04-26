@@ -4,7 +4,7 @@ import {
   Typography,
   AccordionSummary,
   Accordion,
-  AccordionDetails
+  AccordionDetails,
 } from "@mui/material";
 import rulesData from "./rules.json";
 import RulesRules from "./RulesRules";
@@ -17,7 +17,7 @@ const RulesCategories: FunctionComponent = () => (
           key={categoryName}
           sx={{
             background:
-              "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212"
+              "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
           }}
         >
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>

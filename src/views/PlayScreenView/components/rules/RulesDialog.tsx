@@ -4,7 +4,7 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import RulesCategories from "./RulesCategories";
@@ -21,7 +21,7 @@ const RulesDialog: FunctionComponent<Props> = ({ onClose, open }) => {
     <Dialog onClose={onClose} open={open}>
       <DialogTitle
         sx={{
-          background
+          background,
         }}
       >
         <Typography variant="h3">Rules</Typography>
@@ -32,15 +32,15 @@ const RulesDialog: FunctionComponent<Props> = ({ onClose, open }) => {
           overflowX: "hidden",
           overflowY: "scroll",
           "::-webkit-scrollbar": {
-            display: "none"
-          }
+            display: "none",
+          },
         }}
       >
         <RulesCategories />
       </DialogContent>
       <DialogActions
         sx={{
-          background
+          background,
         }}
       >
         <Button sx={{ margin: 2 }} variant="contained" onClick={onClose}>
