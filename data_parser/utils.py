@@ -66,6 +66,9 @@ def convert_pascal_camel_case_to_title_case(s: str):
 
 def convert_name_to_title_case(obj):
     if "name" not in obj:
+        if "Name" in obj:
+            obj["Name"] = convert_pascal_camel_case_to_title_case(obj["Name"])
+            return obj
         return obj
 
     obj["name"] = convert_pascal_camel_case_to_title_case(obj["name"])

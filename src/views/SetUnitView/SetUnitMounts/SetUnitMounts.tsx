@@ -1,20 +1,28 @@
-import { Radio, Grid, Typography } from "@mui/material";
+import { Radio, Grid, Typography, Collapse } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import theme from "../../../app/theme";
+import { TransitionGroup } from "react-transition-group";
 import data from "../../../data.json";
-import { Mounts } from "../../../types";
+import { Mounts, Armour, Model, Abilities } from "../../../types";
 import SetUnitMountsStats from "./SetUnitMountsStats";
+import SetUnitMountArmour from "./SetUnitMountsArmour";
+import SetUnitMountUpgrades from "./SetUnitMountsUpgrades";
 
 interface Props {
   handleSelect: (selected: Mounts) => void;
   mounts: Mounts;
+  model: Model;
   currentMounts?: Mounts;
+  handleMountUpgradeSelect: (selected: Abilities) => void;
+  handleMountArmourSelect: (selected: Armour) => void;
 }
 
 const SetUnitMounts: FunctionComponent<Props> = ({
   handleSelect,
   mounts,
-  currentMounts,
+  handleMountArmourSelect,
+  handleMountUpgradeSelect,
+  model,
+  currentMounts
 }) => {
   const handleClick = (event: any) => {
     const value = event.target.value as Mounts;
@@ -23,50 +31,88 @@ const SetUnitMounts: FunctionComponent<Props> = ({
 
   return (
     <Grid
-      container
+      padding="8px 16px"
       marginBottom="16px"
       alignItems="center"
       justifyContent="space-between"
-      flexWrap="nowrap"
-      padding="8px 16px"
-      direction="row"
+      component={TransitionGroup}
       sx={{
-        width: "100%",
-        gap: "auto",
-        minHeight: theme.spacing(9),
-        borderRadius: "4px",
         background:
           "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
+        borderRadius: "4px"
       }}
     >
-      <Grid container direction="row">
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-        >
+      <Grid
+        container
+        flexWrap="nowrap"
+        direction="row"
+        alignItems="center"
+        sx={{
+          width: "100%",
+          gap: "auto"
+        }}
+      >
+        <Grid container direction="row">
           <Grid
             container
-            direction="column"
-            justifyContent="flex-start"
-            wrap="wrap"
-            width="176px"
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            <Typography>{mounts}</Typography>
-            <Typography variant="body1" sx={{ color: "text.disabled" }}>
-              {data.mounts[mounts].Cost} Points
-            </Typography>
+            <Grid
+              container
+              direction="column"
+              justifyContent="flex-start"
+              wrap="wrap"
+              width="176px"
+            >
+              {data.mounts[mounts].Type.map((type, key) => (
+                <>
+                  <Typography
+                    variant="body2"
+                    key={key}
+                    sx={{ color: "text.disabled" }}
+                  >
+                    {type}
+                  </Typography>
+                </>
+              ))}
+              <Typography>{mounts.replace(/_/g, " ")}</Typography>
+              <Typography variant="body1" sx={{ color: "text.disabled" }}>
+                {data.mounts[mounts].Cost} Points
+              </Typography>
+            </Grid>
+            <SetUnitMountsStats mounts={mounts} />
           </Grid>
-          <SetUnitMountsStats mounts={mounts} />
         </Grid>
+
+        <Radio
+          checked={currentMounts === mounts}
+          value={mounts}
+          onClick={handleClick}
+          sx={{ height: 1 }}
+        />
       </Grid>
 
-      <Radio
-        checked={currentMounts === mounts}
-        value={mounts}
-        onClick={handleClick}
-      />
+      {currentMounts === mounts && (
+        <Grid component={Collapse}>
+          {data.mounts[mounts].Armour && (
+            <SetUnitMountArmour
+              armoury={data.mounts[mounts].Armour}
+              currentMountArmour={model.mountArmour}
+              handleSelect={handleMountArmourSelect}
+            />
+          )}
+          {data.mounts[mounts].Upgrades &&
+            data.mounts[mounts].Upgrades.length > 0 && (
+              <SetUnitMountUpgrades
+                upgrades={data.mounts[mounts].Upgrades}
+                currentMountUpgrade={model.mountUpgrade}
+                handleSelect={handleMountUpgradeSelect}
+              />
+            )}
+        </Grid>
+      )}
     </Grid>
   );
 };

@@ -1,38 +1,52 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Mounts } from "../../../../types";
+import { Model } from "../../../../types";
 import PlayScreenMountStats from "./PlayScreenMountStats";
+import PlayScreenMountArmour from "./PlayScreenMountArmour";
+import PlayScreenMountUpgrade from "./PlayScreenMountUpgrade";
+import data from "../../../../data.json";
 
 interface Props {
-  mounts: Mounts;
+  model: Model;
 }
 
-const PlayScreenMount: FunctionComponent<Props> = ({ mounts }) => (
-  <Grid container direction="column">
-    <Typography color="primary">MOUNT</Typography>
-    <Grid
-      container
-      marginBottom="8px"
-      padding="0px 16px"
-      alignItems="center"
-      justifyContent="space-between"
-      flexWrap="nowrap"
-      direction="row"
-      sx={{
-        gap: "auto",
-        minHeight: theme.spacing(7),
-        background:
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
-        borderRadius: "4px",
-      }}
-    >
-      <Grid container direction="column" maxWidth="196px">
-        <Typography variant="body1">{mounts}</Typography>
-      </Grid>
+const PlayScreenMount: FunctionComponent<Props> = ({ model }) => (
+  <>
+    {model.mounts && (
+      <Grid container direction="column">
+        <Typography color="primary">MOUNT</Typography>
+        <Grid
+          container
+          marginBottom="8px"
+          padding="0px 16px"
+          alignItems="center"
+          justifyContent="space-between"
+          flexWrap="nowrap"
+          direction="row"
+          sx={{
+            gap: "auto",
+            minHeight: theme.spacing(7),
+            background:
+              "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
+            borderRadius: "4px"
+          }}
+        >
+          <Grid container direction="column" maxWidth="196px">
+            <Typography sx={{ color: "text.disabled" }} variant="caption">
+              {data.mounts[model.mounts].Type}
+            </Typography>
+            <Typography variant="body1">
+              {model.mounts.replace(/_/g, " ")}
+            </Typography>
+          </Grid>
 
-      <PlayScreenMountStats mounts={mounts} />
-    </Grid>
-  </Grid>
+          <PlayScreenMountStats mounts={model.mounts} />
+        </Grid>
+        {model.mountArmour && <PlayScreenMountArmour model={model} />}
+        {model.mountUpgrade && <PlayScreenMountUpgrade model={model} />}
+      </Grid>
+    )}
+  </>
 );
 export default PlayScreenMount;

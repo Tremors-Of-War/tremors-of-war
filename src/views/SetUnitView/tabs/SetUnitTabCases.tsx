@@ -24,7 +24,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
   blankModel,
   unitOptions,
   isDoneLoading,
-  onModelChanges,
+  onModelChanges
 }) => {
   const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
 
@@ -44,8 +44,8 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
         overflowX: "hidden",
         overflowY: "scroll",
         "::-webkit-scrollbar": {
-          display: "none",
-        },
+          display: "none"
+        }
       }}
     >
       {(() => {
@@ -70,7 +70,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                             ...blankModel,
                             unit,
                             name: model.name,
-                            id: model.id,
+                            id: model.id
                           });
                         }}
                         isSelected={selectedUnit === unit.name}
@@ -193,17 +193,29 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                 {model.unit?.mounts.map((mounts) => (
                   <SetUnitMounts
                     key={mounts}
+                    model={model}
                     mounts={mounts}
                     currentMounts={model.mounts}
                     handleSelect={(selectedMount) => {
                       if (selectedMount !== model.mounts) {
-                        onModelChanges({ ...model, mounts });
+                        onModelChanges({
+                          ...model,
+                          mounts,
+                          mountArmour: undefined,
+                          mountUpgrade: undefined
+                        });
                       } else {
                         onModelChanges({
                           ...model,
-                          mounts: blankModel.mounts,
+                          mounts: blankModel.mounts
                         });
                       }
+                    }}
+                    handleMountArmourSelect={(mountArmour) => {
+                      onModelChanges({ ...model, mountArmour });
+                    }}
+                    handleMountUpgradeSelect={(mountUpgrade) => {
+                      onModelChanges({ ...model, mountUpgrade });
                     }}
                   />
                 ))}
@@ -222,7 +234,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                       if (selected) {
                         onModelChanges({
                           ...model,
-                          upgrades: [...model.upgrades, upgrade],
+                          upgrades: [...model.upgrades, upgrade]
                         });
                       } else {
                         const newUpgrades = model.upgrades.filter(

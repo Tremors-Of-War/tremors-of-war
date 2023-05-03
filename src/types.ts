@@ -47,6 +47,8 @@ export interface Model {
   helmet?: Armour;
   upgrades: Abilities[];
   mounts?: Mounts;
+  mountArmour?: Armour;
+  mountUpgrade?: Abilities;
   handWeapon?: Weapons;
   twoHandedWeapon?: Weapons;
   rangedWeapon?: Weapons;
