@@ -25,6 +25,8 @@ dist-ssr
 .~lock*
 
 # windows pyenv files
-data_parser/_pycache_/*
+data_parser/__pycache__/*
 data_parser/env/*
-data_parser/parsers/_pycache_/*
+data_parser/parsers/__pycache__/*
+
+data_parser/.python-version
