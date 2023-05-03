@@ -22,7 +22,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
   handleMountArmourSelect,
   handleMountUpgradeSelect,
   model,
-  currentMounts
+  currentMounts,
 }) => {
   const handleClick = (event: any) => {
     const value = event.target.value as Mounts;
@@ -39,7 +39,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
       sx={{
         background:
           "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212",
-        borderRadius: "4px"
+        borderRadius: "4px",
       }}
     >
       <Grid
@@ -49,7 +49,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
         alignItems="center"
         sx={{
           width: "100%",
-          gap: "auto"
+          gap: "auto",
         }}
       >
         <Grid container direction="row">
@@ -66,7 +66,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
               wrap="wrap"
               width="176px"
             >
-              {data.mounts[mounts].Type.map((type, key) => (
+              {data.mounts[mounts].type.map((type, key) => (
                 <>
                   <Typography
                     variant="body2"
@@ -79,7 +79,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
               ))}
               <Typography>{mounts.replace(/_/g, " ")}</Typography>
               <Typography variant="body1" sx={{ color: "text.disabled" }}>
-                {data.mounts[mounts].Cost} Points
+                {data.mounts[mounts].cost} Points
               </Typography>
             </Grid>
             <SetUnitMountsStats mounts={mounts} />
@@ -96,17 +96,17 @@ const SetUnitMounts: FunctionComponent<Props> = ({
 
       {currentMounts === mounts && (
         <Grid component={Collapse}>
-          {data.mounts[mounts].Armour && (
+          {data.mounts[mounts].armour && (
             <SetUnitMountArmour
-              armoury={data.mounts[mounts].Armour}
+              armoury={data.mounts[mounts].armour}
               currentMountArmour={model.mountArmour}
               handleSelect={handleMountArmourSelect}
             />
           )}
-          {data.mounts[mounts].Upgrades &&
-            data.mounts[mounts].Upgrades.length > 0 && (
+          {data.mounts[mounts].upgrades &&
+            data.mounts[mounts].upgrades.length > 0 && (
               <SetUnitMountUpgrades
-                upgrades={data.mounts[mounts].Upgrades}
+                upgrades={data.mounts[mounts].upgrades}
                 currentMountUpgrade={model.mountUpgrade}
                 handleSelect={handleMountUpgradeSelect}
               />

@@ -9,7 +9,7 @@ from utils import (
     get_table_size,
     build_object_from_table_on_index,
     transform_multi_columns_to_list,
-    convert_name_to_title_case
+    set_camel_case_keys
 
 )
 
@@ -39,10 +39,10 @@ def parse_mounts(db: Database):
         mount = build_object_from_table_on_index(table, index)
         mount = transform_multi_columns_to_list(mount, "AB", 3, "Abilities") 
         mount = _add_relations_to_unit(mount, relations)
-   
-        name = mount["Name"]
+        mount = set_camel_case_keys(mount)
+        name = mount["name"]
         mounts[name] = mount
-        mount = convert_name_to_title_case(mount)
+        
         
  
     return mounts

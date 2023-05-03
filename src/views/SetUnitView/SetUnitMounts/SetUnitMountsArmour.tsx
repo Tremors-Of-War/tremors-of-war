@@ -6,7 +6,7 @@ import {
   Select,
   SelectChangeEvent,
   Typography,
-  Tooltip
+  Tooltip,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
@@ -14,7 +14,7 @@ import { Armour } from "../../../types";
 import data from "../../../data.json";
 
 interface Props {
-  armoury: Armour[];
+  armoury: string[];
   currentMountArmour?: Armour;
   handleSelect: (selected: Armour) => void;
 }
@@ -22,7 +22,7 @@ interface Props {
 const SetUnitMountArmour: FunctionComponent<Props> = ({
   armoury,
   currentMountArmour,
-  handleSelect
+  handleSelect,
 }) => {
   const [armourSelect, setArmourSelect] = React.useState(currentMountArmour);
 
@@ -76,7 +76,7 @@ const SetUnitMountArmour: FunctionComponent<Props> = ({
           minHeight: theme.spacing(7),
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
-          borderRadius: "4px"
+          borderRadius: "4px",
         }}
       >
         {armourSelect && (

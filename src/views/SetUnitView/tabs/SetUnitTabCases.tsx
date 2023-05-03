@@ -24,7 +24,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
   blankModel,
   unitOptions,
   isDoneLoading,
-  onModelChanges
+  onModelChanges,
 }) => {
   const [selectedUnit, setSelectedUnit] = React.useState<string | null>(null);
 
@@ -44,8 +44,8 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
         overflowX: "hidden",
         overflowY: "scroll",
         "::-webkit-scrollbar": {
-          display: "none"
-        }
+          display: "none",
+        },
       }}
     >
       {(() => {
@@ -70,7 +70,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                             ...blankModel,
                             unit,
                             name: model.name,
-                            id: model.id
+                            id: model.id,
                           });
                         }}
                         isSelected={selectedUnit === unit.name}
@@ -201,13 +201,15 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                         onModelChanges({
                           ...model,
                           mounts,
-                          mountArmour: undefined,
-                          mountUpgrade: undefined
+                          mountArmour: blankModel.mountArmour,
+                          mountUpgrade: blankModel.mountUpgrade,
                         });
                       } else {
                         onModelChanges({
                           ...model,
-                          mounts: blankModel.mounts
+                          mounts: blankModel.mounts,
+                          mountArmour: blankModel.mountArmour,
+                          mountUpgrade: blankModel.mountUpgrade,
                         });
                       }
                     }}
@@ -234,7 +236,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                       if (selected) {
                         onModelChanges({
                           ...model,
-                          upgrades: [...model.upgrades, upgrade]
+                          upgrades: [...model.upgrades, upgrade],
                         });
                       } else {
                         const newUpgrades = model.upgrades.filter(

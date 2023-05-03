@@ -16,11 +16,11 @@ const header = [
   { title: "I", description: "Initiative" },
   { title: "A", description: "Attacks" },
   { title: "CL", description: "Cool" },
-  { title: "INT", description: "Intelligence" }
+  { title: "INT", description: "Intelligence" },
 ];
 const SetUnitMountsStats: FunctionComponent<Props> = ({ mounts }) => {
-  const { M, WS, BS, S, T, W, I, A, Cl, Int } = data.mounts[mounts];
-  const stats = [M, WS, BS, S, T, W, I, A, Cl, Int];
+  const { m, ws, bs, s, t, w, i, a, cl, int } = data.mounts[mounts];
+  const stats = [m, ws, bs, s, t, w, i, a, cl, int];
   return (
     <Grid
       container

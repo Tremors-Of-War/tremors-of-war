@@ -28,5 +28,4 @@ dist-ssr
 data_parser/__pycache__/*
 data_parser/env/*
 data_parser/parsers/__pycache__/*
-
 data_parser/.python-version

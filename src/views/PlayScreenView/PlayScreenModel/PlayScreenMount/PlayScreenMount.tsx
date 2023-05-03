@@ -29,12 +29,12 @@ const PlayScreenMount: FunctionComponent<Props> = ({ model }) => (
             minHeight: theme.spacing(7),
             background:
               "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
-            borderRadius: "4px"
+            borderRadius: "4px",
           }}
         >
           <Grid container direction="column" maxWidth="196px">
             <Typography sx={{ color: "text.disabled" }} variant="caption">
-              {data.mounts[model.mounts].Type}
+              {data.mounts[model.mounts].type}
             </Typography>
             <Typography variant="body1">
               {model.mounts.replace(/_/g, " ")}

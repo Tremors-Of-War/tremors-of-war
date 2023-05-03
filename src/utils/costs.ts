@@ -14,7 +14,7 @@ export const calculateWeaponryCosts = (model: Model): number => {
   const costs = [
     model.handWeapon ? data.weapons[model.handWeapon].Cost : 0,
     model.twoHandedWeapon ? data.weapons[model.twoHandedWeapon].Cost : 0,
-    model.rangedWeapon ? data.weapons[model.rangedWeapon].Cost : 0
+    model.rangedWeapon ? data.weapons[model.rangedWeapon].Cost : 0,
   ];
   return costs.reduce(sumReducer, 0);
 };
@@ -23,16 +23,16 @@ export const calculateArmourCosts = (model: Model): number => {
   const costs = [
     model.armour ? data.armour[model.armour].Cost : 0,
     model.shield ? data.armour[model.shield].Cost : 0,
-    model.helmet ? data.armour[model.helmet].Cost : 0
+    model.helmet ? data.armour[model.helmet].Cost : 0,
   ];
   return costs.reduce(sumReducer, 0);
 };
 
 export const calculateMountCosts = (model: Model): number => {
   const costs = [
-    model.mounts ? data.mounts[model.mounts].Cost : 0,
+    model.mounts ? data.mounts[model.mounts].cost : 0,
     model.mountArmour ? data.armour[model.mountArmour].Cost : 0,
-    model.mountUpgrade ? data.abilities[model.mountUpgrade].Cost : 0
+    model.mountUpgrade ? data.abilities[model.mountUpgrade].Cost : 0,
   ];
   return costs.reduce(sumReducer, 0);
 };
@@ -42,7 +42,7 @@ export const calculateModelCost = (model: Model): number => {
     calculateMountCosts(model),
     calculateArmourCosts(model),
     calculateWeaponryCosts(model),
-    calculateUpgradeCosts(model)
+    calculateUpgradeCosts(model),
   ];
   return costs.reduce(sumReducer, 0);
 };

@@ -38,6 +38,8 @@ const blankModel: Model = {
   helmet: undefined,
   upgrades: [],
   mounts: undefined,
+  mountArmour: undefined,
+  mountUpgrade: undefined,
   active: true,
 };
 

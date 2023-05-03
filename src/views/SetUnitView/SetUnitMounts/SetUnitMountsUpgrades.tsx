@@ -5,7 +5,7 @@ import {
   InputLabel,
   SelectChangeEvent,
   Select,
-  MenuItem
+  MenuItem,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
@@ -13,7 +13,7 @@ import data from "../../../data.json";
 import { Abilities } from "../../../types";
 
 interface Props {
-  upgrades: Abilities[];
+  upgrades: string[];
   currentMountUpgrade?: Abilities;
   handleSelect: (selected: Abilities) => void;
 }
@@ -21,7 +21,7 @@ interface Props {
 const SetUnitMountUpgrades: FunctionComponent<Props> = ({
   upgrades,
   currentMountUpgrade,
-  handleSelect
+  handleSelect,
 }) => {
   const [upgradeSelect, setUpgradeSelect] = React.useState(currentMountUpgrade);
 
@@ -75,7 +75,7 @@ const SetUnitMountUpgrades: FunctionComponent<Props> = ({
           minHeight: theme.spacing(7),
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
-          borderRadius: "4px"
+          borderRadius: "4px",
         }}
       >
         {currentMountUpgrade && (
