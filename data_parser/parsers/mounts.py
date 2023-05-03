@@ -1,4 +1,3 @@
-
 from pylightxl import Database
 import logging
 from constants import SHEETS
@@ -9,13 +8,15 @@ from utils import (
     get_table_size,
     build_object_from_table_on_index,
     transform_multi_columns_to_list,
-    convert_name_to_title_case
-
+    convert_name_to_title_case,
 )
 
 logger = logging.getLogger(__name__)
+
+
 def _get_mounts_sheet(db: Database):
     return db.ws(SHEETS.MOUNTS)
+
 
 def _add_relations_to_unit(mount, relations):
     mount_name = mount["Name"]
@@ -24,7 +25,7 @@ def _add_relations_to_unit(mount, relations):
         logger.warning('Data integrity issue: "%s" not in relations table', mount_name)
         return mount
 
-    return {**mount, **relations[mount_name]} 
+    return {**mount, **relations[mount_name]}
 
 
 def parse_mounts(db: Database):
@@ -37,12 +38,11 @@ def parse_mounts(db: Database):
     mounts = {}
     for index in range(table_size):
         mount = build_object_from_table_on_index(table, index)
-        mount = transform_multi_columns_to_list(mount, "AB", 3, "Abilities") 
+        mount = transform_multi_columns_to_list(mount, "AB", 3, "Abilities")
         mount = _add_relations_to_unit(mount, relations)
-   
+
         name = mount["Name"]
         mounts[name] = mount
         mount = convert_name_to_title_case(mount)
-        
- 
+
     return mounts
