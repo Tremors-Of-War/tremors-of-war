@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 .~lock*
+
+# windows pyenv files
+data_parser/_pycache_/*
+data_parser/env/*
+data_parser/parsers/_pycache_/*
