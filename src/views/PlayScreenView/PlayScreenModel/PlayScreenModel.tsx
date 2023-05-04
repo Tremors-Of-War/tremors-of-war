@@ -34,12 +34,10 @@ const PlayScreenModel: FunctionComponent<Props> = ({
   const stopPropagation = (e: any) => e.stopPropagation();
 
   return (
-    <>
+    <Grid sx={{ padding: "8px 0px" }}>
       <Grid
         component={Accordion}
         container
-        marginTop="8px"
-        marginBottom="8px"
         alignItems="center"
         justifyContent="space-between"
         flexWrap="nowrap"
@@ -114,7 +112,7 @@ const PlayScreenModel: FunctionComponent<Props> = ({
         onActiveChange={onActiveChange}
         onClose={() => setOpenReviveAlert(false)}
       />
-    </>
+    </Grid>
   );
 };
 export default PlayScreenModel;

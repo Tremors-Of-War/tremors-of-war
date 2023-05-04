@@ -28,7 +28,7 @@ const PlayScreenUnit: FunctionComponent<Props> = ({ model }) => (
         borderRadius: "4px",
       }}
     >
-      <Grid container direction="column" maxWidth="150px">
+      <Grid container direction="column" maxWidth="160px">
         {model.unit?.name && (
           <Typography variant="body1">{model.unit.name}</Typography>
         )}
