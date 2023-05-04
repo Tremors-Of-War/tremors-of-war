@@ -5,7 +5,7 @@ import {
   Grid,
   Typography,
   IconButton,
-  Box,
+  Box
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -27,19 +27,19 @@ const inactiveBackground = "rgba(255, 255, 255, 0.09)";
 
 const PlayScreenModel: FunctionComponent<Props> = ({
   model,
-  onActiveChange,
+  onActiveChange
 }) => {
   const [openKillAlert, setOpenKillAlert] = React.useState<boolean>(false);
   const [openReviveAlert, setOpenReviveAlert] = React.useState<boolean>(false);
   const stopPropagation = (e: any) => e.stopPropagation();
 
   return (
-    <>
+    <AccordionDetails sx={{ padding: "8px 0px" }}>
       <Grid
         component={Accordion}
         container
-        marginTop="8px"
-        marginBottom="8px"
+        // marginTop="8px"
+        // marginBottom="8px"
         alignItems="center"
         justifyContent="space-between"
         flexWrap="nowrap"
@@ -49,7 +49,7 @@ const PlayScreenModel: FunctionComponent<Props> = ({
           minHeight: theme.spacing(9),
           background: model.active ? defaultBackground : inactiveBackground,
           borderRadius: "4px",
-          ".MuiCollapse-root": { width: "100%" },
+          ".MuiCollapse-root": { width: "100%" }
         }}
       >
         <Grid
@@ -114,7 +114,7 @@ const PlayScreenModel: FunctionComponent<Props> = ({
         onActiveChange={onActiveChange}
         onClose={() => setOpenReviveAlert(false)}
       />
-    </>
+    </AccordionDetails>
   );
 };
 export default PlayScreenModel;
