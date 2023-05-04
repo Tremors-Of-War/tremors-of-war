@@ -34,7 +34,7 @@ const PlayScreenModelDetails: FunctionComponent<Props> = ({ model }) => (
         twoHandedWeapon={model.twoHandedWeapon}
       />
     )}
-    {model?.mounts && <PlayScreenMount mounts={model.mounts} />}
+    {model?.mounts && <PlayScreenMount model={model} />}
     {model?.upgrades && model.upgrades.length > 0 && (
       <PlayScreenUpgrades upgrades={model.upgrades} />
     )}

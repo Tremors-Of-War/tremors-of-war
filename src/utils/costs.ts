@@ -28,8 +28,14 @@ export const calculateArmourCosts = (model: Model): number => {
   return costs.reduce(sumReducer, 0);
 };
 
-export const calculateMountCosts = (model: Model): number =>
-  model.mounts ? data.mounts[model.mounts].Cost : 0;
+export const calculateMountCosts = (model: Model): number => {
+  const costs = [
+    model.mounts ? data.mounts[model.mounts].cost : 0,
+    model.mountArmour ? data.armour[model.mountArmour].Cost : 0,
+    model.mountUpgrade ? data.abilities[model.mountUpgrade].Cost : 0,
+  ];
+  return costs.reduce(sumReducer, 0);
+};
 export const calculateModelCost = (model: Model): number => {
   const costs: number[] = [
     model.unit?.cost || 0,

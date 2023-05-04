@@ -193,17 +193,31 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                 {model.unit?.mounts.map((mounts) => (
                   <SetUnitMounts
                     key={mounts}
+                    model={model}
                     mounts={mounts}
                     currentMounts={model.mounts}
                     handleSelect={(selectedMount) => {
                       if (selectedMount !== model.mounts) {
-                        onModelChanges({ ...model, mounts });
+                        onModelChanges({
+                          ...model,
+                          mounts,
+                          mountArmour: blankModel.mountArmour,
+                          mountUpgrade: blankModel.mountUpgrade,
+                        });
                       } else {
                         onModelChanges({
                           ...model,
                           mounts: blankModel.mounts,
+                          mountArmour: blankModel.mountArmour,
+                          mountUpgrade: blankModel.mountUpgrade,
                         });
                       }
+                    }}
+                    handleMountArmourSelect={(mountArmour) => {
+                      onModelChanges({ ...model, mountArmour });
+                    }}
+                    handleMountUpgradeSelect={(mountUpgrade) => {
+                      onModelChanges({ ...model, mountUpgrade });
                     }}
                   />
                 ))}
