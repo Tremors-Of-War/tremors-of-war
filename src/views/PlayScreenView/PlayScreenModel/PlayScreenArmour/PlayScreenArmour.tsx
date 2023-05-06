@@ -13,11 +13,9 @@ const PlayScreenArmour: FunctionComponent<Props> = ({ model }) => (
     <Typography color="primary">ARMOUR</Typography>
     <Grid container direction="column">
       {model.armour && <PlayScreenArmourStats armour={model.armour} />}
-      {model.shield && <PlayScreenArmourStats armour={model.shield} />}
+
       {model.helmet && <PlayScreenArmourStats armour={model.helmet} />}
-      {model.otherArmour && (
-        <PlayScreenArmourStats armour={model.otherArmour} />
-      )}
+
       <Grid container justifyContent="flex-end">
         <ArmourSave model={model} />
       </Grid>
