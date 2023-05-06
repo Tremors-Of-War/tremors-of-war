@@ -25,7 +25,7 @@ const PlayScreenMountStats: FunctionComponent<Props> = ({ mounts }) => {
     <Grid
       container
       justifyContent="flex-start"
-      width="472px"
+      width="400px"
       paddingRight="32px"
     >
       <Grid container direction="column">

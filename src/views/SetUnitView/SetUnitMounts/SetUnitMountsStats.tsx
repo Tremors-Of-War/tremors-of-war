@@ -22,12 +22,7 @@ const SetUnitMountsStats: FunctionComponent<Props> = ({ mounts }) => {
   const { m, ws, bs, s, t, w, i, a, cl, int } = data.mounts[mounts];
   const stats = [m, ws, bs, s, t, w, i, a, cl, int];
   return (
-    <Grid
-      container
-      justifyContent="flex-start"
-      width="512px"
-      paddingRight="32px"
-    >
+    <Grid container justifyContent="flex-start" width="410px">
       <Grid container direction="column">
         <Grid container direction="row" justifyContent="space-between">
           {header.map(({ title, description }) => (

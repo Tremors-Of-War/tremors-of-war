@@ -6,6 +6,7 @@ import {
   Select,
   SelectChangeEvent,
   Typography,
+  Tooltip,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
@@ -103,10 +104,16 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                     <Grid container direction="row" justifyContent="flex-end">
                       {data.weapons[weaponSelect].Traits.map(
                         (trait, i, arr) => (
-                          <Typography variant="body1" key={i}>
-                            {trait}
-                            {i !== arr.length - 1 ? "," : ""}&nbsp;
-                          </Typography>
+                          <Tooltip
+                            key={i}
+                            title={data.abilities[trait].Effects}
+                            sx={{ whiteSpace: "pre-wrap" }}
+                          >
+                            <Typography variant="body1">
+                              {trait}
+                              {i !== arr.length - 1 ? "," : ""}&nbsp;
+                            </Typography>
+                          </Tooltip>
                         )
                       )}
                     </Grid>

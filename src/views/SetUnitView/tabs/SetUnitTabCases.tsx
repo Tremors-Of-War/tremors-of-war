@@ -83,24 +83,25 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
           case "weaponryTab":
             return (
               <>
-                {model.unit?.weaponry && model.unit.weaponry.length > 0 && (
-                  <SetUnitWeaponry
-                    weaponry={model.unit?.weaponry}
-                    currentWeaponry={model.handWeapon}
-                    dropdownTitle="HAND WEAPON"
-                    handleSelect={(handWeapon) => {
-                      onModelChanges({ ...model, handWeapon });
-                    }}
-                  />
-                )}
-                {model.unit?.twoHandWeaponry &&
-                  model.unit.twoHandWeaponry.length > 0 && (
+                {model.unit?.primaryWeaponry &&
+                  model.unit.primaryWeaponry.length > 0 && (
                     <SetUnitWeaponry
-                      weaponry={model.unit?.twoHandWeaponry}
-                      currentWeaponry={model.twoHandedWeapon}
-                      dropdownTitle="TWO HANDED WEAPON"
-                      handleSelect={(twoHandedWeapon) => {
-                        onModelChanges({ ...model, twoHandedWeapon });
+                      weaponry={model.unit?.primaryWeaponry}
+                      currentWeaponry={model.primaryWeaponry}
+                      dropdownTitle="PRIMARY WEAPON"
+                      handleSelect={(primaryWeaponry) => {
+                        onModelChanges({ ...model, primaryWeaponry });
+                      }}
+                    />
+                  )}
+                {model.unit?.secondaryWeaponry &&
+                  model.unit.secondaryWeaponry.length > 0 && (
+                    <SetUnitWeaponry
+                      weaponry={model.unit?.secondaryWeaponry}
+                      currentWeaponry={model.secondaryWeaponry}
+                      dropdownTitle="SECONDARY WEAPON"
+                      handleSelect={(secondaryWeaponry) => {
+                        onModelChanges({ ...model, secondaryWeaponry });
                       }}
                     />
                   )}
@@ -141,28 +142,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                     }}
                   />
                 )}
-                {model.unit?.shield && model.unit.shield.length > 0 && (
-                  <SetUnitArmour
-                    armoury={model.unit?.shield}
-                    currentArmoury={model.shield}
-                    dropdownTitle="SHIELD"
-                    handleSelect={(shield) => {
-                      onModelChanges({ ...model, shield });
-                    }}
-                  />
-                )}
 
-                {model.unit?.otherArmour &&
-                  model.unit.otherArmour.length > 0 && (
-                    <SetUnitArmour
-                      armoury={model.unit?.otherArmour}
-                      currentArmoury={model.otherArmour}
-                      dropdownTitle="OTHER ARMOUR"
-                      handleSelect={(otherArmour) => {
-                        onModelChanges({ ...model, otherArmour });
-                      }}
-                    />
-                  )}
                 {model.unit?.helmet && model.unit.helmet.length > 0 && (
                   <SetUnitArmour
                     armoury={model.unit?.helmet}
@@ -202,6 +182,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                           ...model,
                           mounts,
                           mountArmour: blankModel.mountArmour,
+                          mountWeapon: blankModel.mountWeapon,
                           mountUpgrade: blankModel.mountUpgrade,
                         });
                       } else {
@@ -209,6 +190,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                           ...model,
                           mounts: blankModel.mounts,
                           mountArmour: blankModel.mountArmour,
+                          mountWeapon: blankModel.mountWeapon,
                           mountUpgrade: blankModel.mountUpgrade,
                         });
                       }
@@ -218,6 +200,9 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                     }}
                     handleMountUpgradeSelect={(mountUpgrade) => {
                       onModelChanges({ ...model, mountUpgrade });
+                    }}
+                    handleMountWeaponSelect={(mountWeapon) => {
+                      onModelChanges({ ...model, mountWeapon });
                     }}
                   />
                 ))}

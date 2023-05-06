@@ -25,12 +25,10 @@ export interface Unit {
   int: number;
   cost: number;
   abilities: Abilities[];
-  weaponry: Weapons[];
-  twoHandWeaponry: Weapons[];
+  primaryWeaponry: Weapons[];
+  secondaryWeaponry: Weapons[];
   rangedWeaponry: Weapons[];
   armour: Armour[];
-  shield: Armour[];
-  otherArmour: Armour[];
   helmet: Armour[];
   upgrades: [];
   mounts: Mounts[];
@@ -42,15 +40,14 @@ export interface Model {
   cost: number;
   name: string;
   armour?: Armour;
-  shield?: Armour;
-  otherArmour?: Armour;
   helmet?: Armour;
   upgrades: Abilities[];
   mounts?: Mounts;
   mountArmour?: Armour;
   mountUpgrade?: Abilities;
-  handWeapon?: Weapons;
-  twoHandedWeapon?: Weapons;
+  mountWeapon?: Weapons;
+  primaryWeaponry?: Weapons;
+  secondaryWeaponry?: Weapons;
   rangedWeapon?: Weapons;
   active: boolean;
 }

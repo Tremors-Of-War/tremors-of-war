@@ -28,7 +28,7 @@ const PlayScreenMountArmour: FunctionComponent<Props> = ({ model }) => (
           borderRadius: "4px",
         }}
       >
-        <Grid container direction="column" width="100px">
+        <Grid container direction="column" width="160px">
           <Typography variant="caption" sx={{ color: "text.disabled" }}>
             Armour
           </Typography>

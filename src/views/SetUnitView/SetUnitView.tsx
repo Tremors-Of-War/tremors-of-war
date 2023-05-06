@@ -30,16 +30,15 @@ const blankModel: Model = {
   cost: 0,
   name: "",
   armour: undefined,
-  shield: undefined,
-  otherArmour: undefined,
-  handWeapon: undefined,
-  twoHandedWeapon: undefined,
+  secondaryWeaponry: undefined,
+  primaryWeaponry: undefined,
   rangedWeapon: undefined,
   helmet: undefined,
   upgrades: [],
   mounts: undefined,
   mountArmour: undefined,
   mountUpgrade: undefined,
+  mountWeapon: undefined,
   active: true,
 };
 
@@ -68,9 +67,10 @@ const SetUnitView: FunctionComponent<Props> = ({
   };
   const checkWeaponry = () => {
     if (
-      (model?.unit?.weaponry && model.unit.weaponry.length > 0) ||
+      (model?.unit?.secondaryWeaponry &&
+        model.unit.secondaryWeaponry.length > 0) ||
       (model?.unit?.rangedWeaponry && model.unit.rangedWeaponry.length > 0) ||
-      (model?.unit?.twoHandWeaponry && model.unit.twoHandWeaponry.length > 0)
+      (model?.unit?.primaryWeaponry && model.unit.primaryWeaponry.length > 0)
     ) {
       return true;
     }

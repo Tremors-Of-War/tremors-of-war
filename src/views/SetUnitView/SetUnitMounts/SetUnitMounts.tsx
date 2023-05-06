@@ -1,11 +1,12 @@
-import { Radio, Grid, Typography, Collapse } from "@mui/material";
+import { Radio, Grid, Typography, Collapse, Tooltip } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import { TransitionGroup } from "react-transition-group";
 import data from "../../../data.json";
-import { Mounts, Armour, Model, Abilities } from "../../../types";
+import { Mounts, Armour, Model, Abilities, Weapons } from "../../../types";
 import SetUnitMountsStats from "./SetUnitMountsStats";
 import SetUnitMountArmour from "./SetUnitMountsArmour";
 import SetUnitMountUpgrades from "./SetUnitMountsUpgrades";
+import SetUnitMountWeaponry from "./SetUnitMountsWeaponry";
 
 interface Props {
   handleSelect: (selected: Mounts) => void;
@@ -14,6 +15,7 @@ interface Props {
   currentMounts?: Mounts;
   handleMountUpgradeSelect: (selected: Abilities) => void;
   handleMountArmourSelect: (selected: Armour) => void;
+  handleMountWeaponSelect: (selected: Weapons) => void;
 }
 
 const SetUnitMounts: FunctionComponent<Props> = ({
@@ -23,6 +25,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
   handleMountUpgradeSelect,
   model,
   currentMounts,
+  handleMountWeaponSelect,
 }) => {
   const handleClick = (event: any) => {
     const value = event.target.value as Mounts;
@@ -34,6 +37,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
       padding="8px 16px"
       marginBottom="16px"
       alignItems="center"
+      width="100%"
       justifyContent="space-between"
       component={TransitionGroup}
       sx={{
@@ -62,27 +66,40 @@ const SetUnitMounts: FunctionComponent<Props> = ({
             <Grid
               container
               direction="column"
-              justifyContent="flex-start"
+              justifyContent="space-between"
               wrap="wrap"
-              width="176px"
+              width="146px"
             >
-              {data.mounts[mounts].type.map((type, key) => (
-                <>
-                  <Typography
-                    variant="body2"
-                    key={key}
-                    sx={{ color: "text.disabled" }}
-                  >
-                    {type}
-                  </Typography>
-                </>
-              ))}
+              {data.mounts[mounts].type &&
+                data.mounts[mounts].type.map((type, key) => (
+                  <>
+                    <Typography
+                      variant="body2"
+                      key={key}
+                      sx={{ color: "text.disabled" }}
+                    >
+                      {type}
+                    </Typography>
+                  </>
+                ))}
               <Typography>{mounts.replace(/_/g, " ")}</Typography>
               <Typography variant="body1" sx={{ color: "text.disabled" }}>
                 {data.mounts[mounts].cost} Points
               </Typography>
             </Grid>
             <SetUnitMountsStats mounts={mounts} />
+            <Grid
+              container
+              direction="column"
+              justifyContent="flex-start"
+              width="100px"
+            >
+              {data.mounts[mounts].abilities.map((ability) => (
+                <Tooltip title={data.abilities[ability].Effects}>
+                  <Typography variant="caption">&#8226; {ability}</Typography>
+                </Tooltip>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
 
@@ -103,6 +120,14 @@ const SetUnitMounts: FunctionComponent<Props> = ({
               handleSelect={handleMountArmourSelect}
             />
           )}
+          {data.mounts[mounts].primaryWeaponry &&
+            data.mounts[mounts].primaryWeaponry.length > 0 && (
+              <SetUnitMountWeaponry
+                weaponry={data.mounts[mounts].primaryWeaponry}
+                currentWeaponry={model.mountWeapon}
+                handleSelect={handleMountWeaponSelect}
+              />
+            )}
           {data.mounts[mounts].upgrades &&
             data.mounts[mounts].upgrades.length > 0 && (
               <SetUnitMountUpgrades
