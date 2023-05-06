@@ -1,9 +1,9 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Unit } from "../../../../types";
 
 interface Props {
-  unit: Unit;
+  data: any;
+  textSize: any;
 }
 const header = [
   { title: "M", description: "Movement" },
@@ -17,23 +17,23 @@ const header = [
   { title: "CL", description: "Cool" },
   { title: "INT", description: "Intelligence" },
 ];
-const PlayScreenUnitStats: FunctionComponent<Props> = ({ unit }) => {
-  const { m, ws, bs, s, t, w, i, a, cl, int } = unit;
-  const stats = [m, ws, bs, s, t, w, i, a, cl, int];
+const MountUnitStats: FunctionComponent<Props> = ({ data, textSize }) => {
+  const { m, ws, bs, s, t, w, i, a, cl, int } = data;
 
+  const stats = [m, ws, bs, s, t, w, i, a, cl, int];
   return (
     <Grid
       container
       justifyContent="flex-start"
-      width="424px"
+      width="400px"
       paddingRight="32px"
     >
       <Grid container direction="column">
         <Grid container direction="row" justifyContent="space-between">
           {header.map(({ title, description }) => (
-            <Grid container justifyContent="center" width="16px" key={title}>
+            <Grid container justifyContent="center" width="27px" key={title}>
               <Tooltip title={description}>
-                <Typography color="text.disabled" variant="body2">
+                <Typography color="text.disabled" sx={{ variant: textSize }}>
                   {title}
                 </Typography>
               </Tooltip>
@@ -42,10 +42,10 @@ const PlayScreenUnitStats: FunctionComponent<Props> = ({ unit }) => {
         </Grid>
         <Grid container direction="row" justifyContent="space-between">
           {stats.map((stat, index) => (
-            <Grid container justifyContent="center" width="16px" key={index}>
-              {stat !== 0 && <Typography variant="body2">{stat}</Typography>}
+            <Grid container justifyContent="center" width="27px" key={index}>
+              {stat !== 0 && <Typography variant={textSize}>{stat}</Typography>}
               {stat === 0 && (
-                <Typography color="text.disabled" variant="body2">
+                <Typography color="text.disabled" variant={textSize}>
                   -
                 </Typography>
               )}
@@ -56,4 +56,4 @@ const PlayScreenUnitStats: FunctionComponent<Props> = ({ unit }) => {
     </Grid>
   );
 };
-export default PlayScreenUnitStats;
+export default MountUnitStats;

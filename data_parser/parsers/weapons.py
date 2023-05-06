@@ -66,7 +66,7 @@ def parse_weapons(db: Database):
     weapons = {}
     for index in range(table_size):
         weapon = build_object_from_table_on_index(table, index)
-        weapon = transform_multi_columns_to_list(weapon, "T", 4, "Traits")
+        weapon = transform_multi_columns_to_list(weapon, "T", 5, "Traits")
         # TODO: ACTUALLY CALCULATE THE WEAPON COST
         #       Currently we have the value precomputed
         # weapon = _transform_set_weapon_cost(weapon, weapon_traits)

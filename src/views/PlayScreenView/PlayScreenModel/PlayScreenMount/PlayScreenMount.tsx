@@ -2,7 +2,7 @@ import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
 import { Model } from "../../../../types";
-import PlayScreenMountStats from "./PlayScreenMountStats";
+import MountUnitStats from "../../../../components/MountUnitStats";
 import PlayScreenMountArmour from "./PlayScreenMountArmour";
 import PlayScreenMountUpgrade from "./PlayScreenMountUpgrade";
 import data from "../../../../data.json";
@@ -42,11 +42,11 @@ const PlayScreenMount: FunctionComponent<Props> = ({ model }) => (
             </Typography>
           </Grid>
 
-          <PlayScreenMountStats mounts={model.mounts} />
+          <MountUnitStats data={data.mounts[model.mounts]} textSize="body2" />
           <Grid
             container
             direction="column"
-            justifyContent="flexs-start"
+            justifyContent="flex-start"
             width="116px"
             margin="8px 0px"
           >

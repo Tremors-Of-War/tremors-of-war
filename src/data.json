@@ -220,10 +220,15 @@
       "Effects": "This Fighter gets +1 Wound",
       "Name": "Monstrous Cavalry"
     },
-    "Multi-Shot (X)": {
+    "Multi-Shot (2)": {
+      "Cost": 1,
+      "Effects": "-A weapon with Multi-Shot can be fired 2 times per Shoot action\n-Ranged attacks made using the Multi-Shot 2 ability receive -1 to hit",
+      "Name": "Multi-Shot (2)"
+    },
+    "Multi-Shot (3)": {
       "Cost": 0,
-      "Effects": "-A weapon with Multi-Shot can be fired (X) times per Shoot action\n-Ranged attacks made using the Multi-Shot (X) ability receive -1 to hit",
-      "Name": "Multi-Shot (X)"
+      "Effects": "-A weapon with Multi-Shot can be fired 3 times per Shoot action\n-Ranged attacks made using the Multi-Shot 3 ability receive -1 to hit",
+      "Name": "Multi-Shot (3)"
     },
     "Murderous Prowess": {
       "Cost": 5,
@@ -10120,7 +10125,6 @@
   },
   "weapons": {
     "Axe": {
-      "": 1,
       "AL": 0,
       "AP": 1,
       "AS": 0,
@@ -10130,12 +10134,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+1",
-      "T5": "",
       "Traits": ["Melee"],
       "Type": "Close Combat"
     },
     "Battleaxe": {
-      "": 1,
       "AL": 0,
       "AP": 0,
       "AS": 0,
@@ -10145,12 +10147,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+1",
-      "T5": "",
       "Traits": ["Hooked", "Melee"],
       "Type": "Close Combat"
     },
     "Bow": {
-      "": 3,
       "AL": 0,
       "AP": 0,
       "AS": 1,
@@ -10160,12 +10160,10 @@
       "RL": 24,
       "RS": 12,
       "S": 3,
-      "T5": "",
       "Traits": ["Multi-Shot (2)"],
       "Type": "Long Range"
     },
     "Brace of Pistols": {
-      "": 4,
       "AL": 0,
       "AP": 2,
       "AS": 1,
@@ -10175,12 +10173,10 @@
       "RL": 12,
       "RS": 6,
       "S": 4,
-      "T5": "",
       "Traits": ["Black Powder", "Melee", "Multi-Shot (2)", "Sidearm"],
       "Type": "Short Range"
     },
     "Buckler": {
-      "": 0,
       "AL": 0,
       "AP": 0,
       "AS": 0,
@@ -10190,12 +10186,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Defensive", "Melee", "Parry"],
       "Type": "Close Combat"
     },
     "Cathayan Longsword": {
-      "": 0,
       "AL": 0,
       "AP": 1,
       "AS": 0,
@@ -10205,12 +10199,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee", "Parry", "Rending", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Cathayan Repeater Crossbow": {
-      "": 3,
       "AL": 0,
       "AP": 0,
       "AS": 1,
@@ -10220,12 +10212,10 @@
       "RL": 18,
       "RS": 10,
       "S": 3,
-      "T5": "",
       "Traits": ["Multi-Shot (2)"],
       "Type": "Long Range"
     },
     "Crossbow": {
-      "": 4,
       "AL": 0,
       "AP": 1,
       "AS": 1,
@@ -10235,12 +10225,10 @@
       "RL": 36,
       "RS": 18,
       "S": 4,
-      "T5": "",
       "Traits": [],
       "Type": "Long Range"
     },
     "Crushing Jaws": {
-      "": 0,
       "AL": 0,
       "AP": 1,
       "AS": 0,
@@ -10250,12 +10238,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee"],
       "Type": "Close Combat"
     },
     "Dagger": {
-      "": 0,
       "AL": 0,
       "AP": 0,
       "AS": 0,
@@ -10265,12 +10251,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee", "Paired"],
       "Type": "Close Combat"
     },
     "Dane Axe": {
-      "": 3,
       "AL": -1,
       "AP": 1,
       "AS": 0,
@@ -10280,12 +10264,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+3",
-      "T5": "",
       "Traits": ["Hooked", "Melee", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Elven Longbow": {
-      "": 3,
       "AL": 0,
       "AP": 1,
       "AS": 1,
@@ -10295,12 +10277,10 @@
       "RL": 30,
       "RS": 15,
       "S": 3,
-      "T5": "",
       "Traits": ["Multi-Shot (2)"],
       "Type": "Long Range"
     },
     "Executioner's Blade": {
-      "": 2,
       "AL": -1,
       "AP": 0,
       "AS": 0,
@@ -10310,12 +10290,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+2",
-      "T5": "",
       "Traits": ["Melee", "Rending", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Fire Lance": {
-      "": 1,
       "AL": 1,
       "AP": 1,
       "AS": 0,
@@ -10325,12 +10303,10 @@
       "RL": 1,
       "RS": 0,
       "S": "S+1",
-      "T5": "",
       "Traits": ["Fire Lance", "Melee", "Versatile"],
       "Type": "Close Combat"
     },
     "Halberd": {
-      "": 1,
       "AL": 0,
       "AP": 1,
       "AS": 0,
@@ -10340,12 +10316,10 @@
       "RL": 1,
       "RS": 0,
       "S": "S+1",
-      "T5": "",
       "Traits": ["Melee", "Strike First", "Unwieldly", "Versatile"],
       "Type": "Close Combat"
     },
     "Hand Crossbow": {
-      "": 3,
       "AL": 0,
       "AP": 0,
       "AS": 1,
@@ -10355,12 +10329,10 @@
       "RL": 12,
       "RS": 6,
       "S": 3,
-      "T5": "",
       "Traits": ["Melee", "Sidearm"],
       "Type": "Short Range"
     },
     "Handgun": {
-      "": 4,
       "AL": 0,
       "AP": 2,
       "AS": 1,
@@ -10370,12 +10342,10 @@
       "RL": 24,
       "RS": 12,
       "S": 4,
-      "T5": "",
-      "Traits": ["Black powder"],
+      "Traits": ["Black Powder"],
       "Type": "Long Range"
     },
     "Hochland Long Rifle": {
-      "": 4,
       "AL": 1,
       "AP": 2,
       "AS": 0,
@@ -10385,12 +10355,10 @@
       "RL": 36,
       "RS": 18,
       "S": 4,
-      "T5": "",
       "Traits": ["Black Powder"],
       "Type": "Long Range"
     },
     "Javellin": {
-      "": 4,
       "AL": 0,
       "AP": 1,
       "AS": 1,
@@ -10400,12 +10368,10 @@
       "RL": 12,
       "RS": 8,
       "S": "S+1",
-      "T5": "",
       "Traits": [],
       "Type": "Long Range"
     },
     "Katana": {
-      "": 1,
       "AL": 1,
       "AP": 0,
       "AS": 0,
@@ -10415,12 +10381,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+1",
-      "T5": "",
       "Traits": ["Melee", "Parry", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Lance": {
-      "": 0,
       "AL": 1,
       "AP": 1,
       "AS": 0,
@@ -10430,12 +10394,10 @@
       "RL": 1,
       "RS": 0,
       "S": "S",
-      "T5": "Lance",
-      "Traits": ["Melee", "Ride By", "Versatile"],
+      "Traits": ["Lance", "Melee", "Ride By", "Versatile"],
       "Type": "Close Combat"
     },
     "Longbow": {
-      "": 3,
       "AL": 0,
       "AP": 0,
       "AS": 1,
@@ -10445,12 +10407,10 @@
       "RL": 30,
       "RS": 15,
       "S": 3,
-      "T5": "",
       "Traits": ["Multi-Shot (2)"],
       "Type": "Long Range"
     },
     "Mace": {
-      "": 1,
       "AL": 0,
       "AP": 2,
       "AS": 0,
@@ -10460,12 +10420,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+1",
-      "T5": "",
       "Traits": ["Melee", "Pulverise"],
       "Type": "Close Combat"
     },
     "Monstrous Claws": {
-      "": 0,
       "AL": 0,
       "AP": 2,
       "AS": 0,
@@ -10475,12 +10433,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee"],
       "Type": "Close Combat"
     },
     "Pick": {
-      "": 0,
       "AL": 0,
       "AP": 2,
       "AS": 0,
@@ -10490,12 +10446,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee", "Rending"],
       "Type": "Close Combat"
     },
     "Pistol": {
-      "": 4,
       "AL": 0,
       "AP": 2,
       "AS": 1,
@@ -10505,12 +10459,10 @@
       "RL": 12,
       "RS": 6,
       "S": 4,
-      "T5": "",
-      "Traits": ["Black Powder", "Sidearm", "melee"],
+      "Traits": ["Black Powder", "Melee", "Sidearm"],
       "Type": "Short Range"
     },
     "Poisonwind Grenade": {
-      "": 0,
       "AL": 0,
       "AP": 0,
       "AS": 0,
@@ -10520,12 +10472,10 @@
       "RL": 9,
       "RS": 6,
       "S": 0,
-      "T5": "",
       "Traits": ["Blast (3)", "Gas", "Grenade"],
       "Type": "Short Range"
     },
     "Poleaxe": {
-      "": 2,
       "AL": -1,
       "AP": 3,
       "AS": 0,
@@ -10535,12 +10485,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+2",
-      "T5": "",
       "Traits": ["Melee", "Pulverise", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Quarterstaff": {
-      "": 0,
       "AL": 0,
       "AP": 1,
       "AS": 0,
@@ -10550,12 +10498,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee", "Parry"],
       "Type": "Close Combat"
     },
     "Repeater Crossbow": {
-      "": 3,
       "AL": 0,
       "AP": 1,
       "AS": 1,
@@ -10565,12 +10511,10 @@
       "RL": 24,
       "RS": 12,
       "S": 3,
-      "T5": "",
       "Traits": ["Multi-Shot (2)"],
       "Type": "Long Range"
     },
     "Repeater Handgun": {
-      "": 4,
       "AL": 0,
       "AP": 2,
       "AS": 1,
@@ -10580,12 +10524,10 @@
       "RL": 24,
       "RS": 12,
       "S": 4,
-      "T5": "",
       "Traits": ["Black Powder", "Multi-Shot (3)"],
       "Type": "Long Range"
     },
     "Second Dagger": {
-      "": 0,
       "AL": 0,
       "AP": 0,
       "AS": 0,
@@ -10595,12 +10537,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee", "Paired"],
       "Type": "Close Combat"
     },
     "Sharp Pointy Teeth": {
-      "": 0,
       "AL": 0,
       "AP": 2,
       "AS": 0,
@@ -10610,12 +10550,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee", "Rending"],
       "Type": "Close Combat"
     },
     "Shield": {
-      "": 0,
       "AL": 0,
       "AP": 0,
       "AS": 0,
@@ -10625,12 +10563,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Defensive", "Melee", "Shield (10+)"],
       "Type": "Close Combat"
     },
     "Shortbow": {
-      "": 3,
       "AL": 0,
       "AP": 0,
       "AS": 1,
@@ -10640,12 +10576,10 @@
       "RL": 18,
       "RS": 10,
       "S": 3,
-      "T5": "",
       "Traits": ["Multi-Shot (2)"],
       "Type": "Long Range"
     },
     "Sling": {
-      "": 3,
       "AL": 0,
       "AP": 0,
       "AS": 1,
@@ -10655,12 +10589,10 @@
       "RL": 20,
       "RS": 12,
       "S": 3,
-      "T5": "",
       "Traits": ["Multi-Shot (2)"],
       "Type": "Long Range"
     },
     "Spear": {
-      "": 0,
       "AL": 1,
       "AP": 1,
       "AS": -1,
@@ -10670,12 +10602,16 @@
       "RL": 1,
       "RS": 0,
       "S": "S",
-      "T5": "Anti-Large",
-      "Traits": ["Extra Leverage", "Melee", "Strike First", "Versatile"],
+      "Traits": [
+        "Anti-Large",
+        "Extra Leverage",
+        "Melee",
+        "Strike First",
+        "Versatile"
+      ],
       "Type": "Close Combat"
     },
     "Sword": {
-      "": 0,
       "AL": 1,
       "AP": 0,
       "AS": 0,
@@ -10685,12 +10621,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee", "Parry"],
       "Type": "Close Combat"
     },
     "Tail Weapon": {
-      "": 0,
       "AL": 0,
       "AP": 0,
       "AS": 0,
@@ -10700,12 +10634,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Hands Free"],
       "Type": "Close Combat"
     },
     "Three-Eyed Gun": {
-      "": 4,
       "AL": 0,
       "AP": 2,
       "AS": 1,
@@ -10715,12 +10647,10 @@
       "RL": 18,
       "RS": 10,
       "S": 4,
-      "T5": "",
       "Traits": ["Black Powder", "Multi-Shot (3)"],
       "Type": "Long Range"
     },
     "Throwing Axe": {
-      "": 4,
       "AL": 0,
       "AP": 0,
       "AS": 1,
@@ -10730,12 +10660,10 @@
       "RL": 9,
       "RS": 6,
       "S": "S+1",
-      "T5": "",
       "Traits": [],
       "Type": "Short Range"
     },
     "Throwing Knives": {
-      "": 3,
       "AL": 0,
       "AP": 0,
       "AS": 1,
@@ -10745,12 +10673,10 @@
       "RL": 9,
       "RS": 6,
       "S": "S",
-      "T5": "",
       "Traits": ["Multi-Shot (2)"],
       "Type": "Short Range"
     },
     "Troll Club": {
-      "": 0,
       "AL": 0,
       "AP": "",
       "AS": 0,
@@ -10760,12 +10686,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S",
-      "T5": "",
       "Traits": ["Melee", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Two Handed Hammer": {
-      "": 3,
       "AL": -1,
       "AP": 2,
       "AS": 0,
@@ -10775,12 +10699,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+3",
-      "T5": "",
       "Traits": ["Melee", "Pulverise", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Two handed Axe": {
-      "": 3,
       "AL": -1,
       "AP": 2,
       "AS": 0,
@@ -10790,12 +10712,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+3",
-      "T5": "",
       "Traits": ["Melee", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Two handed sword": {
-      "": 2,
       "AL": 0,
       "AP": 1,
       "AS": 0,
@@ -10805,12 +10725,10 @@
       "RL": 0,
       "RS": 0,
       "S": "S+2",
-      "T5": "",
       "Traits": ["Melee", "Unwieldly"],
       "Type": "Close Combat"
     },
     "Warplock Pistol": {
-      "": 5,
       "AL": 0,
       "AP": 3,
       "AS": 1,
@@ -10820,7 +10738,6 @@
       "RL": 12,
       "RS": 6,
       "S": 5,
-      "T5": "",
       "Traits": ["Black Powder", "Sidearm"],
       "Type": "Short Range"
     }

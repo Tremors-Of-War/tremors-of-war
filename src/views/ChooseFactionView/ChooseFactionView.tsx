@@ -25,7 +25,7 @@ const ChooseFactionView: FunctionComponent<Props> = ({
         container
         spacing={2}
         marginTop="16px"
-        maxHeight="520px"
+        maxHeight="530px"
         sx={{
           overflowX: "hidden",
           overflowY: "scroll",

@@ -3,10 +3,10 @@ import React, { FunctionComponent } from "react";
 import { TransitionGroup } from "react-transition-group";
 import data from "../../../data.json";
 import { Mounts, Armour, Model, Abilities, Weapons } from "../../../types";
-import SetUnitMountsStats from "./SetUnitMountsStats";
 import SetUnitMountArmour from "./SetUnitMountsArmour";
 import SetUnitMountUpgrades from "./SetUnitMountsUpgrades";
 import SetUnitMountWeaponry from "./SetUnitMountsWeaponry";
+import MountUnitStats from "../../../components/MountUnitStats";
 
 interface Props {
   handleSelect: (selected: Mounts) => void;
@@ -87,7 +87,8 @@ const SetUnitMounts: FunctionComponent<Props> = ({
                 {data.mounts[mounts].cost} Points
               </Typography>
             </Grid>
-            <SetUnitMountsStats mounts={mounts} />
+            <MountUnitStats data={data.mounts[mounts]} textSize="body1" />
+
             <Grid
               container
               direction="column"

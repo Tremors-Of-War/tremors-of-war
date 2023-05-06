@@ -19,7 +19,9 @@ const PlayScreenWeaponry: FunctionComponent<Props> = ({
     <Grid container direction="column">
       {primaryWeaponry && <PlayScreenWeaponryStats weapon={primaryWeaponry} />}
       {rangedWeapon && <PlayScreenWeaponryStats weapon={rangedWeapon} />}
-      {secondaryWeaponry && <PlayScreenWeaponryStats weapon={secondaryWeaponry} />}
+      {secondaryWeaponry && (
+        <PlayScreenWeaponryStats weapon={secondaryWeaponry} />
+      )}
     </Grid>
   </Grid>
 );

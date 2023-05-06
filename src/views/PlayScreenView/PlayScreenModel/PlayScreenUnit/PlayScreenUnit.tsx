@@ -2,7 +2,7 @@ import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
 import { Model } from "../../../../types";
-import PlayScreenUnitStats from "./PlayScreenUnitStats";
+import MountUnitStats from "../../../../components/MountUnitStats";
 import data from "../../../../data.json";
 
 interface Props {
@@ -36,7 +36,7 @@ const PlayScreenUnit: FunctionComponent<Props> = ({ model }) => (
 
       {model?.unit && (
         <>
-          <PlayScreenUnitStats unit={model.unit} />
+          <MountUnitStats data={model.unit} textSize="body2" />
           <Grid
             container
             direction="column"
