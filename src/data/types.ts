@@ -29,7 +29,7 @@ export interface Unit {
   rangedWeaponry: WeaponId[];
   armour: ArmourId[];
   helmet: ArmourId[];
-  upgrades: [];
+  upgrades: AbilityId[];
   mounts: MountId[];
 }
 export interface Mount {
