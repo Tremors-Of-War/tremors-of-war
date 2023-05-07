@@ -1,9 +1,9 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Model } from "../../../../types";
+import { Model } from "../../../../data";
 import MountUnitStats from "../../../../components/MountUnitStats";
-import data from "../../../../data.json";
+import data from "../../../../data/database.json";
 
 interface Props {
   model: Model;

@@ -1,7 +1,7 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { ArmourId } from "../../../../types";
-import data from "../../../../data.json";
+import { ArmourId } from "../../../../data";
+import data from "../../../../data/database.json";
 
 interface Props {
   armour: ArmourId;

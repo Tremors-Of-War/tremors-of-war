@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Model } from "../../../types";
+import { Model } from "../../../data";
 import { TabOption } from "../tabs/types";
 import {
   calculateArmourCosts,

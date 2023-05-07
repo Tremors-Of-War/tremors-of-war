@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Model } from "../../../../types";
+import { Model } from "../../../../data";
 import WeaponryStats from "../../../../components/Weaponry/WeaponryStats";
 import WeaponryTraits from "../../../../components/Weaponry/WeaponryTraits";
 

@@ -1,6 +1,6 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Model } from "../types";
+import { Model } from "../data";
 import {
   calculateArmourEffectOnCC,
   calculateArmourEffectOnR,

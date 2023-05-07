@@ -3,7 +3,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../../components/ChooseWarBandTotalDialog";
 import AddUnitsZeroStateAction from "./AddUnitsZeroStateAction";
-import { FactionId, Model } from "../../../types";
+import { FactionId, Model } from "../../../data";
 import AddUnitsViewHeader from "../components/AddUnitsViewHeader";
 import AddUnitsViewFooter from "../components/AddUnitsViewFooter";
 

@@ -5,7 +5,7 @@ import ContentContainer from "../../components/ContentContainer";
 import ChooseRuleSetButton from "./ChooseRuleSetButton";
 import fantasyIMG from "../../assets/rulesets/fantasy.jpg";
 import darkAgesIMG from "../../assets/rulesets/dark_ages.jpg";
-import { RuleSetId } from "../../types";
+import { RuleSetId } from "../../data";
 
 interface Props {
   onClickBack: () => void;

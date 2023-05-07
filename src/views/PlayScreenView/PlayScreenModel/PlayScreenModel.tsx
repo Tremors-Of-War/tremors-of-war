@@ -11,7 +11,7 @@ import React, { FunctionComponent } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import theme from "../../../app/theme";
-import { Model } from "../../../types";
+import { Model } from "../../../data";
 import PlayScreenModelDetails from "./PlayScreenModelDetails";
 import skullLogo from "../../../assets/images/skull_logo.png";
 import KillAlertDialog from "../components/KillAlertDialog";

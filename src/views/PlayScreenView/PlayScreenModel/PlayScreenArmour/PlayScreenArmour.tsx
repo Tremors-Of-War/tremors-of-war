@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Model } from "../../../../types";
+import { Model } from "../../../../data";
 import PlayScreenArmourStats from "./PlayScreenArmourStats";
 import ArmourSave from "../../../../components/ArmourSave";
 

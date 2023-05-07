@@ -1,6 +1,6 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Unit, Mount } from "../types";
+import { Unit, Mount } from "../data";
 
 interface Props {
   data: Mount | Unit;

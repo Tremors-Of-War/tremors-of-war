@@ -9,8 +9,8 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import data from "../../../data.json";
-import { AbilityId } from "../../../types";
+import data from "../../../data/database.json";
+import { AbilityId } from "../../../data";
 
 interface Props {
   upgrades: string[];

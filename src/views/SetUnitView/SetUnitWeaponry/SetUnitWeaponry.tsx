@@ -9,8 +9,8 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { WeaponId } from "../../../types";
-import data from "../../../data.json";
+import { WeaponId } from "../../../data";
+import data from "../../../data/database.json";
 import WeaponryStats from "../../../components/Weaponry/WeaponryStats";
 import WeaponryTraits from "../../../components/Weaponry/WeaponryTraits";
 

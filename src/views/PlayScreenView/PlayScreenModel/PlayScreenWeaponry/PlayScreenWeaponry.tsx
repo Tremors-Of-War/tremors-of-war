@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { WeaponId } from "../../../../types";
+import { WeaponId } from "../../../../data";
 import PlayScreenWeaponryStats from "./PlayScreenWeaponryStats";
 
 interface Props {

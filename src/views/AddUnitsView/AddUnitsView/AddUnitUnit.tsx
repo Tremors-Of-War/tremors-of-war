@@ -3,7 +3,7 @@ import React, { FunctionComponent } from "react";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import theme from "../../../app/theme";
-import { Model } from "../../../types";
+import { Model } from "../../../data";
 
 interface Props {
   model: Model;

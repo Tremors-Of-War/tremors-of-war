@@ -1,8 +1,8 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { Unit } from "../../../types";
-import data from "../../../data.json";
+import { Unit } from "../../../data";
+import data from "../../../data/database.json";
 
 interface Props {
   unit: Unit;

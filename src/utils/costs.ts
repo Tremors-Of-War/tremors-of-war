@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
-import data from "../data.json";
+import data from "../data/database.json";
 
-import { Model } from "../types";
+import { Model } from "../data";
 
 const sumReducer = (acc: number, curr: number) => acc + curr;
 

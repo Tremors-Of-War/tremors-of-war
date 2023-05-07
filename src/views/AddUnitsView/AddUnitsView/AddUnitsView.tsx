@@ -4,7 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { TransitionGroup } from "react-transition-group";
 import ContentContainer from "../../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../../components/ChooseWarBandTotalDialog";
-import { FactionId, Model } from "../../../types";
+import { FactionId, Model } from "../../../data";
 import AddUnitUnit from "./AddUnitUnit";
 import RestartConfirmationDialog from "../components/RestartConfirmationDialog";
 import AddUnitsViewHeader from "../components/AddUnitsViewHeader";

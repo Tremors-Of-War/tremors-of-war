@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
-import { FactionId, RuleSetId, Model } from "../../types";
+import { FactionId, RuleSetId, Model } from "../../data";
 import AddUnitsView from "../AddUnitsView/AddUnitsView/AddUnitsView";
 import AddUnitsZeroStateView from "../AddUnitsView/AddUnitsZeroState/AddUnitsZeroStateView";
 import ChooseFactionView from "../ChooseFactionView/ChooseFactionView";

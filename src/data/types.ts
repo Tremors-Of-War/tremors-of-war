@@ -1,4 +1,4 @@
-import data from "./data.json";
+import data from "./database.json";
 
 export type RuleSetId = keyof typeof data.rulesets;
 export type FactionId = keyof typeof data.factions;
@@ -6,11 +6,12 @@ export type WeaponId = keyof typeof data.weapons;
 export type ArmourId = keyof typeof data.armour;
 export type MountId = keyof typeof data.mounts;
 export type AbilityId = keyof typeof data.abilities;
+export type UnitId = keyof typeof data.units;
 
 export interface Unit {
   faction: FactionId;
   name: string;
-  id: string;
+  id: UnitId;
   m: number;
   ws: number;
   bs: number;
@@ -47,7 +48,7 @@ export interface Mount {
   abilities: AbilityId[];
   primaryWeaponry: WeaponId[];
   armour: ArmourId[];
-  upgrades: [];
+  upgrades: AbilityId[];
 }
 
 export interface Model {

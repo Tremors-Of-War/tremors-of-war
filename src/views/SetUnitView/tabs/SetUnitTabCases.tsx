@@ -1,7 +1,7 @@
 import { Alert, CircularProgress, Grid } from "@mui/material";
 import React, { FunctionComponent, useEffect } from "react";
 import SetUnitUpgrades from "../SetUnitUpgrades/SetUnitUpgrades";
-import { AbilityId, Model, Unit } from "../../../types";
+import { AbilityId, Model, Unit } from "../../../data";
 import SetUnitUnit from "../SetUnitUnit/SetUnitUnit";
 import SetUnitWeaponry from "../SetUnitWeaponry/SetUnitWeaponry";
 import SetUnitArmour from "../SetUnitArmour/SetUnitArmour";

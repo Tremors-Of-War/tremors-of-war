@@ -14,7 +14,7 @@ import NORMANS from "../../assets/factions/dark_ages/normans.jpg";
 import ROMANS from "../../assets/factions/dark_ages/romans.jpg";
 import SAXONS from "../../assets/factions/dark_ages/saxons.jpg";
 import NORSE from "../../assets/factions/dark_ages/vikings.jpg";
-import { FactionId } from "../../types";
+import { FactionId } from "../../data";
 
 export interface FactionButton {
   id: FactionId;

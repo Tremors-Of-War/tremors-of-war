@@ -10,8 +10,8 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { ArmourId } from "../../../types";
-import data from "../../../data.json";
+import { ArmourId } from "../../../data";
+import data from "../../../data/database.json";
 
 interface Props {
   dropdownTitle: string;

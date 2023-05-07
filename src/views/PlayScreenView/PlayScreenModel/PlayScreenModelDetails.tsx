@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Model } from "../../../types";
+import { Model } from "../../../data";
 import PlayScreenUnit from "./PlayScreenUnit/PlayScreenUnit";
 import PlayScreenArmour from "./PlayScreenArmour/PlayScreenArmour";
 import PlayScreenWeaponry from "./PlayScreenWeaponry/PlayScreenWeaponry";

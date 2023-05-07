@@ -1,8 +1,8 @@
 import { Radio, Grid, Typography, Collapse, Tooltip } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import { TransitionGroup } from "react-transition-group";
-import data from "../../../data.json";
-import { MountId, ArmourId, Model, AbilityId, WeaponId } from "../../../types";
+import data from "../../../data/database.json";
+import { MountId, ArmourId, Model, AbilityId, WeaponId } from "../../../data";
 import SetUnitMountArmour from "./SetUnitMountsArmour";
 import SetUnitMountUpgrades from "./SetUnitMountsUpgrades";
 import SetUnitMountWeaponry from "./SetUnitMountsWeaponry";

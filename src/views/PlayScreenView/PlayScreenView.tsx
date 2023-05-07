@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { TransitionGroup } from "react-transition-group";
 import ContentContainer from "../../components/ContentContainer";
-import { FactionId, Model } from "../../types";
+import { FactionId, Model } from "../../data";
 import PlayScreenModel from "./PlayScreenModel/PlayScreenModel";
 import RulesDialog from "./components/rules/RulesDialog";
 
