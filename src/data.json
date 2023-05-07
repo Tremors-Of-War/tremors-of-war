@@ -1875,8 +1875,7 @@
           "Poleaxe",
           "Spear",
           "Sword",
-          "Two handed Axe",
-          "Two handed sword"
+          "Two handed Axe"
         ],
         "rangedWeaponry": [
           "Bow",
@@ -2409,14 +2408,17 @@
       "Nipponese_Leves": {
         "a": 1,
         "abilities": [],
+        "armour": ["Padded Armour"],
         "bs": 8,
         "cl": 9,
         "cost": 16,
         "faction": "Nippon",
+        "helmet": ["Helmet"],
         "i": 6,
         "id": "Nipponese_Leves",
         "int": 9,
         "m": 5,
+        "mounts": [],
         "name": "Nipponese Leves",
         "primaryWeaponry": ["Dagger"],
         "rangedWeaponry": [],
@@ -2749,13 +2751,7 @@
         "upgrades": [
           "Counter-Attack",
           "Crushing Blow",
-          "Helmet",
           "Iron Will",
-          "Nipponese_Leves_Armour",
-          "Nipponese_Leves_Helmet",
-          "Nipponese_Leves_Mounts",
-          "Nipponese_Leves_Mounts",
-          "Padded Armour",
           "Rain of Blows",
           "Step Aside",
           "True Grit"
@@ -6065,8 +6061,7 @@
               "Poleaxe",
               "Spear",
               "Sword",
-              "Two handed Axe",
-              "Two handed sword"
+              "Two handed Axe"
             ],
             "rangedWeaponry": [
               "Bow",
@@ -6603,14 +6598,17 @@
           "Nipponese_Leves": {
             "a": 1,
             "abilities": [],
+            "armour": ["Padded Armour"],
             "bs": 8,
             "cl": 9,
             "cost": 16,
             "faction": "Nippon",
+            "helmet": ["Helmet"],
             "i": 6,
             "id": "Nipponese_Leves",
             "int": 9,
             "m": 5,
+            "mounts": [],
             "name": "Nipponese Leves",
             "primaryWeaponry": ["Dagger"],
             "rangedWeaponry": [],
@@ -6816,13 +6814,7 @@
             "upgrades": [
               "Counter-Attack",
               "Crushing Blow",
-              "Helmet",
               "Iron Will",
-              "Nipponese_Leves_Armour",
-              "Nipponese_Leves_Helmet",
-              "Nipponese_Leves_Mounts",
-              "Nipponese_Leves_Mounts",
-              "Padded Armour",
               "Rain of Blows",
               "Step Aside",
               "True Grit"
@@ -8232,8 +8224,7 @@
         "Poleaxe",
         "Spear",
         "Sword",
-        "Two handed Axe",
-        "Two handed sword"
+        "Two handed Axe"
       ],
       "rangedWeaponry": [
         "Bow",
@@ -9106,14 +9097,17 @@
     "Nipponese_Leves": {
       "a": 1,
       "abilities": [],
+      "armour": ["Padded Armour"],
       "bs": 8,
       "cl": 9,
       "cost": 16,
       "faction": "Nippon",
+      "helmet": ["Helmet"],
       "i": 6,
       "id": "Nipponese_Leves",
       "int": 9,
       "m": 5,
+      "mounts": [],
       "name": "Nipponese Leves",
       "primaryWeaponry": ["Dagger"],
       "rangedWeaponry": [],

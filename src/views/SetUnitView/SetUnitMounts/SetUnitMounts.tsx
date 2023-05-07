@@ -2,7 +2,14 @@ import { Radio, Grid, Typography, Collapse, Tooltip } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import { TransitionGroup } from "react-transition-group";
 import data from "../../../data.json";
-import { Mounts, Armour, Model, Abilities, Weapons } from "../../../types";
+import {
+  Mounts,
+  Armour,
+  Model,
+  Abilities,
+  Weapons,
+  Mount,
+} from "../../../types";
 import SetUnitMountArmour from "./SetUnitMountsArmour";
 import SetUnitMountUpgrades from "./SetUnitMountsUpgrades";
 import SetUnitMountWeaponry from "./SetUnitMountsWeaponry";
@@ -87,7 +94,10 @@ const SetUnitMounts: FunctionComponent<Props> = ({
                 {data.mounts[mounts].cost} Points
               </Typography>
             </Grid>
-            <MountUnitStats data={data.mounts[mounts]} textSize="body1" />
+            <MountUnitStats
+              data={data.mounts[mounts] as Mount}
+              textSize="body1"
+            />
 
             <Grid
               container

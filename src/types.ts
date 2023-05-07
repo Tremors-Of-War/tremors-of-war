@@ -51,6 +51,7 @@ export interface Mount {
   primaryWeaponry: Weapons[];
   armour: Armour[];
   upgrades: [];
+  type: string[];
 }
 
 export interface Model {
