@@ -91,7 +91,7 @@ const SetUnitView: FunctionComponent<Props> = ({
 
   const exceededWarbandTotal = pointsRemaining < 0;
 
-  const unitOptions: Unit[] = Object.values(data.factions[faction]);
+  const unitOptions = Object.values(data.factions[faction]) as Unit[];
 
   useEffect(() => {
     if (existingModel) {
