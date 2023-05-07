@@ -1,15 +1,14 @@
 /* eslint-disable import/prefer-default-export */
-import data from "../data/database.json";
 
-import { Model } from "../data";
+import { armourById, Model } from "../data";
 
 const sumReducer = (acc: number, curr: number) => acc + curr;
 
 export const calculateArmourEffectOnR = (model: Model): number => {
   const costs = [
-    model.armour ? data.armour[model.armour]["Armour Effect vs R"] : 0,
+    model.armour ? armourById[model.armour]["Armour Effect vs R"] : 0,
 
-    model.helmet ? data.armour[model.helmet]["Armour Effect vs R"] : 0,
+    model.helmet ? armourById[model.helmet]["Armour Effect vs R"] : 0,
 
     model.secondaryWeaponry && model.secondaryWeaponry === "Shield" ? 1 : 0,
   ];
@@ -18,9 +17,9 @@ export const calculateArmourEffectOnR = (model: Model): number => {
 
 export const calculateArmourEffectOnCC = (model: Model): number => {
   const costs = [
-    model.armour ? data.armour[model.armour]["Armour Effect vs CC"] : 0,
+    model.armour ? armourById[model.armour]["Armour Effect vs CC"] : 0,
 
-    model.helmet ? data.armour[model.helmet]["Armour Effect vs CC"] : 0,
+    model.helmet ? armourById[model.helmet]["Armour Effect vs CC"] : 0,
   ];
   return 11 - costs.reduce(sumReducer, 0);
 };

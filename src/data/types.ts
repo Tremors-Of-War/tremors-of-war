@@ -49,6 +49,7 @@ export interface Mount {
   primaryWeaponry: WeaponId[];
   armour: ArmourId[];
   upgrades: AbilityId[];
+  type: string[];
 }
 
 export interface Model {
@@ -67,4 +68,34 @@ export interface Model {
   secondaryWeaponry?: WeaponId;
   rangedWeapon?: WeaponId;
   active: boolean;
+}
+
+export interface Weapon {
+  AL: number;
+  AP: number | "";
+  AS: number;
+  Cost: number;
+  D: number;
+  Name: WeaponId;
+  RL: number;
+  RS: number;
+  S: number | "S" | "S+1";
+  Traits: AbilityId[];
+  Type: string;
+}
+
+export interface Armour {
+  "Armour Effect vs CC": number;
+  "Armour Effect vs R": number;
+  "Armour Value CC": string | null;
+  "Armour Value R": string | null;
+  Cost: number;
+  Effects: null | string;
+  Name: ArmourId;
+}
+
+export interface Ability {
+  Cost: number;
+  Effects: string;
+  Name: AbilityId;
 }

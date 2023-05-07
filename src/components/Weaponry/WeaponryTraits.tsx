@@ -1,7 +1,6 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import data from "../../data/database.json";
-import { WeaponId } from "../../data";
+import { abilitiesById, WeaponId, weaponsById } from "../../data";
 
 interface Props {
   weapon: WeaponId;
@@ -10,8 +9,8 @@ interface Props {
 
 const WeaponryStats: FunctionComponent<Props> = ({ weapon, textSize }) => (
   <Grid container direction="row" justifyContent="flex-end">
-    {data.weapons[weapon].Traits.map((trait, i, arr) => (
-      <Tooltip key={i} title={data.abilities[trait].Effects}>
+    {weaponsById[weapon].Traits.map((trait, i, arr) => (
+      <Tooltip key={i} title={abilitiesById[trait].Effects}>
         <Typography variant={textSize}>
           {trait}
           {i !== arr.length - 1 ? "," : ""}&nbsp;

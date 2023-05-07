@@ -1,7 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { WeaponId } from "../../../../data";
-import data from "../../../../data/database.json";
+import { WeaponId, weaponsById } from "../../../../data";
 import WeaponryStats from "../../../../components/Weaponry/WeaponryStats";
 import WeaponryTraits from "../../../../components/Weaponry/WeaponryTraits";
 
@@ -10,7 +9,7 @@ interface Props {
 }
 
 const PlayScreenWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
-  const weaponStats = data.weapons[weapon];
+  const weaponStats = weaponsById[weapon];
   return (
     <Grid
       container
@@ -34,7 +33,7 @@ const PlayScreenWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
       </Grid>
 
       <Grid container justifyContent="flex-start" width="408px">
-        <WeaponryStats weapon={weapon} />
+        <WeaponryStats weaponId={weapon} />
       </Grid>
       <Grid
         container

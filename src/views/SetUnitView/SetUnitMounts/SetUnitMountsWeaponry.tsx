@@ -9,9 +9,8 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { WeaponId } from "../../../data";
+import { WeaponId, weaponsById } from "../../../data";
 import WeaponryStats from "../../../components/Weaponry/WeaponryStats";
-import data from "../../../data/database.json";
 import WeaponryTraits from "../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
@@ -83,7 +82,7 @@ const SetUnitMountWeaponry: FunctionComponent<Props> = ({
         {weaponSelect && (
           <>
             <Grid width="416px">
-              <WeaponryStats weapon={weaponSelect} />
+              <WeaponryStats weaponId={weaponSelect} />
             </Grid>
             <Grid
               container
@@ -99,7 +98,7 @@ const SetUnitMountWeaponry: FunctionComponent<Props> = ({
                   variant="body2"
                   color="text.disabled"
                 >
-                  {data.weapons[weaponSelect].Cost} Points&nbsp;
+                  {weaponsById[weaponSelect].Cost} Points&nbsp;
                 </Grid>
               </Grid>
             </Grid>

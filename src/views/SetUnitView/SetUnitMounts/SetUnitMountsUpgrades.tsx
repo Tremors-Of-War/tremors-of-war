@@ -9,8 +9,7 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import data from "../../../data/database.json";
-import { AbilityId } from "../../../data";
+import { abilitiesById, AbilityId } from "../../../data";
 
 interface Props {
   upgrades: string[];
@@ -86,7 +85,7 @@ const SetUnitMountUpgrades: FunctionComponent<Props> = ({
                 variant="caption"
                 sx={{ whiteSpace: "pre-wrap" }}
               >
-                &nbsp;{data.abilities[currentMountUpgrade].Effects}
+                &nbsp;{abilitiesById[currentMountUpgrade].Effects}
               </Grid>
             </Grid>
             <Grid
@@ -97,7 +96,7 @@ const SetUnitMountUpgrades: FunctionComponent<Props> = ({
               width="100px"
             >
               <Typography variant="body2">
-                {data.abilities[currentMountUpgrade].Cost} Points
+                {abilitiesById[currentMountUpgrade].Cost} Points
               </Typography>
             </Grid>
           </>

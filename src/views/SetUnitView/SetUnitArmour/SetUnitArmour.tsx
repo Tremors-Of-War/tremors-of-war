@@ -10,8 +10,7 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { ArmourId } from "../../../data";
-import data from "../../../data/database.json";
+import { armourById, ArmourId } from "../../../data";
 
 interface Props {
   dropdownTitle: string;
@@ -91,7 +90,7 @@ const SetUnitArmour: FunctionComponent<Props> = ({
                 >
                   <Grid component={Typography} variant="caption">
                     {" "}
-                    {data.armour[armourSelect].Effects}
+                    {armourById[armourSelect].Effects}
                   </Grid>
                 </Grid>
 
@@ -111,7 +110,7 @@ const SetUnitArmour: FunctionComponent<Props> = ({
                       <Typography color="text.disabled">R</Typography>
                     </Grid>
                     <Grid component={Typography}>
-                      {data.armour[armourSelect]["Armour Value R"]}
+                      {armourById[armourSelect]["Armour Value R"]}
                     </Grid>
                   </Grid>
 
@@ -124,14 +123,14 @@ const SetUnitArmour: FunctionComponent<Props> = ({
                       <Typography color="text.disabled">CC</Typography>
                     </Grid>
                     <Grid component={Typography}>
-                      {data.armour[armourSelect]["Armour Value CC"]}
+                      {armourById[armourSelect]["Armour Value CC"]}
                     </Grid>
                   </Grid>
                 </Grid>
 
                 <Grid width="100px">
                   <Grid component={Typography}>
-                    {data.armour[armourSelect].Cost} Points
+                    {armourById[armourSelect].Cost} Points
                   </Grid>
                 </Grid>
               </>

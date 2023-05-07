@@ -5,8 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./tabs/SetUnitTabs";
 import SetUnitUnitHeader from "./SetUnitUnit/SetUnitUnitHeader";
-import { FactionId, Unit, Model } from "../../data";
-import data from "../../data/database.json";
+import { FactionId, getUnitsByFaction, Model } from "../../data";
 import NoUnitNameError from "./components/NoUnitNameError";
 import SetUnitTabCases from "./tabs/SetUnitTabCases";
 import SetUnitFooter from "./components/SetUnitFooter";
@@ -91,7 +90,7 @@ const SetUnitView: FunctionComponent<Props> = ({
 
   const exceededWarbandTotal = pointsRemaining < 0;
 
-  const unitOptions = Object.values(data.factions[faction]) as Unit[];
+  const unitOptions = getUnitsByFaction(faction);
 
   useEffect(() => {
     if (existingModel) {

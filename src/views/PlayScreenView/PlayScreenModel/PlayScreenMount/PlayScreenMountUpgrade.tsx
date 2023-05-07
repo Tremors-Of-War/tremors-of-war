@@ -1,8 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Model } from "../../../../data";
-import data from "../../../../data/database.json";
+import { abilitiesById, Model } from "../../../../data";
 
 interface Props {
   model: Model;
@@ -40,7 +39,7 @@ const PlayScreenMountUpgrade: FunctionComponent<Props> = ({ model }) => (
             variant="caption"
             sx={{ whiteSpace: "pre-wrap" }}
           >
-            &nbsp;{data.abilities[model.mountUpgrade].Effects}
+            &nbsp;{abilitiesById[model.mountUpgrade].Effects}
           </Grid>
         </Grid>
       </Grid>

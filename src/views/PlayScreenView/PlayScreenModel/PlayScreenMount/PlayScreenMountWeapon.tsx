@@ -37,7 +37,7 @@ const PlayScreenMountWeapon: FunctionComponent<Props> = ({ model }) => (
           <Typography>{model.mountWeapon}</Typography>
         </Grid>
         <Grid container width="400px" justifyContent="flex-start">
-          <WeaponryStats weapon={model.mountWeapon} />
+          <WeaponryStats weaponId={model.mountWeapon} />
         </Grid>
         <Grid
           container

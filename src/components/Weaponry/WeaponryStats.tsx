@@ -1,10 +1,9 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { WeaponId } from "../../data";
-import data from "../../data/database.json";
+import { WeaponId, weaponsById } from "../../data";
 
 interface Props {
-  weapon: WeaponId;
+  weaponId: WeaponId;
 }
 const header = [
   { title: "RS", description: "Range Short" },
@@ -16,8 +15,8 @@ const header = [
   { title: "D", description: "D" },
 ];
 
-const WeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
-  const { RS, RL, AS, AL, S, AP, D } = data.weapons[weapon];
+const WeaponryStats: FunctionComponent<Props> = ({ weaponId }) => {
+  const { RS, RL, AS, AL, S, AP, D } = weaponsById[weaponId];
   const stats = [RS, RL, AS, AL, S, AP, D];
   return (
     <Grid container direction="column">

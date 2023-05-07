@@ -1,8 +1,7 @@
 import { Grid, Typography, Tooltip } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Model } from "../../../../data";
-import data from "../../../../data/database.json";
+import { armourById, Model } from "../../../../data";
 
 interface Props {
   model: Model;
@@ -37,7 +36,7 @@ const PlayScreenMountArmour: FunctionComponent<Props> = ({ model }) => (
         <Grid height="100%" width="425px" sx={{ whiteSpace: "pre-wrap" }}>
           <Grid component={Typography} variant="caption">
             {" "}
-            {data.armour[model.mountArmour].Effects}
+            {armourById[model.mountArmour].Effects}
           </Grid>
         </Grid>
 
@@ -56,7 +55,7 @@ const PlayScreenMountArmour: FunctionComponent<Props> = ({ model }) => (
             </Grid>
 
             <Grid component={Typography} variant="body2">
-              {data.armour[model.mountArmour]["Armour Value R"]}
+              {armourById[model.mountArmour]["Armour Value R"]}
             </Grid>
           </Grid>
 
@@ -67,7 +66,7 @@ const PlayScreenMountArmour: FunctionComponent<Props> = ({ model }) => (
               </Typography>
             </Grid>
             <Grid component={Typography} variant="body2">
-              {data.armour[model.mountArmour]["Armour Value CC"]}
+              {armourById[model.mountArmour]["Armour Value CC"]}
             </Grid>
           </Grid>
         </Grid>

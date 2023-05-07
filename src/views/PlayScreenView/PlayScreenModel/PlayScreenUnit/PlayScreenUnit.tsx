@@ -1,9 +1,8 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Model } from "../../../../data";
+import { abilitiesById, Model } from "../../../../data";
 import MountUnitStats from "../../../../components/MountUnitStats";
-import data from "../../../../data/database.json";
 
 interface Props {
   model: Model;
@@ -45,7 +44,7 @@ const PlayScreenUnit: FunctionComponent<Props> = ({ model }) => (
             margin="8px 0px"
           >
             {model.unit.abilities.map((ability) => (
-              <Tooltip key={ability} title={data.abilities[ability].Effects}>
+              <Tooltip key={ability} title={abilitiesById[ability].Effects}>
                 <Typography variant="caption">&#8226; {ability}</Typography>
               </Tooltip>
             ))}

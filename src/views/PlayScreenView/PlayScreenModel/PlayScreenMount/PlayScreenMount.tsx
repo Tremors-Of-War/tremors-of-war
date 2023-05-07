@@ -1,11 +1,10 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Model } from "../../../../data";
+import { abilitiesById, Model, mountsById } from "../../../../data";
 import MountUnitStats from "../../../../components/MountUnitStats";
 import PlayScreenMountArmour from "./PlayScreenMountArmour";
 import PlayScreenMountUpgrade from "./PlayScreenMountUpgrade";
-import data from "../../../../data/database.json";
 import PlayScreenMountWeapon from "./PlayScreenMountWeapon";
 
 interface Props {
@@ -35,14 +34,14 @@ const PlayScreenMount: FunctionComponent<Props> = ({ model }) => (
         >
           <Grid container direction="column" maxWidth="160px">
             <Typography sx={{ color: "text.disabled" }} variant="caption">
-              {data.mounts[model.mounts].type}
+              {mountsById[model.mounts].type}
             </Typography>
             <Typography variant="body1">
               {model.mounts.replace(/_/g, " ")}
             </Typography>
           </Grid>
 
-          <MountUnitStats data={data.mounts[model.mounts]} textSize="body2" />
+          <MountUnitStats data={mountsById[model.mounts]} textSize="body2" />
           <Grid
             container
             direction="column"
@@ -50,8 +49,8 @@ const PlayScreenMount: FunctionComponent<Props> = ({ model }) => (
             width="116px"
             margin="8px 0px"
           >
-            {data.mounts[model.mounts].abilities.map((ability) => (
-              <Tooltip key={ability} title={data.abilities[ability].Effects}>
+            {mountsById[model.mounts].abilities.map((ability) => (
+              <Tooltip key={ability} title={abilitiesById[ability].Effects}>
                 <Typography variant="caption">&#8226; {ability}</Typography>
               </Tooltip>
             ))}
