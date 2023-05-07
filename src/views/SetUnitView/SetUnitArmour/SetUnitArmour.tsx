@@ -10,14 +10,14 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { Armour } from "../../../types";
+import { ArmourId } from "../../../types";
 import data from "../../../data.json";
 
 interface Props {
   dropdownTitle: string;
-  armoury: Armour[];
-  currentArmoury?: Armour;
-  handleSelect: (selected: Armour) => void;
+  armoury: ArmourId[];
+  currentArmoury?: ArmourId;
+  handleSelect: (selected: ArmourId) => void;
 }
 
 const SetUnitArmour: FunctionComponent<Props> = ({
@@ -49,7 +49,7 @@ const SetUnitArmour: FunctionComponent<Props> = ({
                 <Select
                   value={armourSelect || ""}
                   onChange={(event: SelectChangeEvent) => {
-                    const value = event.target.value as Armour;
+                    const value = event.target.value as ArmourId;
                     setArmourSelect(value);
                     handleSelect(value);
                   }}

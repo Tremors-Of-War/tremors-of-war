@@ -1,7 +1,7 @@
 import { Alert, CircularProgress, Grid } from "@mui/material";
 import React, { FunctionComponent, useEffect } from "react";
 import SetUnitUpgrades from "../SetUnitUpgrades/SetUnitUpgrades";
-import { Abilities, Model, Unit } from "../../../types";
+import { AbilityId, Model, Unit } from "../../../types";
 import SetUnitUnit from "../SetUnitUnit/SetUnitUnit";
 import SetUnitWeaponry from "../SetUnitWeaponry/SetUnitWeaponry";
 import SetUnitArmour from "../SetUnitArmour/SetUnitArmour";
@@ -212,7 +212,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
             return (
               // eslint-disable-next-line
               <>
-                {model.unit?.upgrades.map((upgrade: Abilities) => (
+                {model.unit?.upgrades.map((upgrade: AbilityId) => (
                   <SetUnitUpgrades
                     key={upgrade}
                     upgrade={upgrade}
@@ -225,7 +225,7 @@ const SetUnitTabCases: FunctionComponent<Props> = ({
                         });
                       } else {
                         const newUpgrades = model.upgrades.filter(
-                          (remove: Abilities) => remove !== upgrade
+                          (remove: AbilityId) => remove !== upgrade
                         );
                         onModelChanges({ ...model, upgrades: newUpgrades });
                       }

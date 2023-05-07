@@ -2,12 +2,12 @@ import { Checkbox, Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
 import data from "../../../data.json";
-import { Abilities } from "../../../types";
+import { AbilityId } from "../../../types";
 
 interface Props {
   handleClick: (selected: boolean) => void;
-  upgrade: Abilities;
-  currentUpgrades: Abilities[];
+  upgrade: AbilityId;
+  currentUpgrades: AbilityId[];
 }
 
 const SetUnitUpgrades: FunctionComponent<Props> = ({

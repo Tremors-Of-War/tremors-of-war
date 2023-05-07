@@ -4,12 +4,12 @@ import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
 import ChooseFactionButton from "./ChooseFactionButton";
 import Factions from "./factionsList";
-import { Faction, RuleSet } from "../../types";
+import { FactionId, RuleSetId } from "../../types";
 
 interface Props {
-  ruleSet: RuleSet;
+  ruleSet: RuleSetId;
   onClickBack: () => void;
-  setFaction: (faction: Faction) => void;
+  setFaction: (faction: FactionId) => void;
 }
 
 const ChooseFactionView: FunctionComponent<Props> = ({

@@ -10,14 +10,14 @@ import {
 } from "@mui/material";
 import { TransitionGroup } from "react-transition-group";
 import ContentContainer from "../../components/ContentContainer";
-import { Faction, Model } from "../../types";
+import { FactionId, Model } from "../../types";
 import PlayScreenModel from "./PlayScreenModel/PlayScreenModel";
 import RulesDialog from "./components/rules/RulesDialog";
 
 interface Props {
   models: Model[];
   onClickBack: () => void;
-  faction: Faction | null;
+  faction: FactionId | null;
   onActiveChange: (modelId: Model) => void;
 }
 const PlayScreenView: FunctionComponent<Props> = ({

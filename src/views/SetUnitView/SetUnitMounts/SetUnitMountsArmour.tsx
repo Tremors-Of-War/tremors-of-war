@@ -10,13 +10,13 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { Armour } from "../../../types";
+import { ArmourId } from "../../../types";
 import data from "../../../data.json";
 
 interface Props {
   armoury: string[];
-  currentMountArmour?: Armour;
-  handleSelect: (selected: Armour) => void;
+  currentMountArmour?: ArmourId;
+  handleSelect: (selected: ArmourId) => void;
 }
 
 const SetUnitMountArmour: FunctionComponent<Props> = ({
@@ -46,7 +46,7 @@ const SetUnitMountArmour: FunctionComponent<Props> = ({
             <Select
               value={armourSelect || ""}
               onChange={(event: SelectChangeEvent) => {
-                const value = event.target.value as Armour;
+                const value = event.target.value as ArmourId;
                 setArmourSelect(value);
                 handleSelect(value);
               }}

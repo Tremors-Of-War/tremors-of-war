@@ -1,11 +1,11 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Abilities } from "../../../../types";
+import { AbilityId } from "../../../../types";
 import data from "../../../../data.json";
 
 interface Props {
-  upgrades: Abilities[];
+  upgrades: AbilityId[];
 }
 
 const PlayScreenUpgrades: FunctionComponent<Props> = ({ upgrades }) => (

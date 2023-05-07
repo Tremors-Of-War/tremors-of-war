@@ -9,16 +9,16 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { Weapons } from "../../../types";
+import { WeaponId } from "../../../types";
 import data from "../../../data.json";
 import WeaponryStats from "../../../components/Weaponry/WeaponryStats";
 import WeaponryTraits from "../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
   dropdownTitle: string;
-  weaponry: Weapons[];
-  currentWeaponry?: Weapons;
-  handleSelect: (selected: Weapons) => void;
+  weaponry: WeaponId[];
+  currentWeaponry?: WeaponId;
+  handleSelect: (selected: WeaponId) => void;
 }
 
 const SetUnitWeaponry: FunctionComponent<Props> = ({
@@ -50,7 +50,7 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                 <Select
                   value={weaponSelect || ""}
                   onChange={(event: SelectChangeEvent) => {
-                    const value = event.target.value as Weapons;
+                    const value = event.target.value as WeaponId;
                     setWeaponSelect(value);
                     handleSelect(value);
                   }}

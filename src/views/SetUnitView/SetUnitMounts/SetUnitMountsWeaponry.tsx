@@ -9,15 +9,15 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { Weapons } from "../../../types";
+import { WeaponId } from "../../../types";
 import WeaponryStats from "../../../components/Weaponry/WeaponryStats";
 import data from "../../../data.json";
 import WeaponryTraits from "../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
   weaponry: string[];
-  currentWeaponry?: Weapons;
-  handleSelect: (selected: Weapons) => void;
+  currentWeaponry?: WeaponId;
+  handleSelect: (selected: WeaponId) => void;
 }
 
 const SetUnitMountWeaponry: FunctionComponent<Props> = ({
@@ -47,7 +47,7 @@ const SetUnitMountWeaponry: FunctionComponent<Props> = ({
             <Select
               value={weaponSelect || ""}
               onChange={(event: SelectChangeEvent) => {
-                const value = event.target.value as Weapons;
+                const value = event.target.value as WeaponId;
                 setWeaponSelect(value);
                 handleSelect(value);
               }}

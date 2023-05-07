@@ -2,20 +2,20 @@ import { Radio, Grid, Typography, Collapse, Tooltip } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import { TransitionGroup } from "react-transition-group";
 import data from "../../../data.json";
-import { Mounts, Armour, Model, Abilities, Weapons } from "../../../types";
+import { MountId, ArmourId, Model, AbilityId, WeaponId } from "../../../types";
 import SetUnitMountArmour from "./SetUnitMountsArmour";
 import SetUnitMountUpgrades from "./SetUnitMountsUpgrades";
 import SetUnitMountWeaponry from "./SetUnitMountsWeaponry";
 import MountUnitStats from "../../../components/MountUnitStats";
 
 interface Props {
-  handleSelect: (selected: Mounts) => void;
-  mounts: Mounts;
+  handleSelect: (selected: MountId) => void;
+  mounts: MountId;
   model: Model;
-  currentMounts?: Mounts;
-  handleMountUpgradeSelect: (selected: Abilities) => void;
-  handleMountArmourSelect: (selected: Armour) => void;
-  handleMountWeaponSelect: (selected: Weapons) => void;
+  currentMounts?: MountId;
+  handleMountUpgradeSelect: (selected: AbilityId) => void;
+  handleMountArmourSelect: (selected: ArmourId) => void;
+  handleMountWeaponSelect: (selected: WeaponId) => void;
 }
 
 const SetUnitMounts: FunctionComponent<Props> = ({
@@ -28,7 +28,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
   handleMountWeaponSelect,
 }) => {
   const handleClick = (event: any) => {
-    const value = event.target.value as Mounts;
+    const value = event.target.value as MountId;
     handleSelect(value);
   };
 

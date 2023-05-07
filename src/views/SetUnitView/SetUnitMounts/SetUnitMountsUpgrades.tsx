@@ -10,12 +10,12 @@ import {
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
 import data from "../../../data.json";
-import { Abilities } from "../../../types";
+import { AbilityId } from "../../../types";
 
 interface Props {
   upgrades: string[];
-  currentMountUpgrade?: Abilities;
-  handleSelect: (selected: Abilities) => void;
+  currentMountUpgrade?: AbilityId;
+  handleSelect: (selected: AbilityId) => void;
 }
 
 const SetUnitMountUpgrades: FunctionComponent<Props> = ({
@@ -45,7 +45,7 @@ const SetUnitMountUpgrades: FunctionComponent<Props> = ({
             <Select
               value={upgradeSelect || ""}
               onChange={(event: SelectChangeEvent) => {
-                const value = event.target.value as Abilities;
+                const value = event.target.value as AbilityId;
                 setUpgradeSelect(value);
                 handleSelect(value);
               }}

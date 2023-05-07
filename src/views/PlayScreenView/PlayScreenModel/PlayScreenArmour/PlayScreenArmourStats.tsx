@@ -1,10 +1,10 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Armour } from "../../../../types";
+import { ArmourId } from "../../../../types";
 import data from "../../../../data.json";
 
 interface Props {
-  armour: Armour;
+  armour: ArmourId;
 }
 
 const PlayScreenArmourStats: FunctionComponent<Props> = ({ armour }) => {

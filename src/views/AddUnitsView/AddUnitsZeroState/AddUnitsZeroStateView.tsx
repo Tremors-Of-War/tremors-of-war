@@ -3,12 +3,12 @@ import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../../components/ContentContainer";
 import ChooseWarBandTotalDialog from "../../../components/ChooseWarBandTotalDialog";
 import AddUnitsZeroStateAction from "./AddUnitsZeroStateAction";
-import { Faction, Model } from "../../../types";
+import { FactionId, Model } from "../../../types";
 import AddUnitsViewHeader from "../components/AddUnitsViewHeader";
 import AddUnitsViewFooter from "../components/AddUnitsViewFooter";
 
 interface Props {
-  faction: Faction;
+  faction: FactionId;
   warbandTotal: number;
   onClickBack: () => void;
   onClickAdd: () => void;

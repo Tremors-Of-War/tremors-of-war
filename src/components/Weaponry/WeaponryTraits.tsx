@@ -1,10 +1,10 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import data from "../../data.json";
-import { Weapons } from "../../types";
+import { WeaponId } from "../../types";
 
 interface Props {
-  weapon: Weapons;
+  weapon: WeaponId;
   textSize: any;
 }
 

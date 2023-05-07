@@ -1,10 +1,10 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../types";
+import { WeaponId } from "../../types";
 import data from "../../data.json";
 
 interface Props {
-  weapon: Weapons;
+  weapon: WeaponId;
 }
 const header = [
   { title: "RS", description: "Range Short" },

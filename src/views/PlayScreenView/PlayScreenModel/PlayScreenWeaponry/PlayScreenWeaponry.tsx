@@ -1,12 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../../../types";
+import { WeaponId } from "../../../../types";
 import PlayScreenWeaponryStats from "./PlayScreenWeaponryStats";
 
 interface Props {
-  primaryWeaponry?: Weapons;
-  secondaryWeaponry?: Weapons;
-  rangedWeapon?: Weapons;
+  primaryWeaponry?: WeaponId;
+  secondaryWeaponry?: WeaponId;
+  rangedWeapon?: WeaponId;
 }
 
 const PlayScreenWeaponry: FunctionComponent<Props> = ({

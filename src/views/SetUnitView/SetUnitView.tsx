@@ -5,7 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./tabs/SetUnitTabs";
 import SetUnitUnitHeader from "./SetUnitUnit/SetUnitUnitHeader";
-import { Faction, Unit, Model } from "../../types";
+import { FactionId, Unit, Model } from "../../types";
 import data from "../../data.json";
 import NoUnitNameError from "./components/NoUnitNameError";
 import SetUnitTabCases from "./tabs/SetUnitTabCases";
@@ -15,7 +15,7 @@ import { TabOption } from "./tabs/types";
 import ExceededWarbandTotalAlert from "../../components/ExceededWarbandTotalAlert";
 
 interface Props {
-  faction: Faction;
+  faction: FactionId;
   existingModel?: Model;
   onClickBack: () => void;
   warbandTotal: number;

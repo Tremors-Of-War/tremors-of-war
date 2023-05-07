@@ -5,11 +5,11 @@ import ContentContainer from "../../components/ContentContainer";
 import ChooseRuleSetButton from "./ChooseRuleSetButton";
 import fantasyIMG from "../../assets/rulesets/fantasy.jpg";
 import darkAgesIMG from "../../assets/rulesets/dark_ages.jpg";
-import { RuleSet } from "../../types";
+import { RuleSetId } from "../../types";
 
 interface Props {
   onClickBack: () => void;
-  setRuleSet: (ruleSet: RuleSet) => void;
+  setRuleSet: (ruleSet: RuleSetId) => void;
 }
 
 const ChooseRuleSetView: FunctionComponent<Props> = ({

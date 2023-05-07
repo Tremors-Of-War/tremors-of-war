@@ -1,12 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../../../types";
+import { WeaponId } from "../../../../types";
 import data from "../../../../data.json";
 import WeaponryStats from "../../../../components/Weaponry/WeaponryStats";
 import WeaponryTraits from "../../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
-  weapon: Weapons;
+  weapon: WeaponId;
 }
 
 const PlayScreenWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
