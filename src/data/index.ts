@@ -1,31 +1,45 @@
-import {AbilityId, ArmourId, FactionId, Mount, MountId, RuleSetId, Unit, UnitId, WeaponId} from "./types";
+import {
+  AbilityId,
+  ArmourId,
+  FactionId,
+  Mount,
+  MountId,
+  RuleSetId,
+  Unit,
+  UnitId,
+  WeaponId,
+} from "./types";
 import database from "./database.json";
 
-export * from "./types"
+export * from "./types";
 
-export const getRulesSets = () => Object.keys(database.rulesets) as RuleSetId[];
+// TODO: DEFINE TYPES FOR WEAPON, ARMOUR, ABILITY
+// TODO: FIX UNITSBYFACTION
 
-export const getFactions = () => Object.keys(database.factions) as FactionId[];
+export const ruleSets = Object.keys(database.rulesets) as RuleSetId[];
 
-export const getUnitById = (id: UnitId) => database.units[id] as Unit;
+export const factions = Object.keys(database.factions) as FactionId[];
 
-export const getUnitsByFaction = (factionId: FactionId) =>
-  Object.values(database.factions[factionId]) as Unit[];
+export const unitsById = database.units as Record<UnitId, Unit>;
 
-export const getUnitList = () => Object.values(database.units);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export const unitsByFaction = database.factions as Record<FactionId, Unit>;
 
-export const getMountById = (id: MountId) => database.mounts[id] as Mount;
+export const unitsList = Object.values(database.units) as Unit[];
 
-export const getMountList = () => Object.values(database.mounts);
+export const mountsById = database.mounts as Record<MountId, Mount>;
 
-export const getWeaponById = (id: WeaponId) => database.weapons[id];
+export const mountsList = Object.values(database.mounts) as Mount[];
 
-export const getWeaponList = () => Object.values(database.weapons);
+export const weaponsById = database.weapons as Record<WeaponId, object>;
 
-export const getArmourById = (id: ArmourId) => database.armour[id];
+export const weaponsList = Object.values(database.weapons) as object[];
 
-export const getArmourList = () => Object.values(database.armour);
+export const armourById = database.armour as Record<ArmourId, object>;
 
-export const getAbilityById= (id: AbilityId) => database.abilities[id];
+export const armourList = Object.values(database.armour) as object[];
 
-export const getAbilityList = () => Object.values(database.abilities);
+export const abilitiesById = database.abilities as Record<AbilityId, object>;
+
+export const abilitiesList = Object.values(database.abilities) as object[];
