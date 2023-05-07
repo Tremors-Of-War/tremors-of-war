@@ -6,13 +6,13 @@ import {
   Select,
   SelectChangeEvent,
   Typography,
-  Tooltip,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
 import { Weapons } from "../../../types";
 import data from "../../../data.json";
-import SetUnitWeaponryStats from "./SetUnitWeaponryStats";
+import WeaponryStats from "../../../components/Weaponry/WeaponryStats";
+import WeaponryTraits from "../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
   dropdownTitle: string;
@@ -92,7 +92,7 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                   alignItems="center"
                 >
                   <Grid container justifyContent="flex-start" width="465px">
-                    <SetUnitWeaponryStats weapon={weaponSelect} />
+                    <WeaponryStats weapon={weaponSelect} />
                   </Grid>
                   <Grid
                     container
@@ -101,22 +101,7 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                     alignItems="flex-end"
                     width="208px"
                   >
-                    <Grid container direction="row" justifyContent="flex-end">
-                      {data.weapons[weaponSelect].Traits.map(
-                        (trait, i, arr) => (
-                          <Tooltip
-                            key={i}
-                            title={data.abilities[trait].Effects}
-                            sx={{ whiteSpace: "pre-wrap" }}
-                          >
-                            <Typography variant="body1">
-                              {trait}
-                              {i !== arr.length - 1 ? "," : ""}&nbsp;
-                            </Typography>
-                          </Tooltip>
-                        )
-                      )}
-                    </Grid>
+                    <WeaponryTraits weapon={weaponSelect} textSize="body1" />
 
                     <Grid container justifyContent="flex-end" width="100px">
                       <Grid component={Typography} color="text.disabled">

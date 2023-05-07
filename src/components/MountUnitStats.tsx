@@ -1,8 +1,9 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
+import { Unit, Mount } from "../types";
 
 interface Props {
-  data: any;
+  data: Mount | Unit;
   textSize: any;
 }
 const header = [

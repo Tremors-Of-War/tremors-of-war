@@ -1,9 +1,9 @@
-import { Grid, Typography, Tooltip } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
 import { Model } from "../../../../types";
-import SetUnitWeaponryStats from "../../../SetUnitView/SetUnitWeaponry/SetUnitWeaponryStats";
-import data from "../../../../data.json";
+import WeaponryStats from "../../../../components/Weaponry/WeaponryStats";
+import WeaponryTraits from "../../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
   model: Model;
@@ -37,7 +37,7 @@ const PlayScreenMountWeapon: FunctionComponent<Props> = ({ model }) => (
           <Typography>{model.mountWeapon}</Typography>
         </Grid>
         <Grid container width="400px" justifyContent="flex-start">
-          <SetUnitWeaponryStats weapon={model.mountWeapon} />
+          <WeaponryStats weapon={model.mountWeapon} />
         </Grid>
         <Grid
           container
@@ -45,14 +45,7 @@ const PlayScreenMountWeapon: FunctionComponent<Props> = ({ model }) => (
           justifyContent="flex-start"
           width="116px"
         >
-          {data.weapons[model.mountWeapon].Traits.map((trait, i, arr) => (
-            <Tooltip key={i} title={data.abilities[trait].Effects}>
-              <Typography variant="body1">
-                {trait}
-                {i !== arr.length - 1 ? "," : ""}&nbsp;
-              </Typography>
-            </Tooltip>
-          ))}
+          <WeaponryTraits weapon={model.mountWeapon} textSize="body2" />
         </Grid>
       </Grid>
     )}

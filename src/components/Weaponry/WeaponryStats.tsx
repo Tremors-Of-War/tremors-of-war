@@ -1,7 +1,7 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../../types";
-import data from "../../../data.json";
+import { Weapons } from "../../types";
+import data from "../../data.json";
 
 interface Props {
   weapon: Weapons;
@@ -16,7 +16,7 @@ const header = [
   { title: "D", description: "D" },
 ];
 
-const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
+const WeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
   const { RS, RL, AS, AL, S, AP, D } = data.weapons[weapon];
   const stats = [RS, RL, AS, AL, S, AP, D];
   return (
@@ -47,4 +47,4 @@ const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
     </Grid>
   );
 };
-export default SetUnitWeaponryStats;
+export default WeaponryStats;

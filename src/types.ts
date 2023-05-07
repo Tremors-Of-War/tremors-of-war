@@ -33,6 +33,24 @@ export interface Unit {
   upgrades: [];
   mounts: Mounts[];
 }
+export interface Mount {
+  name: string;
+  m: number;
+  ws: number;
+  bs: number;
+  s: number;
+  t: number;
+  w: number;
+  i: number;
+  a: number;
+  cl: number;
+  int: number;
+  cost: number;
+  abilities: Abilities[];
+  primaryWeaponry: Weapons[];
+  armour: Armour[];
+  upgrades: [];
+}
 
 export interface Model {
   id: string;

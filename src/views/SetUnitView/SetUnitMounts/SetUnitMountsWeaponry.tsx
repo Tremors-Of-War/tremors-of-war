@@ -6,13 +6,13 @@ import {
   Select,
   SelectChangeEvent,
   Typography,
-  Tooltip,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
 import { Weapons } from "../../../types";
-import SetUnitWeaponryStats from "../SetUnitWeaponry/SetUnitWeaponryStats";
+import WeaponryStats from "../../../components/Weaponry/WeaponryStats";
 import data from "../../../data.json";
+import WeaponryTraits from "../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
   weaponry: string[];
@@ -83,7 +83,7 @@ const SetUnitMountWeaponry: FunctionComponent<Props> = ({
         {weaponSelect && (
           <>
             <Grid width="416px">
-              <SetUnitWeaponryStats weapon={weaponSelect} />
+              <WeaponryStats weapon={weaponSelect} />
             </Grid>
             <Grid
               container
@@ -91,18 +91,9 @@ const SetUnitMountWeaponry: FunctionComponent<Props> = ({
               justifyContent="flex-start"
               width="100px"
             >
-              <Grid container direction="row" justifyContent="flex-start">
-                {data.weapons[weaponSelect].Traits.map((trait, i, arr) => (
-                  <Tooltip key={i} title={data.abilities[trait].Effects}>
-                    <Typography variant="body1">
-                      {trait}
-                      {i !== arr.length - 1 ? "," : ""}&nbsp;
-                    </Typography>
-                  </Tooltip>
-                ))}
-              </Grid>
+              <WeaponryTraits weapon={weaponSelect} textSize="body1" />
 
-              <Grid container justifyContent="flex-start" width="100px">
+              <Grid container justifyContent="flex-end" width="100px">
                 <Grid
                   component={Typography}
                   variant="body2"
