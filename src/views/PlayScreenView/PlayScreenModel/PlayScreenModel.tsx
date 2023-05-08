@@ -34,7 +34,7 @@ const PlayScreenModel: FunctionComponent<Props> = ({
   const stopPropagation = (e: any) => e.stopPropagation();
 
   return (
-    <Grid sx={{ padding: "8px 0px" }}>
+    <Grid sx={{ padding: "8px 8px" }}>
       <Grid
         component={Accordion}
         container

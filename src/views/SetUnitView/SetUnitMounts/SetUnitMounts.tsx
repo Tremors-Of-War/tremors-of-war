@@ -80,15 +80,13 @@ const SetUnitMounts: FunctionComponent<Props> = ({
             >
               {mountsById[mounts].type &&
                 mountsById[mounts].type.map((type, key) => (
-                  <>
-                    <Typography
-                      variant="body2"
-                      key={key}
-                      sx={{ color: "text.disabled" }}
-                    >
-                      {type}
-                    </Typography>
-                  </>
+                  <Typography
+                    variant="body2"
+                    key={key}
+                    sx={{ color: "text.disabled" }}
+                  >
+                    {type}
+                  </Typography>
                 ))}
               <Typography>{mounts.replace(/_/g, " ")}</Typography>
               <Typography variant="body1" sx={{ color: "text.disabled" }}>
@@ -106,8 +104,8 @@ const SetUnitMounts: FunctionComponent<Props> = ({
               justifyContent="flex-start"
               width="100px"
             >
-              {mountsById[mounts].abilities.map((ability) => (
-                <Tooltip title={abilitiesById[ability].Effects}>
+              {mountsById[mounts].abilities.map((ability, index) => (
+                <Tooltip key={index} title={abilitiesById[ability].Effects}>
                   <Typography variant="caption">&#8226; {ability}</Typography>
                 </Tooltip>
               ))}
