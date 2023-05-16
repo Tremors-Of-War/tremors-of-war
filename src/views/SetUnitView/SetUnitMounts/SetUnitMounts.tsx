@@ -1,19 +1,29 @@
-import { Radio, Grid, Typography, Collapse } from "@mui/material";
+import { Radio, Grid, Typography, Collapse, Tooltip } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import { TransitionGroup } from "react-transition-group";
-import data from "../../../data.json";
-import { Mounts, Armour, Model, Abilities } from "../../../types";
-import SetUnitMountsStats from "./SetUnitMountsStats";
+import {
+  MountId,
+  ArmourId,
+  Model,
+  AbilityId,
+  WeaponId,
+  Mount,
+  abilitiesById,
+  mountsById,
+} from "../../../data";
 import SetUnitMountArmour from "./SetUnitMountsArmour";
 import SetUnitMountUpgrades from "./SetUnitMountsUpgrades";
+import SetUnitMountWeaponry from "./SetUnitMountsWeaponry";
+import MountUnitStats from "../../../components/MountUnitStats";
 
 interface Props {
-  handleSelect: (selected: Mounts) => void;
-  mounts: Mounts;
+  handleSelect: (selected: MountId) => void;
+  mounts: MountId;
   model: Model;
-  currentMounts?: Mounts;
-  handleMountUpgradeSelect: (selected: Abilities) => void;
-  handleMountArmourSelect: (selected: Armour) => void;
+  currentMounts?: MountId;
+  handleMountUpgradeSelect: (selected: AbilityId) => void;
+  handleMountArmourSelect: (selected: ArmourId) => void;
+  handleMountWeaponSelect: (selected: WeaponId) => void;
 }
 
 const SetUnitMounts: FunctionComponent<Props> = ({
@@ -23,9 +33,10 @@ const SetUnitMounts: FunctionComponent<Props> = ({
   handleMountUpgradeSelect,
   model,
   currentMounts,
+  handleMountWeaponSelect,
 }) => {
   const handleClick = (event: any) => {
-    const value = event.target.value as Mounts;
+    const value = event.target.value as MountId;
     handleSelect(value);
   };
 
@@ -34,6 +45,7 @@ const SetUnitMounts: FunctionComponent<Props> = ({
       padding="8px 16px"
       marginBottom="16px"
       alignItems="center"
+      width="100%"
       justifyContent="space-between"
       component={TransitionGroup}
       sx={{
@@ -62,12 +74,12 @@ const SetUnitMounts: FunctionComponent<Props> = ({
             <Grid
               container
               direction="column"
-              justifyContent="flex-start"
+              justifyContent="space-between"
               wrap="wrap"
-              width="176px"
+              width="146px"
             >
-              {data.mounts[mounts].type.map((type, key) => (
-                <>
+              {mountsById[mounts].type &&
+                mountsById[mounts].type.map((type, key) => (
                   <Typography
                     variant="body2"
                     key={key}
@@ -75,14 +87,29 @@ const SetUnitMounts: FunctionComponent<Props> = ({
                   >
                     {type}
                   </Typography>
-                </>
-              ))}
+                ))}
               <Typography>{mounts.replace(/_/g, " ")}</Typography>
               <Typography variant="body1" sx={{ color: "text.disabled" }}>
-                {data.mounts[mounts].cost} Points
+                {mountsById[mounts].cost} Points
               </Typography>
             </Grid>
-            <SetUnitMountsStats mounts={mounts} />
+            <MountUnitStats
+              data={mountsById[mounts] as Mount}
+              textSize="body1"
+            />
+
+            <Grid
+              container
+              direction="column"
+              justifyContent="flex-start"
+              width="100px"
+            >
+              {mountsById[mounts].abilities.map((ability, index) => (
+                <Tooltip key={index} title={abilitiesById[ability].Effects}>
+                  <Typography variant="caption">&#8226; {ability}</Typography>
+                </Tooltip>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
 
@@ -96,17 +123,25 @@ const SetUnitMounts: FunctionComponent<Props> = ({
 
       {currentMounts === mounts && (
         <Grid component={Collapse}>
-          {data.mounts[mounts].armour && (
+          {mountsById[mounts].armour && (
             <SetUnitMountArmour
-              armoury={data.mounts[mounts].armour}
+              armoury={mountsById[mounts].armour}
               currentMountArmour={model.mountArmour}
               handleSelect={handleMountArmourSelect}
             />
           )}
-          {data.mounts[mounts].upgrades &&
-            data.mounts[mounts].upgrades.length > 0 && (
+          {mountsById[mounts].primaryWeaponry &&
+            mountsById[mounts].primaryWeaponry.length > 0 && (
+              <SetUnitMountWeaponry
+                weaponry={mountsById[mounts].primaryWeaponry}
+                currentWeaponry={model.mountWeapon}
+                handleSelect={handleMountWeaponSelect}
+              />
+            )}
+          {mountsById[mounts].upgrades &&
+            mountsById[mounts].upgrades.length > 0 && (
               <SetUnitMountUpgrades
-                upgrades={data.mounts[mounts].upgrades}
+                upgrades={mountsById[mounts].upgrades}
                 currentMountUpgrade={model.mountUpgrade}
                 handleSelect={handleMountUpgradeSelect}
               />

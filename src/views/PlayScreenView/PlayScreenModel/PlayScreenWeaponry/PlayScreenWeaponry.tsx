@@ -1,25 +1,27 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../../../types";
+import { WeaponId } from "../../../../data";
 import PlayScreenWeaponryStats from "./PlayScreenWeaponryStats";
 
 interface Props {
-  twoHandedWeapon?: Weapons;
-  handWeapon?: Weapons;
-  rangedWeapon?: Weapons;
+  primaryWeaponry?: WeaponId;
+  secondaryWeaponry?: WeaponId;
+  rangedWeapon?: WeaponId;
 }
 
 const PlayScreenWeaponry: FunctionComponent<Props> = ({
-  twoHandedWeapon,
+  primaryWeaponry,
   rangedWeapon,
-  handWeapon,
+  secondaryWeaponry,
 }) => (
   <Grid container direction="column">
     <Typography color="primary">WEAPONRY</Typography>
     <Grid container direction="column">
-      {handWeapon && <PlayScreenWeaponryStats weapon={handWeapon} />}
+      {primaryWeaponry && <PlayScreenWeaponryStats weapon={primaryWeaponry} />}
       {rangedWeapon && <PlayScreenWeaponryStats weapon={rangedWeapon} />}
-      {twoHandedWeapon && <PlayScreenWeaponryStats weapon={twoHandedWeapon} />}
+      {secondaryWeaponry && (
+        <PlayScreenWeaponryStats weapon={secondaryWeaponry} />
+      )}
     </Grid>
   </Grid>
 );

@@ -11,7 +11,7 @@ import React, { FunctionComponent } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import theme from "../../../app/theme";
-import { Model } from "../../../types";
+import { Model } from "../../../data";
 import PlayScreenModelDetails from "./PlayScreenModelDetails";
 import skullLogo from "../../../assets/images/skull_logo.png";
 import KillAlertDialog from "../components/KillAlertDialog";
@@ -34,7 +34,7 @@ const PlayScreenModel: FunctionComponent<Props> = ({
   const stopPropagation = (e: any) => e.stopPropagation();
 
   return (
-    <Grid sx={{ padding: "8px 0px" }}>
+    <Grid sx={{ padding: "8px 8px" }}>
       <Grid
         component={Accordion}
         container

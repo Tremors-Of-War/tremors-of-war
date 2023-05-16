@@ -1,18 +1,13 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React, { FunctionComponent } from "react";
-import {
-  Typography,
-  AccordionSummary,
-  Accordion,
-  AccordionDetails,
-} from "@mui/material";
+import { Typography, AccordionSummary, Accordion, Grid } from "@mui/material";
 import rulesData from "./rules.json";
 import RulesRules from "./RulesRules";
 
 const RulesCategories: FunctionComponent = () => (
   <>
-    {Object.entries(rulesData).map(([categoryName, ruleCategory]) => (
-      <AccordionDetails>
+    {Object.entries(rulesData).map(([categoryName, ruleCategory], index) => (
+      <Grid key={index} sx={{ padding: "8px 0px" }}>
         <Accordion
           key={categoryName}
           sx={{
@@ -27,10 +22,12 @@ const RulesCategories: FunctionComponent = () => (
             </Typography>
           </AccordionSummary>
           {Object.values(ruleCategory).map((rule) => (
-            <RulesRules name={rule.name} rules={rule.rule} />
+            <Grid key={index} sx={{ padding: "8px 8px" }}>
+              <RulesRules name={rule.name} rules={rule.rule} />
+            </Grid>
           ))}
         </Accordion>
-      </AccordionDetails>
+      </Grid>
     ))}
   </>
 );

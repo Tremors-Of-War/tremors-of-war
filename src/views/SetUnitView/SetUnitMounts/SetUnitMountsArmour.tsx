@@ -10,13 +10,12 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { Armour } from "../../../types";
-import data from "../../../data.json";
+import { armourById, ArmourId } from "../../../data";
 
 interface Props {
   armoury: string[];
-  currentMountArmour?: Armour;
-  handleSelect: (selected: Armour) => void;
+  currentMountArmour?: ArmourId;
+  handleSelect: (selected: ArmourId) => void;
 }
 
 const SetUnitMountArmour: FunctionComponent<Props> = ({
@@ -46,7 +45,7 @@ const SetUnitMountArmour: FunctionComponent<Props> = ({
             <Select
               value={armourSelect || ""}
               onChange={(event: SelectChangeEvent) => {
-                const value = event.target.value as Armour;
+                const value = event.target.value as ArmourId;
                 setArmourSelect(value);
                 handleSelect(value);
               }}
@@ -84,7 +83,7 @@ const SetUnitMountArmour: FunctionComponent<Props> = ({
             <Grid height="100%" width="425px" sx={{ whiteSpace: "pre-wrap" }}>
               <Grid component={Typography} variant="caption">
                 {" "}
-                {data.armour[armourSelect].Effects}
+                {armourById[armourSelect].Effects}
               </Grid>
             </Grid>
 
@@ -106,7 +105,7 @@ const SetUnitMountArmour: FunctionComponent<Props> = ({
                   </Typography>
                 </Grid>
                 <Grid component={Typography} variant="body2">
-                  {data.armour[armourSelect]["Armour Value R"]}
+                  {armourById[armourSelect]["Armour Value R"]}
                 </Grid>
               </Grid>
 
@@ -121,14 +120,14 @@ const SetUnitMountArmour: FunctionComponent<Props> = ({
                   </Typography>
                 </Grid>
                 <Grid component={Typography} variant="body2">
-                  {data.armour[armourSelect]["Armour Value CC"]}
+                  {armourById[armourSelect]["Armour Value CC"]}
                 </Grid>
               </Grid>
             </Grid>
 
             <Grid width="100px">
               <Grid component={Typography} variant="body2">
-                {data.armour[armourSelect].Cost} Points
+                {armourById[armourSelect].Cost} Points
               </Grid>
             </Grid>
           </>

@@ -1,11 +1,10 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Abilities } from "../../../../types";
-import data from "../../../../data.json";
+import { abilitiesById, AbilityId } from "../../../../data";
 
 interface Props {
-  upgrades: Abilities[];
+  upgrades: AbilityId[];
 }
 
 const PlayScreenUpgrades: FunctionComponent<Props> = ({ upgrades }) => (
@@ -35,7 +34,7 @@ const PlayScreenUpgrades: FunctionComponent<Props> = ({ upgrades }) => (
         <Grid container justifyContent="flex-start" width="488px">
           <Grid component={Typography} variant="caption">
             {" "}
-            {data.abilities[upgrade].Effects}
+            {abilitiesById[upgrade].Effects}
           </Grid>
         </Grid>
       </Grid>

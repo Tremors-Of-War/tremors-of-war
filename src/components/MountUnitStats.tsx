@@ -1,10 +1,10 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Mounts } from "../../../types";
-import data from "../../../data.json";
+import { Unit, Mount } from "../data";
 
 interface Props {
-  mounts: Mounts;
+  data: Mount | Unit;
+  textSize: any;
 }
 const header = [
   { title: "M", description: "Movement" },
@@ -18,14 +18,15 @@ const header = [
   { title: "CL", description: "Cool" },
   { title: "INT", description: "Intelligence" },
 ];
-const SetUnitMountsStats: FunctionComponent<Props> = ({ mounts }) => {
-  const { m, ws, bs, s, t, w, i, a, cl, int } = data.mounts[mounts];
+const MountUnitStats: FunctionComponent<Props> = ({ data, textSize }) => {
+  const { m, ws, bs, s, t, w, i, a, cl, int } = data;
+
   const stats = [m, ws, bs, s, t, w, i, a, cl, int];
   return (
     <Grid
       container
       justifyContent="flex-start"
-      width="512px"
+      width="400px"
       paddingRight="32px"
     >
       <Grid container direction="column">
@@ -33,7 +34,7 @@ const SetUnitMountsStats: FunctionComponent<Props> = ({ mounts }) => {
           {header.map(({ title, description }) => (
             <Grid container justifyContent="center" width="27px" key={title}>
               <Tooltip title={description}>
-                <Typography color="text.disabled" variant="body1">
+                <Typography color="text.disabled" sx={{ variant: textSize }}>
                   {title}
                 </Typography>
               </Tooltip>
@@ -43,9 +44,9 @@ const SetUnitMountsStats: FunctionComponent<Props> = ({ mounts }) => {
         <Grid container direction="row" justifyContent="space-between">
           {stats.map((stat, index) => (
             <Grid container justifyContent="center" width="27px" key={index}>
-              {stat !== 0 && <Typography variant="body1">{stat}</Typography>}
+              {stat !== 0 && <Typography variant={textSize}>{stat}</Typography>}
               {stat === 0 && (
-                <Typography color="text.disabled" variant="body2">
+                <Typography color="text.disabled" variant={textSize}>
                   -
                 </Typography>
               )}
@@ -56,4 +57,4 @@ const SetUnitMountsStats: FunctionComponent<Props> = ({ mounts }) => {
     </Grid>
   );
 };
-export default SetUnitMountsStats;
+export default MountUnitStats;

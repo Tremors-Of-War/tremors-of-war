@@ -3,7 +3,6 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogTitle,
   Typography,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
@@ -19,13 +18,16 @@ const RulesDialog: FunctionComponent<Props> = ({ onClose, open }) => {
     "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #121212";
   return (
     <Dialog onClose={onClose} open={open}>
-      <DialogTitle
+      <Typography
+        variant="h3"
         sx={{
           background,
+          padding: "16px 24px 0px",
         }}
       >
-        <Typography variant="h3">Rules</Typography>
-      </DialogTitle>
+        Rules
+      </Typography>
+
       <DialogContent
         sx={{
           background,

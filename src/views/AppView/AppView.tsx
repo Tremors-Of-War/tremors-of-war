@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
-import { Faction, RuleSet, Model } from "../../types";
+import { FactionId, RuleSetId, Model } from "../../data";
 import AddUnitsView from "../AddUnitsView/AddUnitsView/AddUnitsView";
 import AddUnitsZeroStateView from "../AddUnitsView/AddUnitsZeroState/AddUnitsZeroStateView";
 import ChooseFactionView from "../ChooseFactionView/ChooseFactionView";
@@ -10,8 +10,8 @@ import ROUTES from "./routes";
 import PlayScreenView from "../PlayScreenView/PlayScreenView";
 
 interface State {
-  ruleSet: RuleSet | null;
-  faction: Faction | null;
+  ruleSet: RuleSetId | null;
+  faction: FactionId | null;
   warbandTotal: number;
   models: Record<string, Model>;
   currentRoute: string;

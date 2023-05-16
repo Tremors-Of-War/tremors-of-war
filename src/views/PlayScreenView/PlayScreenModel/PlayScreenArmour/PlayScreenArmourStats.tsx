@@ -1,14 +1,13 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Armour } from "../../../../types";
-import data from "../../../../data.json";
+import { armourById, ArmourId } from "../../../../data";
 
 interface Props {
-  armour: Armour;
+  armour: ArmourId;
 }
 
 const PlayScreenArmourStats: FunctionComponent<Props> = ({ armour }) => {
-  const armourStats = data.armour[armour];
+  const armourStats = armourById[armour];
   return (
     <Grid
       container

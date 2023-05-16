@@ -1,28 +1,30 @@
 import {
   FormControl,
-  Grid,
-  Typography,
   InputLabel,
-  SelectChangeEvent,
-  Select,
+  Grid,
   MenuItem,
+  Select,
+  SelectChangeEvent,
+  Typography,
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { abilitiesById, AbilityId } from "../../../data";
+import { WeaponId, weaponsById } from "../../../data";
+import WeaponryStats from "../../../components/Weaponry/WeaponryStats";
+import WeaponryTraits from "../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
-  upgrades: string[];
-  currentMountUpgrade?: AbilityId;
-  handleSelect: (selected: AbilityId) => void;
+  weaponry: string[];
+  currentWeaponry?: WeaponId;
+  handleSelect: (selected: WeaponId) => void;
 }
 
-const SetUnitMountUpgrades: FunctionComponent<Props> = ({
-  upgrades,
-  currentMountUpgrade,
+const SetUnitMountWeaponry: FunctionComponent<Props> = ({
+  weaponry,
+  currentWeaponry,
   handleSelect,
 }) => {
-  const [upgradeSelect, setUpgradeSelect] = React.useState(currentMountUpgrade);
+  const [weaponSelect, setWeaponSelect] = React.useState(currentWeaponry);
 
   return (
     <Grid
@@ -36,23 +38,23 @@ const SetUnitMountUpgrades: FunctionComponent<Props> = ({
     >
       <Grid container justifyContent="space-between" alignItems="flex-end">
         <Typography variant="body1" color="primary" marginBottom="8px">
-          UPGRADE
+          WEAPON
         </Typography>
         <Grid width="275px" paddingBottom="8px">
           <FormControl fullWidth variant="filled" size="small">
-            <InputLabel variant="filled">SELECT UPGRADE</InputLabel>
+            <InputLabel variant="filled">SELECT ARMOUR</InputLabel>
             <Select
-              value={upgradeSelect || ""}
+              value={weaponSelect || ""}
               onChange={(event: SelectChangeEvent) => {
-                const value = event.target.value as AbilityId;
-                setUpgradeSelect(value);
+                const value = event.target.value as WeaponId;
+                setWeaponSelect(value);
                 handleSelect(value);
               }}
             >
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              {upgrades.map((item) => (
+              {weaponry.map((item) => (
                 <MenuItem key={item} value={item}>
                   {item}
                 </MenuItem>
@@ -63,41 +65,42 @@ const SetUnitMountUpgrades: FunctionComponent<Props> = ({
       </Grid>
       <Grid
         container
-        marginBottom="8px"
-        padding="8px 16px"
         alignItems="center"
         justifyContent="space-between"
         flexWrap="nowrap"
+        padding="8px 16px"
         direction="row"
+        gap="24px"
         sx={{
-          gap: "auto",
+          width: "100%",
           minHeight: theme.spacing(7),
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), #121212",
           borderRadius: "4px",
         }}
       >
-        {currentMountUpgrade && (
+        {weaponSelect && (
           <>
-            <Grid container justifyContent="flex-start" width="532px">
-              <Grid
-                component={Typography}
-                variant="caption"
-                sx={{ whiteSpace: "pre-wrap" }}
-              >
-                &nbsp;{abilitiesById[currentMountUpgrade].Effects}
-              </Grid>
+            <Grid width="416px">
+              <WeaponryStats weaponId={weaponSelect} />
             </Grid>
             <Grid
               container
               direction="column"
               justifyContent="flex-start"
-              wrap="wrap"
               width="100px"
             >
-              <Typography variant="body2">
-                {abilitiesById[currentMountUpgrade].Cost} Points
-              </Typography>
+              <WeaponryTraits weapon={weaponSelect} textSize="body1" />
+
+              <Grid container justifyContent="flex-end" width="100px">
+                <Grid
+                  component={Typography}
+                  variant="body2"
+                  color="text.disabled"
+                >
+                  {weaponsById[weaponSelect].Cost} Points&nbsp;
+                </Grid>
+              </Grid>
             </Grid>
           </>
         )}
@@ -105,4 +108,4 @@ const SetUnitMountUpgrades: FunctionComponent<Props> = ({
     </Grid>
   );
 };
-export default SetUnitMountUpgrades;
+export default SetUnitMountWeaponry;

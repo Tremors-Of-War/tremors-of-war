@@ -80,7 +80,7 @@ pyenv local tremors-of-war
 pip install --upgrade pip
 poetry install
 
-# Build data.json from Database.xlsx
+# Build database.json from Database.xlsx
 ./main.py
 ```
 

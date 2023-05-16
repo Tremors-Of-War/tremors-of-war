@@ -1,10 +1,9 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../../types";
-import data from "../../../data.json";
+import { WeaponId, weaponsById } from "../../data";
 
 interface Props {
-  weapon: Weapons;
+  weaponId: WeaponId;
 }
 const header = [
   { title: "RS", description: "Range Short" },
@@ -16,8 +15,8 @@ const header = [
   { title: "D", description: "D" },
 ];
 
-const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
-  const { RS, RL, AS, AL, S, AP, D } = data.weapons[weapon];
+const WeaponryStats: FunctionComponent<Props> = ({ weaponId }) => {
+  const { RS, RL, AS, AL, S, AP, D } = weaponsById[weaponId];
   const stats = [RS, RL, AS, AL, S, AP, D];
   return (
     <Grid container direction="column">
@@ -47,4 +46,4 @@ const SetUnitWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
     </Grid>
   );
 };
-export default SetUnitWeaponryStats;
+export default WeaponryStats;

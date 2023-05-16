@@ -1,13 +1,12 @@
 import { Checkbox, Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import data from "../../../data.json";
-import { Abilities } from "../../../types";
+import { abilitiesById, AbilityId } from "../../../data";
 
 interface Props {
   handleClick: (selected: boolean) => void;
-  upgrade: Abilities;
-  currentUpgrades: Abilities[];
+  upgrade: AbilityId;
+  currentUpgrades: AbilityId[];
 }
 
 const SetUnitUpgrades: FunctionComponent<Props> = ({
@@ -45,14 +44,14 @@ const SetUnitUpgrades: FunctionComponent<Props> = ({
       >
         <Typography>{upgrade}</Typography>
         <Typography variant="body1" sx={{ color: "text.disabled" }}>
-          {data.abilities[upgrade].Cost} Points
+          {abilitiesById[upgrade].Cost} Points
         </Typography>
       </Grid>
 
       <Grid container justifyContent="flex-start" width="488px">
         <Grid component={Typography} variant="caption">
           {" "}
-          {data.abilities[upgrade].Effects}
+          {abilitiesById[upgrade].Effects}
         </Grid>
       </Grid>
 

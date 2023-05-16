@@ -9,15 +9,15 @@ import {
 } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../app/theme";
-import { Weapons } from "../../../types";
-import data from "../../../data.json";
-import SetUnitWeaponryStats from "./SetUnitWeaponryStats";
+import { WeaponId, weaponsById } from "../../../data";
+import WeaponryStats from "../../../components/Weaponry/WeaponryStats";
+import WeaponryTraits from "../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
   dropdownTitle: string;
-  weaponry: Weapons[];
-  currentWeaponry?: Weapons;
-  handleSelect: (selected: Weapons) => void;
+  weaponry: WeaponId[];
+  currentWeaponry?: WeaponId;
+  handleSelect: (selected: WeaponId) => void;
 }
 
 const SetUnitWeaponry: FunctionComponent<Props> = ({
@@ -49,7 +49,7 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                 <Select
                   value={weaponSelect || ""}
                   onChange={(event: SelectChangeEvent) => {
-                    const value = event.target.value as Weapons;
+                    const value = event.target.value as WeaponId;
                     setWeaponSelect(value);
                     handleSelect(value);
                   }}
@@ -91,7 +91,7 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                   alignItems="center"
                 >
                   <Grid container justifyContent="flex-start" width="465px">
-                    <SetUnitWeaponryStats weapon={weaponSelect} />
+                    <WeaponryStats weaponId={weaponSelect} />
                   </Grid>
                   <Grid
                     container
@@ -100,20 +100,11 @@ const SetUnitWeaponry: FunctionComponent<Props> = ({
                     alignItems="flex-end"
                     width="208px"
                   >
-                    <Grid container direction="row" justifyContent="flex-end">
-                      {data.weapons[weaponSelect].Traits.map(
-                        (trait, i, arr) => (
-                          <Typography variant="body1" key={i}>
-                            {trait}
-                            {i !== arr.length - 1 ? "," : ""}&nbsp;
-                          </Typography>
-                        )
-                      )}
-                    </Grid>
+                    <WeaponryTraits weapon={weaponSelect} textSize="body1" />
 
                     <Grid container justifyContent="flex-end" width="100px">
                       <Grid component={Typography} color="text.disabled">
-                        {data.weapons[weaponSelect].Cost} Points&nbsp;
+                        {weaponsById[weaponSelect].Cost} Points&nbsp;
                       </Grid>
                     </Grid>
                   </Grid>

@@ -1,15 +1,15 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Weapons } from "../../../../types";
-import data from "../../../../data.json";
-import SetUnitWeaponryStats from "../../../SetUnitView/SetUnitWeaponry/SetUnitWeaponryStats";
+import { WeaponId, weaponsById } from "../../../../data";
+import WeaponryStats from "../../../../components/Weaponry/WeaponryStats";
+import WeaponryTraits from "../../../../components/Weaponry/WeaponryTraits";
 
 interface Props {
-  weapon: Weapons;
+  weapon: WeaponId;
 }
 
 const PlayScreenWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
-  const weaponStats = data.weapons[weapon];
+  const weaponStats = weaponsById[weapon];
   return (
     <Grid
       container
@@ -33,7 +33,7 @@ const PlayScreenWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
       </Grid>
 
       <Grid container justifyContent="flex-start" width="408px">
-        <SetUnitWeaponryStats weapon={weapon} />
+        <WeaponryStats weaponId={weapon} />
       </Grid>
       <Grid
         container
@@ -43,14 +43,7 @@ const PlayScreenWeaponryStats: FunctionComponent<Props> = ({ weapon }) => {
         direction="row"
         gap="8px"
       >
-        <Grid container direction="row" justifyContent="flex-end">
-          {weaponStats.Traits.map((trait, i, arr) => (
-            <Typography variant="body2" key={i}>
-              {trait}
-              {i !== arr.length - 1 ? "," : ""}&nbsp;
-            </Typography>
-          ))}
-        </Grid>
+        <WeaponryTraits weapon={weapon} textSize="body2" />
       </Grid>
     </Grid>
   );

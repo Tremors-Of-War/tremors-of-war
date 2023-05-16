@@ -24,4 +24,4 @@ class STAT_NAMES:
 
 
 DATABASE = "../Database.xlsx"
-OUTPUT_FILE = "../src/data.json"
+OUTPUT_FILE = "../src/data/database.json"

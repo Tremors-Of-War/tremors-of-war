@@ -5,8 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import ContentContainer from "../../components/ContentContainer";
 import SetUnitTabs from "./tabs/SetUnitTabs";
 import SetUnitUnitHeader from "./SetUnitUnit/SetUnitUnitHeader";
-import { Faction, Unit, Model } from "../../types";
-import data from "../../data.json";
+import { FactionId, getUnitsByFaction, Model } from "../../data";
 import NoUnitNameError from "./components/NoUnitNameError";
 import SetUnitTabCases from "./tabs/SetUnitTabCases";
 import SetUnitFooter from "./components/SetUnitFooter";
@@ -15,7 +14,7 @@ import { TabOption } from "./tabs/types";
 import ExceededWarbandTotalAlert from "../../components/ExceededWarbandTotalAlert";
 
 interface Props {
-  faction: Faction;
+  faction: FactionId;
   existingModel?: Model;
   onClickBack: () => void;
   warbandTotal: number;
@@ -30,16 +29,15 @@ const blankModel: Model = {
   cost: 0,
   name: "",
   armour: undefined,
-  shield: undefined,
-  otherArmour: undefined,
-  handWeapon: undefined,
-  twoHandedWeapon: undefined,
+  secondaryWeaponry: undefined,
+  primaryWeaponry: undefined,
   rangedWeapon: undefined,
   helmet: undefined,
   upgrades: [],
   mounts: undefined,
   mountArmour: undefined,
   mountUpgrade: undefined,
+  mountWeapon: undefined,
   active: true,
 };
 
@@ -68,9 +66,10 @@ const SetUnitView: FunctionComponent<Props> = ({
   };
   const checkWeaponry = () => {
     if (
-      (model?.unit?.weaponry && model.unit.weaponry.length > 0) ||
+      (model?.unit?.secondaryWeaponry &&
+        model.unit.secondaryWeaponry.length > 0) ||
       (model?.unit?.rangedWeaponry && model.unit.rangedWeaponry.length > 0) ||
-      (model?.unit?.twoHandWeaponry && model.unit.twoHandWeaponry.length > 0)
+      (model?.unit?.primaryWeaponry && model.unit.primaryWeaponry.length > 0)
     ) {
       return true;
     }
@@ -91,7 +90,7 @@ const SetUnitView: FunctionComponent<Props> = ({
 
   const exceededWarbandTotal = pointsRemaining < 0;
 
-  const unitOptions: Unit[] = Object.values(data.factions[faction]);
+  const unitOptions = getUnitsByFaction(faction);
 
   useEffect(() => {
     if (existingModel) {

@@ -1,11 +1,11 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Tooltip, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Model } from "../../../../types";
-import PlayScreenMountStats from "./PlayScreenMountStats";
+import { abilitiesById, Model, mountsById } from "../../../../data";
+import MountUnitStats from "../../../../components/MountUnitStats";
 import PlayScreenMountArmour from "./PlayScreenMountArmour";
 import PlayScreenMountUpgrade from "./PlayScreenMountUpgrade";
-import data from "../../../../data.json";
+import PlayScreenMountWeapon from "./PlayScreenMountWeapon";
 
 interface Props {
   model: Model;
@@ -32,18 +32,32 @@ const PlayScreenMount: FunctionComponent<Props> = ({ model }) => (
             borderRadius: "4px",
           }}
         >
-          <Grid container direction="column" maxWidth="196px">
+          <Grid container direction="column" maxWidth="160px">
             <Typography sx={{ color: "text.disabled" }} variant="caption">
-              {data.mounts[model.mounts].type}
+              {mountsById[model.mounts].type}
             </Typography>
             <Typography variant="body1">
               {model.mounts.replace(/_/g, " ")}
             </Typography>
           </Grid>
 
-          <PlayScreenMountStats mounts={model.mounts} />
+          <MountUnitStats data={mountsById[model.mounts]} textSize="body2" />
+          <Grid
+            container
+            direction="column"
+            justifyContent="flex-start"
+            width="116px"
+            margin="8px 0px"
+          >
+            {mountsById[model.mounts].abilities.map((ability) => (
+              <Tooltip key={ability} title={abilitiesById[ability].Effects}>
+                <Typography variant="caption">&#8226; {ability}</Typography>
+              </Tooltip>
+            ))}
+          </Grid>
         </Grid>
         {model.mountArmour && <PlayScreenMountArmour model={model} />}
+        {model.mountWeapon && <PlayScreenMountWeapon model={model} />}
         {model.mountUpgrade && <PlayScreenMountUpgrade model={model} />}
       </Grid>
     )}

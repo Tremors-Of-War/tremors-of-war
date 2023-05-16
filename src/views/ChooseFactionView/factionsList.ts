@@ -13,11 +13,11 @@ import CELTS from "../../assets/factions/dark_ages/celt.jpg";
 import NORMANS from "../../assets/factions/dark_ages/normans.jpg";
 import ROMANS from "../../assets/factions/dark_ages/romans.jpg";
 import SAXONS from "../../assets/factions/dark_ages/saxons.jpg";
-import VIKINGS from "../../assets/factions/dark_ages/vikings.jpg";
-import { Faction } from "../../types";
+import NORSE from "../../assets/factions/dark_ages/vikings.jpg";
+import { FactionId } from "../../data";
 
 export interface FactionButton {
-  id: Faction;
+  id: FactionId;
   name: string;
   image: string;
 }
@@ -73,6 +73,11 @@ const FantasyFactions: FactionButton[] = [
     name: "Skaven",
     image: SKAVEN,
   },
+  {
+    id: "Norsca",
+    name: "Norsca",
+    image: NORSE,
+  },
 ];
 const DarkAgesFactions: FactionButton[] = [
   {
@@ -101,9 +106,9 @@ const DarkAgesFactions: FactionButton[] = [
     image: SAXONS,
   },
   {
-    id: "Vikings",
-    name: "Vikings",
-    image: VIKINGS,
+    id: "Norse",
+    name: "Norse",
+    image: NORSE,
   },
 ];
 

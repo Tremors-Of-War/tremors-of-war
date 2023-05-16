@@ -2,11 +2,11 @@ import React, { FunctionComponent } from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Box, Button, Tooltip, Typography } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
-import { Faction, Model } from "../../../types";
+import { FactionId, Model } from "../../../data";
 import { calculateModelsCosts } from "../../../utils/costs";
 
 interface Props {
-  faction: Faction;
+  faction: FactionId;
   warbandTotal: number;
   onClickAdd: () => void;
   models: Model[];

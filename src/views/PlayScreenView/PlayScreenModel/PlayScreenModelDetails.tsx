@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { FunctionComponent } from "react";
-import { Model } from "../../../types";
+import { Model } from "../../../data";
 import PlayScreenUnit from "./PlayScreenUnit/PlayScreenUnit";
 import PlayScreenArmour from "./PlayScreenArmour/PlayScreenArmour";
 import PlayScreenWeaponry from "./PlayScreenWeaponry/PlayScreenWeaponry";
@@ -11,13 +11,13 @@ interface Props {
   model: Model;
 }
 const hasArmour = (model: Model) => {
-  if (model.armour || model.shield || model.otherArmour || model.helmet) {
+  if (model.armour || model.helmet) {
     return true;
   }
   return false;
 };
 const hasWeaponry = (model: Model) => {
-  if (model.handWeapon || model.rangedWeapon || model.twoHandedWeapon) {
+  if (model.primaryWeaponry || model.rangedWeapon || model.secondaryWeaponry) {
     return true;
   }
   return false;
@@ -29,9 +29,9 @@ const PlayScreenModelDetails: FunctionComponent<Props> = ({ model }) => (
     {hasArmour(model) && <PlayScreenArmour model={model} />}
     {hasWeaponry(model) && (
       <PlayScreenWeaponry
-        handWeapon={model.handWeapon}
+        primaryWeaponry={model.primaryWeaponry}
         rangedWeapon={model.rangedWeapon}
-        twoHandedWeapon={model.twoHandedWeapon}
+        secondaryWeaponry={model.secondaryWeaponry}
       />
     )}
     {model?.mounts && <PlayScreenMount model={model} />}

@@ -1,8 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import React, { FunctionComponent } from "react";
 import theme from "../../../../app/theme";
-import { Model } from "../../../../types";
-import data from "../../../../data.json";
+import { abilitiesById, Model } from "../../../../data";
 
 interface Props {
   model: Model;
@@ -15,7 +14,7 @@ const PlayScreenMountUpgrade: FunctionComponent<Props> = ({ model }) => (
         container
         alignItems="center"
         marginBottom="8px"
-        justifyContent="space-between"
+        justifyContent="flex-start"
         flexWrap="nowrap"
         padding="8px 16px"
         direction="row"
@@ -28,19 +27,19 @@ const PlayScreenMountUpgrade: FunctionComponent<Props> = ({ model }) => (
           borderRadius: "4px",
         }}
       >
-        <Grid container direction="column" width="150px">
+        <Grid container direction="column" width="160px">
           <Typography variant="caption" sx={{ color: "text.disabled" }}>
             Upgrade
           </Typography>
           <Typography>{model.mountUpgrade}</Typography>
         </Grid>
-        <Grid container justifyContent="flex-start">
+        <Grid container justifyContent="flex-start" width="412px">
           <Grid
             component={Typography}
             variant="caption"
             sx={{ whiteSpace: "pre-wrap" }}
           >
-            &nbsp;{data.abilities[model.mountUpgrade].Effects}
+            &nbsp;{abilitiesById[model.mountUpgrade].Effects}
           </Grid>
         </Grid>
       </Grid>
